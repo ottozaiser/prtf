@@ -1,4 +1,4 @@
-# prtf
+# PRTF
 
 ## Project setup
 ```

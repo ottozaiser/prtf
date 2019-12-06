@@ -1,0 +1,72 @@
+{
+    "title": "Otto capo",
+    "about": "Hello World Otto",
+    "proyectos": [
+      {
+        "title": "Garlopa",
+        "content": "Garlopa fulera",
+        "cover": "jajaj.jpg",
+        "imagenes": [
+          {
+            "url": "jajaj.jpg",
+            "alt": "Imagen que dice",
+            "ep": "Esta foto es una mierda"
+          },
+          {
+            "url": "jajaj.jpg",
+            "alt": "Imagen que dice",
+            "ep": "Esta foto es una mierda"
+          },
+          {
+            "url": "jajaj.jpg",
+            "alt": "Imagen que dice",
+            "ep": "Esta foto es una mierda"
+          }
+        ]
+      },
+      {
+        "title": "Garlopa",
+        "content": "Garlopa fulera",
+        "cover": "jajaj.jpg",
+        "imagenes": [
+          {
+            "url": "jajaj.jpg",
+            "alt": "Imagen que dice",
+            "ep": "Esta foto es una mierda"
+          },
+          {
+            "url": "jajaj.jpg",
+            "alt": "Imagen que dice",
+            "ep": "Esta foto es una mierda"
+          },
+          {
+            "url": "jajaj.jpg",
+            "alt": "Imagen que dice",
+            "ep": "Esta foto es una mierda"
+          }
+        ]
+      },
+      {
+        "title": "Garlopa",
+        "content": "Garlopa fulera",
+        "cover": "jajaj.jpg",
+        "imagenes": [
+          {
+            "url": "jajaj.jpg",
+            "alt": "Imagen que dice",
+            "ep": "Esta foto es una mierda"
+          },
+          {
+            "url": "jajaj.jpg",
+            "alt": "Imagen que dice",
+            "ep": "Esta foto es una mierda"
+          },
+          {
+            "url": "jajaj.jpg",
+            "alt": "Imagen que dice",
+            "ep": "Esta foto es una mierda"
+          }
+        ]
+      }
+    ]
+  }
