@@ -1,70 +1,82 @@
 {
     "title": "Otto capo",
-    "about": "Hello World Otto",
+    "home": {
+      "location": "/",
+      "title": "Home",
+      "content": "Lorem impsun bitches"
+    },
+    "about": {
+      "location": "/about",
+      "title": "About",
+      "content": "Hello World Otto"
+    },
     "proyectos": [
       {
-        "title": "Garlopa",
+        "title": "Garlopa 1",
         "content": "Garlopa fulera",
-        "cover": "jajaj.jpg",
+        "cover": "https://via.placeholder.com/500x250",
+        "location": "/proyecto/garlopa-1",
         "imagenes": [
           {
-            "url": "jajaj.jpg",
-            "alt": "Imagen que dice",
-            "ep": "Esta foto es una mierda"
+            "url": "https://via.placeholder.com/200x100.jpg?text=Img+1",
+            "alt": "Alt dice 1",
+            "ep": "Esta foto es "
           },
           {
-            "url": "jajaj.jpg",
-            "alt": "Imagen que dice",
-            "ep": "Esta foto es una mierda"
+            "url": "https://via.placeholder.com/200x100.jpg?text=Img+2",
+            "alt": "Alt dice 2",
+            "ep": "Esta foto es "
           },
           {
-            "url": "jajaj.jpg",
-            "alt": "Imagen que dice",
-            "ep": "Esta foto es una mierda"
+            "url": "https://via.placeholder.com/200x100.jpg?text=Img+3",
+            "alt": "Alt dice 3",
+            "ep": "Esta foto es "
           }
         ]
       },
       {
-        "title": "Garlopa",
+        "title": "Garlopa 2",
         "content": "Garlopa fulera",
-        "cover": "jajaj.jpg",
+        "cover": "https://via.placeholder.com/500x250",
+        "location": "/proyecto/garlopa-2",
         "imagenes": [
           {
-            "url": "jajaj.jpg",
-            "alt": "Imagen que dice",
-            "ep": "Esta foto es una mierda"
+            "url": "https://via.placeholder.com/200x100.jpg?text=Img+4",
+            "alt": "Alt dice 4",
+            "ep": "Esta foto es "
           },
           {
-            "url": "jajaj.jpg",
-            "alt": "Imagen que dice",
-            "ep": "Esta foto es una mierda"
+            "url": "https://via.placeholder.com/200x100.jpg?text=Img+5",
+            "alt": "Alt dice 5",
+            "ep": "Esta foto es "
           },
           {
-            "url": "jajaj.jpg",
-            "alt": "Imagen que dice",
-            "ep": "Esta foto es una mierda"
+            "url": "https://via.placeholder.com/200x100.jpg?text=Img+6",
+            "alt": "Alt dice 6",
+            "ep": "Esta foto es "
           }
         ]
       },
       {
-        "title": "Garlopa",
+        "title": "Garlopa 3",
         "content": "Garlopa fulera",
-        "cover": "jajaj.jpg",
+        "cover": "https://via.placeholder.com/500x250",
+        "location": "/proyecto/garlopa-3",
         "imagenes": [
           {
-            "url": "jajaj.jpg",
-            "alt": "Imagen que dice",
-            "ep": "Esta foto es una mierda"
+            "url": "https://via.placeholder.com/200x100.jpg?text=Img+7",
+            "alt": "Alt dice 7",
+            "ep": "Esta foto es "
           },
           {
-            "url": "jajaj.jpg",
-            "alt": "Imagen que dice",
-            "ep": "Esta foto es una mierda"
+            "url": "https://via.placeholder.com/200x100.jpg?text=Img+8",
+            "alt": "Alt dice 8",
+            "ep": "Esta foto es "
           },
           {
-            "url": "jajaj.jpg",
-            "alt": "Imagen que dice",
-            "ep": "Esta foto es una mierda"
+            "url": "https://via.placeholder.com/200x100.jpg?text=Img+9",
+            "alt": "Alt dice 9",
+            "ep": "Esta foto es "
           }
         ]
       }

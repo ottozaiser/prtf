@@ -1,11 +1,14 @@
 <template>
   <div id="app">
     <Loader v-if="loading"/>
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id="nav" v-if="this.djson != null">
+      <router-link :to="this.djson.home.location">{{this.djson.home.title}}</router-link> 
+      <router-link :to="this.djson.about.location">{{this.djson.about.title}}</router-link>
     </div>
-    <router-view/>
+    <router-view
+      v-if="this.djson != null"
+      :djson="djson"
+    />
   </div>
 </template>
 
@@ -14,13 +17,16 @@
 import Loader from '@/components/Loader.vue'
 import axios from 'axios'
 
+
 export default {
+  name: 'app',
   components: {
     Loader
   },
   data: function() {
       return {
-          loading: true,   
+          loading: true,  
+          djson: null,
       };
   },
   created: function () {
@@ -33,7 +39,7 @@ export default {
       axios.get(json)
       .then(function (response) {
         // handle success
-        console.log(response.data);  
+        self.djson = response.data;  
         self.loader(false);
       })
       .catch(function (error) {
