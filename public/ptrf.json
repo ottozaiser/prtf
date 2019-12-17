@@ -1,14 +1,36 @@
 {
     "title": "Otto capo",
     "home": {
-      "location": "/",
       "title": "Home",
       "content": "Lorem impsun bitches"
     },
     "about": {
-      "location": "/about",
       "title": "About",
       "content": "Hello World Otto"
+    },
+    "story": {
+      "title": "Story",
+      "content": "Hello World Otto",
+      "steps": [
+        {
+          "title": "80s",
+          "content": "Excepteur quis do ut duis. Dolore veniam dolore ea magna exercitation labore ut ullamco qui cupidatat Lorem. Et nostrud fugiat reprehenderit magna amet dolor proident non cillum anim nulla. Qui mollit magna aliqua irure occaecat fugiat. Eiusmod ex anim ipsum proident sit excepteur eiusmod esse ullamco voluptate duis reprehenderit ea. Commodo minim commodo ut sunt ea magna amet ex aliqua.",
+          "url": "https://via.placeholder.com/200x100.jpg?text=Img+1",
+          "alt": "Alt dice 1"
+        },
+        {
+          "title": "90s",
+          "content": "Eu proident elit eiusmod amet esse tempor ad occaecat labore. Tempor sint consectetur labore reprehenderit in sunt ex fugiat. Deserunt velit do esse excepteur officia velit labore id enim esse incididunt esse enim. Id veniam ullamco culpa occaecat nostrud deserunt cupidatat officia.",
+          "url": "https://via.placeholder.com/200x100.jpg?text=Img+1",
+          "alt": "Alt dice 1"
+        },
+        {
+          "title": "00s",
+          "content": "Voluptate mollit mollit irure voluptate id est Lorem. Elit nostrud culpa pariatur reprehenderit laboris id velit consequat pariatur reprehenderit. Ex incididunt eiusmod magna ullamco excepteur labore ut duis. Ut aliquip ex laborum irure ut. Tempor id sunt cupidatat cupidatat irure ea occaecat occaecat duis qui.",
+          "url": "https://via.placeholder.com/200x100.jpg?text=Img+1",
+          "alt": "Alt dice 1"
+        }
+      ]
     },
     "proyectos": [
       {

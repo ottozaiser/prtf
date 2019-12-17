@@ -2,8 +2,9 @@
   <div id="app">
     <Loader v-if="loading"/>
     <div id="nav" v-if="this.djson != null">
-      <router-link :to="this.djson.home.location">{{this.djson.home.title}}</router-link> 
-      <router-link :to="this.djson.about.location">{{this.djson.about.title}}</router-link>
+      <router-link to="/">{{this.djson.home.title}}</router-link> 
+      <router-link to="/about">{{this.djson.about.title}}</router-link>
+      <router-link to="/story">{{this.djson.story.title}}</router-link>
     </div>
     <router-view
       v-if="this.djson != null"
