@@ -1,11 +1,11 @@
 <template>
   <div id="app">
     <Loader v-if="loading"/>
-    <div id="nav" v-if="this.djson != null">
+    <nav v-if="this.djson != null">
       <router-link to="/">{{this.djson.home.title}}</router-link> 
       <router-link to="/about">{{this.djson.about.title}}</router-link>
       <router-link to="/story">{{this.djson.story.title}}</router-link>
-    </div>
+    </nav>
     <router-view
       v-if="this.djson != null"
       :djson="djson"
@@ -60,5 +60,8 @@ export default {
 </script>
 
 <style lang="scss">
-
+nav{
+  position: fixed;
+  z-index: 100;
+}
 </style>

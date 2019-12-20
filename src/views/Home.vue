@@ -1,4 +1,4 @@
-<template>
+w<template>
   <div class="home">
     <h1>{{ this.djson.home.title }}</h1>
     <p>{{ this.djson.home.content }}</p>
