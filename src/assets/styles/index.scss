@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,400i,700&display=swap');
+:root {
+    --main-bg-color: brown;
+}
+html, body{
+    font-family: 'Nunito', sans-serif;
+}
+
+
+header{
+    background-color: var(--main-bg-color);
+    color: white;
+    nav.main-navigation{      
+        ul.menu{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            li.menu-item{
+                a{
+                    display: block;
+                    width: 100%;
+                    color: white;
+                    padding: 1em;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+

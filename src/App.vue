@@ -1,15 +1,25 @@
 <template>
   <div id="app">
     <Loader v-if="loading"/>
-    <nav v-if="this.djson != null">
-      <router-link to="/">{{this.djson.home.title}}</router-link> 
-      <router-link to="/about">{{this.djson.about.title}}</router-link>
-      <router-link to="/story">{{this.djson.story.title}}</router-link>
-    </nav>
-    <router-view
-      v-if="this.djson != null"
-      :djson="djson"
-    />
+    <div v-if="this.djson != null">
+      <header>
+        <!-- <h1 class="brand">Test</h1> -->
+        <button @click="handleHamburger">Ver</button>
+        <nav class="main-navigation">
+          <ul class="menu">
+            <li class="menu-item"><router-link to="/">{{this.djson.home.title}}</router-link> </li>
+            <li class="menu-item"><router-link to="/resume">{{this.djson.resume.title}}</router-link></li>
+            <li class="menu-item"><router-link to="/story">{{this.djson.story.title}}</router-link>   </li>
+            <li class="menu-item"><router-link to="/portfolio">{{this.djson.portfolio.title}}</router-link></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+      <router-view      
+        :djson="djson"
+      />
+      </main>
+    </div>
   </div>
 </template>
 
@@ -53,6 +63,10 @@ export default {
     },
     loader(show){
       this.loading = show;
+    },
+    handleHamburger(){
+      console.log(this.$refs.myDiv)
+      
     }
   }
   
@@ -60,8 +74,5 @@ export default {
 </script>
 
 <style lang="scss">
-nav{
-  position: fixed;
-  z-index: 100;
-}
+
 </style>

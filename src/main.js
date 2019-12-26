@@ -4,7 +4,8 @@ import router from './router'
 import VueLazyload from 'vue-lazyload'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-
+import 'normalize.css';
+import './assets/styles/index.scss';
 
 Vue.config.productionTip = false
 Vue.use(VueLazyload)

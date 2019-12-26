@@ -24,7 +24,7 @@ export default {
       };
   },
   created: function () {
-    this.proyecto = this.filterIt(this.djson.proyectos,this.id)[0];
+    this.proyecto = this.filterIt(this.djson.portfolio.proyectos,this.id)[0];
   },
   methods: {
      filterIt(arr, searchKey) {

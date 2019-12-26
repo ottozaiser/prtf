@@ -4,10 +4,110 @@
       "title": "Home",
       "content": "Lorem impsun bitches"
     },
-    "about": {
-      "title": "About",
-      "content": "Hello World Otto"
-    },
+    "resume": {
+      "title": "Res",
+      "photo": "images/me.png",
+      "content": "Hello World Re <a  href='/portfolio'>Know me better</a>",
+      "label": "Know more about me",
+      "sections": ["About me", "Skills, Knowledge and Tools", "Past"],
+      "skills": [
+        {
+          "personal": [
+            "Love Leader 1",
+            "Love Leader 2",
+            "Love Leader 3",
+            "Love Leader 4",
+            "Love Leader 5"
+          ],
+          "design": [
+            "Love Design 1",
+            "Love Design 2",
+            "Love Design 3",
+            "Love Design 4",
+            "Love Design 5"
+          ],
+          "art": [
+            "Love art 1",
+            "Love art 2",
+            "Love art 3",
+            "Love art 4",
+            "Love art 5"
+          ],
+          "video": [
+            "Love Motion 1",
+            "Love Motion 2",
+            "Love Motion 3",
+            "Love Motion 4",
+            "Love Motion 5"
+          ],
+          "web": [
+            "Love",
+            "Love",
+            "Love",
+            "Love",
+            "Love"
+          ],
+          "dev": [
+            "Love CSS 1",
+            "Love CSS 2",
+            "Love CSS 3",
+            "Love CSS 4",
+            "Love CSS 5"
+          ],
+          "tools":[
+            ["Herramienta 1","50"],
+            ["Herramienta 2","60"],
+            ["Herramienta 3","70"],
+            ["Herramienta 4","80"],
+            ["Herramienta 5","90"]
+          ]
+        }
+      ],
+      "past": [
+        {
+          "company": "NIC 1",
+          "title": "Designer",
+          "started": "03/2018",
+          "finished": "08/2018",
+          "description": "Lorem ipsum"
+        },
+        {
+          "company": "NIC 2",
+          "title": "Designer",
+          "started": "03/2018",
+          "finished": "08/2018",
+          "description": "Lorem ipsum"
+        },
+        {
+          "company": "NIC 3",
+          "title": "Designer",
+          "started": "03/2018",
+          "finished": "08/2018",
+          "description": "Lorem ipsum"
+        },
+        {
+          "company": "NIC 4",
+          "title": "Designer",
+          "started": "03/2018",
+          "finished": "08/2018",
+          "description": "Lorem ipsum"
+        },
+        {
+          "company": "NIC 5",
+          "title": "Designer",
+          "started": "03/2018",
+          "finished": "08/2018",
+          "description": "Lorem ipsum"
+        },
+        {
+          "company": "NIC 6",
+          "title": "Designer",
+          "started": "03/2018",
+          "finished": "08/2018",
+          "description": "Lorem ipsum"
+        }
+      ]
+    },    
     "story": {
       "title": "Story",
       "content": "Hello World Otto",
@@ -74,75 +174,80 @@
         }
       ]
     },
-    "proyectos": [
-      {
-        "title": "Garlopa 1",
-        "content": "Garlopa fulera",
-        "cover": "https://via.placeholder.com/500x250",
-        "location": "/proyecto/garlopa-1",
-        "imagenes": [
-          {
-            "url": "https://via.placeholder.com/200x100.jpg?text=Img+1",
-            "alt": "Alt dice 1",
-            "ep": "Esta foto es "
-          },
-          {
-            "url": "https://via.placeholder.com/200x100.jpg?text=Img+2",
-            "alt": "Alt dice 2",
-            "ep": "Esta foto es "
-          },
-          {
-            "url": "https://via.placeholder.com/200x100.jpg?text=Img+3",
-            "alt": "Alt dice 3",
-            "ep": "Esta foto es "
-          }
-        ]
-      },
-      {
-        "title": "Garlopa 2",
-        "content": "Garlopa fulera",
-        "cover": "https://via.placeholder.com/500x250",
-        "location": "/proyecto/garlopa-2",
-        "imagenes": [
-          {
-            "url": "https://via.placeholder.com/200x100.jpg?text=Img+4",
-            "alt": "Alt dice 4",
-            "ep": "Esta foto es "
-          },
-          {
-            "url": "https://via.placeholder.com/200x100.jpg?text=Img+5",
-            "alt": "Alt dice 5",
-            "ep": "Esta foto es "
-          },
-          {
-            "url": "https://via.placeholder.com/200x100.jpg?text=Img+6",
-            "alt": "Alt dice 6",
-            "ep": "Esta foto es "
-          }
-        ]
-      },
-      {
-        "title": "Garlopa 3",
-        "content": "Garlopa fulera",
-        "cover": "https://via.placeholder.com/500x250",
-        "location": "/proyecto/garlopa-3",
-        "imagenes": [
-          {
-            "url": "https://via.placeholder.com/200x100.jpg?text=Img+7",
-            "alt": "Alt dice 7",
-            "ep": "Esta foto es "
-          },
-          {
-            "url": "https://via.placeholder.com/200x100.jpg?text=Img+8",
-            "alt": "Alt dice 8",
-            "ep": "Esta foto es "
-          },
-          {
-            "url": "https://via.placeholder.com/200x100.jpg?text=Img+9",
-            "alt": "Alt dice 9",
-            "ep": "Esta foto es "
-          }
-        ]
-      }
-    ]
+    "portfolio": {
+      "title": "Prtrf",
+      "content": "Hello World Otto",
+      "proyectos": [
+        {
+          "title": "Garlopa 1",
+          "content": "Garlopa fulera",
+          "cover": "https://via.placeholder.com/500x250",
+          "location": "/portfolio/proyecto/garlopa-1",
+          "imagenes": [
+            {
+              "url": "https://via.placeholder.com/200x100.jpg?text=Img+1",
+              "alt": "Alt dice 1",
+              "ep": "Esta foto es "
+            },
+            {
+              "url": "https://via.placeholder.com/200x100.jpg?text=Img+2",
+              "alt": "Alt dice 2",
+              "ep": "Esta foto es "
+            },
+            {
+              "url": "https://via.placeholder.com/200x100.jpg?text=Img+3",
+              "alt": "Alt dice 3",
+              "ep": "Esta foto es "
+            }
+          ]
+        },
+        {
+          "title": "Garlopa 2",
+          "content": "Garlopa fulera",
+          "cover": "https://via.placeholder.com/500x250",
+          "location": "/portfolio/proyecto/garlopa-2",
+          "imagenes": [
+            {
+              "url": "https://via.placeholder.com/200x100.jpg?text=Img+4",
+              "alt": "Alt dice 4",
+              "ep": "Esta foto es "
+            },
+            {
+              "url": "https://via.placeholder.com/200x100.jpg?text=Img+5",
+              "alt": "Alt dice 5",
+              "ep": "Esta foto es "
+            },
+            {
+              "url": "https://via.placeholder.com/200x100.jpg?text=Img+6",
+              "alt": "Alt dice 6",
+              "ep": "Esta foto es "
+            }
+          ]
+        },
+        {
+          "title": "Garlopa 3",
+          "content": "Garlopa fulera",
+          "cover": "https://via.placeholder.com/500x250",
+          "location": "/portfolio/proyecto/garlopa-3",
+          "imagenes": [
+            {
+              "url": "https://via.placeholder.com/200x100.jpg?text=Img+7",
+              "alt": "Alt dice 7",
+              "ep": "Esta foto es "
+            },
+            {
+              "url": "https://via.placeholder.com/200x100.jpg?text=Img+8",
+              "alt": "Alt dice 8",
+              "ep": "Esta foto es "
+            },
+            {
+              "url": "https://via.placeholder.com/200x100.jpg?text=Img+9",
+              "alt": "Alt dice 9",
+              "ep": "Esta foto es "
+            }
+          ]
+        }
+      ]
+    }
+    
   }
