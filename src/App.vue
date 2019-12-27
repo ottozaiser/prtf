@@ -4,20 +4,11 @@
     <div v-if="this.djson != null">
       <header>
         <!-- <h1 class="brand">Test</h1> -->
-        <button @click="handleHamburger">Ver</button>
-        <nav class="main-navigation">
-          <ul class="menu">
-            <li class="menu-item"><router-link to="/">{{this.djson.home.title}}</router-link> </li>
-            <li class="menu-item"><router-link to="/resume">{{this.djson.resume.title}}</router-link></li>
-            <li class="menu-item"><router-link to="/story">{{this.djson.story.title}}</router-link>   </li>
-            <li class="menu-item"><router-link to="/portfolio">{{this.djson.portfolio.title}}</router-link></li>
-          </ul>
-        </nav>
+      <button aria-label="Open Navigation" id="open-dialog" @click="$refs.navComponent.toggleMenu()">Menu</button>        
       </header>
+      <MainNav ref="navComponent" :djson="djson"/>
       <main>
-      <router-view      
-        :djson="djson"
-      />
+        <router-view :djson="djson"/>
       </main>
     </div>
   </div>
@@ -26,13 +17,14 @@
 
 <script>
 import Loader from '@/components/Loader.vue'
+import MainNav from '@/components/MainNav.vue'
 import axios from 'axios'
-
 
 export default {
   name: 'app',
   components: {
-    Loader
+    Loader,
+    MainNav
   },
   data: function() {
       return {
@@ -63,16 +55,10 @@ export default {
     },
     loader(show){
       this.loading = show;
-    },
-    handleHamburger(){
-      console.log(this.$refs.myDiv)
-      
     }
   }
   
 }
 </script>
 
-<style lang="scss">
-
-</style>
+<style lang="scss"></style>
