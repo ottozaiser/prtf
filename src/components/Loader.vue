@@ -1,46 +1,66 @@
 <template>
-    <div class="loading overlay">
-        <svg aria-label="Cargando" class="center-v" version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-        width="100px" height="100px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
-            <path opacity="0.4" fill="#fff" d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946
+  <div class="loading overlay">
+    <svg
+      aria-label="Loading"
+      class="center-v"
+      version="1.1"
+      id="loader-1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      x="0px"
+      y="0px"
+      width="100px"
+      height="100px"
+      viewBox="0 0 40 40"
+      enable-background="new 0 0 40 40"
+      xml:space="preserve"
+    >
+      <path
+        opacity="0.4"
+        fill="#000"
+        d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946
             s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634
-            c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z"/>
-            <path fill="#fff" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0
-            C22.32,8.481,24.301,9.057,26.013,10.047z">
-            <animateTransform attributeType="xml"
-            attributeName="transform"
-            type="rotate"
-            from="0 20 20"
-            to="360 20 20"
-            dur="0.5s"
-            repeatCount="indefinite"/>
-            </path>
-        </svg>
-    </div>
+            c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z"
+      />
+      <path
+        fill="#000"
+        d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0
+            C22.32,8.481,24.301,9.057,26.013,10.047z"
+      >
+        <animateTransform
+          attributeType="xml"
+          attributeName="transform"
+          type="rotate"
+          from="0 20 20"
+          to="360 20 20"
+          dur="0.5s"
+          repeatCount="indefinite"
+        />
+      </path>
+    </svg>
+  </div>
 </template>
 
 <style scoped lang="scss">
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 9999999999;
-    color: #fff;    
-    background: rgba(0, 148, 212, 0.10);    
+.loading {
+  //background-color: var(--main-charcoal-trans);
+  text-align: center;
+  border-radius: 5px;
 }
 
-.loading {
-    background-color: rgba(0, 148, 212, 0.75);
-    text-align: center;
-    border-radius: 5px;
+.overlay {
+  position: absolute;
+  background-color: var(--main-bg-trans);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999999999;
 }
 
 .center-v {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
-
 </style>

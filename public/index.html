@@ -1,16 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title>PRTF</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-156467748-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-156467748-1");
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta charset="utf-8" />
+    <!-- Metadata OG-->
+    <meta name="keywords" content="designer, ux, ui, motion, illustration" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Otto Zaiser" />
+    <meta
+      name="description"
+      property="og:description"
+      content="I have been a professional designer for the past 15 years and this is my website where you can find my CV and Portfolio."
+    />
+    <meta name="author" content="Otto Zaiser" />
+    <meta property="og:url" content="https://otto.com.ar/" />
+    <meta property="og:site_name" content="Otto Zaiser" />
+    <meta property="og:image" content="http://otto.com.ar/images/rrss.png" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ottocapo" />
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/images/icons/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/images/icons/safari-pinned-tab.svg"
+      color="#000000"
+    />
+    <link rel="shortcut icon" href="/images/icons/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-config"
+      content="/images/icons/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- <link rel="icon" href="<%= BASE_URL %>favicon.ico"> -->
+    <title>Otto Zaiser [Designer]</title>
+    <style>
+      div.alert{
+        display: flex;
+        position: absolute;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        color: crimson;
+        font-family: sans-serif;
+        padding: 0;
+        z-index: 10000000000000000;
+        background-color: white;
+      }
+      }
+    </style>
   </head>
   <body>
     <noscript>
-      <strong>We're sorry but PRTF doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <div class="alert">
+        <p>
+          We're sorry but my portfolio doesn't work properly without JavaScript
+          enabled. Please enable it to continue.
+        </p>
+      </div>
     </noscript>
+
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>

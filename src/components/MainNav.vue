@@ -1,72 +1,116 @@
 <template>
-  <div id="nav">
+  <div>
+    <header>
+      <nav class="main-navigation" id="nav">
+        <button
+          class="menu-button"
+          id="menuBtn"
+          @click="toggleMenu"
+          aria-controls="navbarCollapse"
+          aria-label="Toggle navigation"
+          :aria-expanded="[showMenu]"
+        >
+          <div class="nav-icon" v-bind:class="{ open: showMenu }">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+        <transition name="slide">
+          <div class="panel-menu" v-show="showMenu" id="menu">
+            <h1 class="brand">{{ this.djson.title }}</h1>
+            <h1 id="dialog-title" class="sr-only">Main navigation</h1>
+            <ul class="menu">
+              <li
+                class="menu-item"
+                @click="toggleMenu"
+                v-bind:key="index"
+                v-for="(item, index) in this.djson.menu"
+              >
+                <router-link :to="item[1]" v-if="item[1].startsWith('/')">
+                  {{ item[0] }}
+                </router-link>
+                <a :href="item[1]" target="_blank" v-else>
+                  {{ item[0] }}
+                </a>
+              </li>
+            </ul>
+            <!-- <button aria-label="Close Navigation" @click="toggleMenu">x</button>  -->
+            <Social class="social" :djson="djson" />
+          </div>
+        </transition>
+      </nav>
+    </header>
     <transition name="fade">
-      <div  v-show="showMenu">
-        <nav class="main-navigation" id="dialog" tabindex="-1" role="dialog" aria-labelledby="dialog-title">
-          <h1 id="dialog-title">Main navigation</h1>
-          <ul class="menu" role="document">
-            <li class="menu-item" @click="toggleMenu"><router-link to="/">{{this.djson.home.title}}</router-link> </li>
-            <li class="menu-item" @click="toggleMenu"><router-link to="/resume">{{this.djson.resume.title}}</router-link></li>
-            <li class="menu-item" @click="toggleMenu"><router-link to="/story">{{this.djson.story.title}}</router-link>   </li>
-            <li class="menu-item" @click="toggleMenu"><router-link to="/portfolio">{{this.djson.portfolio.title}}</router-link></li>
-          </ul>
-          <button aria-label="Close Navigation" @click="toggleMenu">x</button> 
-        </nav>
-        <div class="dialog-overlay" tabindex="-1" id="dialog-overlay" @click="toggleMenu"></div>
-      </div>
+      <div
+        v-show="showMenu"
+        class="overlay"
+        tabindex="-1"
+        id="overlay"
+        @click="toggleMenu"
+      ></div>
     </transition>
   </div>
 </template>
 
-
 <script>
-
+import Social from "@/components/Social.vue";
 export default {
-  name: 'MainNav',
-  props: ['djson'],
-  data: function() {
-      return {        
-          showMenu: false,
-          dialogEl: undefined,  
-          overlayEl: undefined,  
-          focusedElBeforeOpen: undefined,
-      };
+  name: "MainNav",
+  components: {
+    Social
   },
-  mounted: function () {
-      this.dialogEl = document.getElementById('dialog');
-      this.overlayEl = document.getElementById('dialog-overlay');
-      this.focusedElBeforeOpen;
-      var focusableEls = this.dialogEl.querySelectorAll('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]');
-      this.focusableEls = Array.prototype.slice.call(focusableEls);
-      this.firstFocusableEl = this.focusableEls[0];
-      this.lastFocusableEl = this.focusableEls[this.focusableEls.length - 1];
-      this.close(); // Reset
+  props: ["djson"],
+  data: function() {
+    return {
+      showMenu: false,
+      navEl: undefined,
+      menuEl: undefined,
+      overlayEl: undefined,
+      focusedElBeforeOpen: undefined
+    };
+  },
+  mounted: function() {
+    this.navEl = document.getElementById("nav");
+    this.menuEl = document.getElementById("menu");
+    this.overlayEl = document.getElementById("overlay");
+    this.focusedElBeforeOpen;
+    var focusableEls = this.navEl.querySelectorAll(
+      'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]'
+    );
+    this.focusableEls = Array.prototype.slice.call(focusableEls);
+    this.firstFocusableEl = this.focusableEls[0];
+    this.lastFocusableEl = this.focusableEls[this.focusableEls.length - 1];
+    this.close(); // Reset
   },
   methods: {
-    toggleMenu(){
-      this.showMenu = !this.showMenu;    
-      if(this.showMenu){
+    toggleMenu() {
+      this.showMenu = !this.showMenu;
+      if (this.showMenu) {
         this.open();
-      }else{
+      } else {
         this.close();
       }
-    },   
+    },
     open() {
+      document.body.style.overflow = "hidden";
       var Dialog = this;
-      this.dialogEl.removeAttribute('aria-hidden');
-      this.overlayEl.removeAttribute('aria-hidden');
+      this.menuEl.removeAttribute("aria-hidden");
+      this.overlayEl.removeAttribute("aria-hidden ");
       this.focusedElBeforeOpen = document.activeElement;
-      this.dialogEl.addEventListener('keydown', function (e) {
+      this.menuEl.addEventListener("keydown", function(e) {
         Dialog._handleKeyDown(e);
       });
-      this.overlayEl.addEventListener('click', function () {
+      this.overlayEl.addEventListener("click", function() {
         Dialog.close();
       });
       this.firstFocusableEl.focus();
     },
     close() {
-      this.dialogEl.setAttribute('aria-hidden', true);
-      this.overlayEl.setAttribute('aria-hidden', true);
+      document.body.style.overflow = "visible";
+      this.menuEl.setAttribute("aria-hidden", true);
+      this.overlayEl.setAttribute("aria-hidden", true);
       if (this.focusedElBeforeOpen) {
         this.focusedElBeforeOpen.focus();
       }
@@ -95,12 +139,12 @@ export default {
           }
           if (e.shiftKey) {
             handleBackwardTab();
-          }
-          else {
+          } else {
             handleForwardTab();
           }
           break;
         case KEY_ESC:
+          this.showMenu = false;
           Dialog.close();
           break;
         default:
@@ -108,8 +152,199 @@ export default {
       }
     }
   }
-  
-}
+};
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+header {
+  button.menu-button {
+    position: fixed;
+    top: 8px;
+    right: 8px;
+    width: 48px;
+    height: 48px;
+    border: 0px;
+    z-index: 15;
+    background-color: var(--main-bg-trans);
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--main-lightgray);
+      .nav-icon {
+        opacity: 1;
+      }
+    }
+    .nav-icon {
+      position: relative;
+      margin: 0 auto;
+      margin-top: -9px;
+      width: 24px;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: 0.5s ease-in-out;
+      -moz-transition: 0.5s ease-in-out;
+      -o-transition: 0.5s ease-in-out;
+      transition: 0.5s ease-in-out;
+      opacity: 0.6;
+      span {
+        display: block;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background: var(--main-txt-color);
+        border-radius: 2px;
+        opacity: 1;
+        left: 0;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: 0.2s ease-in-out;
+        -moz-transition: 0.2s ease-in-out;
+        -o-transition: 0.2s ease-in-out;
+        transition: 0.2s ease-in-out;
+      }
+      span:nth-child(1) {
+        top: 0px;
+      }
+
+      span:nth-child(2),
+      span:nth-child(3) {
+        top: 8px;
+      }
+
+      span:nth-child(4) {
+        top: 16px;
+      }
+    }
+    .open span:nth-child(1) {
+      top: 8px;
+      width: 0%;
+      left: 50%;
+    }
+
+    .open span:nth-child(2) {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+    .open span:nth-child(3) {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+
+    .open span:nth-child(4) {
+      top: 8px;
+      width: 0%;
+      left: 50%;
+    }
+  }
+}
+h1.brand {
+  font-size: 1.2em;
+  margin: 18px 32px;
+  &:after {
+  }
+}
+.panel-menu {
+  position: fixed;
+  background-color: var(--main-bg-color);
+  box-shadow: 0px 0px 4px var(--main-txt-color);
+  top: 0;
+  right: 0;
+  width: 0;
+  min-height: 100vh;
+  min-width: 240px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 14;
+  transition: all 0.5s ease;
+  //transform: translateZ(0) translateX(260px);
+  .social {
+    padding: 1em 2em;
+    ul.socialmedia li.social-item {
+      padding: 0;
+      a {
+        font-size: 1em;
+        width: 36px;
+        height: 36px;
+      }
+    }
+  }
+}
+.panel-menu.open {
+  transition: all 0.5s ease;
+  transform: translateZ(0) translateX(0);
+}
+.nombre {
+  font-size: 1.3em;
+  margin-left: 24px;
+}
+nav.main-navigation {
+  ul.menu {
+    list-style-type: none;
+    margin: 0;
+    margin-top: 32px;
+    padding: 0;
+    color: var(--main-txt-color);
+    width: 100%;
+    li.menu-item {
+      a {
+        display: block;
+        width: 100%;
+        color: var(--main-txt-color);
+        padding: 2em;
+        text-decoration: none;
+        // text-transform: uppercase;
+        transition: all 0.2s ease;
+        &:hover,
+        &:focus {
+          border-left: 5px solid var(--main-charcoal);
+          background-color: var(--main-lightgray);
+        }
+      }
+      a.router-link-exact-active {
+        border-left: 5px solid var(--main-charcoal-trans);
+        &:hover,
+        &:focus {
+          border-left: 5px solid var(--main-charcoal);
+        }
+      }
+    }
+  }
+}
+.overlay {
+  z-index: 13;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-charcoal-trans);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 0.2s ease;
+}
+.slide-enter, .slide-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  transform: translateZ(0) translateX(300px);
+}
+</style>
