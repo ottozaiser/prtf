@@ -20,7 +20,7 @@ collections:
             name: resume
             widget: "object"
             fields:
-              - { label: "Single Page Resumé", name: "sp_resume", widget: "string" }
+              - { label: "Single Page Resumé", name: "name", widget: "string" }
               - { label: "Full Resumé", name: "full_resume", widget: "string" }
           - label: "Social Medias"
             label_singular: "Social"
@@ -49,7 +49,7 @@ collections:
         label: "Home Content"
         file: "_data/home.json"
         fields:
-          - { label: "Home title", name: "home_title", widget: "string" }
+          - { label: "Home title", name: "name", widget: "string" }
           - { label: "Home subtitle", name: "home_subtitle", widget: "markdown" }
           - { label: "Home content", name: "home_content", widget: "markdown" }
           - { label: "Home image", name: "image", widget: "image" }
@@ -63,7 +63,7 @@ collections:
         label: "Resumé Content"
         file: "_data/resume.json"
         fields:
-          - { label: "Resume title", name: "resume_title", widget: "string" }
+          - { label: "Resume title", name: "name", widget: "string" }
           - { label: "Resume subtitle", name: "resume_subtitle", widget: "markdown" }
           - { label: "Resume content", name: "resume_content", widget: "markdown" }
           - { label: "Resume image", name: "image", widget: "image" }
