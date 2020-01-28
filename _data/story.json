@@ -1,13 +1,85 @@
 {
-  "story": [
-    {
-      "title": "‘82",
-      "subtitle": "Express Yourself",
-      "song": "https://open.spotify.com/track/4pW3aTX3kAmOaPJfc9UM12",
-      "content": "I was born with a great passion for <span class='highlight'>visual arts</span>. I watched all the cartoons available on TV and I was happy with a crayon on my hand. My parents thought that I had a talent for art, so they sent me to private lessons with art teachers that expanded my mind.",
-      "color": "#FAFFEE",
-      "url": "/images/story/01.png",
-      "alt": "A kid drawing the wall"
-    }
-  ]
+	"story": [
+		{
+			"title": "‘82",
+			"subtitle": "Express Yourself",
+			"song": "https://open.spotify.com/track/4pW3aTX3kAmOaPJfc9UM12",
+			"content": "I was born with a great passion for <span class='highlight'>visual arts</span>. I watched all the cartoons available on TV and I was happy with a crayon on my hand. My parents thought that I had a talent for art, so they sent me to private lessons with art teachers that expanded my mind.",
+			"color": "#FAFFEE",
+			"image": "/_data/media/01.png",
+			"alt": "A kid drawing the wall"
+		},
+		{
+			"title": "‘89",
+			"subtitle": "Wild Thing",
+			"song": "https://open.spotify.com/track/7jGzYUZ2Bgg8BDfYlQRfn8",
+			"content": "My father brought home a brand new Commodore 64 and I was stunned. I usually played old school video games but one day I found a 5 ¼ diskette with a program that made amazing <span class='highlight'>greeting cards</span>. Then I started to make big <span class='highlight'>banners</span> with Bannermania and printed them with an old dot matrix printer.",
+			"color": "#FFEAE6",
+			"image": "/_data/media/02.png",
+			"alt": "Kid hanging paper banners"
+		},
+		{
+			"title": "‘96",
+			"subtitle": "Modern Love",
+			"song": "https://open.spotify.com/track/3gxEZXUjrNbl3TlSrTGbR5",
+			"content": "When I saw the Web for the first time I wanted to be in there. I spent long hours with my 56kbps internet connection to learn about webmasters and <span class='highlight'>web design</span>. Geocities, Lycos and Freeservers showed me the way. I made my first website “Otto’s” with FrontPage and a bunch of stolen GIFs.",
+			"color": "#FFE1E2",
+			"image": "/_data/media/03.png",
+			"alt": "Teenager with a puzzle's piece"
+		},
+		{
+			"title": "‘00",
+			"subtitle": "Money for Nothing",
+			"song": "https://open.spotify.com/track/31DvHUCSioX0JD7B4kZMJ9",
+			"content": "While I was finishing high school a friend of mine showed my Photoshop 5.0 and how you can manipulate photos. I made some money removing scratches from old family pictures and colorizing black and white photos. I realized it was a really fun gig and could make a <span class='highlight'>career</span> out of it.",
+			"color": "#FDECFF",
+			"image": "/_data/media/04.png",
+			"alt": "Teenager meditating with a 3rd eye"
+		},
+		{
+			"title": "‘05",
+			"subtitle": "All Day and All of the Night",
+			"song": "https://open.spotify.com/track/78JmElAFmrPNhLjovDR9Jm",
+			"content": "I started to work as a junior while I was studying Graphic Design at the University. Back in the day, the schools were outdated and there was not a Web or Multimedia Design degree. I was hungry for knowledge, so learned all day about Web Design and all night about <span class='highlight'>Design Fundamentals</span>. ",
+			"color": "#EDE4FF",
+			"image": "/_data/media/05.png",
+			"alt": "A young man juggling with flash, academy and money balls"
+		},
+		{
+			"title": "‘10",
+			"subtitle": "Comfortably Numb",
+			"song": "https://open.spotify.com/track/6JWZiQz7YqhDN7YYIP1eVP",
+			"content": "After 10 years as a Web Designer I felt <span class='highlight'>stuck</span>. I had a good job with great benefits but the rate of change on the outside exceeded the rate of change on the inside. Inside the company and inside myself. So, the end was near and I had to do something.",
+			"color": "#D0EDFF",
+			"image": "/_data/media/06.png",
+			"alt": "Overweight man working with a computer"
+		},
+		{
+			"title": "‘17",
+			"subtitle": "Wake Up",
+			"song": "https://open.spotify.com/track/2QiqwOVUctPRVggO9G1Zs5",
+			"content": "I quit my old job and became an avid learner again. I worked as a freelance while <span class='highlight'>I improved</span> on my Motion Graphics skills, read about new design software outside the Adobe universe and research a lot about the new trends on Design and User Experience. ",
+			"color": "#DEFFF5",
+			"image": "/_data/media/07.png",
+			"alt": "Bearded man exercising"
+		},
+		{
+			"title": "‘18",
+			"subtitle": "Are You Experienced?",
+			"song": "https://open.spotify.com/track/7jGzYUZ2Bgg8BDfYlQRfn8",
+			"content": "I signed on a full year course about <span class='highlight'>Accessibility and User Experience</span> at the University. It helped me a lot to get away from keyboard and learn a lot from users and colleagues. Design is not a designer in front a computer anymore. It’s a full team working together with clients and users to make a great product.",
+			"color": "#E3FFE7",
+			"image": "/_data/media/08.png",
+			"alt": "Bearded man with post-its"
+		},
+		{
+			"title": "Today",
+			"subtitle": "New Sensation",
+			"song": "https://open.spotify.com/track/2xcrseImDFEf8Urommws03",
+			"content": "I am always looking for new opportunities that could make me a better designer. If you think you have the perfect challenge for me, <a href='mailto:hola@otto.com.ar?subject=Hi!' class='highlight'>drop me a line</a>.",
+			"color": "#EDFFDB",
+			"image": "/_data/media/09.png",
+			"alt": "Bearded man writing in a desk"
+		}
+	]
 }

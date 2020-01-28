@@ -60,8 +60,6 @@ collections:
       - name: "resumecontent"
         label: "Resumé Content"
         file: "_data/resume.json"
-        path: "_data/media/resume"
-        media_folder: ""
         fields:
           - { label: "Resume title", name: "name", widget: "string" }
           - { label: "About Me title", name: "about_title", widget: "string" }
@@ -77,10 +75,11 @@ collections:
             name: skills
             widget: "object"
             fields:
-              - { label: "Category title", name: "category_title", widget: "string" }
-              - label: "Category"
+              - { label: "Skills title", name: "skills_title", widget: "string" }
+              - label: "Skills Title"
                 widget: list
                 fields:
+                  - { label: "Category title", name: "category_title", widget: "string" }
                   - label: "Skill"
                     widget: list
                     fields:
@@ -108,20 +107,18 @@ collections:
       - name: "mystorycontent"
         label: "My Story Content"
         file: "_data/story.json"
-        path: "_data/media/story"
-        media_folder: ""
         fields:
           - label: "Story"
             name: story
             widget: list
             fields:
-              - { label: "title", name: "title", widget: "string" }
-              - { label: "subtitle", name: "subtitle", widget: "string" }
-              - { label: "song", name: "song", widget: "string" }
-              - { label: "content", name: "content", widget: "markdown" }
-              - { label: "color", name: "color", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - { label: "Song", name: "song", widget: "string" }
+              - { label: "Content", name: "content", widget: "markdown" }
+              - { label: "Color", name: "color", widget: "string" }
               - { label: "Image", name: "image", widget: "image" }
-              - { label: "alt", name: "alt", widget: "string" }
+              - { label: "Image alt", name: "alt", widget: "string" }
   - name: "portfolio"
     label: "Portfolio page"
     delete: false # Prevent users from deleting documents in this collection
@@ -131,8 +128,6 @@ collections:
       - name: "portfoliocontent"
         label: "Portfolio Content"
         file: "_data/portfolio.json"
-        path: "_data/media/portfolio"
-        media_folder: ""
         fields:
           - label: "Portfolio"
             name: "portfolio"
