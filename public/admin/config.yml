@@ -16,9 +16,13 @@ collections:
         file: "_data/settings.json"
         fields:
           - { label: "Global title", name: "site_title", widget: "string" }
-          - label: "Social Medias"
-            label_singular: "Social"
-            name: "social"
+      - name: "socialmedia"
+        label: "Social Media Settings"
+        file: "_data/socialmedia.json"
+        fields:
+          - label: "Social Network"
+            label_singular: "Social Network"
+            name: "socialitem"
             widget: list
             fields:
               - { label: "Name", name: "name", widget: "string" }
