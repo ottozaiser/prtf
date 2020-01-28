@@ -1,0 +1,14 @@
+{
+  "portfolio": {
+    "portfolio_title": "Portfolio",
+    "portfolio_content": "<p>I am currently working on this section.</p><p>In the meantime, you can see my work on <b>PDFs</b>:</p>",
+    "undefined": [
+      {
+        "title": "Top-Level Domain Opening",
+        "content": "I helped NIC Argentina to launch the opening of the top-level domain to users.",
+        "image": "/_data/media/nic_00.png",
+        "file": "https://drive.google.com/file/d/1k7SR5Ipxj8AU2JsSMavdWW8Pl-lqLD5x/view"
+      }
+    ]
+  }
+}
