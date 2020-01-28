@@ -1,16 +1,24 @@
 {
   "menuitem": [
     {
-      "name": "Portfolio",
-      "url": "/portfolio"
+      "name": "Home",
+      "url": "/"
+    },
+    {
+      "name": "CV / Resumé",
+      "url": "/resume"
     },
     {
       "name": "My story",
       "url": "/story"
     },
     {
-      "name": "Home",
-      "url": "/"
+      "name": "Portfolio",
+      "url": "/portfolio"
+    },
+    {
+      "name": "Contact me",
+      "url": "mailto:hola@otto.com.ar?subject=Hi!"
     }
   ]
 }
