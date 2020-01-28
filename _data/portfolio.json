@@ -2,7 +2,7 @@
   "portfolio": {
     "portfolio_title": "Portfolio",
     "portfolio_content": "<p>I am currently working on this section.</p><p>In the meantime, you can see my work on <b>PDFs</b>:</p>",
-    "undefined": [
+    "project": [
       {
         "title": "Top-Level Domain Opening",
         "content": "I helped NIC Argentina to launch the opening of the top-level domain to users.",
