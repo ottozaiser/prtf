@@ -3,5 +3,17 @@
   "resume": {
     "name": "OZ.pdf",
     "full_resume": "OZA.pdf"
-  }
+  },
+  "social": [
+    {
+      "name": "Facebook",
+      "hover": "Hola FB",
+      "link": "https://facebooki.com"
+    },
+    {
+      "name": "Twitter",
+      "hover": "Hola tw",
+      "link": "https://twitter.com"
+    }
+  ]
 }
