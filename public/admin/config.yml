@@ -60,10 +60,11 @@ collections:
       - name: "resumecontent"
         label: "Resumé Content"
         file: "_data/resume.json"
-        media_folder: "_data/media/resume"
+        path: "_data/media/resume"
+        media_folder: ""
         fields:
           - { label: "Resume title", name: "name", widget: "string" }
-          - { label: "About Me title", name: "about_title", widget: "markdown" }
+          - { label: "About Me title", name: "about_title", widget: "string" }
           - { label: "About Me content", name: "about_content", widget: "markdown" }
           - { label: "About Me image", name: "about_image", widget: "image" }
           - label: "PDFs Resumés"
@@ -76,11 +77,15 @@ collections:
             name: skills
             widget: "object"
             fields:
-              - { label: "Skills title", name: "skills_title", widget: "string" }
-              - label: "Skill item"
+              - { label: "Category title", name: "category_title", widget: "string" }
+              - label: "Category"
                 widget: list
                 fields:
-                  - { label: "Skill", name: "name", widget: "string" }
+                  - label: "Skill"
+                    widget: list
+                    fields:
+                      - { label: "Skill", name: "name", widget: "string" }
+                      - { label: "Percentage", name: "percentage", widget: "number", required: false }
           - label: "Experience"
             name: experience
             widget: "object"
@@ -102,8 +107,9 @@ collections:
     files:
       - name: "mystorycontent"
         label: "My Story Content"
-        media_folder: "_data/media/story"
         file: "_data/story.json"
+        path: "_data/media/story"
+        media_folder: ""
         fields:
           - label: "Story"
             name: story
@@ -125,7 +131,8 @@ collections:
       - name: "portfoliocontent"
         label: "Portfolio Content"
         file: "_data/portfolio.json"
-        media_folder: "_data/media/portfolio"
+        path: "_data/media/portfolio"
+        media_folder: ""
         fields:
           - label: "Portfolio"
             name: "portfolio"
@@ -134,7 +141,7 @@ collections:
               - { label: "Portfolio title", name: "portfolio_title", widget: "string" }
               - { label: "Portfolio content", name: "portfolio_content", widget: "markdown" }
               - label: "Projects"
-                name: "project"
+                name: "projects"
                 widget: list
                 fields:
                   - { label: "Project Title", name: "title", widget: "string" }
