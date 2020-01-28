@@ -76,11 +76,13 @@ collections:
             widget: "object"
             fields:
               - { label: "Skills title", name: "skills_title", widget: "string" }
-              - label: "Skills Title"
+              - label: "Categories"
+                name: categories
                 widget: list
                 fields:
                   - { label: "Category title", name: "category_title", widget: "string" }
-                  - label: "Skill"
+                  - label: "Category"
+                    name: category
                     widget: list
                     fields:
                       - { label: "Skill", name: "name", widget: "string" }
@@ -92,11 +94,12 @@ collections:
               - { label: "Experience title", name: "experience_title", widget: "string" }
               - label: "Job item"
                 widget: list
+                name: job
                 fields:
                   - { label: "Company", name: "company", widget: "string" }
                   - { label: "Position", name: "position", widget: "string" }
-                  - { label: "From", name: "from", widget: "datetime" }
-                  - { label: "To", name: "to", widget: "datetime" }
+                  - { label: "From", name: "from", widget: "string" }
+                  - { label: "To", name: "to", widget: "string" }
                   - { label: "Description", name: "description", widget: "markdown" }
   - name: "mystory"
     label: "My Story page"

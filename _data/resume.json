@@ -1,36 +1,149 @@
 {
-  "name": "CV / Resumé",
-  "about_title": "About me",
-  "about_content": "<p>I’ve been a professional designer for the past 15 years. Since I was a teen that I am stunned with the Internet and started my amateur designs with FrontPage 98 and since that day I didn’t stop learning and pursuing new challenges that keep me up to date in this field of constant innovation.</p><p>During my professional career I was surrounded by all types of profiles and one of my virtues was to connect and include all these people in the design process to make a useful, accessible, feasible product, and create a great user experience.</p><p><ul><li><a href='https://otto.com.ar/OZ.pdf'>Single page Resumé PDF (~500kb)</a></li><li><a href='https://otto.com.ar/OZ-FULL-EN.pdf'>Full Resumé PDF (~256kb)</a></li><li><a href='https://www.linkedin.com/in/ottozaiser/' target='_blank'>LinkedIn Profile</a></li><li><a class='highlight' href='/story'>Read My Story >></a></li></ul></p>",
-  "about_image": "/_data/media/me-real.png",
-  "resume": {
-    "name": "OZ.pdf",
-    "full_resume": "OZ-FULL-EN.pdf"
-  },
-  "skills": {
-    "skills_title": "\"Skills, Knowledge and Tools",
-    "undefined": [
-      {
-        "category_title": "UI Design",
-        "undefined": [
-          {
-            "name": "Design systems",
-            "percentage": 79
-          }
-        ]
-      }
-    ]
-  },
-  "experience": {
-    "experience_title": "Job Experience",
-    "undefined": [
-      {
-        "company": "Nearpod",
-        "position": "Designer",
-        "from": "2020-01-28T03:47:36.678Z",
-        "to": "2019-12-30T03:47:36.716Z",
-        "description": "<p>The Network Information Center Argentina, or NIC Argentina, is a government office responsible for operating the ‘.ar’ country code top-level domain (ccTLD).</p><p>Responsibilities:</p><ul><li>Design Team management</li><li>Design consulting</li><li>Optimization of process and methodologies</li><li>Institutional communications</li><li>User centered design</li><li>Heuristics analysis</li><li>UI Design</li><li>CMS front-end development (Drupal &amp; Wordpress)</li><li>Blockchain applications front-end development (Timestamp/Smartvote) </li></ul>"
-      }
-    ]
-  }
+	"name": "CV / Resumé",
+	"about_title": "About me",
+	"about_content": "<p>I’ve been a professional designer for the past 15 years. Since I was a teen that I am stunned with the Internet and started my amateur designs with FrontPage 98 and since that day I didn’t stop learning and pursuing new challenges that keep me up to date in this field of constant innovation.</p><p>During my professional career I was surrounded by all types of profiles and one of my virtues was to connect and include all these people in the design process to make a useful, accessible, feasible product, and create a great user experience.</p><p><ul><li><a href='https://otto.com.ar/OZ.pdf'>Single page Resumé PDF (~500kb)</a></li><li><a href='https://otto.com.ar/OZ-FULL-EN.pdf'>Full Resumé PDF (~256kb)</a></li><li><a href='https://www.linkedin.com/in/ottozaiser/' target='_blank'>LinkedIn Profile</a></li><li><a class='highlight' href='/story'>Read My Story >></a></li></ul></p>",
+	"about_image": "/_data/media/me-real.png",
+	"resume": {
+		"name": "OZ.pdf",
+		"full_resume": "OZ-FULL-EN.pdf"
+	},
+	"skills": {
+		"skills_title": "Skills, Knowledge and Tools",
+		"categories": [
+			{
+				"category_title": "UI Design",
+				"category": [
+					{ "name": "Design systems" },
+					{ "name": "Atom Desig" },
+					{ "name": "Mobile iOS" },
+					{ "name": "Responsive" },
+					{ "name": "Motion UI" },
+					{ "name": "Icons" }
+				]
+			},
+			{
+				"category_title": "UX Design",
+				"category": [
+					{ "name": "User Centered Design" },
+					{ "name": "Research and Interviews" },
+					{ "name": "User journey" },
+					{ "name": "Personas" },
+					{ "name": "Heuristics" },
+					{ "name": "Wireframes" },
+					{ "name": "Prototypes" },
+					{ "name": "User Tests" },
+					{ "name": "Metrics and Analysis" }
+				]
+			},
+			{
+				"category_title": "Front-End",
+				"category": [
+					{ "name": "HTML5" },
+					{ "name": "CSS3" },
+					{ "name": "SASS" },
+					{ "name": "CSS Frameworks" },
+					{ "name": "Javascript" },
+					{ "name": "jQuery" },
+					{ "name": "Vue.js" },
+					{ "name": "Task runners" },
+					{ "name": "Git" }
+				]
+			},
+			{
+				"category_title": "Video",
+				"category": [
+					{ "name": "Motion graphics" },
+					{ "name": "After Effects" },
+					{ "name": "2d animation" },
+					{ "name": "Video edition" },
+					{ "name": "Audio edition" }
+				]
+			},
+			{
+				"category_title": "Art",
+				"category": [{ "name": "Illustration" }, { "name": "Character design" }, { "name": "Cartoons" }, { "name": "Comics" }]
+			},
+			{
+				"category_title": "Graphic Design",
+				"category": [{ "name": "Branding" }, { "name": "Typography" }, { "name": "Brochures" }, { "name": "Merchandising" }]
+			},
+			{
+				"category_title": "Design Tools",
+				"category": [
+					{ "name": "Pencil & Paper", "percentage": "100" },
+					{ "name": "Sketch", "percentage": "80" },
+					{ "name": "Figma", "percentage": "70" },
+					{ "name": "Invision", "percentage": "90" },
+					{ "name": "Photoshop", "percentage": "100" },
+					{ "name": "Illustrator", "percentage": "100" },
+					{ "name": "After Effects", "percentage": "90" },
+					{ "name": "Premiere", "percentage": "75" },
+					{ "name": "Audition", "percentage": "50" },
+					{ "name": "Visual Studio Code", "percentage": "80" }
+				]
+			},
+			{
+				"category_title": "Standards and methodology",
+				"category": [
+					{ "name": "Agile SCRUM" },
+					{ "name": "LEAN UX" },
+					{ "name": "SCORM (e-learning)" },
+					{ "name": "W3C" },
+					{ "name": "Accessibility (WAI-ARIA)" },
+					{ "name": "Screen readers" }
+				]
+			},
+			{
+				"category_title": "Admin tools",
+				"category": [{ "name": "Office" }, { "name": "Trello" }, { "name": "Jira" }, { "name": "Redmine" }]
+			}
+		]
+	},
+	"experience": {
+		"experience_title": "Job Experience",
+		"job": [
+			{
+				"company": "NIC Argentina",
+				"position": "Design Lead",
+				"from": "03/2018",
+				"to": "12/2019",
+				"description": "<p>The Network Information Center Argentina, or NIC Argentina, is a government office responsible for operating the ‘.ar’ country code top-level domain (ccTLD).</p><p>Responsibilities:</p><ul><li>Design Team management</li><li>Design consulting</li><li>Optimization of process and methodologies</li><li>Institutional communications</li><li>User centered design</li><li>Heuristics analysis</li><li>UI Design</li><li>CMS front-end development (Drupal &amp; Wordpress)</li><li>Blockchain applications front-end development (Timestamp/Smartvote) </li></ul>"
+			},
+			{
+				"company": "Hexacta",
+				"position": "Senior Product Designer",
+				"from": "7/2017",
+				"to": "2/2018",
+				"description": "<p>Hexacta is an offshore & nearshore IT consulting company. The client was Nearpod (education engagement application) and I was working alongside the development pods, Product Owners and the Product Manager in the US.</p><p>Responsibilities and tools:</p><ul><li>Product Design (Web App, iPad and iPhone)</li><li>New features and improvement proposals</li><li>Design consulting</li><li>Graphics and illustrations</li><li>Motion UI</li><li>Sketch, Invision, Zeplin y Avocode.</li><li>Adobe Suite (Photoshop, Illustrator, After Effects)</li></ul>"
+			},
+			{
+				"company": "Globant",
+				"position": "Senior Multimedia Designer",
+				"from": "03/2018",
+				"to": "08/2018",
+				"description": "<p>Globant is an IT and Software Development company operating around the world. I was the technical lead of the team and worked on several projects mostly design and development of simulations and tutorials for American Companies (StateFarm, FOX, Microsoft, T-Mobile).</p><p>Responsibilities and tools:</p><ul><li>Technical point of contact</li><li>Design consulting</li><li>Working alongside the client</li><li>HTML5 y CSS3</li><li>UI design</li><ul><li>Templates and Reusable components</li><li>Interactions</li></ul><li>Development</li><ul><li>HTML5</li><li>CSS3</li><li>Javascript</li><li>Jquery</li></ul><li>Motion graphics</li><ul><li>Simulations and Tutorials</li><li>Audio &amp; Video post-production</li></ul><li>Adobe Suite (Photoshop, Illustrator, After Effects)</li></ul>"
+			},
+			{
+				"company": "TeleTech",
+				"position": "Technical Leader and Senior Media Specialist",
+				"from": "05/2006",
+				"to": "02/2014",
+				"description": "<p>TeleTech is a business process outsourcing company headquartered in Englewood, Colorado. I was part of the team that made e-Learning training for all employees around the world in the company but we also worked with Marketing when was required. I started as a Media Specialist and ended as a Technical Leader.</p><p>Responsibilities and tools:</p><ul><li>Design and development of e-Learning courses</li><li>Technical point of contact</li><li>Optimization of process and methodologies</li><li>Design consulting</li><li>Working alongside the international team</li><li>Branding</li><ul><li>Sub-brands</li><li>Landing pages</li><li>Microsites</li><li>Merchandising</li></ul><li>UI design</li><ul><li>Visual proposals</li><li>Templates</li><li>Interactions</li></ul><li>Development</li><ul><li>Flash</li><li>Actionscript 2.0 / 3.0</li><li>XML</li><li>Reusable components</li><li>SCORM standards</li></ul><li>Motion</li><ul><li>Motion graphics</li><li>TV Spots</li><li>2D vector animations</li><li>Audio &amp; Video post-production</li></ul><li>Adobe Suite (Photoshop, Illustrator, Flash, After Effects)</li></ul>"
+			},
+			{
+				"company": "AXG Tecnonexo",
+				"position": "Junior Web Designer",
+				"from": "11/2004",
+				"to": "12/2005",
+				"description": "<p>Tecnonexo was a company that made e-Learning courses for Argentina, Spain and the United States. I started as a junior designer of a big design team.</p><p>Responsibilities and tools:</p><ul><li>Development of e-Learning courses</li><ul><li>Look&amp;Feel</li><li>Interactions</li><li>Graphics</li><li>HTML 4.0 y CSS 2.0</li><li>Flash, XML and Actionscript 2.0&nbsp;</li><li>SCORM standards</li></ul><li>Animations Flash Vectoriales 2D</li><li>Adobe Suite (Photoshop, Illustrator, Flash)</li></ul>"
+			},
+			{
+				"company": "Freelance ",
+				"position": "Multimedia Designer",
+				"from": "2002",
+				"to": "Today",
+				"description": "<p>Freelance work makes me explore different aspects of design and expand my set of tools and knowledge. My career as a designer was always web related but as a freelance I could make illustrations, animations and motion graphics.</p><p>What I do:</p><ul><li>Animation</li><ul><li>Motion Graphics</li><li>2D animation</li></ul><li>Illustration</li><ul><li>Cartoons</li><li>Children illustration</li><li>Infographics</li></ul><li>Branding</li><li>Web</li><ul><li>Microsites</li><li>Wordpress</li><li>Banners</li></ul></ul>"
+			}
+		]
+	}
 }
