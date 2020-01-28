@@ -21,7 +21,6 @@ collections:
         file: "_data/socialmedia.json"
         fields:
           - label: "Social Network"
-            label_singular: "Social Network"
             name: "socialitem"
             widget: list
             fields:
@@ -34,7 +33,6 @@ collections:
         fields:
           - label: "Menu item"
             name: "menuitem"
-            label_singular: "Menu item"
             widget: list
             fields:
               - { label: "Title", name: "name", widget: "string" }
@@ -62,11 +60,12 @@ collections:
       - name: "resumecontent"
         label: "Resumé Content"
         file: "_data/resume.json"
+        media_folder: "_data/media/resume"
         fields:
           - { label: "Resume title", name: "name", widget: "string" }
-          - { label: "Resume subtitle", name: "resume_subtitle", widget: "markdown" }
-          - { label: "Resume content", name: "resume_content", widget: "markdown" }
-          - { label: "Resume image", name: "image", widget: "image" }
+          - { label: "About Me title", name: "about_title", widget: "markdown" }
+          - { label: "About Me content", name: "about_content", widget: "markdown" }
+          - { label: "About Me image", name: "about_image", widget: "image" }
           - label: "PDFs Resumés"
             name: resume
             widget: "object"
@@ -79,7 +78,6 @@ collections:
             fields:
               - { label: "Skills title", name: "skills_title", widget: "string" }
               - label: "Skill item"
-                label_singular: "Skill item"
                 widget: list
                 fields:
                   - { label: "Skill", name: "name", widget: "string" }
@@ -89,7 +87,6 @@ collections:
             fields:
               - { label: "Experience title", name: "experience_title", widget: "string" }
               - label: "Job item"
-                label_singular: "Job item"
                 widget: list
                 fields:
                   - { label: "Company", name: "company", widget: "string" }
@@ -105,6 +102,7 @@ collections:
     files:
       - name: "mystorycontent"
         label: "My Story Content"
+        media_folder: "_data/media/story"
         file: "_data/story.json"
         fields:
           - label: "Story"
@@ -116,7 +114,7 @@ collections:
               - { label: "song", name: "song", widget: "string" }
               - { label: "content", name: "content", widget: "markdown" }
               - { label: "color", name: "color", widget: "string" }
-              - { label: "url", name: "url", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
               - { label: "alt", name: "alt", widget: "string" }
   - name: "portfolio"
     label: "Portfolio page"
@@ -127,18 +125,19 @@ collections:
       - name: "portfoliocontent"
         label: "Portfolio Content"
         file: "_data/portfolio.json"
+        media_folder: "_data/media/portfolio"
         fields:
           - label: "Portfolio"
-            name: portfolio
+            name: "portfolio"
             widget: "object"
             fields:
               - { label: "Portfolio title", name: "portfolio_title", widget: "string" }
               - { label: "Portfolio content", name: "portfolio_content", widget: "markdown" }
-              - label: "Portfolio item"
-                label_singular: "Portfolio item"
+              - label: "Projects"
+                name: "project"
                 widget: list
                 fields:
-                  - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Content", name: "content", widget: "markdown" }
-                  - { label: "Cover image", name: "image", widget: "image" }
-                  - { label: "File location", name: "file", widget: "string" }
+                  - { label: "Project Title", name: "title", widget: "string" }
+                  - { label: "Project Content", name: "content", widget: "markdown" }
+                  - { label: "Project Cover image", name: "image", widget: "image" }
+                  - { label: "Project File location", name: "file", widget: "string" }
