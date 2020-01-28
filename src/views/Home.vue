@@ -38,7 +38,7 @@ export default {
         this.homejson = response.data;
       })
       .catch(error => {
-        console.log(error);
+        alert(error);
       });
   }
 };

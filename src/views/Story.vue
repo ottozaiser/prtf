@@ -81,7 +81,7 @@ export default {
         AOS.init();
       })
       .catch(error => {
-        console.log(error);
+        alert(error);
       });
   },
   methods: {

@@ -29,7 +29,7 @@ export default {
         this.social = response.data.socialitem;
       })
       .catch(error => {
-        console.log(error);
+        alert(error);
       });
   }
 };

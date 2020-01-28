@@ -72,7 +72,7 @@ export default {
         this.menujson = response.data.menuitem;
       })
       .catch(error => {
-        console.log(error);
+        alert(error);
       });
   },
   mounted: function() {
