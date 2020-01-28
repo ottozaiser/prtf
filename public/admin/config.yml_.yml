@@ -1,0 +1,138 @@
+backend:
+  name: git-gateway
+  branch: dev
+
+media_folder: _data/media
+
+collections:
+  - name: "settings"
+    label: "Settings"
+    delete: false # Prevent users from deleting documents in this collection
+    editor:
+      preview: false
+    files:
+      - name: "general"
+        label: "Site Settings"
+        file: "_data/settings.json"
+        fields:
+          - { label: "Global title", name: "site_title", widget: "string" }
+          - label: "PDFs Resumés"
+            name: resume
+            widget: "object"
+            fields:
+              - { label: "Single Page Resumé", name: "name", widget: "string" }
+              - { label: "Full Resumé", name: "full_resume", widget: "string" }
+          - label: "Social Medias"
+            label_singular: "Social"
+            widget: list
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Hover", name: "hover", widget: "string" }
+              - { label: "Link", name: "link", widget: "string" }
+      - name: "menu"
+        label: "Menu Settings"
+        file: "_data/menu.json"
+        fields:
+          - label: "Menu item"
+            label_singular: "Menu item"
+            widget: list
+            fields:
+              - { label: "Title", name: "name", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+  - name: "home"
+    label: "Home page"
+    delete: false # Prevent users from deleting documents in this collection
+    editor:
+      preview: false
+    files:
+      - name: "homecontent"
+        label: "Home Content"
+        file: "_data/home.json"
+        fields:
+          - { label: "Home title", name: "name", widget: "string" }
+          - { label: "Home subtitle", name: "home_subtitle", widget: "markdown" }
+          - { label: "Home content", name: "home_content", widget: "markdown" }
+          - { label: "Home image", name: "image", widget: "image" }
+  - name: "resume"
+    label: "Resumé page"
+    delete: false # Prevent users from deleting documents in this collection
+    editor:
+      preview: false
+    files:
+      - name: "resumecontent"
+        label: "Resumé Content"
+        file: "_data/resume.json"
+        fields:
+          - { label: "Resume title", name: "name", widget: "string" }
+          - { label: "Resume subtitle", name: "resume_subtitle", widget: "markdown" }
+          - { label: "Resume content", name: "resume_content", widget: "markdown" }
+          - { label: "Resume image", name: "image", widget: "image" }
+          - label: "Skills"
+            name: skills
+            widget: "object"
+            fields:
+              - { label: "Skills title", name: "skills_title", widget: "string" }
+              - label: "Skill item"
+                label_singular: "Skill item"
+                widget: list
+                fields:
+                  - { label: "Skill", name: "name", widget: "string" }
+          - label: "Experience"
+            name: experience
+            widget: "object"
+            fields:
+              - { label: "Experience title", name: "experience_title", widget: "string" }
+              - label: "Job item"
+                label_singular: "Job item"
+                widget: list
+                fields:
+                  - { label: "Company", name: "company", widget: "string" }
+                  - { label: "Position", name: "position", widget: "string" }
+                  - { label: "From", name: "from", widget: "datetime" }
+                  - { label: "To", name: "to", widget: "datetime" }
+                  - { label: "Description", name: "description", widget: "markdown" }
+  - name: "mystory"
+    label: "My Story page"
+    delete: false # Prevent users from deleting documents in this collection
+    editor:
+      preview: false
+    files:
+      - name: "mystorycontent"
+        label: "My Story Content"
+        file: "_data/story.json"
+        fields:
+          - label: "Story"
+            name: story
+            widget: list
+            fields:
+              - { label: "title", name: "title", widget: "string" }
+              - { label: "subtitle", name: "subtitle", widget: "string" }
+              - { label: "song", name: "song", widget: "string" }
+              - { label: "content", name: "content", widget: "markdown" }
+              - { label: "color", name: "color", widget: "string" }
+              - { label: "url", name: "url", widget: "string" }
+              - { label: "alt", name: "alt", widget: "string" }
+  - name: "portfolio"
+    label: "Portfolio page"
+    delete: false # Prevent users from deleting documents in this collection
+    editor:
+      preview: false
+    files:
+      - name: "portfoliocontent"
+        label: "Portfolio Content"
+        file: "_data/portfolio.json"
+        fields:
+          - label: "Portfolio"
+            name: portfolio
+            widget: "object"
+            fields:
+              - { label: "Portfolio title", name: "portfolio_title", widget: "string" }
+              - { label: "Portfolio content", name: "portfolio_content", widget: "markdown" }
+              - label: "Portfolio item"
+                label_singular: "Portfolio item"
+                widget: list
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Content", name: "content", widget: "markdown" }
+                  - { label: "Cover image", name: "image", widget: "image" }
+                  - { label: "File location", name: "file", widget: "string" }
