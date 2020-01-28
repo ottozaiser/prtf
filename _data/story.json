@@ -1,0 +1,13 @@
+{
+  "story": [
+    {
+      "title": "‘82",
+      "subtitle": "Express Yourself",
+      "song": "https://open.spotify.com/track/4pW3aTX3kAmOaPJfc9UM12",
+      "content": "I was born with a great passion for <span class='highlight'>visual arts</span>. I watched all the cartoons available on TV and I was happy with a crayon on my hand. My parents thought that I had a talent for art, so they sent me to private lessons with art teachers that expanded my mind.",
+      "color": "#FAFFEE",
+      "url": "/images/story/01.png",
+      "alt": "A kid drawing the wall"
+    }
+  ]
+}
