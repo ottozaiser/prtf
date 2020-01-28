@@ -1,0 +1,29 @@
+{
+  "socialitem": [
+    {
+      "name": "linkedin",
+      "hover": "Profile",
+      "link": "https://www.linkedin.com/in/ottozaiser/"
+    },
+    {
+      "name": "vimeo",
+      "hover": "Motion",
+      "link": "http://www.vimeo.com/ottozaiser"
+    },
+    {
+      "name": "tumblr",
+      "hover": "Art",
+      "link": "http://www.ottozaiser.com/"
+    },
+    {
+      "name": "instagram",
+      "hover": "Follow me!",
+      "link": "https://www.instagram.com/ottoescapo/"
+    },
+    {
+      "name": "dribbble",
+      "hover": "Follow me!",
+      "link": "https://dribbble.com/ottozaiser/"
+    }
+  ]
+}
