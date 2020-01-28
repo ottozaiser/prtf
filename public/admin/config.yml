@@ -24,6 +24,7 @@ collections:
               - { label: "Full Resumé", name: "full_resume", widget: "string" }
           - label: "Social Medias"
             label_singular: "Social"
+            name: "social"
             widget: list
             fields:
               - { label: "Name", name: "name", widget: "string" }
@@ -34,6 +35,7 @@ collections:
         file: "_data/menu.json"
         fields:
           - label: "Menu item"
+            name: "menuitem"
             label_singular: "Menu item"
             widget: list
             fields:
