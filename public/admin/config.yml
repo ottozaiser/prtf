@@ -67,7 +67,7 @@ collections:
         label: "Resumé Content"
         file: "public/_data/resume.json"
         fields:
-          - { label: "Resume title", name: "name", widget: "string" }
+          - { label: "Resume title", name: "title", widget: "string" }
           - label: "About me"
             name: about
             widget: "object"
