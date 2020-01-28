@@ -1,15 +1,10 @@
 <template>
   <div class="skill">
     <h3>{{ title }}</h3>
-    <ul v-if="typeof skills[0] == 'string'">
+    <ul>
       <li v-bind:key="value.id" v-for="value in skills">
-        {{ value }}
-      </li>
-    </ul>
-    <ul v-if="typeof skills[0] == 'object'">
-      <li v-bind:key="value.id" v-for="value in skills">
-        {{ value[0] }}
-        <Percentage v-bind:number="value[1]" />
+        {{ value.name }}
+        <Percentage v-if="value.percentage" v-bind:number="value.percentage" />
       </li>
     </ul>
   </div>

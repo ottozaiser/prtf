@@ -19,51 +19,45 @@
         </button>
         <transition name="slide">
           <div class="panel-menu" v-show="showMenu" id="menu">
-            <h1 class="brand">{{ this.djson.title }}</h1>
+            <h1 class="brand">{{ this.settings.site_title }}</h1>
             <h1 id="dialog-title" class="sr-only">Main navigation</h1>
             <ul class="menu">
               <li
                 class="menu-item"
                 @click="toggleMenu"
                 v-bind:key="index"
-                v-for="(item, index) in this.djson.menu"
+                v-for="(item, index) in this.menujson"
               >
-                <router-link :to="item[1]" v-if="item[1].startsWith('/')">
-                  {{ item[0] }}
-                </router-link>
-                <a :href="item[1]" target="_blank" v-else>
-                  {{ item[0] }}
-                </a>
+                <router-link :to="item.url" v-if="item.url.startsWith('/')">{{ item.name }}</router-link>
+                <a :href="item.url" target="_blank" v-else>{{ item.name }}</a>
               </li>
             </ul>
             <!-- <button aria-label="Close Navigation" @click="toggleMenu">x</button>  -->
-            <Social class="social" :djson="djson" />
+            <Social class="social" />
           </div>
         </transition>
       </nav>
     </header>
     <transition name="fade">
-      <div
-        v-show="showMenu"
-        class="overlay"
-        tabindex="-1"
-        id="overlay"
-        @click="toggleMenu"
-      ></div>
+      <div v-show="showMenu" class="overlay" tabindex="-1" id="overlay" @click="toggleMenu"></div>
     </transition>
   </div>
 </template>
 
 <script>
 import Social from "@/components/Social.vue";
+import axios from "axios";
 export default {
   name: "MainNav",
   components: {
     Social
   },
-  props: ["djson"],
+  props: {
+    settings: Object
+  },
   data: function() {
     return {
+      menujson: null,
       showMenu: false,
       navEl: undefined,
       menuEl: undefined,
@@ -71,7 +65,18 @@ export default {
       focusedElBeforeOpen: undefined
     };
   },
+  created: function() {
+    axios
+      .get("/_data/menu.json")
+      .then(response => {
+        this.menujson = response.data.menuitem;
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  },
   mounted: function() {
+    //this.menujson = this.loadData("/_data/menu.json");
     this.navEl = document.getElementById("nav");
     this.menuEl = document.getElementById("menu");
     this.overlayEl = document.getElementById("overlay");

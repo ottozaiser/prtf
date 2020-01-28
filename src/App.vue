@@ -2,16 +2,17 @@
   <div id="app">
     <div class="alert" v-if="ie">
       <p>
-        You are using an <b>outdated</b> browser. Please
-        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
-        your experience and security.
+        You are using an
+        <b>outdated</b> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and
+        security.
       </p>
     </div>
-    <Loader v-if="loading" />
-    <div v-if="this.djson != null">
-      <MainNav ref="navComponent" :djson="djson" />
+    <Loader v-show="loading" />
+    <div v-if="this.settings">
+      <MainNav ref="navComponent" :settings="settings" />
       <main>
-        <router-view :djson="djson" />
+        <router-view />
       </main>
     </div>
   </div>
@@ -30,9 +31,9 @@ export default {
   },
   data: function() {
     return {
+      settings: null,
       loading: true,
-      ie: false,
-      djson: null
+      ie: false
     };
   },
   beforeMount: function() {
@@ -46,30 +47,17 @@ export default {
     this.ie = isIE();
   },
   created: function() {
-    this.loader(true);
-    this.loadData("/ptrf.json");
+    axios
+      .get("/_data/settings.json")
+      .then(response => {
+        this.settings = response.data;
+        this.loading = false;
+      })
+      .catch(error => {
+        console.log(error);
+      });
   },
   methods: {
-    loadData(json) {
-      var self = this;
-      axios
-        .get(json)
-        .then(function(response) {
-          // handle success
-          self.djson = response.data;
-          self.loader(false);
-        })
-        .catch(function() {
-          // handle error
-          //console.log(error);
-        })
-        .finally(function() {
-          // always executed
-        });
-    },
-    loader(show) {
-      this.loading = show;
-    },
     onToggleCanva(menuVisible) {
       this.canvaOffset = menuVisible;
     }

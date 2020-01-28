@@ -1,38 +1,50 @@
 <template>
-  <div class="portfolio wrapper">
-    <h1>{{ this.djson.portfolio.title }}</h1>
-    <div v-html="this.djson.portfolio.content"></div>
+  <div class="portfolio wrapper" v-if="this.portjson">
+    <h1>{{ this.portjson.title }}</h1>
+    <div v-html="this.portjson.content"></div>
     <div class="projects">
       <Project
         class="project"
         data-aos="flip-up"
         data-aos-once="true"
-        v-for="post in this.djson.portfolio.proyectos"
+        v-for="post in this.portjson.projects"
         v-bind:key="post.id"
         v-bind:title="post.title"
         v-bind:content="post.content"
         v-bind:location="post.location"
         v-bind:file="post.file"
-        v-bind:cover="post.cover"
+        v-bind:cover="post.image"
       />
     </div>
   </div>
 </template>
 
 <script>
+import axios from "axios";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Project from "@/components/Project.vue";
 
 export default {
   name: "porfolio",
-  props: ["djson"],
   components: {
     Project
   },
+  data: function() {
+    return {
+      portjson: null
+    };
+  },
   created: function() {
-    //console.log(this.djson)
-    AOS.init();
+    axios
+      .get("/_data/portfolio.json")
+      .then(response => {
+        this.portjson = response.data.portfolio;
+        AOS.init();
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }
 };
 </script>

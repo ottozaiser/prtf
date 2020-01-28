@@ -1,5 +1,5 @@
 <template>
-  <div class="story">
+  <div class="story" v-if="this.steps">
     <Progress />
     <section
       v-bind:key="index"
@@ -19,7 +19,7 @@
           <p v-html="item.content"></p>
         </div>
         <div class="img-container" data-aos="fade-up" data-aos-delay="50">
-          <progressive-img class="image" :src="item.url" :alt="item.alt" />
+          <progressive-img class="image" :src="item.image" :alt="item.alt" />
         </div>
       </div>
 
@@ -35,10 +35,8 @@
       </a>
       <div class="bottom-btns" v-if="index == steps.length - 1">
         <router-link v-tooltip="'Home'" to="/" class="icon-btn">
-          <font-awesome-icon aria-hidden="true" :icon="['fa', 'home']" /><span
-            class="sr-only"
-            >Home</span
-          >
+          <font-awesome-icon aria-hidden="true" :icon="['fa', 'home']" />
+          <span class="sr-only">Home</span>
         </router-link>
         <a
           v-tooltip="'Read story again'"
@@ -46,10 +44,7 @@
           v-on:click.stop.prevent="handleClick(0)"
           class="icon-btn"
         >
-          <font-awesome-icon
-            aria-hidden="true"
-            :icon="['fa', 'angle-double-up']"
-          />
+          <font-awesome-icon aria-hidden="true" :icon="['fa', 'angle-double-up']" />
           <span class="sr-only">Read story again</span>
         </a>
       </div>
@@ -60,6 +55,7 @@
 </template>
 
 <script>
+import axios from "axios";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Progress from "@/components/Progress.vue";
@@ -68,19 +64,25 @@ import animateScrollTo from "animated-scroll-to";
 
 export default {
   name: "story",
-  props: ["djson"],
   mixins: [ClickHandler],
   components: {
     Progress
   },
   data: function() {
     return {
-      steps: undefined
+      steps: null
     };
   },
   created: function() {
-    this.steps = this.djson.story.steps;
-    AOS.init();
+    axios
+      .get("/_data/story.json")
+      .then(response => {
+        this.steps = response.data.story;
+        AOS.init();
+      })
+      .catch(error => {
+        console.log(error);
+      });
   },
   methods: {
     getBackground(url) {

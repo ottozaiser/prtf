@@ -1,7 +1,7 @@
 {
 	"portfolio": {
-		"portfolio_title": "Portfolio",
-		"portfolio_content": "<p>I am currently working on this section.</p><p>In the meantime, you can see my work on <b>PDFs</b>:</p>",
+		"title": "Portfolio",
+		"content": "<p>I am currently working on this section.</p><p>In the meantime, you can see my work on <b>PDFs</b>:</p>",
 		"projects": [
 			{
 				"title": "Top-Level Domain Opening",

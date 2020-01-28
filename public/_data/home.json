@@ -1,0 +1,20 @@
+{
+	"title": "Home",
+	"subtitle": "Hi! I'm <span class='highlight'>Otto</span>",
+	"content": "I've been a professional designer for the past 15 years.",
+	"image": "/_data/media/me.png",
+	"links": [
+		{
+			"name": "CV / Resumé",
+			"url": "/resume"
+		},
+		{
+			"name": "My story",
+			"url": "/story"
+		},
+		{
+			"name": "Portfolio",
+			"url": "/portfolio"
+		}
+	]
+}

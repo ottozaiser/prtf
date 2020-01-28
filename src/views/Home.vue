@@ -1,32 +1,24 @@
 <template>
-  <div class="home">
+  <div class="home" v-if="this.homejson">
     <div class="layout">
-      <progressive-img class="image" :src="this.djson.home.url" alt="" />
+      <progressive-img class="image" :src="this.homejson.image" alt />
       <div class="content">
-        <h1 v-html="this.djson.home.subtitle"></h1>
-        <p v-html="this.djson.home.content"></p>
+        <h1 v-html="this.homejson.subtitle"></h1>
+        <p v-html="this.homejson.content"></p>
         <ul class="menu">
-          <li class="menu-item">
-            <router-link to="/resume">{{
-              this.djson.resume.title
-            }}</router-link>
-          </li>
-          <li class="menu-item">
-            <router-link to="/story">{{ this.djson.story.title }}</router-link>
-          </li>
-          <li class="menu-item">
-            <router-link to="/portfolio">{{
-              this.djson.portfolio.title
-            }}</router-link>
+          <li class="menu-item" v-bind:key="index" v-for="(item, index) in this.homejson.links">
+            <router-link :to="item.url" v-if="item.url.startsWith('/')">{{ item.name }}</router-link>
+            <a :href="item.url" target="_blank" v-else>{{ item.name }}</a>
           </li>
         </ul>
       </div>
     </div>
-    <Social class="social" :djson="djson" />
+    <Social class="social" />
   </div>
 </template>
 
 <script>
+import axios from "axios";
 import Social from "@/components/Social.vue";
 
 export default {
@@ -34,7 +26,21 @@ export default {
   components: {
     Social
   },
-  props: ["djson"]
+  data: function() {
+    return {
+      homejson: null
+    };
+  },
+  created: function() {
+    axios
+      .get("/_data/home.json")
+      .then(response => {
+        this.homejson = response.data;
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }
 };
 </script>
 

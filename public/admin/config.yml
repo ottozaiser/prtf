@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: dev
 
-media_folder: _data/media
+media_folder: public/_data/media
 
 collections:
   - name: "settings"
@@ -13,12 +13,12 @@ collections:
     files:
       - name: "general"
         label: "Site Settings"
-        file: "_data/settings.json"
+        file: "public/_data/settings.json"
         fields:
           - { label: "Global title", name: "site_title", widget: "string" }
       - name: "socialmedia"
         label: "Social Media Settings"
-        file: "_data/socialmedia.json"
+        file: "public/_data/socialmedia.json"
         fields:
           - label: "Social Network"
             name: "socialitem"
@@ -26,10 +26,10 @@ collections:
             fields:
               - { label: "Name", name: "name", widget: "string" }
               - { label: "Hover", name: "hover", widget: "string" }
-              - { label: "Link", name: "link", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
       - name: "menu"
         label: "Menu Settings"
-        file: "_data/menu.json"
+        file: "public/_data/menu.json"
         fields:
           - label: "Menu item"
             name: "menuitem"
@@ -45,12 +45,18 @@ collections:
     files:
       - name: "homecontent"
         label: "Home Content"
-        file: "_data/home.json"
+        file: "public/_data/home.json"
         fields:
-          - { label: "Home title", name: "name", widget: "string" }
-          - { label: "Home subtitle", name: "home_subtitle", widget: "markdown" }
-          - { label: "Home content", name: "home_content", widget: "markdown" }
+          - { label: "Home title", name: "title", widget: "string" }
+          - { label: "Home subtitle", name: "subtitle", widget: "markdown" }
+          - { label: "Home content", name: "content", widget: "markdown" }
           - { label: "Home image", name: "image", widget: "image" }
+          - label: "Home links"
+            name: "links"
+            widget: list
+            fields:
+              - { label: "Title", name: "name", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
   - name: "resume"
     label: "Resumé page"
     delete: false # Prevent users from deleting documents in this collection
@@ -59,12 +65,16 @@ collections:
     files:
       - name: "resumecontent"
         label: "Resumé Content"
-        file: "_data/resume.json"
+        file: "public/_data/resume.json"
         fields:
           - { label: "Resume title", name: "name", widget: "string" }
-          - { label: "About Me title", name: "about_title", widget: "string" }
-          - { label: "About Me content", name: "about_content", widget: "markdown" }
-          - { label: "About Me image", name: "about_image", widget: "image" }
+          - label: "About me"
+            name: about
+            widget: "object"
+            fields:
+              - { label: "About Me title", name: "title", widget: "string" }
+              - { label: "About Me content", name: "content", widget: "markdown" }
+              - { label: "About Me image", name: "image", widget: "image" }
           - label: "PDFs Resumés"
             name: resume
             widget: "object"
@@ -109,7 +119,7 @@ collections:
     files:
       - name: "mystorycontent"
         label: "My Story Content"
-        file: "_data/story.json"
+        file: "public/_data/story.json"
         fields:
           - label: "Story"
             name: story
@@ -130,14 +140,14 @@ collections:
     files:
       - name: "portfoliocontent"
         label: "Portfolio Content"
-        file: "_data/portfolio.json"
+        file: "public/_data/portfolio.json"
         fields:
           - label: "Portfolio"
             name: "portfolio"
             widget: "object"
             fields:
-              - { label: "Portfolio title", name: "portfolio_title", widget: "string" }
-              - { label: "Portfolio content", name: "portfolio_content", widget: "markdown" }
+              - { label: "Portfolio title", name: "title", widget: "string" }
+              - { label: "Portfolio content", name: "content", widget: "markdown" }
               - label: "Projects"
                 name: "projects"
                 widget: list

@@ -2,14 +2,10 @@
   <div class="social">
     <h2 class="sr-only">Social media</h2>
     <ul class="socialmedia">
-      <li
-        class="social-item"
-        v-bind:key="index"
-        v-for="(item, index) in this.social"
-      >
-        <a target="_blank" :href="item[2]" class="icon-btn" v-tooltip="item[1]">
-          <font-awesome-icon :icon="['fab', item[0]]" aria-hidden="true" />
-          <span class="sr-only">{{ item[0] }}</span>
+      <li class="social-item" v-bind:key="index" v-for="(item, index) in this.social">
+        <a target="_blank" :href="item.url" class="icon-btn" v-tooltip="item.hover">
+          <font-awesome-icon :icon="['fab', item.name]" aria-hidden="true" />
+          <span class="sr-only">{{ item.name }}</span>
         </a>
       </li>
     </ul>
@@ -17,16 +13,24 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   name: "Social",
-  props: ["djson"],
   data: function() {
     return {
-      social: undefined
+      social: null
     };
   },
   created: function() {
-    this.social = this.djson.social;
+    axios
+      .get("/_data/socialmedia.json")
+      .then(response => {
+        this.social = response.data.socialitem;
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }
 };
 </script>

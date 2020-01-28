@@ -1,42 +1,38 @@
 <template>
-  <div class="resume wrapper">
-    <h1>{{ this.djson.resume.title }}</h1>
+  <div class="resume wrapper" v-if="this.resumejson">
+    <h1>{{ this.resumejson.title }}</h1>
     <section>
-      <h2>{{ this.djson.resume.sections[0] }}</h2>
+      <h2>{{ this.resumejson.about.title }}</h2>
       <div class="content">
-        <progressive-img class="image" :src="this.djson.resume.photo" />
-        <div
-          v-html="this.djson.resume.content"
-          class="dynamic-content"
-          @click="handleClicks"
-        ></div>
+        <progressive-img class="image" :src="this.resumejson.about.image" />
+        <div v-html="this.resumejson.about.content" class="dynamic-content" @click="handleClicks"></div>
       </div>
     </section>
-    <!-- <router-link to='/story'> {{ this.djson.resume.label }} </router-link> -->
+    <!-- <router-link to='/story'> {{ this.resumejson.label }} </router-link> -->
 
     <section>
-      <h2>{{ this.djson.resume.sections[1] }}</h2>
+      <h2>{{ this.resumejson.skills.skills_title }}</h2>
       <div class="skills">
         <Skill
           class="skill"
           data-aos="fade-up"
           data-aos-once="true"
-          v-for="(post, key) in this.djson.resume.skills[0]"
+          v-for="post in this.resumejson.skills.categories"
           v-bind:key="post.id"
-          v-bind:skills="post"
-          v-bind:title="key"
+          v-bind:skills="post.category"
+          v-bind:title="post.category_title"
         />
       </div>
     </section>
 
     <section>
-      <h2>{{ this.djson.resume.sections[2] }}</h2>
+      <h2>{{ this.resumejson.experience.experience_title }}</h2>
       <div class="jobs">
         <Job
           class="job"
           data-aos="fade-up"
           data-aos-once="true"
-          v-for="post in this.djson.resume.past"
+          v-for="post in this.resumejson.experience.job"
           v-bind:key="post.id"
           v-bind:position="post.position"
           v-bind:company="post.company"
@@ -51,6 +47,7 @@
 </template>
 
 <script>
+import axios from "axios";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Job from "@/components/Job.vue";
@@ -59,14 +56,26 @@ import ClickHandler from "@/mixins/ClickHandler.js";
 
 export default {
   name: "resume",
-  props: ["djson"],
   mixins: [ClickHandler],
   components: {
     Job,
     Skill
   },
+  data: function() {
+    return {
+      resumejson: null
+    };
+  },
   created: function() {
-    AOS.init();
+    axios
+      .get("/_data/resume.json")
+      .then(response => {
+        this.resumejson = response.data;
+        AOS.init();
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }
 };
 </script>
