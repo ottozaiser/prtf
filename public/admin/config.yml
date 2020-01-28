@@ -16,12 +16,6 @@ collections:
         file: "_data/settings.json"
         fields:
           - { label: "Global title", name: "site_title", widget: "string" }
-          - label: "PDFs Resumés"
-            name: resume
-            widget: "object"
-            fields:
-              - { label: "Single Page Resumé", name: "name", widget: "string" }
-              - { label: "Full Resumé", name: "full_resume", widget: "string" }
           - label: "Social Medias"
             label_singular: "Social"
             name: "social"
@@ -69,6 +63,12 @@ collections:
           - { label: "Resume subtitle", name: "resume_subtitle", widget: "markdown" }
           - { label: "Resume content", name: "resume_content", widget: "markdown" }
           - { label: "Resume image", name: "image", widget: "image" }
+          - label: "PDFs Resumés"
+            name: resume
+            widget: "object"
+            fields:
+              - { label: "Single Page Resumé", name: "name", widget: "string" }
+              - { label: "Full Resumé", name: "full_resume", widget: "string" }
           - label: "Skills"
             name: skills
             widget: "object"
