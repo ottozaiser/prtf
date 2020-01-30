@@ -170,14 +170,14 @@ header {
     height: 48px;
     border: 0px;
     z-index: 15;
-    background-color: var(--main-bg-trans);
+    background-color: transparent;
     border-radius: 24px;
     cursor: pointer;
     transition: all 0.2s ease;
     &:hover,
     &:focus,
     &:active {
-      background-color: var(--main-lightgray);
+      background-color: var(--main-gray-tras);
       .nav-icon {
         opacity: 1;
       }

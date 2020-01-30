@@ -10,7 +10,25 @@
     </section>
     <!-- <router-link to='/story'> {{ this.resumejson.label }} </router-link> -->
 
-    <section>
+    <section data-aos="fade-up" data-aos-once="true">
+      <h2>{{ this.resumejson.education.education_title }}</h2>
+      <div class="education">
+        <Education
+          class="job"
+          data-aos="fade-up"
+          data-aos-once="true"
+          v-bind:position="post.position"
+          v-bind:title="post.title"
+          v-bind:institution="post.institution"
+          v-bind:link="post.link"
+          v-bind:finished="post.finished"
+          v-for="post in this.resumejson.education.education_items"
+          v-bind:key="post.id"
+        />
+      </div>
+    </section>
+
+    <section data-aos="fade-up" data-aos-once="true">
       <h2>{{ this.resumejson.skills.skills_title }}</h2>
       <div class="skills">
         <Skill
@@ -25,7 +43,7 @@
       </div>
     </section>
 
-    <section>
+    <section data-aos="fade-up" data-aos-once="true">
       <h2>{{ this.resumejson.experience.experience_title }}</h2>
       <div class="jobs">
         <Job
@@ -52,6 +70,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Job from "@/components/Job.vue";
 import Skill from "@/components/Skill.vue";
+import Education from "@/components/Education.vue";
 import ClickHandler from "@/mixins/ClickHandler.js";
 
 export default {
@@ -59,7 +78,8 @@ export default {
   mixins: [ClickHandler],
   components: {
     Job,
-    Skill
+    Skill,
+    Education
   },
   data: function() {
     return {

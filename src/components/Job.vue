@@ -2,18 +2,21 @@
   <div class="job">
     <div class="header">
       <h3>
-        <span class="sr-only">{{ labels[0] }}: </span>{{ company }}
+        <span class="sr-only">{{ labels[0] }}:</span>
+        {{ company }}
       </h3>
       <p>
-        <span class="sr-only">{{ labels[2] }}: </span>{{ from }}
+        <span class="sr-only">{{ labels[2] }}:</span>
+        {{ from }}
         <span aria-label="hidden">-</span>
-        <span class="sr-only">{{ labels[3] }}: </span> {{ to }}
+        <span class="sr-only">{{ labels[3] }}:</span>
+        {{ to }}
       </p>
     </div>
     <div class="subheader">
       <p>
-        <span class="sr-only">{{ labels[1] }}: </span
-        ><span class="highlight">{{ position }}</span>
+        <span class="sr-only">{{ labels[1] }}:</span>
+        <span class="highlight">{{ position }}</span>
       </p>
     </div>
     <div class="content">
@@ -42,28 +45,33 @@ export default {
 h3,
 p {
   margin: 0px;
+  font-weight: normal;
 }
 .job {
-  border: 1px solid var(--main-charcoal);
+  border: 1px solid var(--main-gray);
   border-radius: 4px;
   .header {
     background-color: var(--main-charcoal);
     color: var(--main-bg-color);
-    padding: 8px;
+    padding: 16px;
     text-transform: uppercase;
-    font-weight: normal;
-    padding-bottom: 12px;
+    padding-bottom: 18px;
     h3,
     p {
       display: inline-block;
+      line-height: 1em;
     }
     p {
       float: right;
+      @media (max-width: 640px) {
+        float: initial;
+        display: block;
+      }
     }
   }
   .subheader {
     padding: 8px;
-    border-bottom: 1px solid var(--main-charcoal);
+    border-bottom: 1px solid var(--main-gray);
     font-weight: bold;
   }
   .content {

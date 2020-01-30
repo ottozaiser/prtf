@@ -229,7 +229,7 @@ section {
   .icon-btn {
     &:hover,
     &:focus {
-      background: var(--main-bg-trans);
+      background: var(--main-gray-tras);
     }
   }
   .animate {

@@ -2,12 +2,9 @@
   <div class="percentage">
     <div class="container">
       <div class="number">{{ number }}%</div>
-      <div
-        class="bar"
-        :style="{
+      <div class="bar" :style="{
           width: `${number}%`
-        }"
-      />
+        }" />
     </div>
   </div>
 </template>
@@ -16,7 +13,7 @@
 export default {
   name: "Percentage",
   props: {
-    number: String
+    number: Number
   }
 };
 </script>

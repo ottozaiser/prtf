@@ -76,6 +76,7 @@ export default {
   --main-charcoal-trans: rgb(54, 69, 79, 0.8);
   --main-charcoal-fulltrans: rgb(54, 69, 79, 0.3);
   --main-bg-trans: rgb(248, 248, 248, 0.8);
+  --main-gray-tras: rgb(150, 150, 150, 0.2);
   --main-highlight: rgb(255, 255, 0);
 
   box-sizing: border-box;
@@ -145,7 +146,7 @@ ul {
   transition: all 0.2s ease;
   &:hover,
   &:focus {
-    background: var(--main-lightgray);
+    background: var(--main-gray-tras);
     transform: scale(1.2);
   }
 }

@@ -81,6 +81,19 @@ collections:
             fields:
               - { label: "Single Page Resumé", name: "name", widget: "string" }
               - { label: "Full Resumé", name: "full_resume", widget: "string" }
+          - label: "Education"
+            name: education
+            widget: "object"
+            fields:
+              - { label: "Education title", name: "education_title", widget: "string" }
+              - label: "Education item"
+                widget: list
+                name: education_items
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Institution", name: "institution", widget: "string" }
+                  - { label: "Link", name: "link", widget: "string" }
+                  - { label: "Finished", name: "finished", widget: "string" }
           - label: "Skills"
             name: skills
             widget: "object"

@@ -4,12 +4,10 @@
       <div class="project">
         <div class="img-container">
           <div class="open">
-            <font-awesome-icon
-              aria-hidden="true"
-              :icon="['fa', 'external-link-alt']"
-            /><span class="sr-only">Open in new window</span>
+            <font-awesome-icon aria-hidden="true" :icon="['fa', 'external-link-alt']" />
+            <span class="sr-only">Open in new window</span>
           </div>
-          <progressive-img class="image" :src="cover" alt="" />
+          <progressive-img class="image" :src="cover" alt />
         </div>
         <h2>{{ title }}</h2>
         <div class="content">
@@ -88,6 +86,8 @@ a {
   width: 100%;
   margin-bottom: -3px;
   filter: grayscale(100%);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }
 .content {
   padding: 16px;
