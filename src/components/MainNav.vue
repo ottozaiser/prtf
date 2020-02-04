@@ -17,25 +17,23 @@
             <span></span>
           </div>
         </button>
-        <transition name="slide">
-          <div class="panel-menu" v-show="showMenu" id="menu">
-            <h1 class="brand">{{ this.settings.site_title }}</h1>
-            <h1 id="dialog-title" class="sr-only">Main navigation</h1>
-            <ul class="menu">
-              <li
-                class="menu-item"
-                @click="toggleMenu"
-                v-bind:key="index"
-                v-for="(item, index) in this.menujson"
-              >
-                <router-link :to="item.url" v-if="item.url.startsWith('/')">{{ item.name }}</router-link>
-                <a :href="item.url" target="_blank" v-else>{{ item.name }}</a>
-              </li>
-            </ul>
-            <!-- <button aria-label="Close Navigation" @click="toggleMenu">x</button>  -->
-            <Social class="social" />
-          </div>
-        </transition>
+        <div class="panel-menu" v-show="showMenu" id="menu">
+          <h1 class="brand">{{ this.settings.site_title }}</h1>
+          <h1 id="dialog-title" class="sr-only">Main navigation</h1>
+          <ul class="menu">
+            <li
+              class="menu-item"
+              @click="toggleMenu"
+              v-bind:key="index"
+              v-for="(item, index) in this.menujson"
+            >
+              <router-link :to="item.url" v-if="item.url.startsWith('/')">{{ item.name }}</router-link>
+              <a :href="item.url" target="_blank" v-else>{{ item.name }}</a>
+            </li>
+          </ul>
+          <!-- <button aria-label="Close Navigation" @click="toggleMenu">x</button>  -->
+          <Social class="social" />
+        </div>
       </nav>
     </header>
     <transition name="fade">
@@ -80,13 +78,6 @@ export default {
     this.navEl = document.getElementById("nav");
     this.menuEl = document.getElementById("menu");
     this.overlayEl = document.getElementById("overlay");
-    this.focusedElBeforeOpen;
-    var focusableEls = this.navEl.querySelectorAll(
-      'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]'
-    );
-    this.focusableEls = Array.prototype.slice.call(focusableEls);
-    this.firstFocusableEl = this.focusableEls[0];
-    this.lastFocusableEl = this.focusableEls[this.focusableEls.length - 1];
     this.close(); // Reset
   },
   methods: {
@@ -99,6 +90,13 @@ export default {
       }
     },
     open() {
+      this.focusedElBeforeOpen;
+      var focusableEls = this.navEl.querySelectorAll(
+        'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]'
+      );
+      this.focusableEls = Array.prototype.slice.call(focusableEls);
+      this.firstFocusableEl = this.focusableEls[0];
+      this.lastFocusableEl = this.focusableEls[this.focusableEls.length - 1];
       document.body.style.overflow = "hidden";
       var Dialog = this;
       this.menuEl.removeAttribute("aria-hidden");
