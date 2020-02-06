@@ -271,6 +271,9 @@ h1.brand {
   overflow-x: hidden;
   z-index: 14;
   transition: all 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   //transform: translateZ(0) translateX(260px);
   .social {
     padding: 1em 2em;
