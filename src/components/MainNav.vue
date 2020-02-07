@@ -17,23 +17,25 @@
             <span></span>
           </div>
         </button>
-        <div class="panel-menu" v-show="showMenu" id="menu">
-          <h1 class="brand">{{ this.settings.site_title }}</h1>
-          <h1 id="dialog-title" class="sr-only">Main navigation</h1>
-          <ul class="menu">
-            <li
-              class="menu-item"
-              @click="toggleMenu"
-              v-bind:key="index"
-              v-for="(item, index) in this.menujson"
-            >
-              <router-link :to="item.url" v-if="item.url.startsWith('/')">{{ item.name }}</router-link>
-              <a :href="item.url" target="_blank" v-else>{{ item.name }}</a>
-            </li>
-          </ul>
-          <!-- <button aria-label="Close Navigation" @click="toggleMenu">x</button>  -->
-          <Social class="social" />
-        </div>
+        <transition name="slide">
+          <div class="panel-menu" v-show="showMenu" id="menu">
+            <h1 class="brand">{{ this.settings.site_title }}</h1>
+            <h1 id="dialog-title" class="sr-only">Main navigation</h1>
+            <ul class="menu">
+              <li
+                class="menu-item"
+                @click="toggleMenu"
+                v-bind:key="index"
+                v-for="(item, index) in this.menujson"
+              >
+                <router-link :to="item.url" v-if="item.url.startsWith('/')">{{ item.name }}</router-link>
+                <a :href="item.url" target="_blank" v-else>{{ item.name }}</a>
+              </li>
+            </ul>
+            <!-- <button aria-label="Close Navigation" @click="toggleMenu">x</button>  -->
+            <Social class="social" />
+          </div>
+        </transition>
       </nav>
     </header>
     <transition name="fade">
