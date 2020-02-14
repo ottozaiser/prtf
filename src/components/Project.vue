@@ -7,7 +7,7 @@
             <font-awesome-icon aria-hidden="true" :icon="['fa', 'external-link-alt']" />
             <span class="sr-only">Open in new window</span>
           </div>
-          <progressive-img class="image" :src="cover" alt />
+          <progressive-img class="image" :src="cover.split('/public').pop()" alt />
         </div>
         <h2>{{ title }}</h2>
         <div class="content">
