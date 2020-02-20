@@ -4,12 +4,6 @@
     "content": "<p>I am currently working on this section.</p><p>In the meantime, you can see my work on <b>PDFs</b>:</p>",
     "projects": [
       {
-        "title": "Mezzo",
-        "content": "This is a figma prototype of a personal project.",
-        "image": "/public/_data/media/portfolio_mezzo.png",
-        "file": "https://www.figma.com/proto/ZYPbDABWhg8hfzfCVlGeua/Relaunch?node-id=1%3A18&scaling=scale-down"
-      },
-      {
         "title": "Top-Level Domain Opening",
         "content": "Case of Study: I helped NIC Argentina to launch the opening of the top-level domain to users.",
         "image": "/public/_data/media/portfolio_nic.png",
@@ -34,22 +28,28 @@
         "file": "https://drive.google.com/file/d/1lLVfR-bNSB-ZgHnE_vSGY07_rK7IpQE3/view"
       },
       {
+        "title": " Visual Designs",
+        "content": "A mix of designs for large companies like Microsoft, Personal, Saks and T-Mobile.",
+        "image": "/public/_data/media/portfolio_visuals.png",
+        "file": "https://drive.google.com/file/d/154f6KelNTEoW8U-ZrloanbWN6zuYY1vw/view"
+      },
+      {
         "title": "Nearpod Motion UI",
         "content": "Case of Study: I helped Nearpod to adapt a new features to their iOS application.",
         "image": "/public/_data/media/portfolio_nearpod.png",
         "file": "https://drive.google.com/file/d/1vYYhgm0KgLwD3uqAG34zO0En4X0hgKNX/view"
       },
       {
+        "title": "Mezzo",
+        "content": "This is a figma prototype of a personal project.",
+        "image": "/public/_data/media/portfolio_mezzo.png",
+        "file": "https://www.figma.com/proto/ZYPbDABWhg8hfzfCVlGeua/Relaunch?node-id=1%3A18&scaling=scale-down"
+      },
+      {
         "title": "UX Workshop",
         "content": "This is the final report (Spanish) of the UX Workshop I did back in 2018.",
         "image": "/public/_data/media/portfolio_ratup.png",
         "file": "https://drive.google.com/file/d/1tmO7vkJFyd400E7kicwBVHOm9FkUywTD/view"
-      },
-      {
-        "title": " Visual Designs",
-        "content": "A mix of designs for large companies like Microsoft, Personal, Saks and T-Mobile.",
-        "image": "/public/_data/media/portfolio_visuals.png",
-        "file": "https://drive.google.com/file/d/154f6KelNTEoW8U-ZrloanbWN6zuYY1vw/view"
       },
       {
         "title": "Reel",
