@@ -2,11 +2,9 @@
   <div class="portfolio wrapper" v-if="this.portjson">
     <h1>{{ this.portjson.title }}</h1>
     <div v-html="this.portjson.content"></div>
-    <div class="projects">
+    <div class="projects" data-aos="fade-up" data-aos-once="true">
       <Project
         class="project"
-        data-aos="flip-up"
-        data-aos-once="true"
         v-for="post in this.portjson.projects"
         v-bind:key="post.id"
         v-bind:title="post.title"
