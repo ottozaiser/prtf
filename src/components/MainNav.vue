@@ -187,13 +187,7 @@ header {
       margin: 0 auto;
       margin-top: -9px;
       width: 24px;
-      -webkit-transform: rotate(0deg);
-      -moz-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
       transform: rotate(0deg);
-      -webkit-transition: 0.5s ease-in-out;
-      -moz-transition: 0.5s ease-in-out;
-      -o-transition: 0.5s ease-in-out;
       transition: 0.5s ease-in-out;
       opacity: 0.6;
       span {
@@ -205,13 +199,7 @@ header {
         border-radius: 2px;
         opacity: 1;
         left: 0;
-        -webkit-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
         transform: rotate(0deg);
-        -webkit-transition: 0.2s ease-in-out;
-        -moz-transition: 0.2s ease-in-out;
-        -o-transition: 0.2s ease-in-out;
         transition: 0.2s ease-in-out;
       }
       span:nth-child(1) {
@@ -234,16 +222,10 @@ header {
     }
 
     .open span:nth-child(2) {
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
       transform: rotate(45deg);
     }
 
     .open span:nth-child(3) {
-      -webkit-transform: rotate(-45deg);
-      -moz-transform: rotate(-45deg);
-      -o-transform: rotate(-45deg);
       transform: rotate(-45deg);
     }
 
@@ -267,7 +249,7 @@ h1.brand {
   top: 0;
   right: 0;
   width: 0;
-  min-height: 100vh;
+  height: 100%;
   min-width: 240px;
   overflow-y: auto;
   overflow-x: hidden;
