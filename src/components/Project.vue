@@ -65,7 +65,7 @@ a {
   z-index: 1;
   width: 42px;
   height: 42px;
-  padding-top: 9px;
+  padding-top: 7px;
   border-radius: 56px;
   top: 8px;
   right: 8px;

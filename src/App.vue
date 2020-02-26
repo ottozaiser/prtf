@@ -158,7 +158,7 @@ ul {
   font-size: 1.2em;
   width: 42px;
   height: 42px;
-  padding-top: 9px;
+  padding-top: 7px;
   display: block;
   transition: all 0.2s ease;
   &:hover,
