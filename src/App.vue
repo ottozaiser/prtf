@@ -305,4 +305,9 @@ p {
     transition: opacity 0.15s;
   }
 }
+
+.progressive-background-image {
+  background-position: 0 30% !important;
+  border-radius: 4px;
+}
 </style>

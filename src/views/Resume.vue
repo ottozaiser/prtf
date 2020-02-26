@@ -134,7 +134,8 @@ section {
     background-color: var(--main-lightgray);
     border: 1px solid var(--main-lightgray);
     @media (max-width: 640px) {
-      max-width: 250px;
+      width: 100%;
+      height: 300px;
       margin: 0 auto;
     }
   }
