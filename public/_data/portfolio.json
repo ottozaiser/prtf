@@ -38,12 +38,6 @@
         "content": "You can watch my Motion Graphics Reel on Vimeo.",
         "image": "/public/_data/media/portfolio_motion.png",
         "file": "http://www.vimeo.com/ottozaiser"
-      },
-      {
-        "title": "Art",
-        "content": "You can see my illustration portfolio on Tumblr.",
-        "image": "/public/_data/media/portfolio_art.png",
-        "file": "http://www.ottozaiser.com/"
       }
     ]
   }
