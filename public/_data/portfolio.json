@@ -4,6 +4,18 @@
     "content": "<p>My Cases of Study focus on my thinking process and my ability to solve problems through design.</p><p>I am currently working on this section. In the meantime, you can see my work on <b>PDFs</b>:</p>",
     "projects": [
       {
+        "title": "The Web Through Me",
+        "content": "Case of Study: I’ve been in charge of Viñetas Sueltas' website since 2008 and this is that story.",
+        "image": "/public/_data/media/portfolio_vinetas.png",
+        "file": "https://drive.google.com/file/d/1lLVfR-bNSB-ZgHnE_vSGY07_rK7IpQE3/view"
+      },
+      {
+        "title": " Visual Designs",
+        "content": "A mix of designs for large companies like Microsoft, Personal, Saks and T-Mobile.",
+        "image": "/public/_data/media/portfolio_visuals.png",
+        "file": "https://drive.google.com/file/d/154f6KelNTEoW8U-ZrloanbWN6zuYY1vw/view"
+      },
+      {
         "title": "Top-Level Domain Opening",
         "content": "Case of Study: I helped NIC Argentina to launch the opening of the top-level domain to users.",
         "image": "/public/_data/media/portfolio_nic.png",
@@ -26,18 +38,6 @@
         "content": "Case of Study: I helped Nearpod to design a new feature for the quiz activity.",
         "image": "/public/_data/media/portfolio_nearpod.png",
         "file": "https://drive.google.com/file/d/1V69CpFUNlFc-hKsfSCFt0B5qJ4ZQFj-n/view"
-      },
-      {
-        "title": "The Web Through Me",
-        "content": "Case of Study: I’ve been in charge of Viñetas Sueltas' website since 2008 and this is that story.",
-        "image": "/public/_data/media/portfolio_vinetas.png",
-        "file": "https://drive.google.com/file/d/1lLVfR-bNSB-ZgHnE_vSGY07_rK7IpQE3/view"
-      },
-      {
-        "title": " Visual Designs",
-        "content": "A mix of designs for large companies like Microsoft, Personal, Saks and T-Mobile.",
-        "image": "/public/_data/media/portfolio_visuals.png",
-        "file": "https://drive.google.com/file/d/154f6KelNTEoW8U-ZrloanbWN6zuYY1vw/view"
       },
       {
         "title": "Nearpod Motion UI",
