@@ -4,7 +4,9 @@
     <section>
       <h2>{{ this.resumejson.about.title }}</h2>
       <div class="content">
-        <progressive-img class="image" :src="this.resumejson.about.image" />
+        <div class="image">
+          <progressive-background :src="this.resumejson.about.image" />
+        </div>
         <div v-html="this.resumejson.about.content" class="dynamic-content" @click="handleClicks"></div>
       </div>
     </section>
@@ -116,7 +118,7 @@ section {
 
 .content {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 2fr;
   grid-column-gap: 16px;
 
   @media (max-width: 640px) {
@@ -124,12 +126,17 @@ section {
   }
 
   .image {
-    max-width: 250px !important;
     text-align: center;
-    border: 1px solid var(--main-lightgray);
-    border-radius: 4px;
+    width: 100%;
+    text-align: center;
     margin: 0 auto;
     margin-top: 16px;
+    background-color: var(--main-lightgray);
+    border: 1px solid var(--main-lightgray);
+    @media (max-width: 640px) {
+      max-width: 250px;
+      margin: 0 auto;
+    }
   }
 }
 </style>
