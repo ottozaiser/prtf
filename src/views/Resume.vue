@@ -119,7 +119,7 @@ section {
 .content {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-column-gap: 16px;
+  grid-column-gap: 32px;
 
   @media (max-width: 640px) {
     grid-template-columns: 1fr;
