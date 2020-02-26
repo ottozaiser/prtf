@@ -162,8 +162,13 @@ section {
       margin-top: 0px;
       margin-bottom: 0px;
       &:after {
+        background-color: var(--main-txt-color);
+        content: "";
+        display: block;
+        bottom: -8px;
+        position: absolute;
         left: 21px;
-        width: 54px;
+        width: 65px;
         height: 8px;
       }
     }

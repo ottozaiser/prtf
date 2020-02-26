@@ -91,6 +91,7 @@ body {
     "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
   background-color: var(--main-bg-color);
   color: var(--main-txt-color);
+  font-size: 18px;
 }
 a,
 a:hover,
@@ -127,6 +128,22 @@ button:focus,
   background-color: var(--main-highlight);
   white-space: nowrap;
 }
+h1 span.underline {
+  position: relative;
+  &:after {
+    background-color: var(--main-txt-color);
+    content: "";
+    display: block;
+    height: 8px;
+    left: 0;
+    bottom: -4px;
+    position: absolute;
+    width: 72px;
+    @media (max-width: 350px) {
+      content: none;
+    }
+  }
+}
 ul {
   list-style-type: square;
 }
@@ -153,16 +170,16 @@ ul {
 h1 {
   position: relative;
   margin-bottom: 32px;
-  &:after {
-    background-color: var(--main-txt-color);
-    content: "";
-    display: block;
-    height: 5px;
-    left: 0;
-    bottom: -8px;
-    position: absolute;
-    width: 42px;
-  }
+  // &:after {
+  //   background-color: var(--main-txt-color);
+  //   content: "";
+  //   display: block;
+  //   height: 5px;
+  //   left: 0;
+  //   bottom: -8px;
+  //   position: absolute;
+  //   width: 42px;
+  // }
 }
 p {
   line-height: 1.5em;

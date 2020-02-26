@@ -84,4 +84,7 @@ p {
 li {
   margin: 4px !important;
 }
+.highlight {
+  white-space: normal;
+}
 </style>

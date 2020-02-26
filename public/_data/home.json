@@ -1,11 +1,11 @@
 {
 	"title": "Home",
-	"subtitle": "Hi! I'm <span class='highlight'>Otto</span>",
-	"content": "I've been a professional designer for the past 15 years.",
+	"subtitle": "<span class='underline'>Hi!</span> I'm <span class='highlight'>Otto</span>",
+	"content": "I'm a UI/UX designer with a taste for code, illustration, and motion. Also, I love to cook but that's another story.",
 	"image": "/_data/media/me.png",
 	"links": [
 		{
-			"name": "CV / Resumé",
+			"name": "Resumé",
 			"url": "/resume"
 		},
 		{
