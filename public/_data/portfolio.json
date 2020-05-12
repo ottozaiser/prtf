@@ -38,6 +38,24 @@
         "content": "You can watch my Motion Graphics Reel on Vimeo.",
         "image": "/public/_data/media/portfolio_motion.png",
         "file": "http://www.vimeo.com/ottozaiser"
+      },
+      {
+        "title": "UX Workshop",
+        "content": "This is the final report (Spanish) of the UX Workshop I did back in 2018.",
+        "file": "https://drive.google.com/file/d/1tmO7vkJFyd400E7kicwBVHOm9FkUywTD/view",
+        "image": "/public/_data/media/portfolio_ratup.png"
+      },
+      {
+        "title": "Mezzo",
+        "content": "This is a figma prototype of a personal project.",
+        "file": "https://www.figma.com/proto/ZYPbDABWhg8hfzfCVlGeua/Relaunch?node-id=1%3A18&scaling=scale-down",
+        "image": "/public/_data/media/portfolio_mezzo.png"
+      },
+      {
+        "content": "You can see my illustration portfolio on Tumblr.",
+        "title": "Art",
+        "file": "http://www.ottozaiser.com/",
+        "image": "/public/_data/media/portfolio_art.png"
       }
     ]
   }
