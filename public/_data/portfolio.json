@@ -34,6 +34,12 @@
         "image": "/public/_data/media/portfolio_mezzo.png"
       },
       {
+        "title": "Logos",
+        "content": "Some logos I've designed.",
+        "image": "/public/_data/media/logos.png",
+        "file": "https://drive.google.com/file/d/1hS3vqdHLHyqiXAxVQ6BIMD_NPDcv7mey/view"
+      },
+      {
         "title": "Reel",
         "content": "You can watch my Motion Graphics Reel on Vimeo.",
         "image": "/public/_data/media/portfolio_motion.png",
@@ -44,12 +50,6 @@
         "title": "Art",
         "file": "http://www.ottozaiser.com/",
         "image": "/public/_data/media/portfolio_art.png"
-      },
-      {
-        "title": "Logos",
-        "content": "Some logos I've designed.",
-        "image": "/public/_data/media/logos.png",
-        "file": "https://drive.google.com/file/d/1hS3vqdHLHyqiXAxVQ6BIMD_NPDcv7mey/view"
       }
     ]
   }
