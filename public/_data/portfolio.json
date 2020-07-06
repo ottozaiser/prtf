@@ -1,25 +1,25 @@
 {
   "portfolio": {
     "title": "Portfolio",
-    "content": "<p>My Cases of Study focus on my thinking process and my ability to solve problems through design.</p><p>I am currently working on this section. In the meantime, you can see my work on <b>PDFs</b>:</p>",
+    "content": "<p>I am currently working on this section. In the meantime, you can see my work on <b>PDFs</b>:</p>",
     "projects": [
       {
         "title": "Blockchain Federal Argentina",
-        "content": "Case of Study: I helped BFA to create their brand, website and applications.",
-        "image": "/public/_data/media/portfolio_bfa.png",
-        "file": "https://drive.google.com/file/d/10dSplikXY9jf7vofN9Sa60PZSFwTAibc/view"
+        "content": "I helped BFA to create their brand, website and applications.",
+        "image": "/public/_data/media/bfa.png",
+        "file": "https://drive.google.com/file/d/1uV1F7vlxTZ0RRc4i4X_ZavfjwbV0JmVm/view"
       },
       {
-        "title": "The Web Through Me",
-        "content": "Case of Study: I’ve been in charge of Viñetas Sueltas' website since 2008 and this is that story.",
-        "image": "/public/_data/media/portfolio_vinetas.png",
-        "file": "https://drive.google.com/file/d/1lLVfR-bNSB-ZgHnE_vSGY07_rK7IpQE3/view"
+        "title": "Viñetas Sueltas",
+        "content": "I’ve been in charge of Viñetas Sueltas' website since 2008 and this is that story.",
+        "image": "/public/_data/media/vinetas.png",
+        "file": "https://drive.google.com/file/d/1X3uAUzciYfkBicg1ZaaVjF8M9WlPVv0q/view"
       },
       {
-        "title": " Visual Designs",
-        "content": "A mix of designs for large companies like Microsoft, Personal, Saks and T-Mobile.",
-        "image": "/public/_data/media/portfolio_visuals.png",
-        "file": "https://drive.google.com/file/d/154f6KelNTEoW8U-ZrloanbWN6zuYY1vw/view"
+        "title": "TeleTech",
+        "content": "e-Learning courses designs for large companies.",
+        "image": "/public/_data/media/teletech.png",
+        "file": "https://drive.google.com/file/d/1qjdF7Wmp92MJEGFydKCOO3a7iYmk0cQi/view"
       },
       {
         "title": "Top-Level Domain Opening",
@@ -28,10 +28,10 @@
         "file": "https://drive.google.com/file/d/1k7SR5Ipxj8AU2JsSMavdWW8Pl-lqLD5x/view"
       },
       {
-        "title": "Nearpod Image Quiz",
-        "content": "Case of Study: I helped Nearpod to design a new feature for the quiz activity.",
-        "image": "/public/_data/media/portfolio_nearpod.png",
-        "file": "https://drive.google.com/file/d/1V69CpFUNlFc-hKsfSCFt0B5qJ4ZQFj-n/view"
+        "title": "Mezzo",
+        "content": "This is a figma prototype of a personal project.",
+        "file": "https://www.figma.com/proto/ZYPbDABWhg8hfzfCVlGeua/Relaunch?node-id=1%3A18&scaling=scale-down",
+        "image": "/public/_data/media/portfolio_mezzo.png"
       },
       {
         "title": "Reel",
@@ -40,28 +40,10 @@
         "file": "http://www.vimeo.com/ottozaiser"
       },
       {
-        "title": "UX Workshop",
-        "content": "This is the final report (Spanish) of the UX Workshop I did back in 2018.",
-        "file": "https://drive.google.com/file/d/1tmO7vkJFyd400E7kicwBVHOm9FkUywTD/view",
-        "image": "/public/_data/media/portfolio_ratup.png"
-      },
-      {
-        "title": "Mezzo",
-        "content": "This is a figma prototype of a personal project.",
-        "file": "https://www.figma.com/proto/ZYPbDABWhg8hfzfCVlGeua/Relaunch?node-id=1%3A18&scaling=scale-down",
-        "image": "/public/_data/media/portfolio_mezzo.png"
-      },
-      {
         "content": "You can see my illustration portfolio on Tumblr.",
         "title": "Art",
         "file": "http://www.ottozaiser.com/",
         "image": "/public/_data/media/portfolio_art.png"
-      },
-      {
-        "title": "Nearpod Motion UI",
-        "content": "Case of Study: I helped Nearpod to adapt a new features to their iOS application.",
-        "file": "https://drive.google.com/file/d/1vYYhgm0KgLwD3uqAG34zO0En4X0hgKNX/view",
-        "image": "/public/_data/media/portfolio_nearpod.png"
       }
     ]
   }
