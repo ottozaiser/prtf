@@ -1,20 +1,20 @@
 {
-	"title": "Home",
-	"subtitle": "<span class='underline'>Hi!</span> I'm <span class='highlight'>Otto</span>",
-	"content": "I'm a UI/UX designer with a taste for code, illustration, and motion. Also, I love to cook but that's another story.",
-	"image": "/_data/media/me.png",
-	"links": [
-		{
-			"name": "Resumé",
-			"url": "/resume"
-		},
-		{
-			"name": "My story",
-			"url": "/story"
-		},
-		{
-			"name": "Portfolio",
-			"url": "/portfolio"
-		}
-	]
+  "title": "Home",
+  "subtitle": "<span class='underline'>Hi!</span> I'm <span class='highlight'>Otto</span>",
+  "content": "I'm a designer with a taste for code, illustration, and motion. Also, I love to cook but that's another story.",
+  "image": "/_data/media/me.png",
+  "links": [
+    {
+      "name": "Resumé",
+      "url": "/resume"
+    },
+    {
+      "name": "My story",
+      "url": "/story"
+    },
+    {
+      "name": "Portfolio",
+      "url": "/portfolio"
+    }
+  ]
 }
