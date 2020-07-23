@@ -164,6 +164,7 @@ export default {
 header {
   button.menu-button {
     position: fixed;
+    padding: 0;
     top: 8px;
     right: 8px;
     width: 48px;
