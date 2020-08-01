@@ -181,11 +181,11 @@ section {
 
     @media (max-width: 640px) {
       display: flex;
-      text-align: center;
+      // text-align: center;
       flex-direction: column-reverse;
 
       .titles {
-        justify-content: center;
+        justify-content: start;
       }
 
       h1:after {
