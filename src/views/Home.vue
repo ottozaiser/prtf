@@ -55,7 +55,7 @@ export default {
   padding: 0 24px;
   max-width: 992px;
   margin: 0 auto;
-  overflow: hidden;
+  //overflow: hidden;
   @media (max-width: 640px) {
     height: auto;
   }
