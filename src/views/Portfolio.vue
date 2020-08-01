@@ -14,6 +14,19 @@
         v-bind:cover="post.image"
       />
     </div>
+    <div class="clientcontainer">
+      <h2 v-html="this.clientjson.title"></h2>
+      <div v-html="this.clientjson.content"></div>
+      <div class="clients">
+        <Client
+          class="client"
+          v-for="post in this.clientjson.clients"
+          v-bind:key="post.id"
+          v-bind:title="post.title"
+          v-bind:cover="post.image"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -22,15 +35,18 @@ import axios from "axios";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Project from "@/components/Project.vue";
+import Client from "@/components/Client.vue";
 
 export default {
   name: "porfolio",
   components: {
     Project,
+    Client,
   },
   data: function () {
     return {
       portjson: null,
+      clientjson: null,
     };
   },
   created: function () {
@@ -38,6 +54,7 @@ export default {
       .get("/_data/portfolio.json")
       .then((response) => {
         this.portjson = response.data.portfolio;
+        this.clientjson = response.data.client;
         AOS.init();
       })
       .catch((error) => {
@@ -58,13 +75,20 @@ export default {
 <style lang="scss" scoped>
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   grid-column-gap: 16px;
   grid-row-gap: 16px;
   margin-top: 42px;
 }
 
-.portfolio {
-  padding-bottom: 16px;
+.clients {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  grid-column-gap: 48px;
+  grid-row-gap: 48px;
+  margin-top: 42px;
+}
+.clientcontainer {
+  margin: 80px 0;
 }
 </style>

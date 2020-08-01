@@ -4,6 +4,7 @@
       <div class="heading-home">
         <h1 v-html="this.homejson.subtitle"></h1>
       </div>
+      <!-- <div class="img" :style="{ backgroundImage: 'url(' + this.homejson.image + ')'}"></div> -->
       <div class="content">
         <!-- <progressive-img class="image" :src="this.homejson.image" alt /> -->
         <p v-html="this.homejson.content"></p>
@@ -50,7 +51,7 @@ export default {
 .home {
   display: grid;
   position: relative;
-  height: 98vh;
+  height: 99vh;
   padding: 0 24px;
   max-width: 992px;
   margin: 0 auto;
@@ -58,6 +59,12 @@ export default {
   @media (max-width: 640px) {
     height: auto;
   }
+}
+.img {
+  background-size: 300px;
+  background-position: -150px 0;
+  background-repeat: no-repeat;
+  opacity: 0.5;
 }
 .layout {
   display: grid;

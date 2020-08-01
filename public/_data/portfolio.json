@@ -1,66 +1,145 @@
 {
-  "portfolio": {
-    "title": "Portfolio",
-    "content": "<p>I am currently working on this section. Beware that I can not show all because NDAs. In the meantime, you can see some of my work on <b>PDFs</b>:</p>",
-    "projects": [
-      {
-        "title": "BFA",
-        "content": "I helped Blockchain Federal Argentina to create their brand, website and applications.",
-        "image": "/public/_data/media/bfa.png",
-        "file": "https://drive.google.com/file/d/1uV1F7vlxTZ0RRc4i4X_ZavfjwbV0JmVm/view"
-      },
-      {
-        "title": "Viñetas Sueltas",
-        "content": "I’ve been in charge of Viñetas Sueltas' website since 2008 and this is that story.",
-        "image": "/public/_data/media/vinetas.png",
-        "file": "https://drive.google.com/file/d/1X3uAUzciYfkBicg1ZaaVjF8M9WlPVv0q/view"
-      },
-      {
-        "title": "TeleTech",
-        "content": "e-Learning courses designs for large companies.",
-        "image": "/public/_data/media/teletech.png",
-        "file": "https://drive.google.com/file/d/1qjdF7Wmp92MJEGFydKCOO3a7iYmk0cQi/view"
-      },
-      {
-        "title": "CoS: Top-Level Domain",
-        "content": "I helped NIC Argentina to launch the opening of the top-level domain to users.",
-        "image": "/public/_data/media/portfolio_nic.png",
-        "file": "https://drive.google.com/file/d/1k7SR5Ipxj8AU2JsSMavdWW8Pl-lqLD5x/view"
-      },
-      {
-        "title": "Personal",
-        "content": "Art direction and motion for a promotional video.",
-        "image": "/public/_data/media/ppdeportes.png",
-        "file": "https://drive.google.com/file/d/1N6j7C5M9lUZFdIa2jVED0Nhw0bg0BJKa/view"
-      },
-      {
-        "title": "Logos",
-        "content": "Some logos I've designed.",
-        "image": "/public/_data/media/logos.png",
-        "file": "https://drive.google.com/file/d/1hS3vqdHLHyqiXAxVQ6BIMD_NPDcv7mey/view"
-      },
-      {
-        "title": "Reel",
-        "content": "You can watch my Motion Graphics Reel on Vimeo.",
-        "image": "/public/_data/media/portfolio_motion.png",
-        "file": "http://www.vimeo.com/ottozaiser"
-      },
-      {
-        "content": "You can see my illustration portfolio on Tumblr.",
-        "title": "Art",
-        "file": "http://www.ottozaiser.com/",
-        "image": "/public/_data/media/portfolio_art.png"
-      }
-    ]
-  },
-  "client": {
-    "clients": [
-      {
-        "title": "Microsoft",
-        "image": "/public/_data/media/portfolio_nearpod.png"
-      }
-    ],
-    "title": "Clients",
-    "content": "ASDAsd"
-  }
+	"portfolio": {
+		"title": "Portfolio",
+		"content": "<p>I am currently working on this section. Beware that I can not show all because NDAs. In the meantime, you can see some of my work on <b>PDFs</b>:</p>",
+		"projects": [
+			{
+				"title": "BFA",
+				"content": "I helped Blockchain Federal Argentina to create their brand, website and applications.",
+				"image": "/public/_data/media/bfa.png",
+				"file": "https://drive.google.com/file/d/1uV1F7vlxTZ0RRc4i4X_ZavfjwbV0JmVm/view"
+			},
+			{
+				"title": "TeleTech",
+				"content": "e-Learning courses designs for large companies.",
+				"image": "/public/_data/media/teletech.png",
+				"file": "https://drive.google.com/file/d/1qjdF7Wmp92MJEGFydKCOO3a7iYmk0cQi/view"
+			},
+			{
+				"title": "Viñetas Sueltas",
+				"content": "I’ve been in charge of Viñetas Sueltas' website since 2008 and this is that story.",
+				"image": "/public/_data/media/vinetas.png",
+				"file": "https://drive.google.com/file/d/1X3uAUzciYfkBicg1ZaaVjF8M9WlPVv0q/view"
+			},
+			{
+				"title": "CoS: Top-Level Domain",
+				"content": "I helped NIC Argentina to launch the opening of the top-level domain to users.",
+				"image": "/public/_data/media/portfolio_nic.png",
+				"file": "https://drive.google.com/file/d/1k7SR5Ipxj8AU2JsSMavdWW8Pl-lqLD5x/view"
+			},
+			{
+				"title": "Personal",
+				"content": "Art direction and motion for a promotional video.",
+				"image": "/public/_data/media/ppdeportes.png",
+				"file": "https://drive.google.com/file/d/1N6j7C5M9lUZFdIa2jVED0Nhw0bg0BJKa/view"
+			},
+			{
+				"title": "Logos",
+				"content": "Some logos I've designed.",
+				"image": "/public/_data/media/logos.png",
+				"file": "https://drive.google.com/file/d/1hS3vqdHLHyqiXAxVQ6BIMD_NPDcv7mey/view"
+			},
+			{
+				"title": "Reel",
+				"content": "You can watch my Motion Graphics Reel on Vimeo.",
+				"image": "/public/_data/media/portfolio_motion.png",
+				"file": "http://www.vimeo.com/ottozaiser"
+			},
+			{
+				"content": "You can see my illustration portfolio on Tumblr.",
+				"title": "Art",
+				"file": "http://www.ottozaiser.com/",
+				"image": "/public/_data/media/portfolio_art.png"
+			}
+		]
+	},
+	"client": {
+		"clients": [
+			{
+				"title": "Microsoft",
+				"image": "/public/_data/media/client01.png"
+			},
+			{
+				"title": "T-Mobile",
+				"image": "/public/_data/media/client02.png"
+			},
+			{
+				"title": "Bank of America",
+				"image": "/public/_data/media/client03.png"
+			},
+			{
+				"title": "Best Buy",
+				"image": "/public/_data/media/client04.png"
+			},
+			{
+				"title": "American Red Cross",
+				"image": "/public/_data/media/client05.png"
+			},
+			{
+				"title": "Sony",
+				"image": "/public/_data/media/client06.png"
+			},
+			{
+				"title": "Saks Fifth Avenue",
+				"image": "/public/_data/media/client07.png"
+			},
+			{
+				"title": "Itaú",
+				"image": "/public/_data/media/client08.png"
+			},
+			{
+				"title": "StateFarm",
+				"image": "/public/_data/media/client09.png"
+			},
+			{
+				"title": "Personal",
+				"image": "/public/_data/media/client10.png"
+			},
+			{
+				"title": "Nissan",
+				"image": "/public/_data/media/client11.png"
+			},
+			{
+				"title": "Hyundai",
+				"image": "/public/_data/media/client12.png"
+			},
+			{
+				"title": "Eleven Sports",
+				"image": "/public/_data/media/client13.png"
+			},
+			{
+				"title": "Charter",
+				"image": "/public/_data/media/client14.png"
+			},
+			{
+				"title": "Weightwatchers",
+				"image": "/public/_data/media/client15.png"
+			},
+			{
+				"title": "AstraZeneca",
+				"image": "/public/_data/media/client16.png"
+			},
+			{
+				"title": "Argentina",
+				"image": "/public/_data/media/client17.png"
+			},
+			{
+				"title": "ICANN",
+				"image": "/public/_data/media/client18.png"
+			},
+			{
+				"title": "LACTLD",
+				"image": "/public/_data/media/client19.png"
+			},
+			{
+				"title": "Pica Pica",
+				"image": "/public/_data/media/client20.png"
+			},
+			{
+				"title": "Nearpod",
+				"image": "/public/_data/media/client21.png"
+			}
+		],
+		"title": "Client list"
+	}
 }

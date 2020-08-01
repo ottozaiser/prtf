@@ -174,7 +174,6 @@ collections:
             widget: "object"
             fields:
               - { label: "Clients title", name: "title", widget: "string" }
-              - { label: "Clients content", name: "content", widget: "markdown" }
               - label: "Clients"
                 name: "clients"
                 widget: list
