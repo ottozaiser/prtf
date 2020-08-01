@@ -11,8 +11,8 @@ const routes = [
 		name: "home",
 		component: Home,
 		meta: {
-			title: "Otto Zaiser [Designer]"
-		}
+			title: "Otto Zaiser [Designer]",
+		},
 	},
 	{
 		path: "/portfolio",
@@ -22,8 +22,8 @@ const routes = [
 		// which is lazy-loaded when the route is visited.
 		component: () => import(/* webpackChunkName: "portfolio" */ "../views/Portfolio.vue"),
 		meta: {
-			title: "Portfolio - Otto Zaiser [Designer]"
-		}
+			title: "Portfolio - Otto Zaiser [Designer]",
+		},
 	},
 	// {
 	//   path: '/portfolio/proyecto/:id',
@@ -42,8 +42,8 @@ const routes = [
 		// which is lazy-loaded when the route is visited.
 		component: () => import(/* webpackChunkName: "resume" */ "../views/Resume.vue"),
 		meta: {
-			title: "CV / Resumé - Otto Zaiser [Designer]"
-		}
+			title: "CV Resumé - Otto Zaiser [Designer]",
+		},
 	},
 	{
 		path: "/story",
@@ -51,8 +51,8 @@ const routes = [
 		props: true,
 		component: () => import(/* webpackChunkName: "story" */ "../views/Story.vue"),
 		meta: {
-			title: "My Story - Otto Zaiser [Designer]"
-		}
+			title: "My Story - Otto Zaiser [Designer]",
+		},
 	},
 	{
 		// will match everything
@@ -60,9 +60,9 @@ const routes = [
 		name: "error404",
 		component: () => import(/* webpackChunkName: "error404" */ "../views/Error404.vue"),
 		meta: {
-			title: "404 - Page not found"
-		}
-	}
+			title: "404 - Page not found",
+		},
+	},
 ];
 
 const router = new VueRouter({
@@ -72,7 +72,7 @@ const router = new VueRouter({
 	},
 	linkActiveClass: "is-active",
 	base: process.env.BASE_URL,
-	routes
+	routes,
 });
 
 wrapRouter(router);

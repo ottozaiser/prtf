@@ -169,3 +169,15 @@ collections:
                   - { label: "Project Content", name: "content", widget: "markdown" }
                   - { label: "Project Cover image", name: "image", widget: "image" }
                   - { label: "Project File location", name: "file", widget: "string" }
+          - label: "Clients"
+            name: "client"
+            widget: "object"
+            fields:
+              - { label: "Clients title", name: "title", widget: "string" }
+              - { label: "Clients content", name: "content", widget: "markdown" }
+              - label: "Clients"
+                name: "clients"
+                widget: list
+                fields:
+                  - { label: "Client Title", name: "title", widget: "string" }
+                  - { label: "Client Cover image", name: "image", widget: "image" }

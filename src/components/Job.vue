@@ -1,9 +1,9 @@
 <template>
-  <div class="job">
+  <div class="job" :id="company">
     <div class="header">
       <h3>
         <span class="sr-only">{{ labels[0] }}:</span>
-        {{ company }}
+        {{ position }}
       </h3>
       <p>
         <span class="sr-only">{{ labels[2] }}:</span>
@@ -16,12 +16,22 @@
     <div class="subheader">
       <p>
         <span class="sr-only">{{ labels[1] }}:</span>
-        <span class="highlight">{{ position }}</span>
+        <span class="company">{{ company }}</span>
       </p>
+      <div class="more">
+        <button v-if="!show" id="showBtn" v-on:click="toggle()" class="btn btn-small">
+          See more
+          <span class="sr-only">about {{ company }}</span>
+        </button>
+      </div>
     </div>
-    <div class="content">
+    <div class="content" v-if="show">
       <p class="sr-only">{{ labels[4] }}:</p>
       <div v-html="description"></div>
+      <button id="hideBtn" v-on:click="toggle()" class="btn btn-small less">
+        See less
+        <span class="sr-only">about {{ company }}</span>
+      </button>
     </div>
   </div>
 </template>
@@ -35,8 +45,23 @@ export default {
     position: String,
     description: String,
     from: String,
-    to: String
-  }
+    to: String,
+  },
+  data: function () {
+    return {
+      show: false,
+    };
+  },
+  methods: {
+    toggle() {
+      if (this.show) {
+        this.show = false;
+        document.getElementById(this.company).scrollIntoView();
+      } else {
+        this.show = true;
+      }
+    },
+  },
 };
 </script>
 
@@ -48,31 +73,47 @@ p {
   font-weight: normal;
 }
 .job {
-  border: 1px solid var(--main-gray);
+  border: 1px solid var(--main-lightgray);
   border-radius: 4px;
   .header {
-    background-color: var(--main-charcoal);
-    color: var(--main-bg-color);
+    border-bottom: 1px solid var(--main-lightgray);
+    color: var(--main-charcoal);
     padding: 16px;
-    text-transform: uppercase;
     padding-bottom: 18px;
-    h3,
-    p {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    @media (max-width: 640px) {
+      grid-template-columns: 1fr;
+    }
+    h3 {
+      font-weight: bold;
       display: inline-block;
-      line-height: 1em;
     }
     p {
-      float: right;
+      line-height: 1em;
+      align-self: center;
+      justify-self: end;
       @media (max-width: 640px) {
-        float: initial;
-        display: block;
+        margin-top: 8px;
+        justify-self: start;
       }
     }
   }
   .subheader {
-    padding: 8px;
-    border-bottom: 1px solid var(--main-gray);
-    font-weight: bold;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 8px 16px;
+    border-bottom: 1px solid var(--main-lightgray);
+  }
+  .company {
+    text-transform: uppercase;
+  }
+  .more {
+    align-self: center;
+    justify-self: end;
+  }
+  .less {
+    margin-bottom: 16px;
   }
   .content {
     padding: 0 16px;

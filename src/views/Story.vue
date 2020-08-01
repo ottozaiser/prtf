@@ -1,12 +1,8 @@
 <template>
   <div class="story" v-if="this.steps">
     <Progress />
-    <section
-      v-bind:key="index"
-      v-for="(item, index) in this.steps"
-      :id="'section' + index"
-      v-bind:style="{ backgroundColor: item.color }"
-    >
+    <section v-bind:key="index" v-for="(item, index) in this.steps" :id="'section' + index">
+      <!-- v-bind:style="{ backgroundColor: item.color }" -->
       <!-- <a v-show="index > 0" class="backButton" :href="'#'+(index-1)">Back</a> -->
       <div class="content">
         <div class="text-container" data-aos="fade" data-aos-delay="100">
@@ -66,21 +62,21 @@ export default {
   name: "story",
   mixins: [ClickHandler],
   components: {
-    Progress
+    Progress,
   },
-  data: function() {
+  data: function () {
     return {
-      steps: null
+      steps: null,
     };
   },
-  created: function() {
+  created: function () {
     axios
       .get("/_data/story.json")
-      .then(response => {
+      .then((response) => {
         this.steps = response.data.story;
         AOS.init();
       })
-      .catch(error => {
+      .catch((error) => {
         alert(error);
       });
   },
@@ -90,16 +86,16 @@ export default {
       var bgUrl = imgUrl.split("/");
       return bgUrl[0] + "/" + bgUrl[1] + "/" + bgUrl[2] + "/bg" + bgUrl[3];
     },
-    handleClick: function(i) {
+    handleClick: function (i) {
       // document.getElementById('section'+i).scrollIntoView({ behavior: 'smooth' });
       //document.getElementById('t'+i).focus();
       var d;
       i == 0 ? (d = 500) : (d = 300);
       animateScrollTo(document.querySelector("#section" + i), {
-        maxDuration: d
+        maxDuration: d,
       }).then((window.location.hash = "section" + i));
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -155,22 +151,22 @@ section {
     .titles {
       display: flex;
       flex-direction: row;
-      align-items: flex-end;
+      align-items: center;
     }
     h1 {
       font-size: 3.5em;
       margin-top: 0px;
       margin-bottom: 0px;
-      &:after {
-        background-color: var(--main-txt-color);
-        content: "";
-        display: block;
-        bottom: -8px;
-        position: absolute;
-        left: 21px;
-        width: 65px;
-        height: 8px;
-      }
+      // &:after {
+      //   background-color: var(--main-txt-color);
+      //   content: "";
+      //   display: block;
+      //   bottom: -8px;
+      //   position: absolute;
+      //   left: 21px;
+      //   width: 65px;
+      //   height: 8px;
+      // }
     }
 
     h2 {

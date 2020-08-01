@@ -16,28 +16,28 @@ export default {
   name: "Skill",
   props: {
     title: String,
-    skills: Array
+    skills: Array,
   },
   components: {
-    Percentage
+    Percentage,
   },
-  created: function() {}
+  created: function () {},
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .skill {
-  border: 1px solid var(--main-gray);
+  border: 1px solid var(--main-lightgray);
   border-radius: 4px;
   h3 {
-    background-color: var(--main-charcoal);
-    color: var(--main-bg-color);
+    border-bottom: 1px solid var(--main-lightgray);
+    color: var(--main-charcoal);
     margin: 0px;
     padding: 16px;
     font-size: 1.1em;
     line-height: 1em;
-    font-weight: normal;
+    font-weight: bold;
   }
 
   li {

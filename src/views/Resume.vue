@@ -1,6 +1,6 @@
 <template>
   <div class="resume wrapper" v-if="this.resumejson">
-    <h1>{{ this.resumejson.title }}</h1>
+    <h1 v-html="this.highTitle(this.resumejson.title)"></h1>
     <section>
       <h2>{{ this.resumejson.about.title }}</h2>
       <div class="content">
@@ -11,6 +11,25 @@
       </div>
     </section>
     <!-- <router-link to='/story'> {{ this.resumejson.label }} </router-link> -->
+
+    <section data-aos="fade-up" data-aos-once="true">
+      <h2>{{ this.resumejson.experience.experience_title }}</h2>
+      <div class="jobs">
+        <Job
+          class="job"
+          data-aos="fade-up"
+          data-aos-once="true"
+          v-for="post in this.resumejson.experience.job"
+          v-bind:key="post.id"
+          v-bind:position="post.position"
+          v-bind:company="post.company"
+          v-bind:description="post.description"
+          v-bind:from="post.from"
+          v-bind:to="post.to"
+          v-bind:labels="Object.keys(post)"
+        />
+      </div>
+    </section>
 
     <section data-aos="fade-up" data-aos-once="true">
       <h2>{{ this.resumejson.education.education_title }}</h2>
@@ -44,25 +63,6 @@
         />
       </div>
     </section>
-
-    <section data-aos="fade-up" data-aos-once="true">
-      <h2>{{ this.resumejson.experience.experience_title }}</h2>
-      <div class="jobs">
-        <Job
-          class="job"
-          data-aos="fade-up"
-          data-aos-once="true"
-          v-for="post in this.resumejson.experience.job"
-          v-bind:key="post.id"
-          v-bind:position="post.position"
-          v-bind:company="post.company"
-          v-bind:description="post.description"
-          v-bind:from="post.from"
-          v-bind:to="post.to"
-          v-bind:labels="Object.keys(post)"
-        />
-      </div>
-    </section>
   </div>
 </template>
 
@@ -81,24 +81,32 @@ export default {
   components: {
     Job,
     Skill,
-    Education
+    Education,
   },
-  data: function() {
+  data: function () {
     return {
-      resumejson: null
+      resumejson: null,
     };
   },
-  created: function() {
+  created: function () {
     axios
       .get("/_data/resume.json")
-      .then(response => {
+      .then((response) => {
         this.resumejson = response.data;
         AOS.init();
       })
-      .catch(error => {
+      .catch((error) => {
         alert(error);
       });
-  }
+  },
+  methods: {
+    highTitle(t) {
+      var st1 = t.slice(0, 2);
+      var st2 = t.substring(2);
+      var ret = "<span class='highlight'>" + st1 + "</span>" + st2;
+      return ret;
+    },
+  },
 };
 </script>
 
@@ -113,7 +121,8 @@ export default {
   margin-bottom: 16px;
 }
 section {
-  margin-top: 48px;
+  margin-bottom: 16px;
+  margin-top: 120px;
 }
 
 .content {

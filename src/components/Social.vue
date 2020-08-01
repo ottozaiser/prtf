@@ -17,21 +17,21 @@ import axios from "axios";
 
 export default {
   name: "Social",
-  data: function() {
+  data: function () {
     return {
-      social: null
+      social: null,
     };
   },
-  created: function() {
+  created: function () {
     axios
       .get("/_data/socialmedia.json")
-      .then(response => {
+      .then((response) => {
         this.social = response.data.socialitem;
       })
-      .catch(error => {
+      .catch((error) => {
         alert(error);
       });
-  }
+  },
 };
 </script>
 
@@ -45,6 +45,9 @@ export default {
       list-style-type: none;
       // margin-right: 8px;
       text-align: center;
+      &:first-child {
+        margin-left: 0;
+      }
       &:last-child {
         margin-right: 0;
       }

@@ -21,21 +21,21 @@ import axios from "axios";
 
 export default {
   name: "error404",
-  data: function() {
+  data: function () {
     return {
-      homejson: null
+      homejson: null,
     };
   },
-  created: function() {
+  created: function () {
     axios
       .get("/_data/home.json")
-      .then(response => {
+      .then((response) => {
         this.homejson = response.data;
       })
-      .catch(error => {
+      .catch((error) => {
         alert(error);
       });
-  }
+  },
 };
 </script>
 
@@ -47,7 +47,7 @@ export default {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 98vh;
   overflow: hidden;
   padding: 0 24px;
   @media (max-width: 640px) {
@@ -56,7 +56,6 @@ export default {
 }
 
 .layout {
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;

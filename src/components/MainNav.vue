@@ -19,7 +19,7 @@
         </button>
         <transition name="slide">
           <div class="panel-menu" v-show="showMenu" id="menu">
-            <h1 class="brand">{{ this.settings.site_title }}</h1>
+            <h1 class="brand" v-html="this.settings.site_title"></h1>
             <h1 id="dialog-title" class="sr-only">Main navigation</h1>
             <ul class="menu">
               <li
@@ -33,7 +33,7 @@
               </li>
             </ul>
             <!-- <button aria-label="Close Navigation" @click="toggleMenu">x</button>  -->
-            <Social class="social" />
+            <!-- <Social class="social" /> -->
           </div>
         </transition>
       </nav>
@@ -45,37 +45,37 @@
 </template>
 
 <script>
-import Social from "@/components/Social.vue";
+// import Social from "@/components/Social.vue";
 import axios from "axios";
 export default {
   name: "MainNav",
-  components: {
-    Social
-  },
+  // components: {
+  //   Social,
+  // },
   props: {
-    settings: Object
+    settings: Object,
   },
-  data: function() {
+  data: function () {
     return {
       menujson: null,
       showMenu: false,
       navEl: undefined,
       menuEl: undefined,
       overlayEl: undefined,
-      focusedElBeforeOpen: undefined
+      focusedElBeforeOpen: undefined,
     };
   },
-  created: function() {
+  created: function () {
     axios
       .get("/_data/menu.json")
-      .then(response => {
+      .then((response) => {
         this.menujson = response.data.menuitem;
       })
-      .catch(error => {
+      .catch((error) => {
         alert(error);
       });
   },
-  mounted: function() {
+  mounted: function () {
     //this.menujson = this.loadData("/_data/menu.json");
     this.navEl = document.getElementById("nav");
     this.menuEl = document.getElementById("menu");
@@ -104,10 +104,10 @@ export default {
       this.menuEl.removeAttribute("aria-hidden");
       this.overlayEl.removeAttribute("aria-hidden ");
       this.focusedElBeforeOpen = document.activeElement;
-      this.menuEl.addEventListener("keydown", function(e) {
+      this.menuEl.addEventListener("keydown", function (e) {
         Dialog._handleKeyDown(e);
       });
-      this.overlayEl.addEventListener("click", function() {
+      this.overlayEl.addEventListener("click", function () {
         Dialog.close();
       });
       this.firstFocusableEl.focus();
@@ -155,8 +155,8 @@ export default {
         default:
           break;
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -171,7 +171,7 @@ header {
     height: 48px;
     border: 0px;
     z-index: 15;
-    background-color: transparent;
+    background-color: var(--main-bg-trans);
     border-radius: 24px;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -239,8 +239,9 @@ header {
 }
 h1.brand {
   font-size: 1.2em;
-  margin: 18px 32px;
-  &:after {
+  margin: 18px 32px 18px 0px;
+  span.ml {
+    padding-left: 32px;
   }
 }
 .panel-menu {
@@ -258,7 +259,6 @@ h1.brand {
   transition: all 0.5s ease;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   //transform: translateZ(0) translateX(260px);
   .social {
     padding: 1em 2em;
@@ -288,8 +288,14 @@ nav.main-navigation {
     padding: 0;
     color: var(--main-txt-color);
     width: 100%;
+    border-radius: 1px solid red;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     li.menu-item {
       a {
+        flex-grow: 1;
         display: block;
         width: 100%;
         color: var(--main-txt-color);

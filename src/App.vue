@@ -27,16 +27,16 @@ export default {
   name: "app",
   components: {
     Loader,
-    MainNav
+    MainNav,
   },
-  data: function() {
+  data: function () {
     return {
       settings: null,
       loading: true,
-      ie: false
+      ie: false,
     };
   },
-  beforeMount: function() {
+  beforeMount: function () {
     function isIE() {
       var ua = navigator.userAgent;
       /* MSIE used to detect old browsers and Trident used to newer ones*/
@@ -46,22 +46,22 @@ export default {
     }
     this.ie = isIE();
   },
-  created: function() {
+  created: function () {
     axios
       .get("/_data/settings.json")
-      .then(response => {
+      .then((response) => {
         this.settings = response.data;
         this.loading = false;
       })
-      .catch(error => {
+      .catch((error) => {
         alert(error);
       });
   },
   methods: {
     onToggleCanva(menuVisible) {
       this.canvaOffset = menuVisible;
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -71,10 +71,10 @@ export default {
   --main-txt-gray: rgba(55, 53, 47, 0.6);
   --main-charcoal: rgb(30, 41, 48);
   --main-gray: rgb(150, 150, 150);
-  --main-lightgray: rgb(238, 238, 238);
+  --main-lightgray: rgb(225, 225, 225);
   --main-bg-color: rgb(248, 248, 248);
   --main-charcoal-trans: rgb(54, 69, 79, 0.8);
-  --main-charcoal-fulltrans: rgb(54, 69, 79, 0.3);
+  --main-charcoal-fulltrans: rgb(54, 69, 79, 0.2);
   --main-bg-trans: rgb(248, 248, 248, 0.8);
   --main-gray-tras: rgb(150, 150, 150, 0.2);
   --main-highlight: rgb(255, 255, 0);
@@ -128,29 +128,40 @@ button:focus,
   background-color: var(--main-highlight);
   white-space: nowrap;
 }
+.greeting {
+  align-self: flex-end;
+}
+.light {
+  margin-left: 12px;
+  display: flex;
+  align-items: flex-end;
+}
 h1 span.underline {
   position: relative;
-  &:after {
-    background-color: var(--main-txt-color);
-    content: "";
-    display: block;
-    height: 8px;
-    left: 0;
-    bottom: -4px;
-    position: absolute;
-    width: 72px;
-    @media (max-width: 350px) {
-      content: none;
-    }
-  }
+  // &:after {
+  //   background-color: var(--main-txt-color);
+  //   content: "";
+  //   display: block;
+  //   height: 8px;
+  //   left: 0;
+  //   bottom: -4px;
+  //   position: absolute;
+  //   width: 72px;
+  //   @media (max-width: 350px) {
+  //     content: none;
+  //   }
+  // }
 }
+
 ul {
   list-style-type: square;
 }
 .content li {
   margin: 8px;
 }
-
+.dynamic-content li {
+  margin: 24px 0 0 0;
+}
 .icon-btn {
   background: transparent;
   color: var(--main-charcoal);
@@ -167,9 +178,38 @@ ul {
     transform: scale(1.2);
   }
 }
+
+.btn {
+  background: transparent;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  color: var(--main-charcoal);
+  padding: 12px 16px;
+  border: 1px solid var(--main-charcoal);
+  border-radius: 1.5em;
+  display: block;
+  transition: all 0.15s ease;
+  &:hover,
+  &:focus {
+    color: var(--main-bg-color);
+    background: var(--main-charcoal);
+    // transform: scale(1.2);
+  }
+  @media (max-width: 640px) {
+    padding: 16px 16px;
+  }
+}
+
+.btn-small {
+  padding: 4px 12px;
+  font-size: 0.9em;
+}
+
 h1 {
   position: relative;
   margin-bottom: 32px;
+
   // &:after {
   //   background-color: var(--main-txt-color);
   //   content: "";
@@ -180,6 +220,13 @@ h1 {
   //   position: absolute;
   //   width: 42px;
   // }
+}
+.wrapper h1 {
+  margin-top: 0;
+  span {
+    display: inline-block;
+    padding-top: 100px;
+  }
 }
 p {
   line-height: 1.5em;

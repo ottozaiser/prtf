@@ -1,19 +1,21 @@
 <template>
-  <div class="home wrapper" v-if="this.homejson">
+  <div class="home" v-if="this.homejson">
     <div class="layout">
-      <div class="content">
-        <progressive-img class="image" :src="this.homejson.image" alt />
+      <div class="heading-home">
         <h1 v-html="this.homejson.subtitle"></h1>
+      </div>
+      <div class="content">
+        <!-- <progressive-img class="image" :src="this.homejson.image" alt /> -->
         <p v-html="this.homejson.content"></p>
         <ul class="menu">
           <li class="menu-item" v-bind:key="index" v-for="(item, index) in this.homejson.links">
-            <router-link :to="item.url" v-if="item.url.startsWith('/')">{{ item.name }}</router-link>
-            <a :href="item.url" target="_blank" v-else>{{ item.name }}</a>
+            <router-link class="btn" :to="item.url" v-if="item.url.startsWith('/')">{{ item.name }}</router-link>
+            <a class="btn" :href="item.url" target="_blank" v-else>{{ item.name }}</a>
           </li>
         </ul>
+        <Social class="social" />
       </div>
     </div>
-    <Social class="social" />
   </div>
 </template>
 
@@ -24,64 +26,83 @@ import Social from "@/components/Social.vue";
 export default {
   name: "home",
   components: {
-    Social
+    Social,
   },
-  data: function() {
+  data: function () {
     return {
-      homejson: null
+      homejson: null,
     };
   },
-  created: function() {
+  created: function () {
     axios
       .get("/_data/home.json")
-      .then(response => {
+      .then((response) => {
         this.homejson = response.data;
       })
-      .catch(error => {
+      .catch((error) => {
         alert(error);
       });
-  }
+  },
 };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 .home {
-  display: flex;
-  flex: 1;
+  display: grid;
   position: relative;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: 100vh;
-  overflow: hidden;
+  height: 98vh;
   padding: 0 24px;
+  max-width: 992px;
+  margin: 0 auto;
+  overflow: hidden;
   @media (max-width: 640px) {
     height: auto;
   }
 }
 .layout {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   z-index: 2;
-  font-size: 1.5em;
   @media (max-width: 640px) {
-    height: auto;
-    margin-top: 24px;
+    // height: auto;
+    // margin-top: 24px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 3fr;
+  }
+}
+.heading-home {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+  h1 {
+    display: flex;
+    align-items: stretch;
+    margin: 0;
+  }
+  @media (max-width: 640px) {
+    justify-content: flex-start;
+    // height: 200px;
+  }
+}
+
+.content {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  @media (max-width: 640px) {
+    grid-column-start: 1;
+    grid-row-start: auto;
   }
 }
 
 ul.menu {
   padding: 0;
+  margin-top: 36px;
+  margin-bottom: 36px;
   li {
     display: inline-block;
-    margin: 8px 16px;
     &:first-child {
       margin-left: 0;
-    }
-    a {
-      color: black;
     }
     @media (max-width: 640px) {
       display: block;
@@ -97,15 +118,6 @@ ul.menu {
 }
 
 .social {
-  position: fixed;
-  bottom: 0;
-  z-index: 2;
-  max-width: 992px;
-  width: 100%;
-  padding: 0 24px;
-  @media (max-width: 640px) {
-    position: relative;
-    padding: 0;
-  }
+  align-self: end;
 }
 </style>
