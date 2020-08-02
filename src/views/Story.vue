@@ -30,10 +30,10 @@
         <span class="sr-only">Next {{ steps[index + 1].title }}</span>
       </a>
       <div class="bottom-btns" v-if="index == steps.length - 1">
-        <router-link v-tooltip="'Home'" to="/" class="icon-btn">
+        <!-- <router-link v-tooltip="'Home'" to="/" class="icon-btn">
           <font-awesome-icon aria-hidden="true" :icon="['fa', 'home']" />
           <span class="sr-only">Home</span>
-        </router-link>
+        </router-link>-->
         <a
           v-tooltip="'Read story again'"
           :href="'#section0'"
@@ -223,15 +223,7 @@ section {
     position: absolute;
     text-align: center;
     bottom: 20px;
-    a {
-      display: inline-block;
-    }
-  }
-  .icon-btn {
-    &:hover,
-    &:focus {
-      background: var(--main-gray-tras);
-    }
+    // display: flex;
   }
   .animate {
     animation: fadein 1s infinite;

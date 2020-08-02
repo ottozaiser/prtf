@@ -92,6 +92,9 @@ body {
   background-color: var(--main-bg-color);
   color: var(--main-txt-color);
   font-size: 18px;
+  &:focus {
+    outline-width: 0 !important;
+  }
 }
 a,
 a:hover,
@@ -169,8 +172,9 @@ ul {
   font-size: 1.2em;
   width: 42px;
   height: 42px;
-  padding-top: 7px;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: all 0.2s ease;
   &:hover,
   &:focus {
