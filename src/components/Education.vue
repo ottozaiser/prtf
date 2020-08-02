@@ -19,8 +19,8 @@ export default {
     title: String,
     institution: String,
     link: String,
-    finished: String
-  }
+    finished: String,
+  },
 };
 </script>
 
@@ -35,17 +35,22 @@ p {
   .header {
     font-weight: normal;
     padding-bottom: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @media (max-width: 640px) {
+      grid-template-columns: 1fr;
+    }
     h3,
     p {
       font-weight: normal;
       display: inline-block;
     }
     p {
-      float: right;
+      align-self: center;
+      justify-self: end;
       @media (max-width: 640px) {
-        float: initial;
-        display: block;
-        margin-left: 58px;
+        justify-self: start;
+        margin-left: 65px;
       }
     }
   }

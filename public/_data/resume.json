@@ -1,7 +1,7 @@
 {
 	"title": "CV Resumé",
 	"about": {
-		"title": "About me",
+		"title": "🤓 About me",
 		"content": "<p>I’ve been a professional designer for the past 15 years. Since I was a teen that I am stunned with the Internet and started my amateur designs with FrontPage 98 and since that day I didn’t stop learning and pursuing new challenges that keep me up to date in this field of constant innovation.</p><p>During my professional career I was surrounded by all types of profiles and one of my virtues was to connect and include all these people in the design process to make a useful, accessible, feasible product, and create a great user experience.</p><p><ul><li><a href='https://www.linkedin.com/in/ottozaiser/' target='_blank'>LinkedIn Profile</a></li><li><a class='highlight' href='/story'>Read My Story >></a></li></ul></p>",
 		"image": "/_data/media/me-real.png"
 	},
@@ -10,7 +10,7 @@
 		"full_resume": "OZ-FULL-EN.pdf"
 	},
 	"education": {
-		"education_title": "Education",
+		"education_title": "🧐 Education",
 		"education_items": [
 			{
 				"title": "Accessibility & Usability",
@@ -27,7 +27,7 @@
 		]
 	},
 	"skills": {
-		"skills_title": "Skills, Knowledge and Tools",
+		"skills_title": "😎 Skills, Knowledge & Tools",
 		"categories": [
 			{
 				"category_title": "UI Design",
@@ -185,11 +185,11 @@
 					},
 					{
 						"name": "Sketch",
-						"percentage": "80"
+						"percentage": "90"
 					},
 					{
 						"name": "Figma",
-						"percentage": "70"
+						"percentage": "90"
 					},
 					{
 						"name": "Invision",
@@ -264,7 +264,7 @@
 		]
 	},
 	"experience": {
-		"experience_title": "Job Experience",
+		"experience_title": "👴 Job Experience",
 		"job": [
 			{
 				"company": "NIC Argentina",

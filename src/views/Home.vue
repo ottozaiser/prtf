@@ -51,14 +51,12 @@ export default {
 .home {
   display: grid;
   position: relative;
-  height: 99vh;
+  height: 92vh;
   padding: 0 24px;
   max-width: 992px;
+  padding-bottom: 24px;
   margin: 0 auto;
   //overflow: hidden;
-  @media (max-width: 640px) {
-    height: auto;
-  }
 }
 .img {
   background-size: 300px;
@@ -69,13 +67,13 @@ export default {
 .layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 50%;
   z-index: 2;
   @media (max-width: 640px) {
     // height: auto;
+    grid-template-rows: 40%;
     // margin-top: 24px;
     grid-template-columns: 1fr;
-    grid-template-rows: 2fr 3fr;
   }
 }
 .heading-home {

@@ -132,7 +132,7 @@ button:focus,
   align-self: flex-end;
 }
 .light {
-  margin-left: 12px;
+  margin-left: 8px;
   display: flex;
   align-items: flex-end;
 }
