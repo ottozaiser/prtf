@@ -10,7 +10,7 @@
 		"full_resume": "OZ-FULL-EN.pdf"
 	},
 	"education": {
-		"education_title": "🧐 Education",
+		"education_title": "📓 Education",
 		"education_items": [
 			{
 				"title": "Accessibility & Usability",
@@ -27,7 +27,7 @@
 		]
 	},
 	"skills": {
-		"skills_title": "😎 Skills, Knowledge & Tools",
+		"skills_title": "👑 Skills, Knowledge & Tools",
 		"categories": [
 			{
 				"category_title": "UI Design",
