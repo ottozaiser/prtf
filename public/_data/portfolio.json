@@ -10,16 +10,28 @@
 				"file": "https://drive.google.com/file/d/1uV1F7vlxTZ0RRc4i4X_ZavfjwbV0JmVm/view"
 			},
 			{
-				"title": "TeleTech",
-				"content": "e-Learning courses designs for large companies.",
-				"image": "/public/_data/media/teletech.png",
-				"file": "https://drive.google.com/file/d/1qjdF7Wmp92MJEGFydKCOO3a7iYmk0cQi/view"
+				"title": "Microsoft",
+				"content": "Training to retailers about the features of the brand new Office 365.",
+				"image": "/public/_data/media/microsoft.png",
+				"file": "https://drive.google.com/file/d/18ffK6BgsCCkP4zwyDvZP5SfN3oTxIBS3/view"
+			},
+			{
+				"title": "Sony",
+				"content": "A new device called Dash was launched and the retailers needed to know about it.",
+				"image": "/public/_data/media/sony.png",
+				"file": "https://drive.google.com/file/d/1mmbDFRsGIvRNHi73ZZ5gDhccxzesNFPA/view"
 			},
 			{
 				"title": "Viñetas Sueltas",
-				"content": "I’ve been in charge of Viñetas Sueltas' website since 2008 and this is that story.",
+				"content": "I’ve been in charge of Viñetas Sueltas' from 2008 to 2017 and this is that story.",
 				"image": "/public/_data/media/vinetas.png",
 				"file": "https://drive.google.com/file/d/1X3uAUzciYfkBicg1ZaaVjF8M9WlPVv0q/view"
+			},
+			{
+				"title": "Nearpod",
+				"content": "Helped the iOS team to create a new menu feature with Motion UI.",
+				"image": "/public/_data/media/portfolio_nearpod.png",
+				"file": "https://drive.google.com/file/d/1vYYhgm0KgLwD3uqAG34zO0En4X0hgKNX/view"
 			},
 			{
 				"title": "CoS: Top-Level Domain",
@@ -27,6 +39,7 @@
 				"image": "/public/_data/media/portfolio_nic.png",
 				"file": "https://drive.google.com/file/d/1k7SR5Ipxj8AU2JsSMavdWW8Pl-lqLD5x/view"
 			},
+
 			{
 				"title": "Personal",
 				"content": "Art direction and motion for a promotional video.",
