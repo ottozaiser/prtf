@@ -1,7 +1,7 @@
 {
 	"title": "Home",
 	"subtitle": "<span class='greeting'>👋 Hi! I'm</span> <span class='highlight light'>Otto</span>",
-	"content": "I'm a designer in love with problem solving. UX, UI, code, illustration, and motion but I am not a unicorn.",
+	"content": "I'm a designer in love with problem solving. I do UX, UI, code, illustration, and motion but I am not a unicorn.",
 	"image": "/_data/media/me.png",
 	"links": [
 		{
@@ -9,8 +9,8 @@
 			"url": "/resume"
 		},
 		{
-			"name": "Portfolio",
-			"url": "/portfolio"
+			"name": "Read My Story",
+			"url": "/story"
 		}
 	]
 }

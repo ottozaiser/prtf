@@ -13,10 +13,6 @@
 			"url": "/story"
 		},
 		{
-			"name": "Portfolio",
-			"url": "/portfolio"
-		},
-		{
 			"name": "Contact me",
 			"url": "mailto:hola@otto.com.ar?subject=Hi!"
 		}
