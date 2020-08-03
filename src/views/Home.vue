@@ -66,9 +66,12 @@ export default {
 }
 .layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 3fr;
   grid-template-rows: 50%;
   z-index: 2;
+  @media (max-width: 780px) {
+    grid-template-columns: 1fr 1fr;
+  }
   @media (max-width: 640px) {
     // height: auto;
     grid-template-rows: 40%;
