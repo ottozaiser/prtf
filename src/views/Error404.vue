@@ -1,40 +1,37 @@
 <template>
-  <div class="error404" v-if="this.homejson">
-    <div class="layout">
-      <progressive-img class="image" src="/images/error.png" alt />
+  <div class="error404">
+    <div class="window" v-if="!fixed">
       <div class="content">
-        <h1>Error 404</h1>
-        <p>This shitty vuerouter couldn't find this page. Try these instead:</p>
-        <ul class="menu">
-          <li class="menu-item" v-bind:key="index" v-for="(item, index) in this.homejson.links">
-            <router-link :to="item.url" v-if="item.url.startsWith('/')">{{ item.name }}</router-link>
-            <a :href="item.url" target="_blank" v-else>{{ item.name }}</a>
-          </li>
-        </ul>
+        <h1>Fatal Error</h1>
+        <div class="textContent">
+          <p>An error ocurred: Connection refused (0x6546FAE36B654E54). Version=2.03. Display(String value, Type objectType) =0000077765464654.</p>
+        </div>
+        <div class="btns">
+          <button v-on:click="fixed = true">Fix UX Error</button>
+        </div>
+      </div>
+    </div>
+    <div class="window fixed" v-if="fixed">
+      <div class="content">
+        <h1>404 - Page not found</h1>
+        <div class="textContent">
+          <p>Sorry. Sometimes I make mistakes but that’s ok.</p>
+        </div>
+        <div class="btns">
+          <router-link class="btn" to="/">Go back home</router-link>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import axios from "axios";
-
 export default {
   name: "error404",
   data: function () {
     return {
-      homejson: null,
+      fixed: false,
     };
-  },
-  created: function () {
-    axios
-      .get("/_data/home.json")
-      .then((response) => {
-        this.homejson = response.data;
-      })
-      .catch((error) => {
-        alert(error);
-      });
   },
 };
 </script>
@@ -55,58 +52,48 @@ export default {
   }
 }
 
-.layout {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.window {
+  max-width: 500px;
   width: 100%;
+  border: 1px solid red;
   z-index: 2;
-  @media (max-width: 640px) {
-    display: block;
-    text-align: center;
-    flex-direction: row;
-    min-height: auto;
-  }
 }
 .content {
-  max-width: 256px;
-
-  @media (max-width: 640px) {
-    margin: 0 auto;
-    h1 {
-      display: inline-block;
-      &:after {
-        left: 0px;
+  h1 {
+    margin: 0;
+    padding: 16px;
+    color: white;
+    background-color: red;
+    font-size: 1.1em;
+  }
+  .textContent {
+    word-wrap: break-word;
+    padding: 16px;
+    p {
+      margin: 0;
+    }
+  }
+  .btns {
+    padding: 16px;
+    text-align: right;
+    button {
+      padding: 8px;
+      border: 1px solid black;
+      background-color: transparent;
+      cursor: pointer;
+      &:hover,
+      &:focus {
+        background-color: var(--main-lightgray);
       }
     }
   }
-  @media (max-width: 300px) {
-    h1:after {
-      content: none;
-    }
-  }
 }
-
-ul.menu {
-  padding: 0;
-  li {
-    display: block;
-    margin: 8px 0;
-    padding: 8px;
-    a {
-      color: black;
-    }
-  }
-  @media (max-width: 640px) {
-    text-align: center;
-  }
-}
-.image {
-  width: 256px;
-  max-width: 256px;
-  max-height: 256px;
-  @media (max-width: 300px) {
-    width: 100%;
+.fixed {
+  border: 1px solid black;
+  border-radius: 10px;
+  h1 {
+    background-color: transparent;
+    color: var(--main-charcoal);
   }
 }
 </style>
