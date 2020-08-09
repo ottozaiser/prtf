@@ -23,6 +23,7 @@
           v-bind:key="post.id"
           v-bind:position="post.position"
           v-bind:company="post.company"
+          v-bind:url="post.url"
           v-bind:description="post.description"
           v-bind:from="post.from"
           v-bind:to="post.to"

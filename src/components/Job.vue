@@ -16,7 +16,12 @@
     <div class="subheader">
       <p>
         <span class="sr-only">{{ labels[1] }}:</span>
-        <span class="company">{{ company }}</span>
+        <span class="company">
+          <span v-if="url">
+            <a :href="url" target="_blank" rel="nofollow">{{ company }}</a>
+          </span>
+          <span v-else>{{ company }}</span>
+        </span>
       </p>
       <div class="more">
         <button v-if="!show" id="showBtn" v-on:click="toggle()" class="btn btn-small">
@@ -42,6 +47,7 @@ export default {
   props: {
     labels: Array,
     company: String,
+    url: String,
     position: String,
     description: String,
     from: String,

@@ -120,6 +120,7 @@ collections:
                 name: job
                 fields:
                   - { label: "Company", name: "company", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string", required: false }
                   - { label: "Position", name: "position", widget: "string" }
                   - { label: "From", name: "from", widget: "string" }
                   - { label: "To", name: "to", widget: "string" }
