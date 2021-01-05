@@ -14,7 +14,7 @@
     "@fortawesome/vue-fontawesome": "^0.1.10",
     "animated-scroll-to": "^2.0.10",
     "aos": "^2.3.4",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "normalize.css": "^8.0.1",
     "oaf-vue-router": "^3.0.0",
