@@ -166,6 +166,7 @@ collections:
                 name: "projects"
                 widget: list
                 fields:
+                  - { label: "Show", name: "show", widget: "boolean" }
                   - { label: "Project Title", name: "title", widget: "string" }
                   - { label: "Project Content", name: "content", widget: "markdown" }
                   - { label: "Project Cover image", name: "image", widget: "image" }

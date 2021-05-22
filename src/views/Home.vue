@@ -103,7 +103,7 @@ export default {
 .layout {
   display: grid;
   // grid-template-columns: 2fr 3fr;
-  grid-template-rows: 50%;
+  // grid-template-rows: 50%;
   z-index: 2;
   // @media (max-width: 780px) {
   // 	grid-template-columns: 1fr 1fr;
@@ -133,6 +133,7 @@ export default {
   max-width: 600px;
   align-self: end;
   opacity: 0.9;
+  margin: inherit !important;
   margin-left: 10px !important;
   @media (max-width: 700px) {
     align-self: auto;

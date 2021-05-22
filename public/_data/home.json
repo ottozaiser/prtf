@@ -9,6 +9,10 @@
 			"url": "/resume"
 		},
 		{
+			"name": "Portfolio",
+			"url": "/portfolio"
+		},
+		{
 			"name": "Read My Story",
 			"url": "/story"
 		}

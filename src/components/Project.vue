@@ -1,5 +1,5 @@
 <template>
-  <a :href="file" target="_blank" rel="external nofollow">
+  <a :href="file" target="_blank" rel="external nofollow" v-if="show">
     <article>
       <div class="project">
         <div class="img-container">
@@ -22,6 +22,7 @@
 export default {
   name: "Project",
   props: {
+    show: Boolean,
     title: String,
     content: String,
     location: String,

@@ -7,6 +7,7 @@
         class="project"
         v-for="post in this.portjson.projects"
         v-bind:key="post.id"
+        v-bind:show="post.show"
         v-bind:title="post.title"
         v-bind:content="post.content"
         v-bind:location="post.location"
