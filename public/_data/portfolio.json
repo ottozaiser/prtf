@@ -3,72 +3,72 @@
 		"title": "Portfolio",
 		"content": "<p>I am currently working on this section. Beware that I can not show all because NDAs. In the meantime, you can see some of my work on <b>PDFs</b>:</p>",
 		"projects": [
-						{
-				"show": true,
+			{
 				"title": "Microsoft",
+				"show": true,
 				"content": "Training to retailers about the features of the brand new Office 365.",
 				"image": "/public/_data/media/microsoft.png",
 				"file": "https://drive.google.com/file/d/18ffK6BgsCCkP4zwyDvZP5SfN3oTxIBS3/view"
 			},
 			{
-				"show": true,
 				"title": "Sony",
+				"show": true,
 				"content": "A new device called Dash was launched and the retailers needed to know about it.",
 				"image": "/public/_data/media/sony.png",
 				"file": "https://drive.google.com/file/d/1mmbDFRsGIvRNHi73ZZ5gDhccxzesNFPA/view"
 			},
 			{
-				"show": true,
 				"title": "BFA",
+				"show": true,
 				"content": "I helped Blockchain Federal Argentina to create their brand, website and applications.",
 				"image": "/public/_data/media/bfa.png",
 				"file": "https://drive.google.com/file/d/1uV1F7vlxTZ0RRc4i4X_ZavfjwbV0JmVm/view"
 			},
 			{
-				"show": true,
 				"title": "Viñetas Sueltas",
+				"show": true,
 				"content": "I’ve been in charge of Viñetas Sueltas' from 2008 to 2017 and this is that story.",
 				"image": "/public/_data/media/vinetas.png",
 				"file": "https://drive.google.com/file/d/1X3uAUzciYfkBicg1ZaaVjF8M9WlPVv0q/view"
 			},
 			{
-				"show": false,
 				"title": "Nearpod",
+				"show": false,
 				"content": "Helped the iOS team to create a new menu feature with Motion UI.",
 				"image": "/public/_data/media/portfolio_nearpod.png",
 				"file": "https://drive.google.com/file/d/1vYYhgm0KgLwD3uqAG34zO0En4X0hgKNX/view"
 			},
 			{
-				"show": true,
 				"title": "CoS: Top-Level Domain",
+				"show": true,
 				"content": "I helped NIC Argentina to launch the opening of the top-level domain to users.",
 				"image": "/public/_data/media/portfolio_nic.png",
 				"file": "https://drive.google.com/file/d/1k7SR5Ipxj8AU2JsSMavdWW8Pl-lqLD5x/view"
 			},
 			{
-				"show": true,
 				"title": "Personal",
+				"show": true,
 				"content": "Art direction and motion for a promotional video.",
 				"image": "/public/_data/media/ppdeportes.png",
 				"file": "https://drive.google.com/file/d/1N6j7C5M9lUZFdIa2jVED0Nhw0bg0BJKa/view"
 			},
 			{
-				"show": false,
 				"title": "Logos",
+				"show": false,
 				"content": "Some logos I've designed.",
 				"image": "/public/_data/media/logos.png",
 				"file": "https://drive.google.com/file/d/1hS3vqdHLHyqiXAxVQ6BIMD_NPDcv7mey/view"
 			},
 			{
-				"show": true,
 				"title": "Reel",
+				"show": true,
 				"content": "You can watch my Motion Graphics Reel on Vimeo.",
 				"image": "/public/_data/media/portfolio_motion.png",
 				"file": "http://www.vimeo.com/ottozaiser"
 			},
 			{
-				"show": true,
 				"content": "You can see my illustration portfolio on Tumblr.",
+				"show": true,
 				"title": "Art",
 				"file": "http://www.ottozaiser.com/",
 				"image": "/public/_data/media/portfolio_art.png"
