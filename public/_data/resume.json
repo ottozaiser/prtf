@@ -85,7 +85,7 @@
         ]
       },
       {
-        "category_title": "Front-End",
+        "category_title": "UI Dev",
         "category": [
           {
             "name": "HTML5",
@@ -108,20 +108,16 @@
             "percentage": 60
           },
           {
-            "name": "jQuery",
-            "percentage": 75
-          },
-          {
             "name": "Vue.js",
             "percentage": 60
           },
           {
-            "name": "Task runners",
-            "percentage": 40
-          },
-          {
             "name": "Git",
             "percentage": 50
+          },
+          {
+            "name": "Unity",
+            "percentage": 90
           }
         ]
       },
@@ -267,11 +263,19 @@
     "experience_title": "👴 Job Experience",
     "job": [
       {
+        "company": "FunCraft",
+        "url": "https://www.funcraft.com/",
+        "position": "Product Designer",
+        "from": "01/2023",
+        "to": "Currently",
+        "description": "<p>FunCraft is a mobile gaming development company.</p> <p>Responsibilities and tools:</p><ul><li>Product design (Android and iOS)</li><li>**Unity** integration</li><li>New features and improvement proposals</li><li>User flows, wireframes and prototyping</li><li>UI design for gaming</li><li>Graphics and illustrations</li><li>Midjourney prompts</li><li>Perforce version control</li><li>UA Ads for games</li><li>Adobe Suite (Photoshop, Illustrator, After Effects)</li></ul>"
+      },
+      {
         "company": "Etermax",
         "url": "https://www.etermax.com",
         "position": "Product Artist",
         "from": "08/2020",
-        "to": "Currently",
+        "to": "12/2022",
         "description": "<p>Etermax is a mobile gaming development company based in Buenos Aires.</p>\n<p>Responsibilities and tools:</p><ul><li>Product design (Android and iOS)</li><li>New features and improvement proposals</li><li>User flows, wireframes and prototyping</li><li>UI design for gaming</li><li>Graphics and illustrations</li><li>Unity integration</li><li>Git version control</li><li>Amplitude analysis</li><li>Braze (In-App Purchases and notifications)</li><li>HTML, CSS &amp; JavaScript</li><li>Adobe Suite (Photoshop, Illustrator, After Effects)</li></ul>"
       },
       {
