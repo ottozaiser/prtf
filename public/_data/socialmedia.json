@@ -1,29 +1,29 @@
 {
-	"socialitem": [
-		{
-			"name": "linkedin",
-			"hover": "Profile",
-			"url": "https://www.linkedin.com/in/ottozaiser/"
-		},
-		{
-			"name": "vimeo",
-			"hover": "Motion",
-			"url": "http://www.vimeo.com/ottozaiser"
-		},
-		{
-			"name": "tumblr",
-			"hover": "Art",
-			"url": "http://www.ottozaiser.com/"
-		},
-		{
-			"name": "instagram",
-			"hover": "Follow me!",
-			"url": "https://www.instagram.com/ottoescapo/"
-		},
-		{
-			"name": "dribbble",
-			"hover": "Follow me!",
-			"url": "https://dribbble.com/ottozaiser/"
-		}
-	]
+  "socialitem": [
+    {
+      "name": "linkedin",
+      "hover": "Profile",
+      "url": "https://www.linkedin.com/in/ottozaiser/"
+    },
+    {
+      "name": "vimeo",
+      "hover": "Motion",
+      "url": "http://www.vimeo.com/ottozaiser"
+    },
+    {
+      "name": "tumblr",
+      "hover": "Art",
+      "url": "https://ottozaiser.tumblr.com/"
+    },
+    {
+      "name": "instagram",
+      "hover": "Follow me!",
+      "url": "https://www.instagram.com/ottoescapo/"
+    },
+    {
+      "name": "dribbble",
+      "hover": "Follow me!",
+      "url": "https://dribbble.com/ottozaiser/"
+    }
+  ]
 }
