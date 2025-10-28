@@ -38,6 +38,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@use 'sass:math';
+@use '@/styles/variables' as *;
+
 .blob {
   position: absolute;
   top: 0;

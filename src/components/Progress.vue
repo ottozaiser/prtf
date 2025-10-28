@@ -10,39 +10,47 @@
 </template>
 
 <script>
+import { ref, onMounted, onUnmounted } from 'vue';
+
 export default {
   name: "Progress",
-  data() {
-    return {
-      width: 0
-    };
-  },
-  mounted() {
-    window.addEventListener("scroll", this.handleScroll);
-    window.dispatchEvent(new Event("scroll"));
-  },
-  destroyed() {
-    window.removeEventListener("scroll", this.handleScroll);
-  },
-  methods: {
-    handleScroll() {
+  setup(props, { emit }) {
+    const width = ref(0);
+
+    const handleScroll = () => {
       const height =
         document.documentElement.scrollHeight -
         document.documentElement.clientHeight;
-      this.width = (window.scrollY / height) * 100;
-      const eventWidth = Math.ceil(this.width);
+      width.value = (window.scrollY / height) * 100;
+      const eventWidth = Math.ceil(width.value);
       if (eventWidth === 0) {
-        this.$emit("begin");
+        emit("begin");
       }
       if (eventWidth === 100) {
-        this.$emit("complete");
+        emit("complete");
       }
-    }
+    };
+
+    onMounted(() => {
+      window.addEventListener("scroll", handleScroll);
+      window.dispatchEvent(new Event("scroll"));
+    });
+
+    onUnmounted(() => {
+      window.removeEventListener("scroll", handleScroll);
+    });
+
+    return {
+      width
+    };
   }
 };
 </script>
 
 <style lang="scss" scoped>
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
 .container {
   position: fixed;
   width: 100%;
@@ -50,9 +58,12 @@ export default {
   left: 0;
   background-color: var(--main-bg-trans);
   z-index: 2;
+  @include transition(background-color);
 }
+
 .bar {
   background-color: var(--main-charcoal);
   height: 8px;
+  @include transition(width);
 }
 </style>

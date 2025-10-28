@@ -1,15 +1,10 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
-import { wrapRouter } from "oaf-vue-router";
-
-Vue.use(VueRouter);
+import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
 	{
 		path: "/",
 		name: "home",
-		component: Home,
+		component: () => import(/* webpackChunkName: "home" */ "../views/Home.vue"),
 		meta: {
 			title: "Otto Zaiser [Designer]",
 		},
@@ -55,31 +50,29 @@ const routes = [
 		},
 	},
 	{
-		// will match everything
-		path: "*",
-		name: "error404",
-		component: () => import(/* webpackChunkName: "error404" */ "../views/Error404.vue"),
+			// will match everything (vue-router v4)
+			path: '/:pathMatch(.*)*',
+			name: "error404",
+			component: () => import(/* webpackChunkName: "error404" */ "../views/Error404.vue"),
 		meta: {
 			title: "404 - Page not found",
 		},
 	},
 ];
 
-const router = new VueRouter({
-	mode: "history",
-	scrollBehavior() {
-		return { x: 0, y: 0 };
-	},
-	linkActiveClass: "is-active",
-	base: process.env.BASE_URL,
-	routes,
-});
+	const router = createRouter({
+		history: createWebHistory(import.meta.env.BASE_URL),
+		routes,
+		// preserve existing options
+		linkActiveClass: "is-active",
+		scrollBehavior() {
+			return { left: 0, top: 0 };
+		},
+	});
 
-wrapRouter(router);
+	router.beforeEach((to, from, next) => {
+		document.title = to.meta?.title || document.title;
+		next();
+	});
 
-router.beforeEach((to, from, next) => {
-	document.title = to.meta.title;
-	next();
-});
-
-export default router;
+	export default router;

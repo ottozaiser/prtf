@@ -20,7 +20,7 @@
       </div>
 
       <a
-        v-tooltip="'Next ' + steps[index + 1].title"
+        :title="'Next ' + steps[index + 1].title"
         v-if="index < steps.length - 1"
         class="icon-btn bottom-btns animate"
         :href="'#section' + (index + 1)"
@@ -35,7 +35,7 @@
           <span class="sr-only">Home</span>
         </router-link>-->
         <a
-          v-tooltip="'Read story again'"
+          :title="'Read story again'"
           :href="'#section0'"
           v-on:click.stop.prevent="handleClick(0)"
           class="icon-btn"
@@ -100,12 +100,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@use 'sass:math';
+@use 'sass:color';
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
 .story {
-  display: flex;
+  @include flex-column;
   flex: 1;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
 }
 .cover {
   position: absolute;

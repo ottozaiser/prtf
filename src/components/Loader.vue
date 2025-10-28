@@ -42,10 +42,13 @@
 </template>
 
 <style scoped lang="scss">
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
 .loading {
-  //background-color: var(--main-charcoal-trans);
   text-align: center;
   border-radius: 5px;
+  @include transition(opacity);
 }
 
 .overlay {

@@ -1,12 +1,12 @@
 <template>
   <div class="description">
     <router-link to="/">BACK</router-link>
-    <h1>{{ this.proyecto.title }}</h1>
-    <img :src="this.proyecto.cover" alt="" />
+  <h1>{{ this.proyecto.title }}</h1>
+  <progressive-img :src="this.proyecto.cover" alt="" />
     <p>{{ this.proyecto.content }}</p>
     <ul>
       <li v-bind:key="value.id" v-for="value in this.proyecto.imagenes">
-        <img :src="value.url" :alt="value.alt" />
+        <progressive-img :src="value.url" :alt="value.alt" />
         {{ value.ep }}
       </li>
     </ul>

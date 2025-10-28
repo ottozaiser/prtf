@@ -34,15 +34,19 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
 * {
-  transition: all 0.2s ease;
+  @include transition;
 }
 
 a {
   border-radius: 4px;
   border: 1px solid var(--main-lightgray);
   text-decoration: none;
-  transition: all 0.2s ease;
+  @include transition;
+  
   &:hover {
     transform: translate(0, -5px);
   }

@@ -3,10 +3,11 @@
     <h2 class="sr-only">Social media</h2>
     <ul class="socialmedia">
       <li class="social-item" v-bind:key="index" v-for="(item, index) in this.social">
-        <a target="_blank" :href="item.url" class="icon-btn" v-tooltip="item.hover">
-          <font-awesome-icon :icon="['fab', item.name]" aria-hidden="true" />
-          <span class="sr-only">{{ item.name }}</span>
-        </a>
+
+          <a target="_blank" :href="item.url" class="icon-btn" :title="item.hover" :aria-label="item.hover">
+            <font-awesome-icon :icon="['fab', item.name]" aria-hidden="true" />
+            <span class="sr-only">{{ item.name }}</span>
+          </a>
       </li>
     </ul>
   </div>
@@ -24,12 +25,13 @@ export default {
   },
   created: function () {
     axios
-      .get("/_data/socialmedia.json")
+      .get(import.meta.env.BASE_URL + "_data/socialmedia.json")
       .then((response) => {
         this.social = response.data.socialitem;
       })
       .catch((error) => {
-        alert(error);
+        // fail gracefully
+        console.warn('Could not load socialmedia.json', error);
       });
   },
 };

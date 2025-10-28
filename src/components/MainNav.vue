@@ -161,6 +161,11 @@ export default {
 </script>
 
 <style lang="scss">
+@use 'sass:math';
+@use 'sass:color';
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
 header {
   button.menu-button {
     position: fixed;
@@ -331,17 +336,17 @@ nav.main-navigation {
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.2s ease;
+  @include transition(opacity);
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+.fade-enter, .fade-leave-to {
   opacity: 0;
 }
 
 .slide-enter-active,
 .slide-leave-active {
-  transition: transform 0.2s ease;
+  @include transition(transform);
 }
-.slide-enter, .slide-leave-to /* .fade-leave-active below version 2.1.8 */ {
+.slide-enter, .slide-leave-to {
   transform: translateZ(0) translateX(300px);
 }
 </style>

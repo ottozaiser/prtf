@@ -41,22 +41,36 @@ export default {
     };
   },
   created: function () {
+    const base = (import.meta.env && import.meta.env.BASE_URL) || '/';
+
     axios
-      .get("/_data/home.json")
+      .get(base + "_data/home.json")
       .then((response) => {
         this.homejson = response.data;
       })
       .catch((error) => {
-        alert(error);
+        // fail gracefully
+        console.warn('Could not load home.json', error);
       });
+
     axios
-      .get("/data.json")
+      .get(base + "home-animation-data.json")
       .then((response) => {
-        this.animationData = response.data;
+        // validate animation data
+        const data = response.data;
+        if (!data || (typeof data === 'object' && Object.keys(data).length === 0)) {
+          console.warn('Animation data is empty or invalid, using fallback animation');
+          // minimal fallback animation (no-op)
+          this.animationData = { v: '5.0.0', fr: 30, ip: 0, op: 1, w: 100, h: 100, layers: [] };
+        } else {
+          this.animationData = data;
+        }
         this.defaultOptions = { animationData: this.animationData };
       })
       .catch((error) => {
-        alert(error);
+        console.warn('Could not load animation data', error);
+        this.animationData = { v: '5.0.0', fr: 30, ip: 0, op: 1, w: 100, h: 100, layers: [] };
+        this.defaultOptions = { animationData: this.animationData };
       });
   },
   methods: {
@@ -84,6 +98,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@use 'sass:math';
+@use '@/styles/variables' as *;
+
 .home {
   display: grid;
   position: relative;

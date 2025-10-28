@@ -1,0 +1,89 @@
+// _mixins.scss
+@use 'sass:math';
+@use 'sass:color';
+@use 'variables' as *;
+
+// Flexbox mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// Media query mixins
+@mixin mobile {
+  @media (max-width: 700px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 701px) and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 993px) {
+    @content;
+  }
+}
+
+// Animation mixins
+@mixin transition($property: all, $duration: 0.3s, $timing: ease) {
+  transition: $property $duration $timing;
+}
+
+@mixin fadeIn($duration: 0.3s) {
+  animation: fadeIn $duration ease-in-out;
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+// Button styles
+@mixin button-base {
+  background: transparent;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  color: var(--main-charcoal);
+  padding: 12px 16px;
+  border: 1px solid var(--main-charcoal);
+  border-radius: 1.5em;
+  display: block;
+  @include transition;
+
+  &:hover,
+  &:focus {
+    color: var(--main-bg-color);
+    background: var(--main-charcoal);
+  }
+
+  @include mobile {
+    padding: 16px;
+  }
+}
+
+@mixin button-small {
+  @include button-base;
+  padding: 4px 12px;
+  font-size: 0.9em;
+}

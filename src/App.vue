@@ -7,7 +7,7 @@
 			</p>
 		</div>
 		<Loader v-show="loading" />
-		<div v-if="this.settings">
+		<div v-if="settings">
 			<MainNav ref="navComponent" :settings="settings" />
 			<main>
 				<router-view />
@@ -17,68 +17,62 @@
 </template>
 
 <script>
-import Loader from "@/components/Loader.vue";
-import MainNav from "@/components/MainNav.vue";
+import { ref, onBeforeMount, onMounted, defineAsyncComponent } from 'vue';
 import axios from "axios";
 
 export default {
 	name: "app",
 	components: {
-		Loader,
-		MainNav,
+		Loader: defineAsyncComponent(() => import("@/components/Loader.vue")),
+		MainNav: defineAsyncComponent(() => import("@/components/MainNav.vue")),
 	},
-	data: function() {
-		return {
-			settings: null,
-			loading: true,
-			ie: false,
-		};
-	},
-	beforeMount: function() {
-		function isIE() {
-			var ua = navigator.userAgent;
-			/* MSIE used to detect old browsers and Trident used to newer ones*/
-			var is_ie = ua.indexOf("MSIE ") > -1 || ua.indexOf("Trident/") > -1;
+	setup() {
+		const settings = ref(null);
+		const loading = ref(true);
+		const ie = ref(false);
+		const navComponent = ref(null);
+		const canvaOffset = ref(false);
 
-			return is_ie;
-		}
-		this.ie = isIE();
-	},
-	created: function() {
-		axios
-			.get("/_data/settings.json")
-			.then((response) => {
-				this.settings = response.data;
-				this.loading = false;
-			})
-			.catch((error) => {
-				alert(error);
-			});
-	},
-	methods: {
-		onToggleCanva(menuVisible) {
-			this.canvaOffset = menuVisible;
-		},
+		const isIE = () => {
+			const ua = navigator.userAgent;
+			/* MSIE used to detect old browsers and Trident used to newer ones*/
+			return ua.indexOf("MSIE ") > -1 || ua.indexOf("Trident/") > -1;
+		};
+
+		onBeforeMount(() => {
+			ie.value = isIE();
+		});
+
+		onMounted(() => {
+			axios
+				.get("/_data/settings.json")
+				.then((response) => {
+					settings.value = response.data;
+					loading.value = false;
+				})
+				.catch((error) => {
+					alert(error);
+				});
+		});
+
+		const onToggleCanva = (menuVisible) => {
+			canvaOffset.value = menuVisible;
+		};
+
+		return {
+			settings,
+			loading,
+			ie,
+			navComponent,
+			onToggleCanva,
+		};
 	},
 };
 </script>
 
 <style lang="scss">
-:root {
-	--main-txt-color: rgb(3, 3, 3);
-	--main-txt-gray: rgba(55, 53, 47, 0.6);
-	--main-charcoal: rgb(30, 41, 48);
-	--main-gray: rgb(150, 150, 150);
-	--main-lightgray: rgb(225, 225, 225);
-	--main-bg-color: rgb(248, 248, 248);
-	--main-charcoal-trans: rgb(54, 69, 79, 0.8);
-	--main-charcoal-fulltrans: rgb(54, 69, 79, 0.2);
-	--main-bg-trans: rgb(248, 248, 248, 0.8);
-	--main-gray-tras: rgb(150, 150, 150, 0.2);
-	--main-highlight: rgb(255, 255, 0);
-
-	box-sizing: border-box;
-}
+@use 'sass:color';
+@use '@/styles/variables' as *;
 * {
 	box-sizing: border-box;
 }
