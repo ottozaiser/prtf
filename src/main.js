@@ -2,6 +2,7 @@ import "normalize.css";
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
+import axios from "axios";
 import VueProgressiveImage from "vue-progressive-image";
 import VTooltip from "v-tooltip";
 
@@ -19,6 +20,12 @@ Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.use(VueProgressiveImage);
 Vue.use(VTooltip);
 Vue.config.productionTip = false;
+
+// Security: limit maximum response/request sizes to mitigate DoS from very large payloads
+// These are conservative defaults; adjust to your app's needs (values are in bytes).
+// maxContentLength: limits response content size in browser/node, maxBodyLength: node only
+axios.defaults.maxContentLength = 2 * 1024 * 1024; // 2 MB
+axios.defaults.maxBodyLength = 2 * 1024 * 1024; // 2 MB
 
 new Vue({
 	router,
