@@ -18,7 +18,7 @@
     "@vue/runtime-dom": "^3.3.4",
     "animated-scroll-to": "^2.2.0",
     "aos": "^2.3.4",
-    "axios": "^1.6.0",
+    "axios": "^1.13.5",
     "esbuild": "^0.25.11",
     "lottie-web": "^5.12.2",
     "normalize.css": "^8.0.1",
