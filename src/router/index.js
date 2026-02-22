@@ -37,7 +37,7 @@ const routes = [
 		// which is lazy-loaded when the route is visited.
 		component: () => import(/* webpackChunkName: "resume" */ "../views/Resume.vue"),
 		meta: {
-			title: "CV Resumé - Otto Zaiser [Designer]",
+			title: "Resume - Otto Zaiser [Designer]",
 		},
 	},
 	{
@@ -65,7 +65,13 @@ const routes = [
 		routes,
 		// preserve existing options
 		linkActiveClass: "is-active",
-		scrollBehavior() {
+		scrollBehavior(to) {
+			if (to.hash) {
+				return {
+					el: to.hash,
+					behavior: "smooth",
+				};
+			}
 			return { left: 0, top: 0 };
 		},
 	});

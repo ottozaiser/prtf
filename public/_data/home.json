@@ -5,12 +5,12 @@
 	"image": "/_data/media/me.png",
 	"links": [
 		{
-			"name": "CV Resumé",
-			"url": "/resume"
+			"name": "Resume",
+			"url": "/#resume"
 		},
 		{
 			"name": "Portfolio",
-			"url": "/portfolio"
+			"url": "/#portfolio"
 		},
 		{
 			"name": "Read My Story",
