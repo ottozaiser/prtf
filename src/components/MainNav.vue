@@ -180,6 +180,9 @@ header {
     border-radius: 24px;
     cursor: pointer;
     transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     &:hover,
     &:focus,
     &:active {
@@ -190,8 +193,7 @@ header {
     }
     .nav-icon {
       position: relative;
-      margin: 0 auto;
-      margin-top: -9px;
+      height: 18px;
       width: 24px;
       transform: rotate(0deg);
       transition: 0.5s ease-in-out;
