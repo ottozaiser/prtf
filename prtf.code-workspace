@@ -4,5 +4,12 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"chat.tools.terminal.autoApprove": {
+			"/^npm audit fix --force$/": {
+				"approve": true,
+				"matchCommandLine": true
+			}
+		}
+	}
 }
