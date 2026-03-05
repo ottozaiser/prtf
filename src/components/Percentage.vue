@@ -19,32 +19,31 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style scoped>
 .percentage {
   display: inline-block;
   font-size: 0.65em;
-
-  .container {
-    border-radius: 4px;
-    background-color: var(--main-lightgray);
-    min-width: 30px;
-    height: 12px;
-    text-align: center;
-    position: relative;
-  }
-  .number {
-    position: absolute;
-    z-index: 3;
-    top: 0;
-    width: 100%;
-  }
-  .bar {
-    border-radius: 4px;
-    position: absolute;
-    background-color: var(--main-highlight);
-    height: 12px;
-    top: 0;
-    z-index: 2;
-  }
+}
+.percentage .container {
+  border-radius: 4px;
+  background-color: var(--main-lightgray);
+  min-width: 30px;
+  height: 12px;
+  text-align: center;
+  position: relative;
+}
+.percentage .number {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  width: 100%;
+}
+.percentage .bar {
+  border-radius: 4px;
+  position: absolute;
+  background-color: var(--main-highlight);
+  height: 12px;
+  top: 0;
+  z-index: 2;
 }
 </style>

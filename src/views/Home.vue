@@ -114,23 +114,19 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-@use 'sass:math';
-@use '@/styles/variables' as *;
-
+<style scoped>
 .home {
   display: grid;
   position: relative;
-  @media (min-width: 992px) {
-    height: 100vh;
-  height: 100dvh;
-  }
-  
   padding: 0 24px;
   max-width: 992px;
-  //padding-bottom: 24px;
   margin: 0 auto;
-  //overflow: hidden;
+}
+@media (min-width: 992px) {
+  .home {
+    height: 100vh;
+    height: 100dvh;
+  }
 }
 .img {
   background-size: 300px;
@@ -142,15 +138,10 @@ export default {
   display: grid;
   grid-template-columns: 30% 70%;
   grid-template-rows: 70% 30%;
-  // grid-template-columns: 2fr 3fr;
-  // grid-template-rows: 50%;
   z-index: 2;
-  // @media (max-width: 780px) {
-  // 	grid-template-columns: 1fr 1fr;
-  // }
-  @media (max-width: 992px) {
-    // height: auto;
-    // margin-top: 24px;
+}
+@media (max-width: 992px) {
+  .layout {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
   }
@@ -161,12 +152,14 @@ export default {
   display: flex;
   align-items: stretch;
   justify-content: flex-start;
-  h1 {
-    display: flex;
-    align-items: stretch;
-    margin: 0;
-  }
-  @media (max-width: 992px) {
+}
+.heading-home h1 {
+  display: flex;
+  align-items: stretch;
+  margin: 0;
+}
+@media (max-width: 992px) {
+  .heading-home {
     justify-content: flex-start;
     height: 200px;
   }
@@ -180,13 +173,17 @@ export default {
   opacity: 0.9;
   margin: inherit !important;
   margin-left: 10px !important;
-  @media (max-width: 992px) {
+}
+@media (max-width: 992px) {
+  .animation {
     align-self: auto;
     grid-column-start: 1;
     grid-row-start: 2;
     padding-top: 24px !important;
   }
-  @media (max-width: 400px) {
+}
+@media (max-width: 400px) {
+  .animation {
     margin-left: -30px !important;
   }
 }
@@ -197,24 +194,27 @@ export default {
   align-self: end;
   justify-self: start;
   width: 100%;
-  @media (max-width: 992px) {
+}
+@media (max-width: 992px) {
+  .content {
     grid-column-start: 1;
     grid-row: 3;
   }
 }
-
 ul.menu {
   padding: 0;
-  li {
-    display: inline-block;
-    &:first-child {
-      margin-left: 0;
-    }
-    @media (max-width: 992px) {
-      display: block;
-      margin: 0;
-      margin-bottom: 24px;
-    }
+}
+ul.menu li {
+  display: inline-block;
+}
+ul.menu li:first-child {
+  margin-left: 0;
+}
+@media (max-width: 992px) {
+  ul.menu li {
+    display: block;
+    margin: 0;
+    margin-bottom: 24px;
   }
 }
 .image {
@@ -222,18 +222,14 @@ ul.menu {
   max-width: 150px;
   max-height: 150px;
 }
-
 .social {
   align-self: end;
 }
-
 section {
   border-top: 5px solid var(--main-highlight);
   margin-top: 48px;
 }
-
 section:last-of-type {
   margin-bottom: 48px;
 }
-
 </style>

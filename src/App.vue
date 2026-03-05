@@ -70,22 +70,20 @@ export default {
 };
 </script>
 
-<style lang="scss">
-@use 'sass:color';
-@use '@/styles/variables' as *;
+<style>
 * {
 	box-sizing: border-box;
 }
 html,
 body {
-	// font-family: 'Courier Prime', monospace;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
 	background-color: var(--main-bg-color);
 	color: var(--main-txt-color);
 	font-size: 18px;
-	&:focus {
-		outline-width: 0 !important;
-	}
+}
+html:focus,
+body:focus {
+	outline-width: 0 !important;
 }
 a,
 a:hover,
@@ -132,21 +130,7 @@ button:focus,
 }
 h1 span.underline {
 	position: relative;
-	// &:after {
-	//   background-color: var(--main-txt-color);
-	//   content: "";
-	//   display: block;
-	//   height: 8px;
-	//   left: 0;
-	//   bottom: -4px;
-	//   position: absolute;
-	//   width: 72px;
-	//   @media (max-width: 350px) {
-	//     content: none;
-	//   }
-	// }
 }
-
 ul {
 	list-style-type: square;
 }
@@ -167,13 +151,12 @@ ul {
 	align-items: center;
 	justify-content: center;
 	transition: all 0.2s ease;
-	&:hover,
-	&:focus {
-		background: var(--main-gray-tras);
-		transform: scale(1.2);
-	}
 }
-
+.icon-btn:hover,
+.icon-btn:focus {
+	background: var(--main-gray-tras);
+	transform: scale(1.2);
+}
 .btn {
 	background: transparent;
 	text-decoration: none;
@@ -185,43 +168,31 @@ ul {
 	border-radius: 1.5em;
 	display: block;
 	transition: all 0.15s ease;
-	&:hover,
-	&:focus {
-		color: var(--main-bg-color);
-		background: var(--main-charcoal);
-		// transform: scale(1.2);
-	}
-	@media (max-width: 640px) {
+}
+.btn:hover,
+.btn:focus {
+	color: var(--main-bg-color);
+	background: var(--main-charcoal);
+}
+@media (max-width: 640px) {
+	.btn {
 		padding: 16px 16px;
 	}
 }
-
 .btn-small {
 	padding: 4px 12px;
 	font-size: 0.9em;
 }
-
 h1 {
 	position: relative;
 	margin-bottom: 32px;
-
-	// &:after {
-	//   background-color: var(--main-txt-color);
-	//   content: "";
-	//   display: block;
-	//   height: 5px;
-	//   left: 0;
-	//   bottom: -8px;
-	//   position: absolute;
-	//   width: 42px;
-	// }
 }
 .wrapper h1 {
 	margin-top: 0;
-	span {
-		display: inline-block;
-		padding-top: 100px;
-	}
+}
+.wrapper h1 span {
+	display: inline-block;
+	padding-top: 100px;
 }
 p {
 	line-height: 1.5em;
@@ -230,124 +201,105 @@ p {
 .fade-leave-active {
 	transition: opacity 0.2s ease;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+.fade-enter,
+.fade-leave-to {
 	opacity: 0;
 }
 
-//TOOLTIP
-
+/* TOOLTIP */
 .tooltip {
 	display: block !important;
 	z-index: 25;
 	font-size: 0.8em;
 	line-height: 1em;
-
-	.tooltip-inner {
-		background: var(--main-charcoal);
-		color: var(--main-bg-color);
-		border-radius: 16px;
-		padding: 4px 10px 6px;
-	}
-
-	.tooltip-arrow {
-		width: 0;
-		height: 0;
-		border-style: solid;
-		position: absolute;
-		margin: 5px;
-		border-color: black;
-		z-index: 1;
-	}
-
-	&[x-placement^="top"] {
-		margin-bottom: 5px;
-
-		.tooltip-arrow {
-			border-width: 5px 5px 0 5px;
-			border-left-color: transparent !important;
-			border-right-color: transparent !important;
-			border-bottom-color: transparent !important;
-			bottom: -5px;
-			left: calc(50% - 5px);
-			margin-top: 0;
-			margin-bottom: 0;
-		}
-	}
-
-	&[x-placement^="bottom"] {
-		margin-top: 5px;
-
-		.tooltip-arrow {
-			border-width: 0 5px 5px 5px;
-			border-left-color: transparent !important;
-			border-right-color: transparent !important;
-			border-top-color: transparent !important;
-			top: -5px;
-			left: calc(50% - 5px);
-			margin-top: 0;
-			margin-bottom: 0;
-		}
-	}
-
-	&[x-placement^="right"] {
-		margin-left: 5px;
-
-		.tooltip-arrow {
-			border-width: 5px 5px 5px 0;
-			border-left-color: transparent !important;
-			border-top-color: transparent !important;
-			border-bottom-color: transparent !important;
-			left: -5px;
-			top: calc(50% - 5px);
-			margin-left: 0;
-			margin-right: 0;
-		}
-	}
-
-	&[x-placement^="left"] {
-		margin-right: 5px;
-
-		.tooltip-arrow {
-			border-width: 5px 0 5px 5px;
-			border-top-color: transparent !important;
-			border-right-color: transparent !important;
-			border-bottom-color: transparent !important;
-			right: -5px;
-			top: calc(50% - 5px);
-			margin-left: 0;
-			margin-right: 0;
-		}
-	}
-
-	&.popover {
-		$color: #f9f9f9;
-
-		.popover-inner {
-			background: $color;
-			color: black;
-			padding: 24px;
-			border-radius: 4px;
-			box-shadow: 0 5px 30px rgba(black, 0.1);
-		}
-
-		.popover-arrow {
-			border-color: $color;
-		}
-	}
-
-	&[aria-hidden="true"] {
-		visibility: hidden;
-		opacity: 0;
-		transition: opacity 0.15s, visibility 0.15s;
-	}
-
-	&[aria-hidden="false"] {
-		visibility: visible;
-		opacity: 1;
-		transition: opacity 0.15s;
-	}
 }
-
+.tooltip .tooltip-inner {
+	background: var(--main-charcoal);
+	color: var(--main-bg-color);
+	border-radius: 16px;
+	padding: 4px 10px 6px;
+}
+.tooltip .tooltip-arrow {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	position: absolute;
+	margin: 5px;
+	border-color: black;
+	z-index: 1;
+}
+.tooltip[x-placement^="top"] {
+	margin-bottom: 5px;
+}
+.tooltip[x-placement^="top"] .tooltip-arrow {
+	border-width: 5px 5px 0 5px;
+	border-left-color: transparent !important;
+	border-right-color: transparent !important;
+	border-bottom-color: transparent !important;
+	bottom: -5px;
+	left: calc(50% - 5px);
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.tooltip[x-placement^="bottom"] {
+	margin-top: 5px;
+}
+.tooltip[x-placement^="bottom"] .tooltip-arrow {
+	border-width: 0 5px 5px 5px;
+	border-left-color: transparent !important;
+	border-right-color: transparent !important;
+	border-top-color: transparent !important;
+	top: -5px;
+	left: calc(50% - 5px);
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.tooltip[x-placement^="right"] {
+	margin-left: 5px;
+}
+.tooltip[x-placement^="right"] .tooltip-arrow {
+	border-width: 5px 5px 5px 0;
+	border-left-color: transparent !important;
+	border-top-color: transparent !important;
+	border-bottom-color: transparent !important;
+	left: -5px;
+	top: calc(50% - 5px);
+	margin-left: 0;
+	margin-right: 0;
+}
+.tooltip[x-placement^="left"] {
+	margin-right: 5px;
+}
+.tooltip[x-placement^="left"] .tooltip-arrow {
+	border-width: 5px 0 5px 5px;
+	border-top-color: transparent !important;
+	border-right-color: transparent !important;
+	border-bottom-color: transparent !important;
+	right: -5px;
+	top: calc(50% - 5px);
+	margin-left: 0;
+	margin-right: 0;
+}
+.tooltip.popover .popover-inner {
+	background: #f9f9f9;
+	color: black;
+	padding: 24px;
+	border-radius: 4px;
+	box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+}
+.tooltip.popover .popover-arrow {
+	border-color: #f9f9f9;
+}
+.tooltip[aria-hidden="true"] {
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.15s, visibility 0.15s;
+}
+.tooltip[aria-hidden="false"] {
+	visibility: visible;
+	opacity: 1;
+	transition: opacity 0.15s;
+}
 .progressive-background-image {
 	background-position: 0 30% !important;
 	border-radius: 4px;

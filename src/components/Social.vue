@@ -37,23 +37,20 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
-.social {
-  ul.socialmedia {
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    li.social-item {
-      list-style-type: none;
-      // margin-right: 8px;
-      text-align: center;
-      &:first-child {
-        margin-left: 0;
-      }
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-  }
+<style scoped>
+.social ul.socialmedia {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.social ul.socialmedia li.social-item {
+  list-style-type: none;
+  text-align: center;
+}
+.social ul.socialmedia li.social-item:first-child {
+  margin-left: 0;
+}
+.social ul.socialmedia li.social-item:last-child {
+  margin-right: 0;
 }
 </style>

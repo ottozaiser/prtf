@@ -72,7 +72,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style scoped>
 h3,
 p {
   margin: 0px;
@@ -81,49 +81,53 @@ p {
 .job {
   border: 1px solid var(--main-lightgray);
   border-radius: 4px;
-  .header {
-    border-bottom: 1px solid var(--main-lightgray);
-    color: var(--main-charcoal);
-    padding: 16px;
-    padding-bottom: 18px;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    @media (max-width: 640px) {
-      grid-template-columns: 1fr;
-    }
-    h3 {
-      font-weight: bold;
-      display: inline-block;
-    }
-    p {
-      line-height: 1em;
-      align-self: center;
-      justify-self: end;
-      @media (max-width: 640px) {
-        margin-top: 8px;
-        justify-self: start;
-      }
-    }
+}
+.job .header {
+  border-bottom: 1px solid var(--main-lightgray);
+  color: var(--main-charcoal);
+  padding: 16px;
+  padding-bottom: 18px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+@media (max-width: 640px) {
+  .job .header {
+    grid-template-columns: 1fr;
   }
-  .subheader {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 8px 16px;
-    border-bottom: 1px solid var(--main-lightgray);
+}
+.job .header h3 {
+  font-weight: bold;
+  display: inline-block;
+}
+.job .header p {
+  line-height: 1em;
+  align-self: center;
+  justify-self: end;
+}
+@media (max-width: 640px) {
+  .job .header p {
+    margin-top: 8px;
+    justify-self: start;
   }
-  .company {
-    text-transform: uppercase;
-  }
-  .more {
-    align-self: center;
-    justify-self: end;
-  }
-  .less {
-    margin-bottom: 16px;
-  }
-  .content {
-    padding: 0 16px;
-  }
+}
+.job .subheader {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--main-lightgray);
+}
+.job .company {
+  text-transform: uppercase;
+}
+.job .more {
+  align-self: center;
+  justify-self: end;
+}
+.job .less {
+  margin-bottom: 16px;
+}
+.job .content {
+  padding: 0 16px;
 }
 .sr-only {
   text-transform: capitalize;

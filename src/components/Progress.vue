@@ -47,10 +47,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-@use '@/styles/variables' as *;
-@use '@/styles/mixins' as *;
-
+<style scoped>
 .container {
   position: fixed;
   width: 100%;
@@ -58,12 +55,11 @@ export default {
   left: 0;
   background-color: var(--main-bg-trans);
   z-index: 2;
-  @include transition(background-color);
+  transition: background-color 0.3s ease;
 }
-
 .bar {
   background-color: var(--main-charcoal);
   height: 8px;
-  @include transition(width);
+  transition: width 0.3s ease;
 }
 </style>

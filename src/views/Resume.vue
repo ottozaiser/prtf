@@ -111,7 +111,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .skills {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -125,29 +125,29 @@ section {
   margin-bottom: 16px;
   margin-top: 120px;
 }
-
 .content {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-column-gap: 32px;
-
-  @media (max-width: 640px) {
+}
+@media (max-width: 640px) {
+  .content {
     grid-template-columns: 1fr;
   }
-
-  .image {
-    text-align: center;
+}
+.content .image {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 16px;
+  background-color: var(--main-lightgray);
+  border: 1px solid var(--main-lightgray);
+}
+@media (max-width: 640px) {
+  .content .image {
     width: 100%;
-    text-align: center;
+    height: 300px;
     margin: 0 auto;
-    margin-top: 16px;
-    background-color: var(--main-lightgray);
-    border: 1px solid var(--main-lightgray);
-    @media (max-width: 640px) {
-      width: 100%;
-      height: 300px;
-      margin: 0 auto;
-    }
   }
 }
 </style>

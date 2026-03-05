@@ -41,16 +41,12 @@
   </div>
 </template>
 
-<style scoped lang="scss">
-@use '@/styles/variables' as *;
-@use '@/styles/mixins' as *;
-
+<style scoped>
 .loading {
   text-align: center;
   border-radius: 5px;
-  @include transition(opacity);
+  transition: opacity 0.3s ease;
 }
-
 .overlay {
   position: absolute;
   background-color: var(--main-bg-trans);
@@ -60,7 +56,6 @@
   height: 100%;
   z-index: 9999999999;
 }
-
 .center-v {
   position: relative;
   top: 50%;

@@ -1,0 +1,13 @@
+:root {
+  --main-txt-color: rgb(3, 3, 3);
+  --main-txt-gray: rgba(55, 53, 47, 0.6);
+  --main-charcoal: rgb(30, 41, 48);
+  --main-gray: rgb(150, 150, 150);
+  --main-lightgray: rgb(225, 225, 225);
+  --main-bg-color: rgb(248, 248, 248);
+  --main-charcoal-trans: rgba(54, 69, 79, 0.8);
+  --main-charcoal-fulltrans: rgba(54, 69, 79, 0.2);
+  --main-bg-trans: rgba(248, 248, 248, 0.8);
+  --main-gray-tras: rgba(150, 150, 150, 0.2);
+  --main-highlight: rgb(255, 255, 0);
+}

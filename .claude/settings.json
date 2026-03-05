@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm info sass dist-tags.latest)",
+      "Bash(npm info sass versions --json)",
+      "Bash(node -e \"const v=require\\(''fs''\\).readFileSync\\(''/dev/stdin'',''utf8''\\); const arr=JSON.parse\\(v\\); console.log\\(arr.slice\\(-10\\).join\\(''\\\\n''\\)\\)\")",
+      "Bash(npm audit)",
+      "Bash(npm audit fix)",
+      "Bash(npm uninstall sass sass-loader)"
+    ]
+  }
+}

@@ -99,14 +99,10 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-@use 'sass:math';
-@use 'sass:color';
-@use '@/styles/variables' as *;
-@use '@/styles/mixins' as *;
-
+<style scoped>
 .story {
-  @include flex-column;
+  display: flex;
+  flex-direction: column;
   flex: 1;
   align-items: center;
   justify-content: center;
@@ -127,134 +123,110 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  // background: yellow;
   border-bottom: 1px solid var(--main-charcoal-fulltrans);
   width: 100%;
   position: relative;
   z-index: 1;
-  &:nth-child(odd) {
-    .content {
-      flex-direction: row-reverse;
-      @media (max-width: 640px) {
-        flex-direction: column-reverse;
-      }
-    }
+}
+section:nth-child(odd) .content {
+  flex-direction: row-reverse;
+}
+@media (max-width: 640px) {
+  section:nth-child(odd) .content {
+    flex-direction: column-reverse;
   }
-  &:last-child {
-    border-bottom: 0;
-  }
-  .content {
-    // background-color: rgba(255, 255, 255, 0.6);
-    // box-shadow: 0 0 24px 24px rgba(255, 255, 255, 0.6);
-    border-radius: 24px;
-    max-width: 640px;
+}
+section:last-child {
+  border-bottom: 0;
+}
+section .content {
+  border-radius: 24px;
+  max-width: 640px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section .content .titles {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+section .content h1 {
+  font-size: 3.5em;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+section .content h2 {
+  margin: 0;
+  font-size: 1.4em;
+  padding-left: 16px;
+}
+section .content .text-container {
+  padding: 24px;
+}
+@media (max-width: 640px) {
+  section .content {
     display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .titles {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-    }
-    h1 {
-      font-size: 3.5em;
-      margin-top: 0px;
-      margin-bottom: 0px;
-      // &:after {
-      //   background-color: var(--main-txt-color);
-      //   content: "";
-      //   display: block;
-      //   bottom: -8px;
-      //   position: absolute;
-      //   left: 21px;
-      //   width: 65px;
-      //   height: 8px;
-      // }
-    }
-
-    h2 {
-      margin: 0;
-      font-size: 1.4em;
-      padding-left: 16px;
-    }
-
-    .text-container {
-      padding: 24px;
-    }
-
-    @media (max-width: 640px) {
-      display: flex;
-      // text-align: center;
-      flex-direction: column-reverse;
-
-      .titles {
-        justify-content: start;
-      }
-
-      h1:after {
-        left: calc(50% - 18px);
-      }
-      h2 {
-        text-align: left;
-        font-size: 1.2em;
-      }
-
-      .text-container {
-        padding-top: 12px;
-      }
-    }
+    flex-direction: column-reverse;
   }
-
-  @media (max-width: 320px) {
+  section .content .titles {
+    justify-content: start;
+  }
+  section .content h1:after {
+    left: calc(50% - 18px);
+  }
+  section .content h2 {
+    text-align: left;
+    font-size: 1.2em;
+  }
+  section .content .text-container {
+    padding-top: 12px;
+  }
+}
+@media (max-width: 320px) {
+  section {
     font-size: 0.8em;
   }
-
-  &:last-child {
-    h1 {
-      font-size: 3.5em;
-    }
-    h1:after {
-      left: 5px;
-      @media (max-width: 640px) {
-        left: calc(50% - 16px);
-        width: 32px;
-      }
-    }
+}
+section:last-child h1 {
+  font-size: 3.5em;
+}
+section:last-child h1:after {
+  left: 5px;
+}
+@media (max-width: 640px) {
+  section:last-child h1:after {
+    left: calc(50% - 16px);
+    width: 32px;
   }
-
-  .bottom-btns {
-    position: absolute;
-    text-align: center;
-    bottom: 20px;
-    // display: flex;
+}
+section .bottom-btns {
+  position: absolute;
+  text-align: center;
+  bottom: 20px;
+}
+section .animate {
+  animation: fadein 1s infinite;
+}
+@keyframes fadein {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+section .image {
+  width: 300px;
+  height: 300px;
+}
+@media (max-width: 400px) {
+  section .image {
+    width: 250px;
+    height: 250px;
   }
-  .animate {
-    animation: fadein 1s infinite;
-  }
-  @keyframes fadein {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.2);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-
-  .image {
-    width: 300px;
-    height: 300px;
-    @media (max-width: 400px) {
-      width: 250px;
-      height: 250px;
-    }
-    @media (max-width: 250px) {
-      width: 100%;
-      height: 100%;
-    }
+}
+@media (max-width: 250px) {
+  section .image {
+    width: 100%;
+    height: 100%;
   }
 }
 </style>

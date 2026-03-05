@@ -25,34 +25,38 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style scoped>
 h3,
 p {
   margin: 0px;
 }
 .education {
   border-bottom: 1px solid var(--main-lightgray);
-  .header {
-    font-weight: normal;
-    padding-bottom: 12px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    @media (max-width: 640px) {
-      grid-template-columns: 1fr;
-    }
-    h3,
-    p {
-      font-weight: normal;
-      display: inline-block;
-    }
-    p {
-      align-self: center;
-      justify-self: end;
-      @media (max-width: 640px) {
-        justify-self: start;
-        margin-left: 65px;
-      }
-    }
+}
+.education .header {
+  font-weight: normal;
+  padding-bottom: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 640px) {
+  .education .header {
+    grid-template-columns: 1fr;
+  }
+}
+.education .header h3,
+.education .header p {
+  font-weight: normal;
+  display: inline-block;
+}
+.education .header p {
+  align-self: center;
+  justify-self: end;
+}
+@media (max-width: 640px) {
+  .education .header p {
+    justify-self: start;
+    margin-left: 65px;
   }
 }
 </style>

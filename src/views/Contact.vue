@@ -24,38 +24,28 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-@use '@/styles/variables' as *;
-@use '@/styles/mixins' as *;
-.contact {
-  .contact-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    align-items: center;
+<style scoped>
+.contact .contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: center;
+}
+.contact .contact-copy p {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+.contact .btn {
+  display: inline-block;
+  width: auto;
+}
+@media (max-width: 640px) {
+  .contact .contact-content {
+    grid-template-columns: 1fr;
   }
-
-  .contact-copy {
-    p {
-      margin-top: 0;
-      margin-bottom: 16px;
-    }
-  }
-
-  .btn {
-    display: inline-block;
-    width: auto;
-  }
-
-  @media (max-width: 640px) {
-    .contact-content {
-      grid-template-columns: 1fr;
-    }
-
-    .btn {
-      display: block;
-      width: 100%;
-    }
+  .contact .btn {
+    display: block;
+    width: 100%;
   }
 }
 </style>

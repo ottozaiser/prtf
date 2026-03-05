@@ -1,0 +1,125 @@
+@import './variables.css';
+
+/* Reset and base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  background-color: var(--main-bg-color);
+  color: var(--main-txt-color);
+  font-size: 18px;
+}
+
+html:focus,
+body:focus {
+  outline-width: 0;
+}
+
+/* Global link styles */
+a {
+  color: var(--main-txt-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+a:focus {
+  outline-color: rgb(255, 0, 170);
+  outline-style: dashed;
+  outline-width: 1px;
+}
+
+/* Utility classes */
+.wrapper {
+  margin: 0 auto;
+  padding: 0 24px;
+  max-width: 992px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.highlight {
+  background-color: var(--main-highlight);
+  white-space: nowrap;
+}
+
+/* Button styles */
+.btn {
+  background: transparent;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  color: var(--main-charcoal);
+  padding: 12px 16px;
+  border: 1px solid var(--main-charcoal);
+  border-radius: 1.5em;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  color: var(--main-bg-color);
+  background: var(--main-charcoal);
+}
+
+@media (max-width: 700px) {
+  .btn {
+    padding: 16px;
+  }
+}
+
+.btn-small {
+  background: transparent;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  color: var(--main-charcoal);
+  padding: 4px 12px;
+  border: 1px solid var(--main-charcoal);
+  border-radius: 1.5em;
+  display: block;
+  transition: all 0.3s ease;
+  font-size: 0.9em;
+}
+
+.btn-small:hover,
+.btn-small:focus {
+  color: var(--main-bg-color);
+  background: var(--main-charcoal);
+}
+
+@media (max-width: 700px) {
+  .btn-small {
+    padding: 16px;
+  }
+}
+
+/* Animations */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}

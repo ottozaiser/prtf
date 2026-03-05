@@ -36,7 +36,7 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 .error404 {
   display: flex;
   flex: 1;
@@ -47,53 +47,52 @@ export default {
   min-height: 98vh;
   overflow: hidden;
   padding: 0 24px;
-  @media (max-width: 640px) {
+}
+@media (max-width: 640px) {
+  .error404 {
     padding: 24px;
   }
 }
-
 .window {
   max-width: 500px;
   width: 100%;
   border: 1px solid red;
   z-index: 2;
 }
-.content {
-  h1 {
-    margin: 0;
-    padding: 16px;
-    color: white;
-    background-color: red;
-    font-size: 1.1em;
-  }
-  .textContent {
-    word-wrap: break-word;
-    padding: 16px;
-    p {
-      margin: 0;
-    }
-  }
-  .btns {
-    padding: 16px;
-    text-align: right;
-    button {
-      padding: 8px;
-      border: 1px solid black;
-      background-color: transparent;
-      cursor: pointer;
-      &:hover,
-      &:focus {
-        background-color: var(--main-lightgray);
-      }
-    }
-  }
+.content h1 {
+  margin: 0;
+  padding: 16px;
+  color: white;
+  background-color: red;
+  font-size: 1.1em;
+}
+.content .textContent {
+  word-wrap: break-word;
+  padding: 16px;
+}
+.content .textContent p {
+  margin: 0;
+}
+.content .btns {
+  padding: 16px;
+  text-align: right;
+}
+.content .btns button {
+  padding: 8px;
+  border: 1px solid black;
+  background-color: transparent;
+  cursor: pointer;
+}
+.content .btns button:hover,
+.content .btns button:focus {
+  background-color: var(--main-lightgray);
 }
 .fixed {
   border: 1px solid black;
   border-radius: 10px;
-  h1 {
-    background-color: transparent;
-    color: var(--main-charcoal);
-  }
+}
+.fixed h1 {
+  background-color: transparent;
+  color: var(--main-charcoal);
 }
 </style>

@@ -3,7 +3,7 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
 import axios from "axios";
-import '@/styles/index.scss';
+import '@/styles/index.css';
 
 // Font Awesome
 import { library } from "@fortawesome/fontawesome-svg-core";

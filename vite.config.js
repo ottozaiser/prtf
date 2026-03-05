@@ -22,18 +22,6 @@ export default defineConfig({
       'vue': '@vue/compat'
     }
   },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: '@use "@/styles/_config.scss" as *;',
-        sassOptions: {
-          outputStyle: 'compressed',
-          quietDeps: true // Suppress dependency warnings
-        },
-        charset: false
-      }
-    }
-  },
   build: {
     rollupOptions: {
       input: {

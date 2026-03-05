@@ -33,42 +33,32 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-@use '@/styles/variables' as *;
-@use '@/styles/mixins' as *;
-
+<style scoped>
 * {
-  @include transition;
+  transition: all 0.3s ease;
 }
-
 a {
   border-radius: 4px;
   border: 1px solid var(--main-lightgray);
   text-decoration: none;
-  @include transition;
-  
-  &:hover {
-    transform: translate(0, -5px);
-  }
+  transition: all 0.3s ease;
+}
+a:hover {
+  transform: translate(0, -5px);
 }
 .img-container {
   position: relative;
-  // background: var(--main-lightgray);
 }
-.project {
-  h2 {
-    color: var(--main-charcoal);
-    margin-top: 0;
-    font-size: 1.1em;
-    // text-transform: uppercase;
-    font-weight: bold;
-  }
+.project h2 {
+  color: var(--main-charcoal);
+  margin-top: 0;
+  font-size: 1.1em;
+  font-weight: bold;
 }
 .image {
   width: 100%;
   max-width: 100% !important;
   margin-bottom: -3px;
-  // filter: grayscale(100%);
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   border-bottom: 1px solid var(--main-lightgray);

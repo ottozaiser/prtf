@@ -21,37 +21,31 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style scoped>
 * {
   transition: all 0.2s ease;
 }
-
 a {
   border-radius: 4px;
   border: 1px solid var(--main-lightgray);
   text-decoration: none;
   transition: all 0.2s ease;
-  &:hover {
-    transform: translate(0, -5px);
-  }
+}
+a:hover {
+  transform: translate(0, -5px);
 }
 .img-container {
   position: relative;
-  // background: var(--main-lightgray);
 }
-.client {
-  h2 {
-    color: var(--main-charcoal);
-    margin-top: 0;
-    font-size: 1.1em;
-    // text-transform: uppercase;
-    font-weight: bold;
-  }
+.client h2 {
+  color: var(--main-charcoal);
+  margin-top: 0;
+  font-size: 1.1em;
+  font-weight: bold;
 }
 .image {
   width: 100%;
   margin-bottom: -3px;
-  // filter: grayscale(100%);
 }
 p {
   margin: 0;

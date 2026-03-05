@@ -26,22 +26,21 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style scoped>
 .skill {
   border: 1px solid var(--main-lightgray);
   border-radius: 4px;
-  h3 {
-    border-bottom: 1px solid var(--main-lightgray);
-    color: var(--main-charcoal);
-    margin: 0px;
-    padding: 16px;
-    font-size: 1.1em;
-    line-height: 1em;
-    font-weight: bold;
-  }
-
-  li {
-    margin: 8px;
-  }
+}
+.skill h3 {
+  border-bottom: 1px solid var(--main-lightgray);
+  color: var(--main-charcoal);
+  margin: 0px;
+  padding: 16px;
+  font-size: 1.1em;
+  line-height: 1em;
+  font-weight: bold;
+}
+.skill li {
+  margin: 8px;
 }
 </style>

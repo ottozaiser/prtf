@@ -73,10 +73,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-@use '@/styles/variables' as *;
-@use '@/styles/mixins' as *;
-
+<style scoped>
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
