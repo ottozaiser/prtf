@@ -28,25 +28,15 @@ export default defineConfig({
         main: path.resolve(__dirname, 'index.html')
       },
       output: {
-        manualChunks: {
-          'core-vendor': [
-            'vue',
-            'vue-router'
-          ],
-          'ui-vendor': [
-            'aos'
-          ],
-          'http-vendor': [
-            'axios'
-          ],
-          'animation-core': ['animated-scroll-to'],
-          // lottie is now loaded from CDN at runtime; don't include in manual chunks
-          'fontawesome': [
-            '@fortawesome/fontawesome-svg-core',
-            '@fortawesome/free-brands-svg-icons',
-            '@fortawesome/free-solid-svg-icons',
-            '@fortawesome/vue-fontawesome'
-          ]
+        // Vite 8 / Rolldown only supports the function form of manualChunks.
+        // lottie is loaded from CDN at runtime, so it's intentionally absent here.
+        manualChunks(id) {
+          if (!id.includes('node_modules')) return
+          if (/[\\/]node_modules[\\/](@vue|vue|vue-router)[\\/]/.test(id)) return 'core-vendor'
+          if (/[\\/]node_modules[\\/]aos[\\/]/.test(id)) return 'ui-vendor'
+          if (/[\\/]node_modules[\\/]axios[\\/]/.test(id)) return 'http-vendor'
+          if (/[\\/]node_modules[\\/]animated-scroll-to[\\/]/.test(id)) return 'animation-core'
+          if (/[\\/]node_modules[\\/]@fortawesome[\\/]/.test(id)) return 'fontawesome'
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         assetFileNames: 'assets/[name]-[hash][extname]',
