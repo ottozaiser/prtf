@@ -140,6 +140,17 @@ ul {
 .dynamic-content li {
 	margin: 24px 0 0 0;
 }
+/* Yellow highlighter stroke under a card title (resume cards; the portfolio cards use the same look) */
+.title-marker {
+	padding: 0 2px;
+	margin: 0 -2px;
+	background-image: linear-gradient(var(--main-highlight), var(--main-highlight));
+	background-repeat: no-repeat;
+	background-position: 0 88%;
+	background-size: 100% 0.4em;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+}
 .icon-btn {
 	background: transparent;
 	color: var(--main-charcoal);

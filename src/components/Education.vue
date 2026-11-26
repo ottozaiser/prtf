@@ -3,7 +3,7 @@
     <div class="header">
       <h3>
         {{ finished }} -
-        <span>{{ title }}</span>
+        <span class="title-marker">{{ title }}</span>
       </h3>
       <p>
         <a :href="link" target="_blank">{{ institution }}</a>

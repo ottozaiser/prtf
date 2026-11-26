@@ -3,7 +3,7 @@
     <div class="header">
       <h3>
         <span class="sr-only">Position:</span>
-        {{ position }}
+        <span class="title-marker">{{ position }}</span>
       </h3>
       <p v-if="from">
         <span class="sr-only">From:</span>
