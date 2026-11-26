@@ -102,8 +102,19 @@
           <figcaption v-if="s.caption">{{ s.caption }}</figcaption>
         </figure>
 
+        <!-- Thumbnail grid (e.g. wireframes); each item can link somewhere, like a page of a PDF -->
+        <div v-if="s.gallery && s.gallery.length" class="gallery">
+          <figure v-for="(g, j) in s.gallery" :key="j" class="gallery-item">
+            <a v-if="g.link" :href="href(g.link)" target="_blank" rel="noopener" :aria-label="`${g.caption || 'Image'} (opens in a new tab)`">
+              <progressive-img :src="media(g.image)" :alt="g.alt || g.caption || ''" loading="lazy" />
+            </a>
+            <progressive-img v-else :src="media(g.image)" :alt="g.alt || g.caption || ''" loading="lazy" />
+            <figcaption v-if="g.caption">{{ g.caption }}</figcaption>
+          </figure>
+        </div>
+
         <p v-if="s.link && s.link.url" class="link">
-          <a class="btn btn-small" :href="s.link.url" target="_blank" rel="noopener">
+          <a class="btn btn-small" :href="href(s.link.url)" target="_blank" rel="noopener">
             {{ s.link.label || s.link.url }}
             <font-awesome-icon :icon="['fa', 'external-link-alt']" aria-hidden="true" />
           </a>
@@ -254,6 +265,10 @@ export default {
     // CMS image paths are stored as /public/_data/...; the site serves them from /_data/...
     media(path) {
       return (path || "").split("/public").pop();
+    },
+    // Links: site files stored CMS-style (/public/_data/...) are rewritten; external URLs untouched.
+    href(url) {
+      return (url || "").startsWith("/public/") ? this.media(url) : url;
     },
     // ["First", " rest of heading"] — the first word gets the yellow highlight, like page titles.
     // Tiny leading words ("A", "My") take the next word along, so "A brand-new" is highlighted, not "A".
@@ -499,6 +514,40 @@ figcaption {
 }
 .link {
   margin: 16px 0 0;
+}
+/* Thumbnail grid: 3 per row (2 on phones) */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+.gallery-item {
+  margin: 0;
+}
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--main-lightgray);
+  border-radius: 4px;
+  background: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.gallery-item a:hover img,
+.gallery-item a:focus-visible img {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(30, 41, 48, 0.12);
+}
+.gallery-item figcaption {
+  margin-top: 6px;
+  font-size: 0.85em;
+}
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
 }
 .link .btn-small {
   display: inline-block;

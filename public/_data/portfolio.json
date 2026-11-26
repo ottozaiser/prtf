@@ -146,6 +146,71 @@
               "alt": "Blockchain Federal Argentina: A system of page designs for the website."
             },
             {
+              "heading": "Wireframes and user testing",
+              "level": 3,
+              "text": "Before building the user area, I wireframed every flow: sign-up, log in, password reset, email verification, managing blockchain accounts, and an admin panel to review accounts and Ether requests.\n\nWe ran user tests on these flows: sign-up, log in, password recovery and account management.",
+              "gallery": [
+                {
+                  "image": "/public/_data/media/projects/bfa/wireframe-01.png",
+                  "caption": "Home",
+                  "alt": "Wireframe: BFA home with sign-up and log-in calls to action",
+                  "link": "/public/_data/media/projects/bfa/bfa-wireframes.pdf#page=1"
+                },
+                {
+                  "image": "/public/_data/media/projects/bfa/wireframe-02.png",
+                  "caption": "Sign up",
+                  "alt": "Wireframe: Sign-up form",
+                  "link": "/public/_data/media/projects/bfa/bfa-wireframes.pdf#page=3"
+                },
+                {
+                  "image": "/public/_data/media/projects/bfa/wireframe-03.png",
+                  "caption": "Log in",
+                  "alt": "Wireframe: Log-in form",
+                  "link": "/public/_data/media/projects/bfa/bfa-wireframes.pdf#page=4"
+                },
+                {
+                  "image": "/public/_data/media/projects/bfa/wireframe-04.png",
+                  "caption": "Password reset",
+                  "alt": "Wireframe: Password reset form",
+                  "link": "/public/_data/media/projects/bfa/bfa-wireframes.pdf#page=5"
+                },
+                {
+                  "image": "/public/_data/media/projects/bfa/wireframe-05.png",
+                  "caption": "Email verification",
+                  "alt": "Wireframe: Verification pending screen",
+                  "link": "/public/_data/media/projects/bfa/bfa-wireframes.pdf#page=7"
+                },
+                {
+                  "image": "/public/_data/media/projects/bfa/wireframe-06.png",
+                  "caption": "Add an account",
+                  "alt": "Wireframe: Dialog to add a blockchain account",
+                  "link": "/public/_data/media/projects/bfa/bfa-wireframes.pdf#page=11"
+                },
+                {
+                  "image": "/public/_data/media/projects/bfa/wireframe-07.png",
+                  "caption": "Accounts",
+                  "alt": "Wireframe: Accounts table with status and Ether balance",
+                  "link": "/public/_data/media/projects/bfa/bfa-wireframes.pdf#page=12"
+                },
+                {
+                  "image": "/public/_data/media/projects/bfa/wireframe-08.png",
+                  "caption": "Admin panel",
+                  "alt": "Wireframe: Admin panel to review users' accounts and Ether requests",
+                  "link": "/public/_data/media/projects/bfa/bfa-wireframes.pdf#page=20"
+                },
+                {
+                  "image": "/public/_data/media/projects/bfa/wireframe-09.png",
+                  "caption": "Change Ether capacity",
+                  "alt": "Wireframe: Admin dialog to change an account's Ether capacity",
+                  "link": "/public/_data/media/projects/bfa/bfa-wireframes.pdf#page=21"
+                }
+              ],
+              "link": {
+                "label": "View all 24 wireframes (PDF)",
+                "url": "/public/_data/media/projects/bfa/bfa-wireframes.pdf"
+              }
+            },
+            {
               "image": "/public/_data/media/projects/bfa/04.jpg",
               "caption": "The brand identity.",
               "alt": "Blockchain Federal Argentina: The brand identity."
