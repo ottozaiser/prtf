@@ -4,6 +4,357 @@
     "content": "<p>A selection of my work, from product and UX design to branding and motion. Some projects are under NDA, so I can only share part of them here. Click any project to see the full story.</p>",
     "projects": [
       {
+        "title": "FunCraft",
+        "show": true,
+        "slug": "funcraft",
+        "content": "Casual word, dice and sports games with more than 35M installs. I’ve been part of launching all of FunCraft’s games, including the breakouts Word Yatzy and Farkle.",
+        "image": "/public/_data/media/funcraft.jpg",
+        "file": "",
+        "detail": {
+          "summary": "FunCraft is a remote-first studio making casual word, dice and sports games. As its product designer, I’ve been part of launching all of the company’s games, including the breakouts Word Yatzy and Farkle. Together, the games have more than 35 million installs.",
+          "client": "FunCraft is a remote-first mobile game studio with a catalog of word, dice, puzzle, strategy and sports-manager games for iOS and Android.",
+          "role": "Product Designer, since 2023. On each game I’m mostly in charge of the Unity integration, asset polish, animation and UI, plus ASO and the first UA ads for launch.",
+          "jumps": [
+            {
+              "label": "What I do",
+              "target": "launch"
+            },
+            {
+              "label": "The breakouts",
+              "target": "breakouts"
+            },
+            {
+              "label": "More launches",
+              "target": "more-launches"
+            },
+            {
+              "label": "All the games",
+              "target": "games"
+            }
+          ],
+          "sections": [
+            {
+              "id": "launch",
+              "heading": "What I do on each launch",
+              "list": [
+                "Integrate the art and UI into Unity",
+                "Create the game art for some of the titles",
+                "Polish assets, animations and UI until the build feels right",
+                "Vibe-code with AI for the final polish, so the last fixes and tweaks land fast",
+                "Handle the ASO: store icons, screenshots and listings",
+                "Make the first UA ads for launch: video, static and playable"
+              ],
+              "text": "We build games very fast to test them in the market, so each launch goes from idea to store in a short cycle. On each one, I:"
+            },
+            {
+              "id": "breakouts",
+              "heading": "The breakouts",
+              "text": "Two of the games broke out, each with more than a million installs on Google Play alone."
+            },
+            {
+              "heading": "Word Yatzy",
+              "level": 3,
+              "text": "A word game with Yatzy scoring: find the best words, fill the scorecard and beat your friends.",
+              "gallery": [
+                {
+                  "image": "/public/_data/media/projects/funcraft/screens/whamzee-1.jpg",
+                  "alt": "Find the best words"
+                },
+                {
+                  "image": "/public/_data/media/projects/funcraft/screens/whamzee-2.jpg",
+                  "alt": "Play with friends"
+                },
+                {
+                  "image": "/public/_data/media/projects/funcraft/screens/whamzee-3.jpg",
+                  "alt": "Score a Yatzy"
+                },
+                {
+                  "image": "/public/_data/media/projects/funcraft/screens/whamzee-4.jpg",
+                  "alt": "Your games, ready to play"
+                }
+              ],
+              "columns": 4,
+              "columnsMobile": 2,
+              "links": [
+                {
+                  "label": "Google Play",
+                  "url": "https://play.google.com/store/apps/details?id=com.funcraft.whamzee",
+                  "srText": "Word Yatzy on"
+                },
+                {
+                  "label": "App Store",
+                  "url": "https://apps.apple.com/us/app/word-yatzy-fun-word-puzzler/id6444775332",
+                  "srText": "Word Yatzy on the"
+                }
+              ]
+            },
+            {
+              "heading": "Farkle Dice Roll",
+              "level": 3,
+              "text": "The classic dice game of strategy and luck: roll, keep your scoring dice and know when to stop.",
+              "gallery": [
+                {
+                  "image": "/public/_data/media/projects/funcraft/screens/farkle-1.jpg",
+                  "alt": "Roll the dice"
+                },
+                {
+                  "image": "/public/_data/media/projects/funcraft/screens/farkle-2.jpg",
+                  "alt": "Win against friends"
+                },
+                {
+                  "image": "/public/_data/media/projects/funcraft/screens/farkle-3.jpg",
+                  "alt": "Bonus roll"
+                },
+                {
+                  "image": "/public/_data/media/projects/funcraft/screens/farkle-4.jpg",
+                  "alt": "Your games, ready to play"
+                }
+              ],
+              "columns": 4,
+              "columnsMobile": 2,
+              "links": [
+                {
+                  "label": "Google Play",
+                  "url": "https://play.google.com/store/apps/details?id=com.funcraft.farkle",
+                  "srText": "Farkle Dice Roll on"
+                },
+                {
+                  "label": "App Store",
+                  "url": "https://apps.apple.com/us/app/farkle-dice-roll/id6476893083",
+                  "srText": "Farkle Dice Roll on the"
+                }
+              ]
+            },
+            {
+              "id": "more-launches",
+              "heading": "More launches",
+              "text": "Two more of the games I helped launch."
+            },
+            {
+              "heading": "Bingo Dice",
+              "level": 3,
+              "text": "Classic bingo with a modern twist: roll the dice to mark your card and play with friends.",
+              "gallery": [
+                {
+                  "image": "/public/_data/media/projects/funcraft/screens/bingodice-1.jpg",
+                  "alt": "The most fun bingo with dice"
+                },
+                {
+                  "image": "/public/_data/media/projects/funcraft/screens/bingodice-2.jpg",
+                  "alt": "Classic bingo with a modern twist"
+                },
+                {
+                  "image": "/public/_data/media/projects/funcraft/screens/bingodice-3.jpg",
+                  "alt": "Let’s play together"
+                },
+                {
+                  "image": "/public/_data/media/projects/funcraft/screens/bingodice-4.jpg",
+                  "alt": "Play with friends"
+                }
+              ],
+              "columns": 4,
+              "columnsMobile": 2,
+              "links": [
+                {
+                  "label": "Google Play",
+                  "url": "https://play.google.com/store/apps/details?id=com.funcraft.bingodice",
+                  "srText": "Bingo Dice on"
+                },
+                {
+                  "label": "App Store",
+                  "url": "https://apps.apple.com/us/app/bingo-dice/id6747049399",
+                  "srText": "Bingo Dice on the"
+                }
+              ]
+            },
+            {
+              "heading": "17-0 Football Manager",
+              "level": 3,
+              "text": "A football manager game: draft legends, build your dream team and go for a perfect 17-0 season.",
+              "gallery": [
+                {
+                  "image": "/public/_data/media/projects/funcraft/screens/profootballmanager-1.jpg",
+                  "alt": "Draft legends"
+                },
+                {
+                  "image": "/public/_data/media/projects/funcraft/screens/profootballmanager-2.jpg",
+                  "alt": "Build your dream team"
+                },
+                {
+                  "image": "/public/_data/media/projects/funcraft/screens/profootballmanager-3.jpg",
+                  "alt": "Clinch your spot"
+                },
+                {
+                  "image": "/public/_data/media/projects/funcraft/screens/profootballmanager-4.jpg",
+                  "alt": "Own the stage"
+                }
+              ],
+              "columns": 4,
+              "columnsMobile": 2,
+              "links": [
+                {
+                  "label": "Google Play",
+                  "url": "https://play.google.com/store/apps/details?id=com.funcraft.profootballmanager",
+                  "srText": "17-0 Football Manager on"
+                },
+                {
+                  "label": "App Store",
+                  "url": "https://apps.apple.com/us/app/17-0-football-manager/id6799906854",
+                  "srText": "17-0 Football Manager on the"
+                }
+              ]
+            },
+            {
+              "id": "games",
+              "heading": "All the games",
+              "text": "Every game in the catalog, from word and dice classics to sports managers and tower defense.",
+              "gallery": [
+                {
+                  "image": "/public/_data/media/projects/funcraft/icons/whamzee.jpg",
+                  "caption": "Word Yatzy",
+                  "alt": "Word Yatzy app icon",
+                  "link": "https://play.google.com/store/apps/details?id=com.funcraft.whamzee",
+                  "shape": "icon"
+                },
+                {
+                  "image": "/public/_data/media/projects/funcraft/icons/farkle.jpg",
+                  "caption": "Farkle Dice Roll",
+                  "alt": "Farkle Dice Roll app icon",
+                  "link": "https://play.google.com/store/apps/details?id=com.funcraft.farkle",
+                  "shape": "icon"
+                },
+                {
+                  "image": "/public/_data/media/projects/funcraft/icons/wordgrams.jpg",
+                  "caption": "Wordgrams",
+                  "alt": "Wordgrams app icon",
+                  "link": "https://play.google.com/store/apps/details?id=com.funcraft.wordgrams",
+                  "shape": "icon"
+                },
+                {
+                  "image": "/public/_data/media/projects/funcraft/icons/diceyatzy.jpg",
+                  "caption": "Dice Yatzy",
+                  "alt": "Dice Yatzy app icon",
+                  "link": "https://play.google.com/store/apps/details?id=com.funcraft.diceyatzy",
+                  "shape": "icon"
+                },
+                {
+                  "image": "/public/_data/media/projects/funcraft/icons/bingodice.jpg",
+                  "caption": "Bingo Dice",
+                  "alt": "Bingo Dice app icon",
+                  "link": "https://play.google.com/store/apps/details?id=com.funcraft.bingodice",
+                  "shape": "icon"
+                },
+                {
+                  "image": "/public/_data/media/projects/funcraft/icons/dicewords.jpg",
+                  "caption": "Dice Words",
+                  "alt": "Dice Words app icon",
+                  "link": "https://play.google.com/store/apps/details?id=com.funcraft.dicewords",
+                  "shape": "icon"
+                },
+                {
+                  "image": "/public/_data/media/projects/funcraft/icons/mergetower.jpg",
+                  "caption": "Merge Kingdoms",
+                  "alt": "Merge Kingdoms app icon",
+                  "link": "https://play.google.com/store/apps/details?id=com.funcraft.mergetower",
+                  "shape": "icon"
+                },
+                {
+                  "image": "/public/_data/media/projects/funcraft/icons/acw.jpg",
+                  "caption": "Arrow Crosswords",
+                  "alt": "Arrow Crosswords app icon",
+                  "link": "https://play.google.com/store/apps/details?id=com.funcraft.acw",
+                  "shape": "icon"
+                },
+                {
+                  "image": "/public/_data/media/projects/funcraft/icons/profootballmanager.jpg",
+                  "caption": "17-0 Football Manager",
+                  "alt": "17-0 Football Manager app icon",
+                  "link": "https://play.google.com/store/apps/details?id=com.funcraft.profootballmanager",
+                  "shape": "icon"
+                },
+                {
+                  "image": "/public/_data/media/projects/funcraft/icons/probasketballmanager.jpg",
+                  "caption": "Unbeaten Hoops",
+                  "alt": "Unbeaten Hoops app icon",
+                  "link": "https://play.google.com/store/apps/details?id=com.funcraft.probasketballmanager",
+                  "shape": "icon"
+                },
+                {
+                  "image": "/public/_data/media/projects/funcraft/icons/yatzyconnect.jpg",
+                  "caption": "Yatzy Connect",
+                  "alt": "Yatzy Connect app icon",
+                  "link": "https://play.google.com/store/apps/details?id=com.funcraft.yatzyconnect",
+                  "shape": "icon"
+                },
+                {
+                  "image": "/public/_data/media/projects/funcraft/icons/boom15.jpg",
+                  "caption": "Boom 15",
+                  "alt": "Boom 15 app icon",
+                  "link": "https://play.google.com/store/apps/details?id=com.funcraft.boom15",
+                  "shape": "icon"
+                },
+                {
+                  "image": "/public/_data/media/projects/funcraft/icons/farkleconnect.jpg",
+                  "caption": "Farkle Connect",
+                  "alt": "Farkle Connect app icon",
+                  "link": "https://play.google.com/store/apps/details?id=com.funcraft.farkleconnect",
+                  "shape": "icon"
+                },
+                {
+                  "image": "/public/_data/media/projects/funcraft/icons/backgammon.jpg",
+                  "caption": "Backgammon",
+                  "alt": "Backgammon app icon",
+                  "link": "https://play.google.com/store/apps/details?id=com.funcraft.backgammon",
+                  "shape": "icon"
+                },
+                {
+                  "image": "/public/_data/media/projects/funcraft/icons/castlemerge.jpg",
+                  "caption": "Castle Merge",
+                  "alt": "Castle Merge app icon",
+                  "link": "https://play.google.com/store/apps/details?id=com.funcraft.castlemerge",
+                  "shape": "icon"
+                },
+                {
+                  "image": "/public/_data/media/projects/funcraft/icons/liarsdice.jpg",
+                  "caption": "Liar’s Dice",
+                  "alt": "Liar’s Dice app icon",
+                  "link": "https://play.google.com/store/apps/details?id=com.funcraft.liarsdice",
+                  "shape": "icon"
+                },
+                {
+                  "image": "/public/_data/media/projects/funcraft/icons/craps.jpg",
+                  "caption": "Hot Rolls",
+                  "alt": "Hot Rolls app icon",
+                  "link": "https://play.google.com/store/apps/details?id=com.funcraft.craps",
+                  "shape": "icon"
+                },
+                {
+                  "image": "/public/_data/media/projects/funcraft/icons/prosoccermanager.jpg",
+                  "caption": "Unbeaten Soccer Manager",
+                  "alt": "Unbeaten Soccer Manager app icon",
+                  "link": "https://play.google.com/store/apps/details?id=com.funcraft.prosoccermanager",
+                  "shape": "icon"
+                }
+              ],
+              "columns": 6,
+              "columnsMobile": 3,
+              "links": [
+                {
+                  "label": "Google Play",
+                  "url": "https://play.google.com/store/apps/dev?id=6217164817604877059",
+                  "srText": "FunCraft on"
+                },
+                {
+                  "label": "App Store",
+                  "url": "https://apps.apple.com/us/developer/funcraft-inc/id1482426779",
+                  "srText": "FunCraft on the"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
         "title": "Pet Shelter",
         "show": true,
         "slug": "pet-shelter",
@@ -806,117 +1157,6 @@
         }
       },
       {
-        "title": "Nearpod",
-        "show": true,
-        "content": "Image answers for quizzes and a Motion UI menu for the iPad app, for an award-winning US edtech platform.",
-        "image": "/public/_data/media/portfolio_nearpod.png",
-        "file": "https://drive.google.com/file/d/1vYYhgm0KgLwD3uqAG34zO0En4X0hgKNX/view",
-        "slug": "nearpod",
-        "detail": {
-          "summary": "Two projects for Nearpod’s lesson platform: images in quiz answers, and a Motion UI menu that brought new lesson libraries to the iPad app.",
-          "client": "Nearpod is an award-winning student engagement platform with lessons for teachers. As a product designer at Hexacta, I worked with Nearpod’s US-based product team on new features for its web and iPad apps.",
-          "context": "The web app was evolving fast, the iPad app had to keep up, and new features had to work on both. I often joined as a firefighter, solving design problems the team was stuck on.",
-          "role": "Product designer (and firefighter): prototyping, UI design, heuristics and accessibility.",
-          "jumps": [
-            {
-              "label": "Case study: Image Quiz",
-              "target": "image-quiz"
-            },
-            {
-              "label": "Case study: Motion UI",
-              "target": "motion-ui"
-            }
-          ],
-          "sections": [
-            {
-              "id": "image-quiz",
-              "heading": "Case study: Image Quiz",
-              "text": "Nearpod had just redesigned its quiz activity when the Product Owner asked for a new feature: images in the answers.\n\nThe quiz has two sides. On the teacher side, a small improvement to the existing view was enough. The student side needed more: it had to become engaging for kids."
-            },
-            {
-              "image": "/public/_data/media/projects/nearpod/quiz-01.jpg",
-              "caption": "Teacher side, before: the freshly redesigned quiz editor.",
-              "alt": "Nearpod quiz editor for teachers, before images were added"
-            },
-            {
-              "image": "/public/_data/media/projects/nearpod/quiz-02.jpg",
-              "caption": "Student side, before: it worked, but it was kind of boring.",
-              "alt": "Nearpod student quiz with plain text answers"
-            },
-            {
-              "heading": "Teacher side",
-              "level": 3,
-              "text": "The editor component was already built in React, so I kept the change small: an image button next to each answer field.",
-              "image": "/public/_data/media/projects/nearpod/quiz-03.jpg",
-              "caption": "A small tweak: an image button next to each answer.",
-              "alt": "Quiz editor with an image button beside each answer option"
-            },
-            {
-              "image": "/public/_data/media/projects/nearpod/quiz-04.jpg",
-              "caption": "Once an image is added, the answer text becomes optional.",
-              "alt": "Quiz editor with a photo added to an answer, text marked optional"
-            },
-            {
-              "heading": "Student side",
-              "level": 3,
-              "text": "For kids, I turned the answers into a colorful, game-board-like grid of image cards.",
-              "image": "/public/_data/media/projects/nearpod/quiz-05.jpg",
-              "caption": "Colors and a game-board feel bring the student side to life.",
-              "alt": "Student quiz with six colorful image answer cards"
-            },
-            {
-              "image": "/public/_data/media/projects/nearpod/quiz-06.jpg",
-              "caption": "A magnifier lets students take a closer look at any image.",
-              "alt": "Student quiz with a magnifier icon on an image card"
-            },
-            {
-              "image": "/public/_data/media/projects/nearpod/quiz-07.jpg",
-              "caption": "Images open in Nearpod’s standard lightbox.",
-              "alt": "An answer image enlarged in a lightbox"
-            },
-            {
-              "image": "/public/_data/media/projects/nearpod/quiz-08.jpg",
-              "caption": "Big, clear selection states and a Submit button sized for kids.",
-              "alt": "Two image answers selected and an active Submit button"
-            },
-            {
-              "id": "motion-ui",
-              "heading": "Case study: Motion UI",
-              "text": "Nearpod sold free and paid lessons in a store, then added custom libraries for schools, districts and programs, and these had to be available on every platform.\n\nOn the web, a top navigation bar with drop-down menus handled it fine. On iOS it was a different game, and the team had been struggling to find an answer before I joined.",
-              "notes": [
-                "Nearpod wanted more revenue from premade lessons",
-                "The web app was evolving much faster than iOS"
-              ]
-            },
-            {
-              "heading": "Welcome",
-              "text": "This was the iPad Welcome screen. Stakeholders saw it almost as part of the brand and didn’t want it changed.\n\nSo instead of redesigning it, I proposed Motion UI: a smooth transition from the Welcome menu into a new submenu, like the Flash sites of the old days.\n\nThe heads of Product and iOS loved the idea, and we aligned on the solution.",
-              "notes": [
-                "Experience gives you the tools to solve problems"
-              ],
-              "level": 3,
-              "image": "/public/_data/media/projects/nearpod/motion-01.jpg",
-              "caption": "The Explore button leads to the lesson store.",
-              "alt": "Nearpod iPad Welcome screen with colored menu buttons"
-            },
-            {
-              "heading": "Transition",
-              "text": "Menu A turns into Menu B. The motion had to be fast but easy to follow, so users never lose their place.",
-              "caption": "From Menu A (Welcome) to Menu B (Explore).",
-              "level": 3,
-              "image": "/public/_data/media/projects/nearpod/motion-02.jpg",
-              "alt": "Nearpod menu A (Welcome) and menu B (Explore submenu) side by side"
-            },
-            {
-              "video": "https://vimeo.com/1250390696",
-              "caption": "The animation prototype.",
-              "text": "I presented the animation prototype to the Product Owner and stakeholders, and they were very happy with the result.",
-              "ratio": "4:3"
-            }
-          ]
-        }
-      },
-      {
         "title": "BFA",
         "show": true,
         "content": "Brand, website and apps for Argentina’s public blockchain, from a blank page to its 2019 conference.",
@@ -1092,6 +1332,228 @@
             {
               "label": "Case study: Sello de Tiempo",
               "target": "case-study"
+            }
+          ]
+        }
+      },
+      {
+        "title": ".ar Domain Launch",
+        "show": true,
+        "content": "Opening Argentina’s .ar domain to the public: 35,000 new domains registered in two months.",
+        "image": "/public/_data/media/portfolio_nic.jpg",
+        "file": "https://drive.google.com/file/d/1k7SR5Ipxj8AU2JsSMavdWW8Pl-lqLD5x/view",
+        "slug": "top-level-domain",
+        "detail": {
+          "client": "NIC Argentina is the government office that runs the .ar country-code top-level domain. I led the design work to open .ar domains to the public.",
+          "context": "Until 2019, people could only register subdomains like .com.ar or .net.ar. Opening .ar itself was a big deal for the organization, and it had been delayed for years.\n\nFour organizations shared the registration platform. Communication between them was poor, and our requests sat low on the platform provider’s list. So we focused on the teams we could work with and kept platform changes to a minimum, which meant the front end could only change in small ways.",
+          "role": "Lead designer: prototyping, UI design, heuristics, communication, branding and consulting.",
+          "notes": [
+            "UI design was part of a government framework library",
+            "Platform redesign was out of scope",
+            "The platform didn’t work very well",
+            "Working for the government is hard"
+          ],
+          "sections": [
+            {
+              "image": "/public/_data/media/projects/cos-top-level-domain/01.jpg",
+              "caption": "Where we started: domain search and the domain list.",
+              "alt": "NIC Argentina domain search and domain list"
+            },
+            {
+              "heading": "Opening phases",
+              "text": "To prevent speculation and domain squatting, the team designed a three-phase opening.",
+              "list": [
+                "Phase 1: people who already owned a name as .com.ar or .net.ar got priority to register it as .ar. If two people had priority on the same name, a raffle decided.",
+                "Phase 2: anyone could request any name, and a raffle decided among all requests.",
+                "Phase 3: open registration, like any other domain."
+              ],
+              "notes": [
+                "This case study focuses on Phase 1",
+                "Case 1: one user with priority to register",
+                "Case 2: two users with priority to register"
+              ]
+            },
+            {
+              "heading": "Tweak it",
+              "text": "The process was complicated, and our resources were limited. So I asked: “What if, instead of changing everything, we tweak it a little?”\n\nI focused on the domain list table. It was within our resources, and users already went there to renew their domains.\n\nRight away I noticed the action buttons were icons only. I couldn’t tell what they did until I hovered over them: a real usability and accessibility problem, and a quick one to fix.",
+              "image": "/public/_data/media/projects/cos-top-level-domain/02.jpg",
+              "caption": "Before: icon-only actions in the domain list.",
+              "alt": "Domain list with icon-only action buttons"
+            },
+            {
+              "image": "/public/_data/media/projects/cos-top-level-domain/03.jpg",
+              "caption": "Renew, Transfer, Delegate: the labels only appeared on hover.",
+              "alt": "Renew, Transfer and Delegate icon buttons with hover labels"
+            },
+            {
+              "text": "First change: a new, highlighted row for the reserved domain, with a clear Register button.",
+              "image": "/public/_data/media/projects/cos-top-level-domain/04.jpg",
+              "caption": "Case 1: one person with priority gets a highlighted row and a Register button.",
+              "alt": "Domain list with a highlighted reserved row and a Register button"
+            },
+            {
+              "text": "That solved Case 1. But what if two people have priority on the same domain?\n\nThat kicked off a UX writing debate that lasted days. Spanish has many near-synonyms with subtle differences, and the button label mattered. We landed on Registrar (Register) and Solicitar (Request).\n\nTogether with the Communication team, we also added an alert at the top of the page explaining the new rows and linking to details about the opening.",
+              "image": "/public/_data/media/projects/cos-top-level-domain/05.jpg",
+              "caption": "Case 2: Register and Request actions, plus an alert explaining the opening.",
+              "alt": "Domain list with Register and Request buttons and an information alert"
+            },
+            {
+              "heading": "Visual communication",
+              "text": "There was no time for the big campaign we had planned, so we explained the opening with a landing page, emails and social media.\n\nThe concept: “Your place on the Internet.” A new domain is a new world in cyberspace, so we went with a space theme.",
+              "image": "/public/_data/media/projects/cos-top-level-domain/06.jpg",
+              "caption": "The landing page: the new domain, its features, the opening timeline, and links to rules and FAQs.",
+              "alt": "Space-themed .ar landing page",
+              "link": {
+                "label": "nic.ar/ar",
+                "url": "https://nic.ar/ar"
+              }
+            },
+            {
+              "heading": "Aftermath",
+              "text": "Then the project stalled for almost a year because of the unstable platform, so we never got to test it with users.\n\nA political decision brought it back to life, and the teams had to ship fast. The opening ran on a very tight schedule, and some features were cut to meet the deadline.\n\nThe core changes (labeled buttons and the new rows) shipped. The alert didn’t, so people who hadn’t heard about the opening could get confused. We covered the gap with emails, a landing page, FAQs and tutorials.",
+              "notes": [
+                "I regret this the most"
+              ],
+              "list": [
+                "The platform was still unstable",
+                "The first deploy failed, pushing the launch back a day",
+                "Many users didn’t know the difference between a subdomain and a top-level domain"
+              ]
+            },
+            {
+              "heading": "Results",
+              "text": "Working for the government is hard, but it can be deeply rewarding. Despite all the issues:",
+              "list": [
+                "35,000 new .ar domains registered in the first two months",
+                "AR$9,500,000 in revenue",
+                "Large customers praised how simple the process was"
+              ],
+              "notes": [
+                "35,000 new domains!"
+              ]
+            },
+            {
+              "heading": "Extra: renewing multiple domains",
+              "text": "Renewing several domains at once sounds simple. It wasn’t.",
+              "image": "/public/_data/media/projects/cos-top-level-domain/07.jpg",
+              "caption": "Select several domains and renew them in one step.",
+              "alt": "Domain list with checkboxes and a Renew domains button",
+              "link": {
+                "label": "Try the functional prototype",
+                "url": "https://ottozaiser.github.io/renovacion-multiple/"
+              }
+            }
+          ],
+          "summary": "How small, targeted UX changes helped open Argentina’s .ar domain to the public, with 35,000 domains registered in the first two months."
+        }
+      },
+      {
+        "title": "Nearpod",
+        "show": true,
+        "content": "Image answers for quizzes and a Motion UI menu for the iPad app, for an award-winning US edtech platform.",
+        "image": "/public/_data/media/portfolio_nearpod.png",
+        "file": "https://drive.google.com/file/d/1vYYhgm0KgLwD3uqAG34zO0En4X0hgKNX/view",
+        "slug": "nearpod",
+        "detail": {
+          "summary": "Two projects for Nearpod’s lesson platform: images in quiz answers, and a Motion UI menu that brought new lesson libraries to the iPad app.",
+          "client": "Nearpod is an award-winning student engagement platform with lessons for teachers. As a product designer at Hexacta, I worked with Nearpod’s US-based product team on new features for its web and iPad apps.",
+          "context": "The web app was evolving fast, the iPad app had to keep up, and new features had to work on both. I often joined as a firefighter, solving design problems the team was stuck on.",
+          "role": "Product designer (and firefighter): prototyping, UI design, heuristics and accessibility.",
+          "jumps": [
+            {
+              "label": "Case study: Image Quiz",
+              "target": "image-quiz"
+            },
+            {
+              "label": "Case study: Motion UI",
+              "target": "motion-ui"
+            }
+          ],
+          "sections": [
+            {
+              "id": "image-quiz",
+              "heading": "Case study: Image Quiz",
+              "text": "Nearpod had just redesigned its quiz activity when the Product Owner asked for a new feature: images in the answers.\n\nThe quiz has two sides. On the teacher side, a small improvement to the existing view was enough. The student side needed more: it had to become engaging for kids."
+            },
+            {
+              "image": "/public/_data/media/projects/nearpod/quiz-01.jpg",
+              "caption": "Teacher side, before: the freshly redesigned quiz editor.",
+              "alt": "Nearpod quiz editor for teachers, before images were added"
+            },
+            {
+              "image": "/public/_data/media/projects/nearpod/quiz-02.jpg",
+              "caption": "Student side, before: it worked, but it was kind of boring.",
+              "alt": "Nearpod student quiz with plain text answers"
+            },
+            {
+              "heading": "Teacher side",
+              "level": 3,
+              "text": "The editor component was already built in React, so I kept the change small: an image button next to each answer field.",
+              "image": "/public/_data/media/projects/nearpod/quiz-03.jpg",
+              "caption": "A small tweak: an image button next to each answer.",
+              "alt": "Quiz editor with an image button beside each answer option"
+            },
+            {
+              "image": "/public/_data/media/projects/nearpod/quiz-04.jpg",
+              "caption": "Once an image is added, the answer text becomes optional.",
+              "alt": "Quiz editor with a photo added to an answer, text marked optional"
+            },
+            {
+              "heading": "Student side",
+              "level": 3,
+              "text": "For kids, I turned the answers into a colorful, game-board-like grid of image cards.",
+              "image": "/public/_data/media/projects/nearpod/quiz-05.jpg",
+              "caption": "Colors and a game-board feel bring the student side to life.",
+              "alt": "Student quiz with six colorful image answer cards"
+            },
+            {
+              "image": "/public/_data/media/projects/nearpod/quiz-06.jpg",
+              "caption": "A magnifier lets students take a closer look at any image.",
+              "alt": "Student quiz with a magnifier icon on an image card"
+            },
+            {
+              "image": "/public/_data/media/projects/nearpod/quiz-07.jpg",
+              "caption": "Images open in Nearpod’s standard lightbox.",
+              "alt": "An answer image enlarged in a lightbox"
+            },
+            {
+              "image": "/public/_data/media/projects/nearpod/quiz-08.jpg",
+              "caption": "Big, clear selection states and a Submit button sized for kids.",
+              "alt": "Two image answers selected and an active Submit button"
+            },
+            {
+              "id": "motion-ui",
+              "heading": "Case study: Motion UI",
+              "text": "Nearpod sold free and paid lessons in a store, then added custom libraries for schools, districts and programs, and these had to be available on every platform.\n\nOn the web, a top navigation bar with drop-down menus handled it fine. On iOS it was a different game, and the team had been struggling to find an answer before I joined.",
+              "notes": [
+                "Nearpod wanted more revenue from premade lessons",
+                "The web app was evolving much faster than iOS"
+              ]
+            },
+            {
+              "heading": "Welcome",
+              "text": "This was the iPad Welcome screen. Stakeholders saw it almost as part of the brand and didn’t want it changed.\n\nSo instead of redesigning it, I proposed Motion UI: a smooth transition from the Welcome menu into a new submenu, like the Flash sites of the old days.\n\nThe heads of Product and iOS loved the idea, and we aligned on the solution.",
+              "notes": [
+                "Experience gives you the tools to solve problems"
+              ],
+              "level": 3,
+              "image": "/public/_data/media/projects/nearpod/motion-01.jpg",
+              "caption": "The Explore button leads to the lesson store.",
+              "alt": "Nearpod iPad Welcome screen with colored menu buttons"
+            },
+            {
+              "heading": "Transition",
+              "text": "Menu A turns into Menu B. The motion had to be fast but easy to follow, so users never lose their place.",
+              "caption": "From Menu A (Welcome) to Menu B (Explore).",
+              "level": 3,
+              "image": "/public/_data/media/projects/nearpod/motion-02.jpg",
+              "alt": "Nearpod menu A (Welcome) and menu B (Explore submenu) side by side"
+            },
+            {
+              "video": "https://vimeo.com/1250390696",
+              "caption": "The animation prototype.",
+              "text": "I presented the animation prototype to the Product Owner and stakeholders, and they were very happy with the result.",
+              "ratio": "4:3"
             }
           ]
         }
@@ -1300,117 +1762,6 @@
             }
           ],
           "summary": "Ten years, six websites, one constraint: two weeks to build each one from scratch, on top of my day job."
-        }
-      },
-      {
-        "title": ".ar Domain Launch",
-        "show": true,
-        "content": "Opening Argentina’s .ar domain to the public: 35,000 new domains registered in two months.",
-        "image": "/public/_data/media/portfolio_nic.jpg",
-        "file": "https://drive.google.com/file/d/1k7SR5Ipxj8AU2JsSMavdWW8Pl-lqLD5x/view",
-        "slug": "top-level-domain",
-        "detail": {
-          "client": "NIC Argentina is the government office that runs the .ar country-code top-level domain. I led the design work to open .ar domains to the public.",
-          "context": "Until 2019, people could only register subdomains like .com.ar or .net.ar. Opening .ar itself was a big deal for the organization, and it had been delayed for years.\n\nFour organizations shared the registration platform. Communication between them was poor, and our requests sat low on the platform provider’s list. So we focused on the teams we could work with and kept platform changes to a minimum, which meant the front end could only change in small ways.",
-          "role": "Lead designer: prototyping, UI design, heuristics, communication, branding and consulting.",
-          "notes": [
-            "UI design was part of a government framework library",
-            "Platform redesign was out of scope",
-            "The platform didn’t work very well",
-            "Working for the government is hard"
-          ],
-          "sections": [
-            {
-              "image": "/public/_data/media/projects/cos-top-level-domain/01.jpg",
-              "caption": "Where we started: domain search and the domain list.",
-              "alt": "NIC Argentina domain search and domain list"
-            },
-            {
-              "heading": "Opening phases",
-              "text": "To prevent speculation and domain squatting, the team designed a three-phase opening.",
-              "list": [
-                "Phase 1: people who already owned a name as .com.ar or .net.ar got priority to register it as .ar. If two people had priority on the same name, a raffle decided.",
-                "Phase 2: anyone could request any name, and a raffle decided among all requests.",
-                "Phase 3: open registration, like any other domain."
-              ],
-              "notes": [
-                "This case study focuses on Phase 1",
-                "Case 1: one user with priority to register",
-                "Case 2: two users with priority to register"
-              ]
-            },
-            {
-              "heading": "Tweak it",
-              "text": "The process was complicated, and our resources were limited. So I asked: “What if, instead of changing everything, we tweak it a little?”\n\nI focused on the domain list table. It was within our resources, and users already went there to renew their domains.\n\nRight away I noticed the action buttons were icons only. I couldn’t tell what they did until I hovered over them: a real usability and accessibility problem, and a quick one to fix.",
-              "image": "/public/_data/media/projects/cos-top-level-domain/02.jpg",
-              "caption": "Before: icon-only actions in the domain list.",
-              "alt": "Domain list with icon-only action buttons"
-            },
-            {
-              "image": "/public/_data/media/projects/cos-top-level-domain/03.jpg",
-              "caption": "Renew, Transfer, Delegate: the labels only appeared on hover.",
-              "alt": "Renew, Transfer and Delegate icon buttons with hover labels"
-            },
-            {
-              "text": "First change: a new, highlighted row for the reserved domain, with a clear Register button.",
-              "image": "/public/_data/media/projects/cos-top-level-domain/04.jpg",
-              "caption": "Case 1: one person with priority gets a highlighted row and a Register button.",
-              "alt": "Domain list with a highlighted reserved row and a Register button"
-            },
-            {
-              "text": "That solved Case 1. But what if two people have priority on the same domain?\n\nThat kicked off a UX writing debate that lasted days. Spanish has many near-synonyms with subtle differences, and the button label mattered. We landed on Registrar (Register) and Solicitar (Request).\n\nTogether with the Communication team, we also added an alert at the top of the page explaining the new rows and linking to details about the opening.",
-              "image": "/public/_data/media/projects/cos-top-level-domain/05.jpg",
-              "caption": "Case 2: Register and Request actions, plus an alert explaining the opening.",
-              "alt": "Domain list with Register and Request buttons and an information alert"
-            },
-            {
-              "heading": "Visual communication",
-              "text": "There was no time for the big campaign we had planned, so we explained the opening with a landing page, emails and social media.\n\nThe concept: “Your place on the Internet.” A new domain is a new world in cyberspace, so we went with a space theme.",
-              "image": "/public/_data/media/projects/cos-top-level-domain/06.jpg",
-              "caption": "The landing page: the new domain, its features, the opening timeline, and links to rules and FAQs.",
-              "alt": "Space-themed .ar landing page",
-              "link": {
-                "label": "nic.ar/ar",
-                "url": "https://nic.ar/ar"
-              }
-            },
-            {
-              "heading": "Aftermath",
-              "text": "Then the project stalled for almost a year because of the unstable platform, so we never got to test it with users.\n\nA political decision brought it back to life, and the teams had to ship fast. The opening ran on a very tight schedule, and some features were cut to meet the deadline.\n\nThe core changes (labeled buttons and the new rows) shipped. The alert didn’t, so people who hadn’t heard about the opening could get confused. We covered the gap with emails, a landing page, FAQs and tutorials.",
-              "notes": [
-                "I regret this the most"
-              ],
-              "list": [
-                "The platform was still unstable",
-                "The first deploy failed, pushing the launch back a day",
-                "Many users didn’t know the difference between a subdomain and a top-level domain"
-              ]
-            },
-            {
-              "heading": "Results",
-              "text": "Working for the government is hard, but it can be deeply rewarding. Despite all the issues:",
-              "list": [
-                "35,000 new .ar domains registered in the first two months",
-                "AR$9,500,000 in revenue",
-                "Large customers praised how simple the process was"
-              ],
-              "notes": [
-                "35,000 new domains!"
-              ]
-            },
-            {
-              "heading": "Extra: renewing multiple domains",
-              "text": "Renewing several domains at once sounds simple. It wasn’t.",
-              "image": "/public/_data/media/projects/cos-top-level-domain/07.jpg",
-              "caption": "Select several domains and renew them in one step.",
-              "alt": "Domain list with checkboxes and a Renew domains button",
-              "link": {
-                "label": "Try the functional prototype",
-                "url": "https://ottozaiser.github.io/renovacion-multiple/"
-              }
-            }
-          ],
-          "summary": "How small, targeted UX changes helped open Argentina’s .ar domain to the public, with 35,000 domains registered in the first two months."
         }
       },
       {

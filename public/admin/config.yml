@@ -241,6 +241,14 @@ collections:
                               - { label: "Alt text", name: "alt", widget: "string", required: false }
                               - { label: "Link (optional, e.g. a PDF page)", name: "link", widget: "string", required: false }
                               - { label: "Shape (icon / round = app icons, cutout = character on white, no frame)", name: "shape", widget: "select", options: ["icon", "round", "cutout"], required: false }
+                          - label: "More links (buttons in a row)"
+                            name: "links"
+                            widget: list
+                            required: false
+                            fields:
+                              - { label: "Label", name: "label", widget: "string" }
+                              - { label: "Screen-reader text before the label (e.g. Word Yatzy on)", name: "srText", widget: "string", required: false }
+                              - { label: "URL", name: "url", widget: "string" }
                           - label: "Link"
                             name: "link"
                             widget: "object"

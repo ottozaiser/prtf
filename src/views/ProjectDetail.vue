@@ -142,9 +142,17 @@
           </figure>
         </div>
 
-        <p v-if="s.link && s.link.url" class="link">
-          <a class="btn btn-small" :href="href(s.link.url)" target="_blank" rel="noopener">
-            {{ s.link.label || s.link.url }}
+        <p v-if="(s.link && s.link.url) || (s.links && s.links.length)" class="link">
+          <a
+            v-for="(l, k) in [s.link, ...(s.links || [])].filter((l) => l && l.url)"
+            :key="k"
+            class="btn btn-small"
+            :href="href(l.url)"
+            target="_blank"
+            rel="noopener"
+          >
+<!-- srText: words only screen readers hear, before the visible label ("Word Yatzy on" + "Google Play") -->
+            <span v-if="l.srText" class="sr-only">{{ l.srText }}&nbsp;</span>{{ l.label || l.url }}
             <font-awesome-icon :icon="['fa', 'external-link-alt']" aria-hidden="true" />
           </a>
         </p>
@@ -584,6 +592,9 @@ figcaption {
   background: #fff;
 }
 .link {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
   margin: 16px 0 0;
 }
 /* Thumbnail grid: --cols per row (default 3); fewer on phones (--cols-mobile) */
