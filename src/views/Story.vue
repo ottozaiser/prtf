@@ -73,6 +73,13 @@ export default {
       steps: null,
     };
   },
+  // Scroll and swipe snap from one chapter to the next (only on this page)
+  mounted() {
+    document.documentElement.classList.add("story-snap");
+  },
+  beforeUnmount() {
+    document.documentElement.classList.remove("story-snap");
+  },
   created: function () {
     axios
       .get("/_data/story.json")
@@ -103,6 +110,17 @@ export default {
 };
 </script>
 
+<style>
+html.story-snap {
+  scroll-snap-type: y mandatory;
+}
+@media (prefers-reduced-motion: reduce) {
+  html.story-snap {
+    scroll-snap-type: y proximity;
+  }
+}
+</style>
+
 <style scoped>
 /* Highlights are nowrap site-wide; in the story text, let long ones (e.g. "Accessibility and User Experience") wrap instead of jumping to a new line. */
 .story :deep(.highlight) {
@@ -128,6 +146,9 @@ export default {
 }
 section {
   min-height: 100vh;
+  min-height: 100svh; /* exactly one screen, with the phone's browser bars showing */
+  box-sizing: border-box;
+  scroll-snap-align: start;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -244,6 +265,23 @@ section .image {
   section .image {
     width: 100%;
     height: 100%;
+  }
+}
+/* Phones: room at the bottom for the "next" arrow, and the illustration scales with the screen
+   height so each chapter fits in one screen, even on short phones. */
+@media (max-width: 640px) {
+  section {
+    padding: 16px 0 64px;
+  }
+  section .image {
+    width: min(300px, 32svh);
+    height: min(300px, 32svh);
+  }
+}
+@media (max-width: 400px) {
+  section .image {
+    width: min(250px, 32svh);
+    height: min(250px, 32svh);
   }
 }
 </style>
