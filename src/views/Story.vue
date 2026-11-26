@@ -13,6 +13,8 @@
             </h2>
           </div>
           <p v-html="item.content"></p>
+          <!-- Last step: every network, including the art ones that aren't on the home page -->
+          <Social v-if="index == steps.length - 1" all class="story-social" />
         </div>
         <div class="img-container" data-aos="fade-up" data-aos-delay="50">
           <progressive-img class="image" :src="item.image" :alt="item.alt" />
@@ -35,13 +37,13 @@
           <span class="sr-only">Home</span>
         </router-link>-->
         <a
-          :title="'Read story again'"
+          :title="'Read the story again'"
           :href="'#section0'"
           v-on:click.stop.prevent="handleClick(0)"
           class="icon-btn"
         >
           <font-awesome-icon aria-hidden="true" :icon="['fa', 'angle-double-up']" />
-          <span class="sr-only">Read story again</span>
+          <span class="sr-only">Read the story again</span>
         </a>
       </div>
 
@@ -55,6 +57,7 @@ import axios from "axios";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Progress from "@/components/Progress.vue";
+import Social from "@/components/Social.vue";
 import ClickHandler from "@/mixins/ClickHandler.js";
 import animateScrollTo from "animated-scroll-to";
 
@@ -63,6 +66,7 @@ export default {
   mixins: [ClickHandler],
   components: {
     Progress,
+    Social,
   },
   data: function () {
     return {
@@ -164,6 +168,14 @@ section .content h2 {
   margin: 0;
   font-size: 1.4em;
   padding-left: 16px;
+}
+/* Song links: a taller tap target than the text line alone */
+section .content h2 a {
+  display: inline-block;
+  padding: 10px 0;
+}
+.story-social :deep(ul.socialmedia) {
+  margin: 16px 0 0;
 }
 section .content .text-container {
   padding: 24px;

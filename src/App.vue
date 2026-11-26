@@ -145,8 +145,8 @@ ul {
 	color: var(--main-charcoal);
 	border-radius: 1.5em;
 	font-size: 1.2em;
-	width: 42px;
-	height: 42px;
+	width: 44px;
+	height: 44px;
 	display: flex;
 	align-items: center;
 	justify-content: center;

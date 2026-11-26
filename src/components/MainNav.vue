@@ -7,7 +7,7 @@
           id="menuBtn"
           @click="toggleMenu"
           aria-controls="menu"
-          aria-label="Toggle navigation"
+          aria-label="Menu"
           :aria-expanded="(!isDesktop && showMenu).toString()"
           v-if="!isDesktop"
         >
@@ -44,7 +44,7 @@
                 </li>
                 <!-- "Get in touch" call to action: copy email / email / LinkedIn -->
                 <li v-if="settings && settings.contact_email" class="menu-item menu-cta">
-                  <ContactMenu :email="settings.contact_email" :linkedin="settings.linkedin_url" />
+                  <ContactMenu :email="settings.contact_email" :linkedin="settings.linkedin_url" :cv="settings.cv_url" />
                 </li>
               </ul>
             </div>

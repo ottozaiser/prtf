@@ -38,7 +38,6 @@
           v-bind:description="post.description"
           v-bind:from="post.from"
           v-bind:to="post.to"
-          v-bind:labels="Object.keys(post)"
         />
       </div>
     </section>
@@ -58,7 +57,6 @@
           v-bind:description="post.description"
           v-bind:from="post.from"
           v-bind:to="post.to"
-          v-bind:labels="Object.keys(post)"
         />
       </div>
     </section>
@@ -155,6 +153,12 @@ export default {
 section {
   margin-bottom: 16px;
   margin-top: 120px;
+}
+/* Phones: half a screen of blank space between sections is too much */
+@media (max-width: 640px) {
+  section {
+    margin-top: 64px;
+  }
 }
 .content {
   display: grid;

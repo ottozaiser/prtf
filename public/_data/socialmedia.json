@@ -2,23 +2,25 @@
   "socialitem": [
     {
       "name": "linkedin",
-      "hover": "Profile",
+      "hover": "LinkedIn profile",
       "url": "https://www.linkedin.com/in/ottozaiser/"
     },
     {
       "name": "vimeo",
-      "hover": "Motion",
+      "hover": "Motion reel on Vimeo",
       "url": "http://www.vimeo.com/ottozaiser"
     },
     {
       "name": "tumblr",
-      "hover": "Art",
-      "url": "https://ottozaiser.tumblr.com/"
+      "hover": "Art on Tumblr",
+      "url": "https://ottozaiser.tumblr.com/",
+      "home": false
     },
     {
       "name": "instagram",
-      "hover": "Follow me!",
-      "url": "https://www.instagram.com/ottodibujo/"
+      "hover": "Follow me on Instagram",
+      "url": "https://www.instagram.com/ottodibujo/",
+      "home": false
     }
   ]
 }

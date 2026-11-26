@@ -4,7 +4,7 @@
       <div class="content">
         <h1>Fatal Error</h1>
         <div class="textContent">
-          <p>An error ocurred: Connection refused (0x6546FAE36B654E54). Version=2.03. Display(String value, Type objectType) =0000077765464654.</p>
+          <p>An error occurred: Connection refused (0x6546FAE36B654E54). Version=2.03. Display(String value, Type objectType) =0000077765464654.</p>
         </div>
         <div class="btns">
           <button v-on:click="fixed = true">Fix UX Error</button>
@@ -15,7 +15,7 @@
       <div class="content">
         <h1>404 - Page not found</h1>
         <div class="textContent">
-          <p>Sorry. Sometimes I make mistakes but that’s ok.</p>
+          <p>Sorry. Sometimes I make mistakes, but that’s OK.</p>
         </div>
         <div class="btns">
           <router-link class="btn" to="/">Go back home</router-link>

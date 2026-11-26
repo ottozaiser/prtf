@@ -14,7 +14,7 @@ if [[ $1 == email ]]; then
   phone=${CV_PHONE:-$(cat "$PRIVATE_DIR/phone.txt" 2>/dev/null)}
   [[ -z $phone ]] && { print -u2 "No phone: put it in $PRIVATE_DIR/phone.txt or set CV_PHONE"; exit 1; }
   mkdir -p "$PRIVATE_DIR"
-  render "$PRIVATE_DIR/Otto-Zaiser-CV-email.pdf" "file://$PWD/cv.html?phone=${phone// /%20}"
+  render "$PRIVATE_DIR/Otto-Zaiser-CV-email.pdf" "file://$PWD/cv.html?phone=${${phone//+/%2B}// /%20}"
 else
   render ../public/cv/Otto-Zaiser-CV.pdf "file://$PWD/cv.html"
 fi

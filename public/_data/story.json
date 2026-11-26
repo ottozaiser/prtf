@@ -1,7 +1,7 @@
 {
   "story": [
     {
-      "title": "‘82",
+      "title": "’82",
       "subtitle": "Express Yourself",
       "song": "https://open.spotify.com/track/4pW3aTX3kAmOaPJfc9UM12",
       "content": "I was born with a great passion for <span class='highlight'>visual arts</span>. I watched every cartoon on TV and was happiest with a crayon in my hand. My parents thought I had a talent for art, so they signed me up for private lessons with art teachers who expanded my mind.",
@@ -10,52 +10,52 @@
       "alt": "A kid drawing on the wall"
     },
     {
-      "title": "‘89",
+      "title": "’89",
       "subtitle": "Wild Thing",
       "song": "https://open.spotify.com/track/7jGzYUZ2Bgg8BDfYlQRfn8",
-      "content": "My father brought home a brand-new Commodore 64 and I was stunned. I mostly played video games, but one day I found a 5¼-inch floppy disk with a program that made amazing <span class='highlight'>greeting cards</span>. Soon I was making big <span class='highlight'>banners</span> with Bannermania and printing them on an old dot-matrix printer.",
+      "content": "My father brought home a brand-new Commodore 64, and I was stunned. I mostly played video games, but one day I found a 5¼-inch floppy disk with a program that made amazing <span class='highlight'>greeting cards</span>. Soon I was making big <span class='highlight'>banners</span> with Bannermania and printing them on an old dot-matrix printer.",
       "color": "#FFEAE6",
       "image": "/_data/media/story_02.png",
-      "alt": "Kid hanging paper banners"
+      "alt": "A kid hanging paper banners"
     },
     {
-      "title": "‘96",
+      "title": "’96",
       "subtitle": "Modern Love",
       "song": "https://open.spotify.com/track/3gxEZXUjrNbl3TlSrTGbR5",
-      "content": "When I saw the Web for the first time, I wanted to be part of it. I spent long hours on my dial-up connection learning about webmasters and <span class='highlight'>web design</span>. Geocities, Lycos and Freeservers showed me the way. I made my first website, “Otto’s”, with FrontPage and a bunch of stolen GIFs.",
+      "content": "When I saw the Web for the first time, I wanted to be part of it. I spent long hours on my dial-up connection learning about webmasters and <span class='highlight'>web design</span>. GeoCities, Lycos and Freeservers showed me the way. I made my first website, “Otto’s”, with FrontPage and a bunch of stolen GIFs.",
       "color": "#FFE1E2",
       "image": "/_data/media/story_03.png",
       "alt": "Teenager holding a puzzle piece"
     },
     {
-      "title": "‘00",
+      "title": "’00",
       "subtitle": "Money for Nothing",
       "song": "https://open.spotify.com/track/31DvHUCSioX0JD7B4kZMJ9",
-      "content": "While I was finishing high school, a friend showed me Photoshop 5.0 and how to manipulate photos. I made some money removing scratches from old family pictures and colorizing black-and-white photos. I realized it was a really fun gig and that I could make a <span class='highlight'>career</span> out of it.",
+      "content": "While I was finishing high school, a friend showed me Photoshop 5.0 and how to retouch photos. I made some money removing scratches from old family pictures and colorizing black-and-white photos. I realized it was a really fun gig and that I could make a <span class='highlight'>career</span> out of it.",
       "color": "#FDECFF",
       "image": "/_data/media/story_04.png",
-      "alt": "Teenager meditating with a 3rd eye"
+      "alt": "Teenager meditating with a third eye"
     },
     {
-      "title": "‘05",
+      "title": "’05",
       "subtitle": "All Day and All of the Night",
       "song": "https://open.spotify.com/track/78JmElAFmrPNhLjovDR9Jm",
-      "content": "I started working as a junior designer while I was studying Graphic Design at university. Back then, schools were outdated and there was no Web or Multimedia Design degree. I was hungry for knowledge, so I learned Web Design all day and <span class='highlight'>Design Fundamentals</span> all night.",
+      "content": "I started working as a junior designer while I was studying graphic design in college. Back then, schools were outdated and there was no degree in web or multimedia design. I was hungry for knowledge, so I learned web design all day and <span class='highlight'>design fundamentals</span> all night.",
       "color": "#EDE4FF",
       "image": "/_data/media/story_05.png",
-      "alt": "A young man juggling Flash, academy and money balls"
+      "alt": "A young man juggling Flash, school and money"
     },
     {
-      "title": "‘10",
+      "title": "’10",
       "subtitle": "Comfortably Numb",
       "song": "https://open.spotify.com/track/6JWZiQz7YqhDN7YYIP1eVP",
       "content": "After 10 years as a web designer, I felt <span class='highlight'>stuck</span>. I had a good job with great benefits, but the rate of change outside exceeded the rate of change inside: inside the company and inside myself. The end was near, and I had to do something.",
       "color": "#D0EDFF",
       "image": "/_data/media/story_06.png",
-      "alt": "Overweight man working with a computer"
+      "alt": "Overweight man working at a computer"
     },
     {
-      "title": "‘16",
+      "title": "’16",
       "subtitle": "Wake Up",
       "song": "https://open.spotify.com/track/2QiqwOVUctPRVggO9G1Zs5",
       "content": "I quit my job and became an avid learner again. I worked as a freelancer while I <span class='highlight'>improved</span> my motion graphics skills, explored design software beyond the Adobe universe, and researched new trends in design and user experience.",
@@ -64,16 +64,16 @@
       "alt": "Bearded man exercising"
     },
     {
-      "title": "‘18",
+      "title": "’18",
       "subtitle": "Are You Experienced?",
       "song": "https://open.spotify.com/track/3YTTBONdXJOXMCQP7vvPuY",
       "content": "I signed up for a year-long course on <span class='highlight'>Accessibility and User Experience</span> at UTN. It helped me step away from the keyboard and learn from users and colleagues. Design is no longer a designer in front of a computer. It’s a whole team working with clients and users to build a great product.",
       "color": "#E3FFE7",
       "image": "/_data/media/story_08.png",
-      "alt": "Bearded man with post-its"
+      "alt": "Bearded man with sticky notes"
     },
     {
-      "title": "‘22",
+      "title": "’22",
       "color": "#E3FFE7",
       "image": "/_data/media/story_10.png",
       "subtitle": "Extra bonus!",
@@ -85,7 +85,7 @@
       "title": "Today",
       "subtitle": "New Sensation",
       "song": "https://open.spotify.com/track/2xcrseImDFEf8Urommws03",
-      "content": "I am always looking for new opportunities that could make me a better designer. If you think you have the perfect challenge for me, <a href='mailto:hola@otto.ar?subject=Hi!' class='highlight'>drop me a line</a>.",
+      "content": "I’m always looking for new opportunities that could make me a better designer. If you think you have the perfect challenge for me, <a href='mailto:hola@otto.ar?subject=Hi!' class='highlight'>drop me a line</a>.",
       "color": "#EDFFDB",
       "image": "/_data/media/story_09.png",
       "alt": "Bearded man writing at a desk"

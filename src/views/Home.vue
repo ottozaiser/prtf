@@ -10,21 +10,25 @@
         <div class="content">
           <!-- <progressive-img class="image" :src="this.homejson.image" alt /> -->
           <p v-html="this.homejson.content"></p>
-          <!-- <ul class="menu">
+          <!-- Next steps for a recruiter: see the work, grab the CV, or write.
+               The CV is a file, so it's a plain <a download>, never a router-link (that would hit the 404 route). -->
+          <ul class="menu" v-if="this.homejson.links && this.homejson.links.length">
             <li class="menu-item" v-bind:key="index" v-for="(item, index) in this.homejson.links">
-              <router-link class="btn" :to="item.url" v-if="item.url.startsWith('/')">{{ item.name }}</router-link>
-              <a class="btn" :href="item.url" target="_blank" v-else>{{ item.name }}</a>
+              <a v-if="item.download" class="btn" :class="{ primary: item.primary }" :href="item.url" download>{{ item.name }}</a>
+              <router-link v-else-if="item.url.startsWith('/')" class="btn" :class="{ primary: item.primary }" :to="item.url">{{ item.name }}</router-link>
+              <a v-else class="btn" :class="{ primary: item.primary }" :href="item.url">{{ item.name }}</a>
             </li>
-          </ul> -->
+          </ul>
           <Social class="social" />
         </div>
       </div>
     </div>
-    <section id="resume">
-      <Resume />
-    </section>
+    <!-- Work first: recruiters see the games before the resume. -->
     <section id="portfolio">
       <Portfolio />
+    </section>
+    <section id="resume">
+      <Resume />
     </section>
   </div>
 </template>
@@ -197,19 +201,43 @@ export default {
   }
 }
 ul.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  list-style: none;
   padding: 0;
+  margin: 20px 0 8px;
 }
-ul.menu li {
-  display: inline-block;
+/* App.vue gives every ".content li" an 8px margin; the gap above handles spacing here */
+ul.menu li,
+.social :deep(li) {
+  margin: 0;
 }
-ul.menu li:first-child {
-  margin-left: 0;
+ul.menu .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 20px;
 }
-@media (max-width: 992px) {
+/* Main call to action: the site's yellow, like "Get in touch" in the header */
+ul.menu .btn.primary {
+  background: var(--main-highlight);
+  border-color: var(--main-highlight);
+  font-weight: 600;
+}
+ul.menu .btn.primary:hover,
+ul.menu .btn.primary:focus-visible {
+  color: var(--main-charcoal);
+  box-shadow: 0 0 0 2px var(--main-charcoal);
+}
+/* Phones: one full-width button per row */
+@media (max-width: 480px) {
   ul.menu li {
-    display: block;
-    margin: 0;
-    margin-bottom: 24px;
+    flex: 1 1 100%;
+  }
+  ul.menu .btn {
+    width: 100%;
   }
 }
 .image {

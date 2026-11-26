@@ -2,20 +2,20 @@
   <div class="job" :id="anchorId">
     <div class="header">
       <h3>
-        <span class="sr-only">{{ labels[0] }}:</span>
+        <span class="sr-only">Position:</span>
         {{ position }}
       </h3>
       <p v-if="from">
-        <span class="sr-only">{{ labels[2] }}:</span>
+        <span class="sr-only">From:</span>
         {{ from }}
-        <span aria-label="hidden">-</span>
-        <span class="sr-only">{{ labels[3] }}:</span>
+        <span aria-hidden="true">–</span>
+        <span class="sr-only">To:</span>
         {{ to }}
       </p>
     </div>
     <div class="subheader">
       <p>
-        <span class="sr-only">{{ labels[1] }}:</span>
+        <span class="sr-only">Company:</span>
         <span class="company">
           <span v-if="url">
             <a :href="url" target="_blank" rel="nofollow">{{ company }}</a>
@@ -31,7 +31,7 @@
       </div>
     </div>
     <div class="content" v-if="show">
-      <p class="sr-only">{{ labels[4] }}:</p>
+      <p class="sr-only">Description:</p>
       <div v-html="description"></div>
       <button id="hideBtn" v-on:click="toggle()" class="btn btn-small less">
         See less
@@ -45,7 +45,6 @@
 export default {
   name: "Job",
   props: {
-    labels: Array,
     company: String,
     url: String,
     position: String,

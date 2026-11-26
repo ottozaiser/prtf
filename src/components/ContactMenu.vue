@@ -34,6 +34,12 @@
           <span class="label">LinkedIn</span>
         </a>
       </li>
+      <li v-if="cv">
+        <a class="option" :href="cv" download @click="close()">
+          <font-awesome-icon icon="download" class="icon" aria-hidden="true" />
+          <span class="label">Download CV</span>
+        </a>
+      </li>
     </ul>
     <!-- Announces "Email copied" to screen readers -->
     <span class="sr-only" aria-live="polite">{{ copied ? "Email address copied to clipboard" : "" }}</span>
@@ -46,6 +52,7 @@ export default {
   props: {
     email: { type: String, required: true },
     linkedin: { type: String, default: "" },
+    cv: { type: String, default: "" },
   },
   data() {
     return { open: false, copied: false, copiedTimer: null };
@@ -125,8 +132,9 @@ export default {
   margin: 0;
   padding: 6px;
   position: absolute;
-  left: 0;
-  right: 0; /* same width as the "Get in touch" button */
+  right: 0; /* right-aligned with the "Get in touch" button, at least as wide, wider if a label needs it */
+  min-width: 100%;
+  width: max-content;
   top: calc(100% + 8px);
   background: #fff;
   border: 1px solid var(--main-lightgray);
@@ -206,6 +214,7 @@ nav.main-navigation ul.menu li.menu-item .contact-menu a.option:focus-visible {
   .options {
     display: block;
     position: static;
+    width: auto;
     box-shadow: none;
     max-height: 0;
     margin-top: 0;
@@ -218,7 +227,7 @@ nav.main-navigation ul.menu li.menu-item .contact-menu a.option:focus-visible {
       visibility 0s linear 0.25s;
   }
   .options.open {
-    max-height: 200px;
+    max-height: 260px;
     margin-top: 8px;
     padding: 6px;
     border-width: 1px;

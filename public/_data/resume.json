@@ -2,7 +2,7 @@
   "title": "Resume",
   "about": {
     "title": "🤓 About me",
-    "content": "<p>I design mobile games end to end: UX flows, UI, illustration and motion, then I build it in Unity myself so nothing gets lost in handoff.</p><p>For 20+ years I’ve worked where design meets code. I built e-learning at TeleTech and Globant for clients like Microsoft, T-Mobile and Bank of America, led the design team at NIC Argentina (the .ar domain registry), designed for Nearpod, and since 2020 I’ve worked on game products at etermax and FunCraft.</p><p>Outside work, I co-founded Viñetas Sueltas, a non-profit that brings comics and graphic narrative to museums and cultural centers across Argentina.</p><ul><li><a href='https://www.linkedin.com/in/ottozaiser/' target='_blank'>LinkedIn Profile</a></li><li><a class='highlight' href='/story'>Read My Story >></a></li></ul>",
+    "content": "<p>I design mobile games end to end: UX flows, UI, illustration and motion. Then I build it all in Unity myself, so nothing gets lost in handoff.</p><p>For 20+ years, I’ve worked where design meets code. I built e-learning at TeleTech and Globant for clients like Microsoft, T-Mobile and Bank of America, led the design team at NIC Argentina (the .ar domain registry), designed for Nearpod, and since 2020 I’ve worked on game products at etermax and FunCraft.</p><p>Outside work, I co-founded Viñetas Sueltas, a nonprofit that brings comics and graphic narrative to museums and cultural centers across Argentina.</p><ul><li><a href='https://www.linkedin.com/in/ottozaiser/' target='_blank'>LinkedIn profile</a></li><li><a class='highlight' href='/story'>Read my story >></a></li></ul>",
     "image": "/_data/media/me-real.png"
   },
   "resume": {
@@ -14,12 +14,12 @@
     "education_items": [
       {
         "title": "Accessibility & Usability",
-        "institution": "National Technology University",
+        "institution": "National Technological University (UTN)",
         "link": "https://sceu.frba.utn.edu.ar/course/diplomatura-en-accesibilidad-y-usabilidad/",
         "finished": "2018"
       },
       {
-        "title": "Graphic Designer",
+        "title": "Graphic Design",
         "institution": "University of Morón",
         "link": "https://www.unimoron.edu.ar/area/informatica/stream/af40023ec-licenciatura-en-diseno",
         "finished": "2008"
@@ -27,7 +27,7 @@
     ]
   },
   "skills": {
-    "skills_title": "👑 Skills, Knowledge & Tools",
+    "skills_title": "👑 Skills, knowledge & tools",
     "categories": [
       {
         "category_title": "UI Design",
@@ -39,10 +39,10 @@
             "name": "Design systems"
           },
           {
-            "name": "Atom Design"
+            "name": "Atomic design"
           },
           {
-            "name": "Mobile iOS"
+            "name": "Mobile (iOS and Android)"
           },
           {
             "name": "Responsive"
@@ -59,10 +59,10 @@
         "category_title": "UX Design",
         "category": [
           {
-            "name": "User Centered Design"
+            "name": "User-centered design"
           },
           {
-            "name": "Research and Interviews"
+            "name": "Research and interviews"
           },
           {
             "name": "User journey"
@@ -80,10 +80,10 @@
             "name": "Prototypes"
           },
           {
-            "name": "User Tests"
+            "name": "User testing"
           },
           {
-            "name": "Metrics and Analysis"
+            "name": "Metrics and analysis"
           }
         ]
       },
@@ -91,36 +91,28 @@
         "category_title": "Dev",
         "category": [
           {
-            "name": "HTML5",
-            "percentage": 95
+            "name": "Unity"
           },
           {
-            "name": "CSS3",
-            "percentage": 90
+            "name": "HTML5"
           },
           {
-            "name": "SASS",
-            "percentage": 80
+            "name": "CSS3"
           },
           {
-            "name": "CSS Frameworks",
-            "percentage": 75
+            "name": "Sass"
           },
           {
-            "name": "Javascript",
-            "percentage": 60
+            "name": "CSS frameworks"
           },
           {
-            "name": "Vue.js",
-            "percentage": 60
+            "name": "JavaScript"
           },
           {
-            "name": "Git",
-            "percentage": 50
+            "name": "Vue.js"
           },
           {
-            "name": "Unity",
-            "percentage": 90
+            "name": "Git"
           }
         ]
       },
@@ -131,7 +123,7 @@
             "name": "Motion graphics"
           },
           {
-            "name": "2d animation"
+            "name": "2D animation"
           },
           {
             "name": "Particle effects"
@@ -174,7 +166,7 @@
             "name": "Brochures"
           },
           {
-            "name": "Merchandising"
+            "name": "Merch design"
           }
         ]
       },
@@ -182,36 +174,28 @@
         "category_title": "Design Tools",
         "category": [
           {
-            "name": "Pencil & Paper",
-            "percentage": "100"
+            "name": "Pencil & paper"
           },
           {
-            "name": "Figma",
-            "percentage": "90"
+            "name": "Figma"
           },
           {
-            "name": "Sketch",
-            "percentage": "90"
+            "name": "Sketch"
           },
           {
-            "name": "Photoshop",
-            "percentage": "100"
+            "name": "Photoshop"
           },
           {
-            "name": "Illustrator",
-            "percentage": "100"
+            "name": "Illustrator"
           },
           {
-            "name": "After Effects",
-            "percentage": "90"
+            "name": "After Effects"
           },
           {
-            "name": "Premiere",
-            "percentage": "75"
+            "name": "Premiere Pro"
           },
           {
-            "name": "Audition",
-            "percentage": "50"
+            "name": "Audition"
           }
         ]
       },
@@ -245,13 +229,13 @@
         ]
       },
       {
-        "category_title": "Methodology & Workflow",
+        "category_title": "Methodology & workflow",
         "category": [
           {
-            "name": "Agile SCRUM"
+            "name": "Agile / Scrum"
           },
           {
-            "name": "LEAN UX"
+            "name": "Lean UX"
           },
           {
             "name": "SCORM (e-learning)"
@@ -282,23 +266,23 @@
     ]
   },
   "experience": {
-    "experience_title": "👴 Job Experience",
+    "experience_title": "💼 Work experience",
     "job": [
       {
         "company": "FunCraft",
         "url": "https://www.funcraft.com/",
         "position": "Product Designer",
         "from": "01/2023",
-        "to": "Currently",
-        "description": "<p>Product designer at FunCraft, the remote-first studio behind Wordgrams, Word Yatzy, Farkle and Dice Yatzy, casual word and dice games with 7M+ installs.</p><ul><li>Design game UI/UX from flows and wireframes to final screens, then implement them directly in Unity</li><li>Create in-game animation and particle effects that make features feel alive</li><li>Produce animated ad creatives for marketing and user-acquisition campaigns</li><li>Create graphics and illustrations for game features, events and store assets</li><li>Built AI-assisted art workflows (Claude, Midjourney, ChatGPT) to speed up concepting and asset production</li><li>Use Amplitude data to evaluate features and guide design iterations</li><li>Work across art, engineering and product using Jira and Perforce</li></ul><p><strong>Tools:</strong> Unity, Perforce, Jira, Amplitude, Adobe Suite (Photoshop, Illustrator, After Effects), Claude, Midjourney, ChatGPT</p>"
+        "to": "Present",
+        "description": "<p>Product designer at FunCraft, the remote-first studio behind Wordgrams, Word Yatzy, Farkle and Dice Yatzy, casual word, dice and sports games with 35M+ installs.</p><ul><li>Design game UI/UX from flows and wireframes to final screens, then implement them directly in Unity</li><li>Create in-game animation and particle effects that make features feel alive</li><li>Produce animated ad creatives for marketing and user-acquisition campaigns</li><li>Create graphics and illustrations for game features, events and store assets</li><li>Build AI-assisted art workflows (Claude, Midjourney, ChatGPT) to speed up concepting and asset production</li><li>Use Amplitude data to evaluate features and guide design iterations</li><li>Work across art, engineering and product using Jira and Perforce</li></ul><p><strong>Tools:</strong> Unity, Perforce, Jira, Amplitude, Adobe Suite (Photoshop, Illustrator, After Effects), Claude, Midjourney, ChatGPT</p>"
       },
       {
-        "company": "Etermax",
+        "company": "etermax",
         "url": "https://www.etermax.com",
         "position": "Principal Product Artist & Product Artist",
         "from": "08/2020",
         "to": "12/2022",
-        "description": "<p>etermax is the Buenos Aires studio behind Trivia Crack. I joined as Product Artist and was promoted to Principal Product Artist in 2022 to lead art direction for Pet Shelter Trivia.</p><p><strong>Principal Product Artist</strong></p><ul><li>Led art direction, defining the visual style and keeping art consistent across features</li><li>Designed UI/UX for new features from concept to final screens</li><li>Created graphics and illustrations for in-game content and live events</li><li>Worked closely with engineering via Unity and Git so the final build matched the design</li></ul><p><strong>Product Artist</strong></p><ul><li>Designed UI/UX for game features, from user flows to final screens</li><li>Integrated UI and art assets directly in Unity, collaborating with engineers through Git</li><li>Designed in-app messages and promotional offers delivered through Braze</li><li>Used Amplitude data to evaluate features and guide design changes</li><li>Created graphics and illustrations for in-game content and events</li></ul><p><strong>Tools:</strong> Unity, Git, Amplitude, Braze, HTML, CSS &amp; JavaScript, Adobe Suite (Photoshop, Illustrator, After Effects)</p>"
+        "description": "<p>etermax is the Buenos Aires studio behind Trivia Crack. I joined as Product Artist and was promoted to Principal Product Artist in 2022, as technical lead and second in charge of the Pet Shelter by Trivia Crack team.</p><p><strong>Principal Product Artist</strong></p><ul><li>Technical lead and second in charge on Pet Shelter: concept art, UI/UX and Unity integration from first concepts to launch</li><li>Designed UI/UX for new features from concept to final screens</li><li>Created graphics and illustrations for in-game content and live events</li><li>Worked closely with engineering via Unity and Git so the final build matched the design</li></ul><p><strong>Product Artist</strong></p><ul><li>Designed UI/UX for game features, from user flows to final screens</li><li>Integrated UI and art assets directly in Unity, collaborating with engineers through Git</li><li>Designed in-app messages and promotional offers delivered through Braze</li><li>Used Amplitude data to evaluate features and guide design changes</li><li>Created graphics and illustrations for in-game content and events</li></ul><p><strong>Tools:</strong> Unity, Git, Amplitude, Braze, HTML, CSS &amp; JavaScript, Adobe Suite (Photoshop, Illustrator, After Effects)</p>"
       },
       {
         "company": "NIC Argentina",
@@ -306,7 +290,7 @@
         "position": "Lead Designer",
         "from": "03/2018",
         "to": "12/2019",
-        "description": "<p>NIC Argentina is the government office under the Presidency that runs the .ar domain registry.</p><ul><li>Led a 4-person design team, covering product UI, web and communication</li><li>Ran heuristic evaluations and flow assessments of the .ar domain registration process to find and fix usability problems</li><li>Applied accessibility standards (WCAG) to NIC’s public services, backed by my UTN diploma in Accessibility &amp; Usability</li><li>Designed UI and built front-ends in Vue.js and JavaScript</li><li>Designed and built the front-end for blockchain applications (Timestamp, Smartvote) on Blockchain Federal Argentina (BFA), the country’s public blockchain</li><li>Built and maintained the organization’s Drupal and WordPress sites</li><li>Created corporate communications and marketing campaigns</li></ul><p><strong>Tools:</strong> Sketch, Vue.js, JavaScript, Drupal, WordPress, Adobe Suite</p>"
+        "description": "<p>NIC Argentina is the government office under the Presidency that runs the .ar domain registry.</p><ul><li>Led a 4-person design team, covering product UI, web and communications</li><li>Ran heuristic evaluations and flow assessments of the .ar domain registration process to find and fix usability problems</li><li>Applied accessibility standards (WCAG) to NIC’s public services, backed by my UTN diploma in Accessibility &amp; Usability</li><li>Designed UI and built front ends in Vue.js and JavaScript</li><li>Designed and built the front end for blockchain applications (Timestamp, Smartvote) on Blockchain Federal Argentina (BFA), the country’s public blockchain</li><li>Built and maintained the organization’s Drupal and WordPress sites</li><li>Created corporate communications and marketing campaigns</li></ul><p><strong>Tools:</strong> Sketch, Vue.js, JavaScript, Drupal, WordPress, Adobe Suite</p>"
       },
       {
         "company": "Hexacta",
@@ -314,7 +298,7 @@
         "position": "Senior Product Designer",
         "from": "07/2017",
         "to": "02/2018",
-        "description": "<p>Hexacta is a nearshore software development company. I worked as a designer for client Nearpod, an interactive lesson platform for K-12 teachers and students.</p><ul><li>Designed features for Nearpod’s native iOS app across iPad, iPad Pro and iPhone</li><li>Designed the responsive web app, keeping the experience consistent across devices and screen sizes</li><li>Collaborated with Nearpod’s US-based product managers, product owners and development pods as part of a nearshore team</li><li>Created graphics, illustrations and motion UI</li></ul><p><strong>Tools:</strong> Sketch, InVision, Zeplin, Avocode, Adobe Suite (Photoshop, Illustrator, After Effects)</p>"
+        "description": "<p>Hexacta is a nearshore software development company. I worked as a designer for its client Nearpod, an interactive lesson platform for K-12 teachers and students.</p><ul><li>Designed features for Nearpod’s native iOS app across iPad, iPad Pro and iPhone</li><li>Designed the responsive web app, keeping the experience consistent across devices and screen sizes</li><li>Collaborated with Nearpod’s US-based product managers, product owners and development pods as part of a nearshore team</li><li>Created graphics, illustrations and motion UI</li></ul><p><strong>Tools:</strong> Sketch, InVision, Zeplin, Avocode, Adobe Suite (Photoshop, Illustrator, After Effects)</p>"
       },
       {
         "company": "Freelance",
@@ -330,7 +314,7 @@
         "position": "Senior Multimedia Designer",
         "from": "03/2014",
         "to": "11/2015",
-        "description": "<p>Globant is the Argentine-founded global software and digital services company. I was the technical lead of my team, designing and developing simulations, tutorials and e-learning for clients including Microsoft, T-Mobile, Bank of America, Best Buy, Sony, FOX, American Red Cross, Saks Fifth Avenue, Itaú, State Farm, Nissan and Charter.</p><ul><li>Technical point of contact for the team and the client</li><li>Designed and developed interactive e-learning courses, from UI/UX to final SCORM-compliant packages</li><li>Built reusable templates, components and interactions</li><li>Built front-ends with HTML5, CSS3 and JavaScript/jQuery</li><li>Created motion graphics, animations and illustrations for course and web content</li><li>Edited audio and video for learning and promotional material</li></ul><p><strong>Tools:</strong> Adobe Captivate, Articulate Storyline, Lectora, Adobe Suite (Photoshop, Illustrator, After Effects)</p>"
+        "description": "<p>Globant is an Argentine-founded global software and digital services company. I was the technical lead of my team, designing and developing simulations, tutorials and e-learning for clients including Microsoft, T-Mobile, Bank of America, Best Buy, Sony, FOX, American Red Cross, Saks Fifth Avenue, Itaú, State Farm, Nissan and Charter.</p><ul><li>Technical point of contact for the team and the client</li><li>Designed and developed interactive e-learning courses, from UI/UX to final SCORM-compliant packages</li><li>Built reusable templates, components and interactions</li><li>Built front ends with HTML5, CSS3 and JavaScript/jQuery</li><li>Created motion graphics, animations and illustrations for course and web content</li><li>Edited audio and video for learning and promotional material</li></ul><p><strong>Tools:</strong> Adobe Captivate, Articulate Storyline, Lectora, Adobe Suite (Photoshop, Illustrator, After Effects)</p>"
       },
       {
         "company": "TeleTech",
@@ -338,7 +322,7 @@
         "position": "Technical Lead & Media Specialist",
         "from": "05/2006",
         "to": "02/2014",
-        "description": "<p>TeleTech (now TTEC) is a global customer-experience company. I was part of the team that built e-learning training for the company’s employees around the world, and worked with Marketing when needed. I started as Media Specialist and was promoted to Technical Lead in 2009.</p><ul><li>Served as the team’s technical reference, answering development questions and solving technical issues across projects</li><li>Built reusable course templates and interaction components used across projects</li><li>Designed UI/UX for interactive training courses and simulations</li><li>Developed courses with HTML, CSS, XML and ActionScript 2.0/3.0, packaged to SCORM standards</li><li>Branding for sub-brands, landing pages, microsites and merchandising</li><li>Created motion graphics, 2D animations, TV spots and audio/video content</li></ul><p><strong>Tools:</strong> Flash, Adobe Captivate, Adobe Suite (Photoshop, Illustrator, After Effects)</p>"
+        "description": "<p>TeleTech (now TTEC) is a global customer-experience company. I was part of the team that built e-learning courses for the company’s employees around the world, and worked with Marketing when needed. I started as Media Specialist and was promoted to Technical Lead in 2009.</p><ul><li>Served as the team’s go-to technical expert, answering development questions and solving technical issues across projects</li><li>Built reusable course templates and interaction components used across projects</li><li>Designed UI/UX for interactive training courses and simulations</li><li>Developed courses with HTML, CSS, XML and ActionScript 2.0/3.0, packaged to SCORM standards</li><li>Designed branding, landing pages, microsites and merch for sub-brands</li><li>Created motion graphics, 2D animations, TV spots and audio/video content</li></ul><p><strong>Tools:</strong> Flash, Adobe Captivate, Adobe Suite (Photoshop, Illustrator, After Effects)</p>"
       },
       {
         "company": "AXG Tecnonexo",
@@ -346,7 +330,7 @@
         "position": "Web Designer",
         "from": "11/2004",
         "to": "12/2005",
-        "description": "<p>Tecnonexo made e-learning courses for Argentina, Spain and the United States. I started as a junior designer in a large design team.</p><ul><li>Designed and developed interactive e-learning courses: look &amp; feel, graphics, animations and interactions</li><li>Built with HTML, CSS, XML and ActionScript 2.0, packaged to SCORM standards</li></ul><p><strong>Tools:</strong> Flash, Adobe Suite (Photoshop, Illustrator)</p>"
+        "description": "<p>Tecnonexo made e-learning courses for clients in Argentina, Spain and the United States. I started as a junior designer on a large design team.</p><ul><li>Designed and developed interactive e-learning courses: look &amp; feel, graphics, animations and interactions</li><li>Built with HTML, CSS, XML and ActionScript 2.0, packaged to SCORM standards</li></ul><p><strong>Tools:</strong> Flash, Adobe Suite (Photoshop, Illustrator)</p>"
       },
       {
         "company": "Freelance",
@@ -354,7 +338,7 @@
         "position": "Freelance Designer",
         "from": "01/2002",
         "to": "11/2004",
-        "description": "<p>Freelance web and multimedia designer for Universidad Austral: designed and built websites (HTML, CSS and Flash), web banners and interactive multimedia CDs.</p>"
+        "description": "<p>Freelance web and multimedia designer for Universidad Austral: designed and built websites (HTML, CSS and Flash), web banners and interactive CD-ROMs.</p>"
       }
     ]
   },
@@ -367,7 +351,7 @@
         "position": "Co-founder",
         "from": "",
         "to": "",
-        "description": "<p>Viñetas Sueltas is a non-profit dedicated to comics and graphic narrative in Argentina, connecting authors, publishers and readers.</p><ul><li>Organize workshops, exhibitions, seminars, screenings and talks on comics and graphic storytelling</li><li>Produced events at leading cultural venues including MALBA, Centro Cultural Recoleta, Palais de Glace, Tecnópolis, Centro Cultural Rojas, Alianza Francesa and the Goethe-Institut</li><li>Represented the organization internationally at the Komikazen festival (Italy) and the Frankfurt Book Fair (Germany)</li></ul>"
+        "description": "<p>Viñetas Sueltas is a nonprofit dedicated to comics and graphic narrative in Argentina, connecting authors, publishers and readers.</p><ul><li>Organize workshops, exhibitions, seminars, screenings and talks on comics and graphic storytelling</li><li>Produced events at leading cultural venues, including MALBA, Centro Cultural Recoleta, Palais de Glace, Tecnópolis, Centro Cultural Rojas, Alianza Francesa and the Goethe-Institut</li><li>Represented the organization internationally at the Komikazen festival (Italy) and the Frankfurt Book Fair (Germany)</li></ul>"
       }
     ]
   }

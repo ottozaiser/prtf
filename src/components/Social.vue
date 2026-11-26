@@ -2,12 +2,10 @@
   <div class="social">
     <h2 class="sr-only">Social media</h2>
     <ul class="socialmedia">
-      <li class="social-item" v-bind:key="index" v-for="(item, index) in this.social">
-
-          <a target="_blank" :href="item.url" class="icon-btn" :title="item.hover" :aria-label="item.hover">
-            <font-awesome-icon :icon="['fab', item.name]" aria-hidden="true" />
-            <span class="sr-only">{{ item.name }}</span>
-          </a>
+      <li class="social-item" v-bind:key="item.name" v-for="item in items">
+        <a target="_blank" rel="noopener" :href="item.url" class="icon-btn" :title="item.hover" :aria-label="item.hover">
+          <font-awesome-icon :icon="['fab', item.name]" aria-hidden="true" />
+        </a>
       </li>
     </ul>
   </div>
@@ -18,10 +16,20 @@ import axios from "axios";
 
 export default {
   name: "Social",
+  props: {
+    // false (home): only the networks without "home": false, i.e. LinkedIn and Vimeo.
+    // true (My story): every network, art ones included.
+    all: { type: Boolean, default: false },
+  },
   data: function () {
     return {
       social: null,
     };
+  },
+  computed: {
+    items() {
+      return (this.social || []).filter((s) => this.all || s.home !== false);
+    },
   },
   created: function () {
     axios
@@ -41,7 +49,8 @@ export default {
 .social ul.socialmedia {
   padding: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 8px;
 }
 .social ul.socialmedia li.social-item {
   list-style-type: none;

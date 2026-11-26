@@ -1,19 +1,19 @@
 {
   "portfolio": {
     "title": "Portfolio",
-    "content": "<p>A selection of my work, from product and UX design to branding and motion. Some projects are under NDA, so I can only share part of them here. Click any project to see the full story.</p>",
+    "content": "<p>A selection of my work, from product and UX design to branding and motion. Some projects are under NDA, so I can only share part of them here. Open any project to see the full story.</p>",
     "projects": [
       {
         "title": "FunCraft",
         "show": true,
         "slug": "funcraft",
-        "content": "Casual word, dice and sports games with more than 35M installs. I’ve been part of launching all of FunCraft’s games, including the breakouts Word Yatzy and Farkle.",
-        "image": "/public/_data/media/funcraft.jpg",
+        "content": "Casual word, dice and sports games with more than 35M installs. Since joining in 2023, I’ve helped launch FunCraft’s new games, including the breakouts Word Yatzy and Farkle.",
+        "image": "/public/_data/media/funcraft-screens.jpg",
         "file": "",
         "detail": {
-          "summary": "FunCraft is a remote-first studio making casual word, dice and sports games. As its product designer, I’ve been part of launching all of the company’s games, including the breakouts Word Yatzy and Farkle. Together, the games have more than 35 million installs.",
+          "summary": "FunCraft is a remote-first studio making casual word, dice and sports games. Since joining as its product designer in 2023, I’ve helped launch its new games, including the breakouts Word Yatzy and Farkle. Together, the games have more than 35 million installs.",
           "client": "FunCraft is a remote-first mobile game studio with a catalog of word, dice, puzzle, strategy and sports-manager games for iOS and Android.",
-          "role": "Product Designer, since 2023. On each game I’m mostly in charge of the Unity integration, asset polish, animation and UI, plus ASO and the first UA ads for launch.",
+          "role": "Product designer since 2023. On each game, I’m mostly in charge of the Unity integration, asset polish, animation and UI, plus ASO and the first UA ads for launch.",
           "jumps": [
             {
               "label": "What I do",
@@ -40,11 +40,11 @@
                 "Integrate the art and UI into Unity",
                 "Create the game art for some of the titles",
                 "Polish assets, animations and UI until the build feels right",
-                "Vibe-code with AI for the final polish, so the last fixes and tweaks land fast",
+                "Use AI coding tools to ship final UI fixes in the codebase myself, so polish doesn’t wait on engineering",
                 "Handle the ASO: store icons, screenshots and listings",
                 "Make the first UA ads for launch: video, static and playable"
               ],
-              "text": "We build games very fast to test them in the market, so each launch goes from idea to store in a short cycle. On each one, I:"
+              "text": "We build games fast to test them in the market, so each launch goes from idea to store in a short cycle. On each one, I:"
             },
             {
               "id": "breakouts",
@@ -207,7 +207,7 @@
             {
               "id": "games",
               "heading": "All the games",
-              "text": "Every game in the catalog, from word and dice classics to sports managers and tower defense.",
+              "text": "The full FunCraft catalog, from word and dice classics to sports managers and tower defense. Wordgrams and Merge Kingdoms launched before I joined.",
               "gallery": [
                 {
                   "image": "/public/_data/media/projects/funcraft/icons/whamzee.jpg",
@@ -362,8 +362,8 @@
         "image": "/public/_data/media/pet-shelter.jpg",
         "file": "",
         "detail": {
-          "summary": "The brief from etermax: a new trivia game with a fun metagame, something different from Trivia Crack. Our answer: a pet shelter where you answer the neighbors’ questions to get clues, find and rescue the pets that ran away, take care of them and rebuild the shelter. I was the team’s technical lead and second in charge, from the first concepts to launch.",
-          "client": "Pet Shelter by Trivia Crack is a mobile trivia game from etermax, the Buenos Aires studio behind Trivia Crack, built around a pet shelter metagame. Players answer the neighbors’ trivia questions to get clues, find and rescue the pets that ran away, take care of them, and rebuild the shelter.",
+          "summary": "The brief from etermax: a new trivia game with a fun metagame, something different from Trivia Crack. Our answer: a pet shelter where you answer the neighbors’ questions to get clues, find and rescue the pets that ran away, take care of them and rebuild the shelter. I was the team’s technical lead and second in charge, from the first concepts to launch. It was also the first etermax game to build its town map in Unity with isometric tiles.",
+          "client": "Pet Shelter by Trivia Crack is a mobile trivia game built around a pet shelter metagame, from etermax, the Buenos Aires studio behind Trivia Crack. Players answer the neighbors’ trivia questions to get clues, find and rescue the pets that ran away, take care of them, and rebuild the shelter.",
           "context": "The shelter went through hard times and its pets ran away. That premise had to become a whole visual world around the trivia: a town to explore, neighbors who give clues, pets to rescue and care for, and a shelter that grows as you play. I started with the concepts, then worked with the team to take the art to launch.",
           "role": "Principal Product Artist: technical lead and second in charge of the team. Concept art and illustration, UI/UX design and Unity integration.",
           "jumps": [
@@ -439,7 +439,7 @@
                 {
                   "image": "/public/_data/media/projects/pet-shelter/concepts/house-3.jpg",
                   "caption": "Blockout",
-                  "alt": "Grey Blender house blockout"
+                  "alt": "Gray Blender house blockout"
                 },
                 {
                   "image": "/public/_data/media/projects/pet-shelter/concepts/house-4.jpg",
@@ -450,7 +450,8 @@
               "columns": 4,
               "heading": "3D exploration in Blender",
               "level": 3,
-              "text": "I modeled the town’s buildings in Blender to explore shapes, roof tiles, materials and color before the final art. The 3D direction didn’t move forward: the team decided to go full 2D and isometric."
+              "text": "I modeled the town’s buildings in Blender to explore shapes, roof tiles, materials and color before the final art. The 3D direction didn’t move forward: the team decided to go full 2D and isometric.",
+              "columnsMobile": 2
             },
             {
               "heading": "Trivia with characters",
@@ -506,7 +507,7 @@
                 {
                   "image": "/public/_data/media/projects/pet-shelter/concepts/trivia-flow-03.jpg",
                   "caption": "…to a neighbor’s house",
-                  "alt": "Map arriving at a neighbor's house"
+                  "alt": "Map arriving at a neighbor’s house"
                 },
                 {
                   "image": "/public/_data/media/projects/pet-shelter/concepts/trivia-flow-04.jpg",
@@ -544,7 +545,8 @@
                   "alt": "Neighbor gives the next clue"
                 }
               ],
-              "columns": 5
+              "columns": 5,
+              "columnsMobile": 2
             },
             {
               "heading": "Prototyping the flow",
@@ -552,7 +554,7 @@
               "text": "I connected it all in an animated flow prototype: home, map, rescue missions, trivia and rewards.",
               "video": "https://vimeo.com/1250396120",
               "width": 340,
-              "caption": "A neighbor offers to help, if you answer her questions.",
+              "caption": "The animated flow prototype.",
               "ratio": "9:16"
             },
             {
@@ -600,7 +602,8 @@
               ],
               "columns": 4,
               "heading": "UI exploration",
-              "level": 3
+              "level": 3,
+              "columnsMobile": 2
             },
             {
               "heading": "Map and mission UI",
@@ -648,7 +651,8 @@
                   "alt": "Choosing a clue to continue"
                 }
               ],
-              "columns": 4
+              "columns": 4,
+              "columnsMobile": 2
             },
             {
               "id": "art-evolution",
@@ -681,7 +685,8 @@
                   "alt": "Splash screen proposal 4 with Jack in front of the shelter"
                 }
               ],
-              "columns": 4
+              "columns": 4,
+              "columnsMobile": 2
             },
             {
               "text": "The final splash screen.",
@@ -875,8 +880,8 @@
                 },
                 {
                   "image": "/public/_data/media/projects/pet-shelter/deck/shelter-2.jpg",
-                  "caption": "Grey blockout",
-                  "alt": "Grey isometric blockout of the shelter"
+                  "caption": "Gray blockout",
+                  "alt": "Gray isometric blockout of the shelter"
                 },
                 {
                   "image": "/public/_data/media/projects/pet-shelter/deck/shelter-final.jpg",
@@ -885,7 +890,7 @@
                 }
               ],
               "columns": 1,
-              "text": "The shelter was a team effort too. Gaby joined to help with it, from the early sketch to the final art, also with team feedback and adjustments along the way."
+              "text": "The shelter was a team effort too. Gaby, another artist on the team, joined to help with it, from the early sketch to the final art, also with team feedback and adjustments along the way."
             },
             {
               "heading": "Pets",
@@ -1031,7 +1036,7 @@
             {
               "id": "final-game",
               "heading": "The final game",
-              "text": "This is the launched game, built by the whole team. As technical lead and second in charge, I designed the UI and flows and integrated the UI in Unity."
+              "text": "This is the launched game, built by the whole team. As technical lead and second in charge, I designed the UI and flows, and integrated the UI into Unity."
             },
             {
               "heading": "Story and rescue missions",
@@ -1051,7 +1056,7 @@
                 {
                   "image": "/public/_data/media/projects/pet-shelter/product/screen-04.jpg",
                   "caption": "Neighbors will help",
-                  "alt": "Jack explains the neighbors will help"
+                  "alt": "Jack explains that the neighbors will help"
                 },
                 {
                   "image": "/public/_data/media/projects/pet-shelter/product/screen-06.jpg",
@@ -1089,7 +1094,8 @@
                   "alt": "Star reward"
                 }
               ],
-              "columns": 5
+              "columns": 5,
+              "columnsMobile": 2
             },
             {
               "heading": "The shelter, rewards and events",
@@ -1142,7 +1148,8 @@
                   "alt": "Pick-A-Prize board"
                 }
               ],
-              "columns": 5
+              "columns": 5,
+              "columnsMobile": 2
             },
             {
               "heading": "What happened next",
@@ -1157,307 +1164,16 @@
         }
       },
       {
-        "title": "BFA",
-        "show": true,
-        "content": "Brand, website and apps for Argentina’s public blockchain, from a blank page to its 2019 conference.",
-        "image": "/public/_data/media/bfa.png",
-        "file": "https://drive.google.com/file/d/1uV1F7vlxTZ0RRc4i4X_ZavfjwbV0JmVm/view",
-        "slug": "bfa",
-        "detail": {
-          "client": "Blockchain Federal Argentina (BFA) is an open, multi-service platform for blockchain-based services and applications, built collaboratively by different sectors.",
-          "context": "BFA was born from a collaboration between different sectors, and that collaborative model is the backbone of the platform. When I joined, it was just an idea. My job was to make it visible and real.",
-          "role": "Lead designer: branding, UI design, prototyping, heuristics, communication and consulting.",
-          "sections": [
-            {
-              "id": "visual-identity",
-              "heading": "Visual identity",
-              "text": "I created BFA’s brand and carried it across every touchpoint: the website, presentations and icons, and the BFA’19 conference.",
-              "link": {
-                "label": "Visit bfa.ar",
-                "url": "https://bfa.ar/"
-              }
-            },
-            {
-              "image": "/public/_data/media/projects/bfa/01.png",
-              "caption": "The website, built on Drupal.",
-              "alt": "Blockchain Federal Argentina: The website, built on Drupal."
-            },
-            {
-              "image": "/public/_data/media/projects/bfa/02.png",
-              "caption": "A system of page designs for the website.",
-              "alt": "Blockchain Federal Argentina: A system of page designs for the website."
-            },
-            {
-              "heading": "Wireframes and user testing",
-              "level": 3,
-              "text": "Before building the user area, I wireframed every flow: sign-up, log in, password reset, email verification, managing blockchain accounts, and an admin panel to review accounts and Ether requests.\n\nWe ran user tests on these flows: sign-up, log in, password recovery and account management.",
-              "gallery": [
-                {
-                  "image": "/public/_data/media/projects/bfa/wireframe-01.png",
-                  "caption": "Home",
-                  "alt": "Wireframe: BFA home with sign-up and log-in calls to action",
-                  "link": "/public/_data/media/projects/bfa/bfa-wireframes.pdf#page=1"
-                },
-                {
-                  "image": "/public/_data/media/projects/bfa/wireframe-02.png",
-                  "caption": "Sign up",
-                  "alt": "Wireframe: Sign-up form",
-                  "link": "/public/_data/media/projects/bfa/bfa-wireframes.pdf#page=3"
-                },
-                {
-                  "image": "/public/_data/media/projects/bfa/wireframe-03.png",
-                  "caption": "Log in",
-                  "alt": "Wireframe: Log-in form",
-                  "link": "/public/_data/media/projects/bfa/bfa-wireframes.pdf#page=4"
-                },
-                {
-                  "image": "/public/_data/media/projects/bfa/wireframe-04.png",
-                  "caption": "Password reset",
-                  "alt": "Wireframe: Password reset form",
-                  "link": "/public/_data/media/projects/bfa/bfa-wireframes.pdf#page=5"
-                },
-                {
-                  "image": "/public/_data/media/projects/bfa/wireframe-05.png",
-                  "caption": "Email verification",
-                  "alt": "Wireframe: Verification pending screen",
-                  "link": "/public/_data/media/projects/bfa/bfa-wireframes.pdf#page=7"
-                },
-                {
-                  "image": "/public/_data/media/projects/bfa/wireframe-06.png",
-                  "caption": "Add an account",
-                  "alt": "Wireframe: Dialog to add a blockchain account",
-                  "link": "/public/_data/media/projects/bfa/bfa-wireframes.pdf#page=11"
-                },
-                {
-                  "image": "/public/_data/media/projects/bfa/wireframe-07.png",
-                  "caption": "Accounts",
-                  "alt": "Wireframe: Accounts table with status and Ether balance",
-                  "link": "/public/_data/media/projects/bfa/bfa-wireframes.pdf#page=12"
-                },
-                {
-                  "image": "/public/_data/media/projects/bfa/wireframe-08.png",
-                  "caption": "Admin panel",
-                  "alt": "Wireframe: Admin panel to review users' accounts and Ether requests",
-                  "link": "/public/_data/media/projects/bfa/bfa-wireframes.pdf#page=20"
-                },
-                {
-                  "image": "/public/_data/media/projects/bfa/wireframe-09.png",
-                  "caption": "Change Ether capacity",
-                  "alt": "Wireframe: Admin dialog to change an account's Ether capacity",
-                  "link": "/public/_data/media/projects/bfa/bfa-wireframes.pdf#page=21"
-                }
-              ],
-              "link": {
-                "label": "View all 24 wireframes (PDF)",
-                "url": "/public/_data/media/projects/bfa/bfa-wireframes.pdf"
-              }
-            },
-            {
-              "image": "/public/_data/media/projects/bfa/04.jpg",
-              "caption": "The brand identity.",
-              "alt": "Blockchain Federal Argentina: The brand identity."
-            },
-            {
-              "image": "/public/_data/media/projects/bfa/05.png",
-              "caption": "A presentation system and a custom icon set.",
-              "alt": "Blockchain Federal Argentina: A presentation system and a custom icon set."
-            },
-            {
-              "image": "/public/_data/media/projects/bfa/06.png",
-              "caption": "The website for BFA’19, the platform’s 2019 conference.",
-              "alt": "Blockchain Federal Argentina: The website for BFA’19, the platform’s 2019 conference."
-            },
-            {
-              "image": "/public/_data/media/projects/bfa/07.jpg",
-              "caption": "BFA’19, live.",
-              "alt": "Blockchain Federal Argentina: BFA’19, live."
-            },
-            {
-              "heading": "Case study: Sello de Tiempo",
-              "text": "An institution in the BFA community built a timestamp tool: a way to prove that a digital document existed at a given moment and hasn’t changed since. They built it first, and then asked me to “put the design on it.”\n\nSo I started from a very basic app and worked out how to make it usable and appealing. There were no front-end developers on the project either, so I built the front end myself, in Vue.js, a framework I had never used before.",
-              "notes": [
-                "“Put the design on it.” Oh, I really love developers!",
-                "My first project with Vue.js"
-              ],
-              "id": "case-study",
-              "link": {
-                "label": "Try Sello de Tiempo live",
-                "url": "https://bfa.ar/sello"
-              }
-            },
-            {
-              "text": "The flow was simple: pick a file, stamp it, then verify that it was added to the blockchain. This is what they sent me:",
-              "image": "/public/_data/media/projects/bfa/timestamp-01.png",
-              "caption": "The original app: drop a file, stamp it, wait, done.",
-              "alt": "The original timestamp app: four basic screens with dashed boxes and plain buttons"
-            },
-            {
-              "heading": "A brand-new timestamp",
-              "text": "I started from the BFA website’s styles, which were based on Bootstrap, so the tool would feel like part of the platform.",
-              "image": "/public/_data/media/projects/bfa/timestamp-02.png",
-              "caption": "The first screen looks different, but works the same.",
-              "alt": "Sello de Tiempo 2.0: upload screen to drag or select files",
-              "level": 3
-            },
-            {
-              "image": "/public/_data/media/projects/bfa/timestamp-03.png",
-              "caption": "Users can now add several files and stamp or verify them all at once.",
-              "alt": "Sello de Tiempo 2.0: a file ready to verify or stamp, with its hash"
-            },
-            {
-              "image": "/public/_data/media/projects/bfa/timestamp-06.png",
-              "caption": "Success: a read-only verification link the user can copy and share.",
-              "alt": "Sello de Tiempo 2.0: file sent successfully, with a verification link"
-            },
-            {
-              "image": "/public/_data/media/projects/bfa/timestamp-08.png",
-              "caption": "Verified: the block number and date prove the file hasn’t changed since.",
-              "alt": "Sello de Tiempo 2.0: verification result with block number and date"
-            },
-            {
-              "heading": "Outcome",
-              "text": "The app was a success and was presented at blockchain events. Others keep improving it today, but I did my part.",
-              "notes": [
-                "The whole project lives in BFA’s private GitLab repository"
-              ],
-              "level": 3
-            }
-          ],
-          "summary": "Turning Argentina’s public blockchain from an idea into a brand, a website, web apps and a conference.",
-          "jumps": [
-            {
-              "label": "Visual identity",
-              "target": "visual-identity"
-            },
-            {
-              "label": "Case study: Sello de Tiempo",
-              "target": "case-study"
-            }
-          ]
-        }
-      },
-      {
-        "title": ".ar Domain Launch",
-        "show": true,
-        "content": "Opening Argentina’s .ar domain to the public: 35,000 new domains registered in two months.",
-        "image": "/public/_data/media/portfolio_nic.jpg",
-        "file": "https://drive.google.com/file/d/1k7SR5Ipxj8AU2JsSMavdWW8Pl-lqLD5x/view",
-        "slug": "top-level-domain",
-        "detail": {
-          "client": "NIC Argentina is the government office that runs the .ar country-code top-level domain. I led the design work to open .ar domains to the public.",
-          "context": "Until 2019, people could only register subdomains like .com.ar or .net.ar. Opening .ar itself was a big deal for the organization, and it had been delayed for years.\n\nFour organizations shared the registration platform. Communication between them was poor, and our requests sat low on the platform provider’s list. So we focused on the teams we could work with and kept platform changes to a minimum, which meant the front end could only change in small ways.",
-          "role": "Lead designer: prototyping, UI design, heuristics, communication, branding and consulting.",
-          "notes": [
-            "UI design was part of a government framework library",
-            "Platform redesign was out of scope",
-            "The platform didn’t work very well",
-            "Working for the government is hard"
-          ],
-          "sections": [
-            {
-              "image": "/public/_data/media/projects/cos-top-level-domain/01.jpg",
-              "caption": "Where we started: domain search and the domain list.",
-              "alt": "NIC Argentina domain search and domain list"
-            },
-            {
-              "heading": "Opening phases",
-              "text": "To prevent speculation and domain squatting, the team designed a three-phase opening.",
-              "list": [
-                "Phase 1: people who already owned a name as .com.ar or .net.ar got priority to register it as .ar. If two people had priority on the same name, a raffle decided.",
-                "Phase 2: anyone could request any name, and a raffle decided among all requests.",
-                "Phase 3: open registration, like any other domain."
-              ],
-              "notes": [
-                "This case study focuses on Phase 1",
-                "Case 1: one user with priority to register",
-                "Case 2: two users with priority to register"
-              ]
-            },
-            {
-              "heading": "Tweak it",
-              "text": "The process was complicated, and our resources were limited. So I asked: “What if, instead of changing everything, we tweak it a little?”\n\nI focused on the domain list table. It was within our resources, and users already went there to renew their domains.\n\nRight away I noticed the action buttons were icons only. I couldn’t tell what they did until I hovered over them: a real usability and accessibility problem, and a quick one to fix.",
-              "image": "/public/_data/media/projects/cos-top-level-domain/02.jpg",
-              "caption": "Before: icon-only actions in the domain list.",
-              "alt": "Domain list with icon-only action buttons"
-            },
-            {
-              "image": "/public/_data/media/projects/cos-top-level-domain/03.jpg",
-              "caption": "Renew, Transfer, Delegate: the labels only appeared on hover.",
-              "alt": "Renew, Transfer and Delegate icon buttons with hover labels"
-            },
-            {
-              "text": "First change: a new, highlighted row for the reserved domain, with a clear Register button.",
-              "image": "/public/_data/media/projects/cos-top-level-domain/04.jpg",
-              "caption": "Case 1: one person with priority gets a highlighted row and a Register button.",
-              "alt": "Domain list with a highlighted reserved row and a Register button"
-            },
-            {
-              "text": "That solved Case 1. But what if two people have priority on the same domain?\n\nThat kicked off a UX writing debate that lasted days. Spanish has many near-synonyms with subtle differences, and the button label mattered. We landed on Registrar (Register) and Solicitar (Request).\n\nTogether with the Communication team, we also added an alert at the top of the page explaining the new rows and linking to details about the opening.",
-              "image": "/public/_data/media/projects/cos-top-level-domain/05.jpg",
-              "caption": "Case 2: Register and Request actions, plus an alert explaining the opening.",
-              "alt": "Domain list with Register and Request buttons and an information alert"
-            },
-            {
-              "heading": "Visual communication",
-              "text": "There was no time for the big campaign we had planned, so we explained the opening with a landing page, emails and social media.\n\nThe concept: “Your place on the Internet.” A new domain is a new world in cyberspace, so we went with a space theme.",
-              "image": "/public/_data/media/projects/cos-top-level-domain/06.jpg",
-              "caption": "The landing page: the new domain, its features, the opening timeline, and links to rules and FAQs.",
-              "alt": "Space-themed .ar landing page",
-              "link": {
-                "label": "nic.ar/ar",
-                "url": "https://nic.ar/ar"
-              }
-            },
-            {
-              "heading": "Aftermath",
-              "text": "Then the project stalled for almost a year because of the unstable platform, so we never got to test it with users.\n\nA political decision brought it back to life, and the teams had to ship fast. The opening ran on a very tight schedule, and some features were cut to meet the deadline.\n\nThe core changes (labeled buttons and the new rows) shipped. The alert didn’t, so people who hadn’t heard about the opening could get confused. We covered the gap with emails, a landing page, FAQs and tutorials.",
-              "notes": [
-                "I regret this the most"
-              ],
-              "list": [
-                "The platform was still unstable",
-                "The first deploy failed, pushing the launch back a day",
-                "Many users didn’t know the difference between a subdomain and a top-level domain"
-              ]
-            },
-            {
-              "heading": "Results",
-              "text": "Working for the government is hard, but it can be deeply rewarding. Despite all the issues:",
-              "list": [
-                "35,000 new .ar domains registered in the first two months",
-                "AR$9,500,000 in revenue",
-                "Large customers praised how simple the process was"
-              ],
-              "notes": [
-                "35,000 new domains!"
-              ]
-            },
-            {
-              "heading": "Extra: renewing multiple domains",
-              "text": "Renewing several domains at once sounds simple. It wasn’t.",
-              "image": "/public/_data/media/projects/cos-top-level-domain/07.jpg",
-              "caption": "Select several domains and renew them in one step.",
-              "alt": "Domain list with checkboxes and a Renew domains button",
-              "link": {
-                "label": "Try the functional prototype",
-                "url": "https://ottozaiser.github.io/renovacion-multiple/"
-              }
-            }
-          ],
-          "summary": "How small, targeted UX changes helped open Argentina’s .ar domain to the public, with 35,000 domains registered in the first two months."
-        }
-      },
-      {
         "title": "Nearpod",
         "show": true,
-        "content": "Image answers for quizzes and a Motion UI menu for the iPad app, for an award-winning US edtech platform.",
+        "content": "I designed image answers for quizzes and a Motion UI menu for the iPad app of an award-winning US edtech platform.",
         "image": "/public/_data/media/portfolio_nearpod.png",
         "file": "https://drive.google.com/file/d/1vYYhgm0KgLwD3uqAG34zO0En4X0hgKNX/view",
         "slug": "nearpod",
         "detail": {
           "summary": "Two projects for Nearpod’s lesson platform: images in quiz answers, and a Motion UI menu that brought new lesson libraries to the iPad app.",
-          "client": "Nearpod is an award-winning student engagement platform with lessons for teachers. As a product designer at Hexacta, I worked with Nearpod’s US-based product team on new features for its web and iPad apps.",
-          "context": "The web app was evolving fast, the iPad app had to keep up, and new features had to work on both. I often joined as a firefighter, solving design problems the team was stuck on.",
+          "client": "Nearpod is an award-winning student engagement platform that teachers use to run interactive lessons. As a product designer at Hexacta, I worked with Nearpod’s US-based product team on new features for its web and iPad apps.",
+          "context": "The web app was evolving fast, the iPad app had to keep up, and new features had to work on both. I often stepped in as a firefighter, solving design problems the team was stuck on.",
           "role": "Product designer (and firefighter): prototyping, UI design, heuristics and accessibility.",
           "jumps": [
             {
@@ -1473,7 +1189,7 @@
             {
               "id": "image-quiz",
               "heading": "Case study: Image Quiz",
-              "text": "Nearpod had just redesigned its quiz activity when the Product Owner asked for a new feature: images in the answers.\n\nThe quiz has two sides. On the teacher side, a small improvement to the existing view was enough. The student side needed more: it had to become engaging for kids."
+              "text": "Nearpod had just redesigned its quiz activity when the product owner asked for a new feature: images in the answers.\n\nThe quiz has two sides. On the teacher side, a small improvement to the existing view was enough. The student side needed more: it had to become engaging for kids."
             },
             {
               "image": "/public/_data/media/projects/nearpod/quiz-01.jpg",
@@ -1543,7 +1259,7 @@
             },
             {
               "heading": "Transition",
-              "text": "Menu A turns into Menu B. The motion had to be fast but easy to follow, so users never lose their place.",
+              "text": "Menu A turns into Menu B. The motion had to be fast but easy to follow, so users would never lose their place.",
               "caption": "From Menu A (Welcome) to Menu B (Explore).",
               "level": 3,
               "image": "/public/_data/media/projects/nearpod/motion-02.jpg",
@@ -1552,74 +1268,306 @@
             {
               "video": "https://vimeo.com/1250390696",
               "caption": "The animation prototype.",
-              "text": "I presented the animation prototype to the Product Owner and stakeholders, and they were very happy with the result.",
+              "text": "I presented the animation prototype to the product owner and stakeholders, and they were very happy with the result.",
               "ratio": "4:3"
             }
           ]
         }
       },
       {
-        "title": "Microsoft",
+        "title": ".ar Domain Launch",
         "show": true,
-        "content": "An iPad training app that got retail sales teams up to speed on Office 365.",
-        "image": "/public/_data/media/microsoft.png",
-        "file": "https://drive.google.com/file/d/18ffK6BgsCCkP4zwyDvZP5SfN3oTxIBS3/view",
-        "slug": "microsoft",
+        "content": "Opening Argentina’s .ar domain to the public: 35,000 new domains registered in two months.",
+        "image": "/public/_data/media/portfolio_nic.jpg",
+        "file": "https://drive.google.com/file/d/1k7SR5Ipxj8AU2JsSMavdWW8Pl-lqLD5x/view",
+        "slug": "top-level-domain",
         "detail": {
-          "client": "Microsoft Corporation is an American multinational technology company headquartered in Redmond, Washington.",
-          "context": "Office 365 was about to launch, and retail sales associates needed to learn the new features fast so they could demo them to customers.",
-          "role": "Designer, technical lead and developer, from visual design to the final build.",
+          "client": "NIC Argentina is the government office that runs the .ar country-code top-level domain. I led the design work to open .ar domains to the public.",
+          "context": "Until 2019, people could only register subdomains like .com.ar or .net.ar. Opening .ar itself was a big deal for the organization, and it had been delayed for years.\n\nFour organizations shared the registration platform. Communication between them was poor, and our requests sat low on the platform provider’s list. So we focused on the teams we could work with and kept platform changes to a minimum, which meant the front end could only change in small ways.",
+          "role": "Lead designer: prototyping, UI design, heuristic evaluation, communications, branding and consulting.",
+          "notes": [
+            "UI design had to use a government framework library",
+            "Platform redesign was out of scope",
+            "The registration platform was unstable"
+          ],
           "sections": [
             {
-              "image": "/public/_data/media/projects/microsoft/01.png",
-              "caption": "The home screen: every tile launches a short video demo.",
-              "alt": "Office 365 retail training on iPad: The home screen: every tile launches a short video demo.",
-              "device": true
+              "image": "/public/_data/media/projects/cos-top-level-domain/01.jpg",
+              "caption": "Where we started: domain search and the domain list.",
+              "alt": "NIC Argentina domain search and domain list"
             },
             {
-              "image": "/public/_data/media/projects/microsoft/02.png",
-              "caption": "The visual style follows Microsoft’s brand guidelines to the letter.",
-              "alt": "Office 365 retail training on iPad: The visual style follows Microsoft’s brand guidelines to the letter.",
-              "device": true
+              "heading": "Opening phases",
+              "text": "To prevent speculation and domain squatting, the team designed a three-phase opening.",
+              "list": [
+                "Phase 1: people who already owned a name as .com.ar or .net.ar got priority to register it as .ar. If two people had priority on the same name, a random drawing decided who got it.",
+                "Phase 2: anyone could request any name, and a random drawing picked among all requests.",
+                "Phase 3: open registration, like any other domain."
+              ],
+              "notes": [
+                "This case study focuses on Phase 1",
+                "Case 1: one user with priority to register",
+                "Case 2: two users with priority to register"
+              ]
             },
             {
-              "image": "/public/_data/media/projects/microsoft/03.png",
-              "caption": "I built the layout on Microsoft’s own tile grid, so the content feels native to the brand.",
-              "alt": "Office 365 retail training on iPad: I built the layout on Microsoft’s own tile grid, so the content feels native to the brand.",
-              "device": true
+              "heading": "Tweak it",
+              "text": "The process was complicated, and our resources were limited. So I asked: “What if, instead of changing everything, we tweak it a little?”\n\nI focused on the domain list table. It was within our resources, and users already went there to renew their domains.\n\nRight away I noticed the action buttons were icons only. I couldn’t tell what they did until I hovered over them: a real usability and accessibility problem, and a quick one to fix.",
+              "image": "/public/_data/media/projects/cos-top-level-domain/02.jpg",
+              "caption": "Before: icon-only actions in the domain list.",
+              "alt": "Domain list with icon-only action buttons"
             },
             {
-              "image": "/public/_data/media/projects/microsoft/04.png",
-              "caption": "Video demos come with step-by-step tutorial animations.",
-              "alt": "Office 365 retail training on iPad: Video demos come with step-by-step tutorial animations.",
-              "device": true
+              "image": "/public/_data/media/projects/cos-top-level-domain/03.jpg",
+              "caption": "Renew, Transfer, Delegate: the labels only appeared on hover.",
+              "alt": "Renew, Transfer and Delegate icon buttons with hover labels"
             },
             {
-              "image": "/public/_data/media/projects/microsoft/05.png",
-              "caption": "The design landed with no major change requests from the client.",
-              "alt": "Office 365 retail training on iPad: The design landed with no major change requests from the client.",
-              "device": true
+              "text": "First change: a new, highlighted row for the reserved domain, with a clear Register button.",
+              "image": "/public/_data/media/projects/cos-top-level-domain/04.jpg",
+              "caption": "Case 1: one person with priority gets a highlighted row and a Register button.",
+              "alt": "Domain list with a highlighted reserved row and a Register button"
             },
             {
-              "image": "/public/_data/media/projects/microsoft/06.png",
-              "caption": "Once every video has been watched, a Next button unlocks.",
-              "alt": "Office 365 retail training on iPad: Once every video has been watched, a Next button unlocks.",
-              "device": true
+              "text": "That solved Case 1. But what if two people have priority on the same domain?\n\nThat kicked off a UX writing debate that lasted days. Spanish has many near-synonyms with subtle differences, and the button label mattered. We landed on Registrar (Register) and Solicitar (Request).\n\nTogether with the Communications team, we also added an alert at the top of the page explaining the new rows and linking to details about the opening.",
+              "image": "/public/_data/media/projects/cos-top-level-domain/05.jpg",
+              "caption": "Case 2: Register and Request actions, plus an alert explaining the opening.",
+              "alt": "Domain list with Register and Request buttons and an information alert"
             },
             {
-              "image": "/public/_data/media/projects/microsoft/07.png",
-              "caption": "The design became a template: we built six more products on it.",
-              "alt": "Office 365 retail training on iPad: The design became a template: we built six more products on it.",
-              "device": true
+              "heading": "Visual communication",
+              "text": "There was no time for the big campaign we had planned, so we explained the opening with a landing page, emails and social media.\n\nThe concept: “Your place on the Internet.” A new domain is a new world in cyberspace, so we went with a space theme.",
+              "image": "/public/_data/media/projects/cos-top-level-domain/06.jpg",
+              "caption": "The landing page: the new domain, its features, the opening timeline, and links to rules and FAQs.",
+              "alt": "Space-themed .ar landing page",
+              "link": {
+                "label": "nic.ar/ar",
+                "url": "https://nic.ar/ar"
+              }
+            },
+            {
+              "heading": "Aftermath",
+              "text": "Then the project stalled for almost a year because of the unstable platform, so we never got to test it with users.\n\nA political decision brought it back to life, and the teams had to ship fast. The opening ran on a very tight schedule, and some features were cut to meet the deadline.\n\nThe core changes (labeled buttons and the new rows) shipped. The alert didn’t, so people who hadn’t heard about the opening might get confused. We covered the gap with emails, a landing page, FAQs and tutorials.",
+              "notes": [
+                "I regret this the most"
+              ],
+              "list": [
+                "The platform was still unstable",
+                "The first deploy failed, pushing the launch back a day",
+                "Many users didn’t know the difference between a subdomain and a top-level domain"
+              ]
+            },
+            {
+              "heading": "Results",
+              "text": "Working for the government is hard, but it can be deeply rewarding. Despite all the issues:",
+              "list": [
+                "35,000 new .ar domains registered in the first two months",
+                "AR$9,500,000 in revenue",
+                "Large customers praised how simple the process was"
+              ],
+              "notes": [
+                "35,000 new domains!"
+              ]
+            },
+            {
+              "heading": "Extra: renewing multiple domains",
+              "text": "Renewing several domains at once sounds simple. It wasn’t.",
+              "image": "/public/_data/media/projects/cos-top-level-domain/07.jpg",
+              "caption": "Select several domains and renew them in one step.",
+              "alt": "Domain list with checkboxes and a Renew domains button",
+              "link": {
+                "label": "Try the functional prototype",
+                "url": "https://ottozaiser.github.io/renovacion-multiple/"
+              }
             }
           ],
-          "summary": "A tile-based iPad training app that got retail sales teams up to speed on Office 365, and became the template for six more products."
+          "summary": "How small, targeted UX changes helped open Argentina’s .ar domain to the public, with 35,000 domains registered in the first two months."
+        }
+      },
+      {
+        "title": "BFA",
+        "show": true,
+        "content": "Brand, website and apps for Argentina’s public blockchain, from a blank page to its 2019 conference.",
+        "image": "/public/_data/media/bfa.png",
+        "file": "https://drive.google.com/file/d/1uV1F7vlxTZ0RRc4i4X_ZavfjwbV0JmVm/view",
+        "slug": "bfa",
+        "detail": {
+          "client": "Blockchain Federal Argentina (BFA) is an open, multi-service platform for blockchain-based services and applications, built collaboratively by different sectors.",
+          "context": "BFA was born from a collaboration between different sectors, and that collaborative model is the backbone of the platform. When I joined, it was just an idea. My job was to make it visible and real.",
+          "role": "Lead designer: branding, UI design, prototyping, heuristic evaluation, communications and consulting.",
+          "sections": [
+            {
+              "id": "visual-identity",
+              "heading": "Visual identity",
+              "text": "I created BFA’s brand and carried it across every touchpoint: the website, presentations and icons, and the BFA’19 conference.",
+              "link": {
+                "label": "Visit bfa.ar",
+                "url": "https://bfa.ar/"
+              }
+            },
+            {
+              "image": "/public/_data/media/projects/bfa/01.png",
+              "caption": "The website, built on Drupal.",
+              "alt": "BFA website home page on a desktop monitor over faded wireframes"
+            },
+            {
+              "image": "/public/_data/media/projects/bfa/02.png",
+              "caption": "A system of page designs for the website.",
+              "alt": "BFA home page beside a grid of nine inner-page designs"
+            },
+            {
+              "heading": "Wireframes and user testing",
+              "level": 3,
+              "text": "Before building the user area, I wireframed every flow: sign-up, login, password reset, email verification, managing blockchain accounts, and an admin panel to review accounts and Ether requests.\n\nWe ran user tests on these flows: sign-up, login, password recovery and account management.",
+              "gallery": [
+                {
+                  "image": "/public/_data/media/projects/bfa/wireframe-01.png",
+                  "caption": "Home",
+                  "alt": "Wireframe: BFA home with sign-up and log-in calls to action",
+                  "link": "/public/_data/media/projects/bfa/bfa-wireframes.pdf#page=1"
+                },
+                {
+                  "image": "/public/_data/media/projects/bfa/wireframe-02.png",
+                  "caption": "Sign up",
+                  "alt": "Wireframe: Sign-up form with name, email and password fields",
+                  "link": "/public/_data/media/projects/bfa/bfa-wireframes.pdf#page=3"
+                },
+                {
+                  "image": "/public/_data/media/projects/bfa/wireframe-03.png",
+                  "caption": "Log in",
+                  "alt": "Wireframe: Log-in form with email, password and a forgot-password link",
+                  "link": "/public/_data/media/projects/bfa/bfa-wireframes.pdf#page=4"
+                },
+                {
+                  "image": "/public/_data/media/projects/bfa/wireframe-04.png",
+                  "caption": "Password reset",
+                  "alt": "Wireframe: Password reset form with a single email field",
+                  "link": "/public/_data/media/projects/bfa/bfa-wireframes.pdf#page=5"
+                },
+                {
+                  "image": "/public/_data/media/projects/bfa/wireframe-05.png",
+                  "caption": "Email verification",
+                  "alt": "Wireframe: Verification pending card with an envelope icon and resend link",
+                  "link": "/public/_data/media/projects/bfa/bfa-wireframes.pdf#page=7"
+                },
+                {
+                  "image": "/public/_data/media/projects/bfa/wireframe-06.png",
+                  "caption": "Add an account",
+                  "alt": "Wireframe: Dialog to add a blockchain account",
+                  "link": "/public/_data/media/projects/bfa/bfa-wireframes.pdf#page=11"
+                },
+                {
+                  "image": "/public/_data/media/projects/bfa/wireframe-07.png",
+                  "caption": "Accounts",
+                  "alt": "Wireframe: Accounts table with status and Ether balance",
+                  "link": "/public/_data/media/projects/bfa/bfa-wireframes.pdf#page=12"
+                },
+                {
+                  "image": "/public/_data/media/projects/bfa/wireframe-08.png",
+                  "caption": "Admin panel",
+                  "alt": "Wireframe: Admin panel to review users’ accounts and Ether requests",
+                  "link": "/public/_data/media/projects/bfa/bfa-wireframes.pdf#page=20"
+                },
+                {
+                  "image": "/public/_data/media/projects/bfa/wireframe-09.png",
+                  "caption": "Change Ether capacity",
+                  "alt": "Wireframe: Admin dialog to change an account’s Ether capacity",
+                  "link": "/public/_data/media/projects/bfa/bfa-wireframes.pdf#page=21"
+                }
+              ],
+              "link": {
+                "label": "View all 24 wireframes (PDF)",
+                "url": "/public/_data/media/projects/bfa/bfa-wireframes.pdf"
+              }
+            },
+            {
+              "image": "/public/_data/media/projects/bfa/04.jpg",
+              "caption": "The brand identity.",
+              "alt": "BFA cube-and-sun logo next to floating business cards"
+            },
+            {
+              "image": "/public/_data/media/projects/bfa/05.png",
+              "caption": "A presentation system and a custom icon set.",
+              "alt": "Grid of blue presentation slides beside a set of round line icons"
+            },
+            {
+              "image": "/public/_data/media/projects/bfa/06.png",
+              "caption": "The website for BFA’19, the platform’s 2019 conference.",
+              "alt": "BFA’19 site pages: hero, agenda, speaker grid and venue map"
+            },
+            {
+              "image": "/public/_data/media/projects/bfa/07.jpg",
+              "caption": "BFA’19, live.",
+              "alt": "Packed auditorium at BFA’19 with a Spanish thank-you message overlaid"
+            },
+            {
+              "heading": "Case study: Sello de Tiempo",
+              "text": "An institution in the BFA community built a timestamp tool: a way to prove that a digital document existed at a given moment and hasn’t changed since. They built it first, and then asked me to “put the design on it.”\n\nSo I started from a very basic app and worked out how to make it usable and appealing. There were no front-end developers on the project either, so I built the front end myself, in Vue.js, a framework I had never used before.",
+              "notes": [
+                "They had built it first. My job was to make it usable.",
+                "My first project with Vue.js"
+              ],
+              "id": "case-study",
+              "link": {
+                "label": "Try Sello de Tiempo live",
+                "url": "https://bfa.ar/sello"
+              }
+            },
+            {
+              "text": "The flow was simple: pick a file, stamp it, then verify that it was added to the blockchain. This is what they sent me:",
+              "image": "/public/_data/media/projects/bfa/timestamp-01.png",
+              "caption": "The original app: drop a file, stamp it, wait, done.",
+              "alt": "The original timestamp app: four basic screens with dashed boxes and plain buttons"
+            },
+            {
+              "heading": "A brand-new timestamp",
+              "text": "I started from the BFA website’s styles, which were based on Bootstrap, so the tool would feel like part of the platform.",
+              "image": "/public/_data/media/projects/bfa/timestamp-02.png",
+              "caption": "The first screen looks different, but works the same.",
+              "alt": "Sello de Tiempo 2.0: upload screen to drag or select files",
+              "level": 3
+            },
+            {
+              "image": "/public/_data/media/projects/bfa/timestamp-03.png",
+              "caption": "Users can now add several files and stamp or verify them all at once.",
+              "alt": "Sello de Tiempo 2.0: a file ready to verify or stamp, with its hash"
+            },
+            {
+              "image": "/public/_data/media/projects/bfa/timestamp-06.png",
+              "caption": "Success: a read-only verification link the user can copy and share.",
+              "alt": "Sello de Tiempo 2.0: file sent successfully, with a verification link"
+            },
+            {
+              "image": "/public/_data/media/projects/bfa/timestamp-08.png",
+              "caption": "Verified: the block number and date prove the file hasn’t changed since.",
+              "alt": "Sello de Tiempo 2.0: verification result with block number and date"
+            },
+            {
+              "heading": "Outcome",
+              "text": "The app was a success and was presented at blockchain events. Other teams keep improving it today.",
+              "notes": [
+                "The whole project lives in BFA’s private GitLab repository"
+              ],
+              "level": 3
+            }
+          ],
+          "summary": "Turning Argentina’s public blockchain from an idea into a brand, a website, web apps and a conference.",
+          "jumps": [
+            {
+              "label": "Visual identity",
+              "target": "visual-identity"
+            },
+            {
+              "label": "Case study: Sello de Tiempo",
+              "target": "case-study"
+            }
+          ]
         }
       },
       {
         "title": "Sony",
         "show": true,
-        "content": "A gamified tutorial that taught people how to use Sony’s new Dash device.",
+        "content": "I designed and built a game, not a slideshow, that taught people how to use Sony’s new Dash device.",
         "image": "/public/_data/media/sony.png",
         "file": "https://drive.google.com/file/d/1mmbDFRsGIvRNHi73ZZ5gDhccxzesNFPA/view",
         "slug": "sony",
@@ -1631,35 +1579,143 @@
             {
               "image": "/public/_data/media/projects/sony/01.png",
               "caption": "We built a game, not a slideshow, to introduce the device.",
-              "alt": "Sony Dash tutorial: We built a game, not a slideshow, to introduce the device.",
+              "alt": "Kids’ bedroom scene with a teddy bear, a blue bird and a Dash device",
               "device": true
             },
             {
               "image": "/public/_data/media/projects/sony/02.png",
               "caption": "Users explore the room to find hidden objects, and a friendly character explains each feature.",
-              "alt": "Sony Dash tutorial: Users explore the room to find hidden objects, and a friendly character explains each feature.",
+              "alt": "Blue bird character beside a Facebook pop-up in the bedroom",
               "device": true
             },
             {
               "image": "/public/_data/media/projects/sony/03.png",
               "caption": "Find every object and the Dash appears, ready to try.",
-              "alt": "Sony Dash tutorial: Find every object and the Dash appears, ready to try.",
+              "alt": "Sony Dash device revealed in the tutorial room",
               "device": true
             },
             {
               "image": "/public/_data/media/projects/sony/04.png",
               "caption": "Complete a room and the character flies off to the next one.",
-              "alt": "Sony Dash tutorial: Complete a room and the character flies off to the next one.",
+              "alt": "Floor plan pop-up showing the bird’s route to the home office",
               "device": true
             },
             {
               "image": "/public/_data/media/projects/sony/05.png",
               "caption": "Sony ended Dash support in 2017, but the tutorial lives on here.",
-              "alt": "Sony Dash tutorial: Sony ended Dash support in 2017, but the tutorial lives on here.",
+              "alt": "Home office scene with the bird and a Home Office pop-up",
               "device": true
             }
           ],
           "summary": "Instead of a slideshow, a game: users explore a virtual home to discover what Sony’s new Dash device can do."
+        }
+      },
+      {
+        "title": "Microsoft",
+        "show": true,
+        "content": "I designed and built an iPad training app that got retail sales teams up to speed on Office 365.",
+        "image": "/public/_data/media/microsoft.png",
+        "file": "https://drive.google.com/file/d/18ffK6BgsCCkP4zwyDvZP5SfN3oTxIBS3/view",
+        "slug": "microsoft",
+        "detail": {
+          "client": "Microsoft Corporation is an American multinational technology company headquartered in Redmond, Washington.",
+          "context": "Office 365 was about to launch, and retail sales associates needed to learn the new features fast so they could demo them to customers.",
+          "role": "Designer, technical lead and developer, from visual design to the final build.",
+          "sections": [
+            {
+              "image": "/public/_data/media/projects/microsoft/01.png",
+              "caption": "The home screen: every tile launches a short video demo.",
+              "alt": "Office 365 training app home screen with a grid of video tiles",
+              "device": true
+            },
+            {
+              "image": "/public/_data/media/projects/microsoft/02.png",
+              "caption": "The visual style follows Microsoft’s brand guidelines to the letter.",
+              "alt": "Video screen with an orange header and a store employee talking",
+              "device": true
+            },
+            {
+              "image": "/public/_data/media/projects/microsoft/03.png",
+              "caption": "I built the layout on Microsoft’s own tile grid, so the content feels native to the brand.",
+              "alt": "Purple Picture to Text screen with a OneNote tile and a presenter",
+              "device": true
+            },
+            {
+              "image": "/public/_data/media/projects/microsoft/04.png",
+              "caption": "Video demos come with step-by-step tutorial animations.",
+              "alt": "Screen Clipping demo showing the OneNote ribbon with a tooltip open",
+              "device": true
+            },
+            {
+              "image": "/public/_data/media/projects/microsoft/05.png",
+              "caption": "The design landed with no major change requests from the client.",
+              "alt": "Blue Artistic Effects screen with a Word tile and a presenter",
+              "device": true
+            },
+            {
+              "image": "/public/_data/media/projects/microsoft/06.png",
+              "caption": "Once every video has been watched, a Next button unlocks.",
+              "alt": "Home screen with an arrow tile in the bottom-right corner",
+              "device": true
+            },
+            {
+              "image": "/public/_data/media/projects/microsoft/07.png",
+              "caption": "The design became a template: we built six more products on it.",
+              "alt": "Summary card over a photo of a crowd of Microsoft Store staff",
+              "device": true
+            }
+          ],
+          "summary": "A tile-based iPad training app that got retail sales teams up to speed on Office 365, and became the template for six more products."
+        }
+      },
+      {
+        "title": "Personal Play Deportes",
+        "show": true,
+        "content": "Art direction and motion design for a video telling the story of a sports app.",
+        "image": "/public/_data/media/ppdeportes.png",
+        "file": "https://drive.google.com/file/d/1N6j7C5M9lUZFdIa2jVED0Nhw0bg0BJKa/view",
+        "slug": "personal-play",
+        "detail": {
+          "client": "Personal Play Deportes is a sports app from Personal, an Argentine telecom company. They wanted a video showing how the app had evolved.",
+          "context": "The brief was simple: a timeline. Every design and motion decision was mine.",
+          "role": "Art director and motion designer.",
+          "sections": [
+            {
+              "heading": "The video",
+              "video": "https://vimeo.com/177124881",
+              "caption": "Personal Play Deportes: the app’s story in two minutes."
+            },
+            {
+              "heading": "Behind the frames",
+              "text": "Key moments from the timeline, from the opening title to the app’s first releases."
+            },
+            {
+              "image": "/public/_data/media/projects/personal/01.jpg",
+              "caption": "Opening title.",
+              "alt": "Video frame: Personal Play Deportes logo on a dark triangle pattern"
+            },
+            {
+              "image": "/public/_data/media/projects/personal/02.jpg",
+              "caption": "Testing, Q&A and focus groups.",
+              "alt": "Video frame: three angled labels above a dotted pink timeline"
+            },
+            {
+              "image": "/public/_data/media/projects/personal/03.jpg",
+              "caption": "January 2016.",
+              "alt": "Video frame: January 2016 on the timeline, the app on a phone in hand"
+            },
+            {
+              "image": "/public/_data/media/projects/personal/04.jpg",
+              "caption": "February 2016.",
+              "alt": "Video frame: February 2016 on the timeline, rugby news on a phone"
+            },
+            {
+              "image": "/public/_data/media/projects/personal/05.jpg",
+              "caption": "Looking ahead.",
+              "alt": "Video frame: the word Futuro on a dotted pink timeline"
+            }
+          ],
+          "summary": "A promotional video telling the story of a sports app, with full creative freedom on design and motion."
         }
       },
       {
@@ -1670,7 +1726,7 @@
         "file": "https://drive.google.com/file/d/1X3uAUzciYfkBicg1ZaaVjF8M9WlPVv0q/view",
         "slug": "vinetas-sueltas",
         "detail": {
-          "client": "Viñetas Sueltas is a non-profit that runs an international comics festival in Buenos Aires. I co-founded it, and I designed and built its website from 2008 to 2017.",
+          "client": "Viñetas Sueltas is a nonprofit that runs an international comics festival in Buenos Aires. I co-founded it, and I designed and built its website from 2008 to 2017.",
           "context": "Web development changed a lot between 2008 and 2017, but one constraint never did: two weeks to build the site from scratch, on top of my day job.",
           "role": "Web designer, developer and branding.",
           "sections": [
@@ -1726,7 +1782,7 @@
             },
             {
               "heading": "2010",
-              "text": "Steve Jobs had declared war on Flash, and we were going crazy. HTML came back hard, and I had to return to markup, which I’d left behind in the days of tables and spacer GIFs.\n\nThe result was cleaner and more readable. Not responsive, though: in 2010, I didn’t even own a smartphone.",
+              "text": "Steve Jobs had declared war on Flash, and we were going crazy. HTML came back strong, and I had to return to markup, which I’d left behind in the days of tables and spacer GIFs.\n\nThe result was cleaner and more readable. Not responsive, though: in 2010, I didn’t even own a smartphone.",
               "tech": [
                 "HTML",
                 "CSS",
@@ -1750,7 +1806,7 @@
             },
             {
               "heading": "2008",
-              "text": "A friend called: a new independent comics festival needed a website, and it needed it within a week.\n\nIt may look rough today, but back then, pulling a blog’s RSS feed into a Flash site was a big deal.",
+              "text": "A friend called: the independent comics festival we were starting needed a website, and it needed it within a week.\n\nIt may look rough today, but back then, pulling a blog’s RSS feed into a Flash site was a big deal.",
               "tech": [
                 "Adobe Flash 7",
                 "ActionScript 2.0",
@@ -1762,56 +1818,6 @@
             }
           ],
           "summary": "Ten years, six websites, one constraint: two weeks to build each one from scratch, on top of my day job."
-        }
-      },
-      {
-        "title": "Personal Play Deportes",
-        "show": true,
-        "content": "Art direction and motion design for a video telling the story of a sports app.",
-        "image": "/public/_data/media/ppdeportes.png",
-        "file": "https://drive.google.com/file/d/1N6j7C5M9lUZFdIa2jVED0Nhw0bg0BJKa/view",
-        "slug": "personal-play",
-        "detail": {
-          "client": "Personal Play Deportes is a sports app from Personal, an Argentine telecom company. They wanted a video showing how the app had evolved.",
-          "context": "The brief was simple: a timeline. Every design and motion decision was mine.",
-          "role": "Art director and motion designer.",
-          "sections": [
-            {
-              "heading": "The video",
-              "video": "https://vimeo.com/177124881",
-              "caption": "Personal Play Deportes: the app’s story in two minutes."
-            },
-            {
-              "heading": "Behind the frames",
-              "text": "Key moments from the timeline, from the opening title to the app’s first releases."
-            },
-            {
-              "image": "/public/_data/media/projects/personal/01.jpg",
-              "caption": "Opening title.",
-              "alt": "Frame from the Personal Play Deportes video: Opening title."
-            },
-            {
-              "image": "/public/_data/media/projects/personal/02.jpg",
-              "caption": "Testing, Q&A and focus groups.",
-              "alt": "Frame from the Personal Play Deportes video: Testing, Q&A and focus groups."
-            },
-            {
-              "image": "/public/_data/media/projects/personal/03.jpg",
-              "caption": "January 2016.",
-              "alt": "Frame from the Personal Play Deportes video: January 2016."
-            },
-            {
-              "image": "/public/_data/media/projects/personal/04.jpg",
-              "caption": "February 2016.",
-              "alt": "Frame from the Personal Play Deportes video: February 2016."
-            },
-            {
-              "image": "/public/_data/media/projects/personal/05.jpg",
-              "caption": "Looking ahead.",
-              "alt": "Frame from the Personal Play Deportes video: Looking ahead."
-            }
-          ],
-          "summary": "A promotional video telling the story of a sports app, with full creative freedom on design and motion."
         }
       },
       {
@@ -1851,12 +1857,12 @@
       {
         "title": "Reel",
         "show": false,
-        "content": "You can watch my Motion Graphics Reel on Vimeo.",
+        "content": "Watch my motion graphics reel on Vimeo.",
         "image": "/public/_data/media/portfolio_motion.png",
         "file": "http://www.vimeo.com/ottozaiser"
       },
       {
-        "content": "You can see my illustration portfolio on Tumblr.",
+        "content": "See my illustration portfolio on Tumblr.",
         "show": false,
         "title": "Art",
         "file": "https://ottozaiser.tumblr.com/",
@@ -1899,7 +1905,7 @@
         "image": "/public/_data/media/client08.png"
       },
       {
-        "title": "StateFarm",
+        "title": "State Farm",
         "image": "/public/_data/media/client09.png"
       },
       {
@@ -1923,7 +1929,7 @@
         "image": "/public/_data/media/client14.png"
       },
       {
-        "title": "Weightwatchers",
+        "title": "WeightWatchers",
         "image": "/public/_data/media/client15.png"
       },
       {

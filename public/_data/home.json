@@ -1,20 +1,22 @@
 {
 	"title": "Home",
-	"subtitle": "<span class='greeting'>👋 Hi! I'm</span> <span class='highlight light'>Otto</span>",
-	"content": "I'm a product designer for mobile games. I design UX, UI, illustration and motion, then build it in Unity myself, from concept to in-engine.",
+	"subtitle": "<span class='greeting'>👋 Hi! I’m</span> <span class='highlight light'>Otto</span>",
+	"content": "I’m a product designer for mobile games, with 20+ years where design meets code. At FunCraft, I’ve helped launch casual games with 35M+ installs, including Word Yatzy and Farkle: UI/UX, Unity integration, motion, ASO and launch UA ads.",
 	"image": "/_data/media/me.png",
 	"links": [
 		{
-			"name": "Resume",
-			"url": "/#resume"
+			"name": "See my work",
+			"url": "/#portfolio",
+			"primary": true
 		},
 		{
-			"name": "Portfolio",
-			"url": "/#portfolio"
+			"name": "Download CV",
+			"url": "/cv/Otto-Zaiser-CV.pdf",
+			"download": true
 		},
 		{
-			"name": "Read My Story",
-			"url": "/story"
+			"name": "Get in touch",
+			"url": "mailto:hola@otto.ar?subject=Hi%20Otto"
 		}
 	]
 }

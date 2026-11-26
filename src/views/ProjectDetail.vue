@@ -44,7 +44,8 @@
           class="btn"
           :to="{ hash: `#${j.target}` }"
         >
-          {{ j.label }} <span aria-hidden="true">↓</span>
+          <!-- &nbsp; keeps the arrow on the label's last line when it wraps -->
+          {{ j.label }}&nbsp;<span aria-hidden="true">↓</span>
         </router-link>
       </nav>
 
@@ -158,6 +159,21 @@
         </p>
       </section>
 
+      <!-- Next step for a recruiter who read to the end -->
+      <aside v-if="settings && settings.contact_email" class="hire" aria-labelledby="hire-title">
+        <p id="hire-title" class="hire-title">Hiring a product designer for mobile games?</p>
+        <div class="hire-actions">
+          <a class="btn primary" :href="`mailto:${settings.contact_email}?subject=${encodeURIComponent('Hi Otto')}`">
+            <font-awesome-icon icon="envelope" aria-hidden="true" />
+            Email me
+          </a>
+          <a v-if="settings.cv_url" class="btn" :href="settings.cv_url" download>
+            <font-awesome-icon icon="download" aria-hidden="true" />
+            Download CV
+          </a>
+        </div>
+      </aside>
+
       <!-- The other public cases, as the same cards used on the Portfolio page -->
       <section v-if="others.length" class="more" aria-labelledby="more-title">
         <div class="more-head">
@@ -211,6 +227,7 @@ export default {
   data() {
     return {
       projects: [],
+      settings: null,
       loaded: false,
       morePage: 0,
       reduceMotion: typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches,
@@ -256,7 +273,7 @@ export default {
     project: {
       immediate: true,
       handler(p) {
-        document.title = p ? `${p.title} - Otto Zaiser [Designer]` : "Project not found - Otto Zaiser [Designer]";
+        document.title = p ? `${p.title} – Otto Zaiser` : "Project not found – Otto Zaiser";
       },
     },
     // New case (or data just loaded): jump the carousel back to its first page,
@@ -277,6 +294,13 @@ export default {
     if (this.clipObserver) this.clipObserver.disconnect();
   },
   created() {
+    // Contact email and CV link for the "Hiring…?" prompt; the page works without it.
+    axios
+      .get("/_data/settings.json")
+      .then((response) => {
+        this.settings = response.data;
+      })
+      .catch(() => {});
     axios
       .get("/_data/portfolio.json")
       .then((response) => {
@@ -477,7 +501,17 @@ h1 {
   margin: 0;
 }
 .notes li {
-  margin: 4px 0;
+  margin: 10px 0;
+}
+.notes li:first-child {
+  margin-top: 4px;
+}
+.notes li:last-child {
+  margin-bottom: 4px;
+}
+/* A dash per note, so two-line notes on phones don't read as one paragraph */
+.notes li::before {
+  content: "– ";
 }
 .notes-title {
   font-style: normal;
@@ -600,7 +634,8 @@ figcaption {
 /* Thumbnail grid: --cols per row (default 3); fewer on phones (--cols-mobile) */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(var(--cols, 3), 1fr);
+  /* minmax(0, 1fr): long captions ("Backgammon") can't widen their column and shrink the others */
+  grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr));
   gap: 16px;
   margin: 24px auto 0; /* centered when a section sets a max width */
   align-items: start;
@@ -637,6 +672,7 @@ figcaption {
 .gallery-item figcaption {
   margin-top: 6px;
   font-size: 0.85em;
+  overflow-wrap: break-word;
 }
 /* App icons: shown the way they look on a phone (rounded square or circle), no frame */
 .gallery-item.shape-icon img,
@@ -666,12 +702,18 @@ figcaption {
 }
 @media (max-width: 600px) {
   .gallery {
-    grid-template-columns: repeat(var(--cols-mobile, 2), 1fr);
+    grid-template-columns: repeat(var(--cols-mobile, 2), minmax(0, 1fr));
     gap: 12px;
   }
 }
 .link .btn-small {
   display: inline-block;
+}
+/* Very narrow phones: store buttons no longer fit side by side, so stack them at full width */
+@media (max-width: 400px) {
+  .link .btn-small {
+    flex: 1 1 100%;
+  }
 }
 .link svg {
   margin-left: 6px;
@@ -704,6 +746,52 @@ figcaption {
     grid-template-columns: 1fr;
     gap: 16px;
   }
+}
+/* "Hiring a product designer…?" prompt between the case and More projects */
+.hire {
+  margin-top: 96px;
+  padding: 24px;
+  border: 2px solid var(--main-highlight);
+  border-radius: 4px;
+  background: #fff;
+}
+.hire-title {
+  font-size: 1.25em;
+  font-weight: bold;
+  line-height: 1.3;
+  color: var(--main-charcoal);
+  margin: 0 0 16px;
+}
+.hire-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.hire .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 10px 20px;
+}
+.hire .btn.primary {
+  background: var(--main-highlight);
+  border-color: var(--main-highlight);
+  font-weight: 600;
+}
+.hire .btn.primary:hover,
+.hire .btn.primary:focus-visible {
+  color: var(--main-charcoal);
+  box-shadow: 0 0 0 2px var(--main-charcoal);
+}
+@media (max-width: 480px) {
+  .hire .btn {
+    flex: 1 1 100%;
+  }
+}
+.hire + .more {
+  margin-top: 64px;
 }
 .more {
   margin-top: 96px;

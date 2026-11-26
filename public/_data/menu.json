@@ -1,12 +1,12 @@
 {
 	"menuitem": [
 		{
-			"name": "Resume",
-			"url": "/#resume"
-		},
-		{
 			"name": "Portfolio",
 			"url": "/#portfolio"
+		},
+		{
+			"name": "Resume",
+			"url": "/#resume"
 		},
 		{
 			"name": "My story",
