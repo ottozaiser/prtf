@@ -21,6 +21,9 @@
         <transition name="slide">
           <div class="panel-menu" :class="{ scrolled: isScrolled && isDesktop, 'brand-visible': isDesktop && $route.path === '/story' }" v-show="showMenu || isDesktop" id="menu">
             <div class="panel-menu-inner">
+              <button v-if="!isDesktop" class="sheet-close" type="button" aria-label="Close menu" @click="toggleMenu">
+                <font-awesome-icon icon="xmark" aria-hidden="true" />
+              </button>
               <h1 class="brand">
                 <a href="/" @click="onBrandClick" v-html="this.settings.site_title"></a>
               </h1>
@@ -645,22 +648,21 @@ nav.main-navigation ul.menu li.menu-item a:focus .nav-link-label {
   transform: translateZ(0) translateX(300px);
 }
 
-/* Phones and tablets: thumb-friendly navigation. The menu button floats at the bottom right, and
-   the menu opens as a bottom sheet with centered links just above it. */
+/* Phones and tablets: the menu button stays at the top right (it never sits on page buttons), and
+   the menu opens as a bottom sheet with centered links, within thumb reach, with its own close button. */
 @media (max-width: 991px) {
   header button.menu-button {
-    top: auto;
-    right: 16px;
-    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+    top: calc(8px + env(safe-area-inset-top, 0px));
+    right: 8px;
     width: 48px;
     height: 48px;
-    background-color: var(--main-charcoal);
-    box-shadow: 0 4px 14px rgba(30, 41, 48, 0.28);
+    background-color: var(--main-bg-color);
+    box-shadow: 0 2px 10px rgba(30, 41, 48, 0.16);
   }
   header button.menu-button:hover,
   header button.menu-button:focus,
   header button.menu-button:active {
-    background-color: var(--main-charcoal);
+    background-color: var(--main-bg-color);
   }
   header button.menu-button:focus-visible {
     outline: 3px solid var(--main-highlight);
@@ -672,7 +674,7 @@ nav.main-navigation ul.menu li.menu-item a:focus .nav-link-label {
     opacity: 1;
   }
   header button.menu-button .nav-icon span {
-    background: #fff;
+    background: var(--main-charcoal);
   }
   header button.menu-button .nav-icon span:nth-child(2),
   header button.menu-button .nav-icon span:nth-child(3),
@@ -700,15 +702,14 @@ nav.main-navigation ul.menu li.menu-item a:focus .nav-link-label {
     max-height: 85dvh;
     border-radius: 16px 16px 0 0;
     box-shadow: 0 -6px 24px rgba(30, 41, 48, 0.18);
-    /* room below the links for the floating close button */
-    padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px));
+    padding-bottom: calc(24px + env(safe-area-inset-bottom, 0px));
   }
   .slide-enter-from,
   .slide-leave-to {
     transform: translateY(100%);
   }
   h1.brand {
-    margin: 20px 24px 12px;
+    margin: 20px 64px 12px; /* clear of the sheet's close button, still centered */
     text-align: center;
   }
   h1.brand span.ml {
@@ -755,10 +756,26 @@ nav.main-navigation ul.menu li.menu-item a:focus .nav-link-label {
     transition: none;
   }
 }
-/* Pages leave room at the bottom so the floating menu button never covers the last lines */
-@media (max-width: 991px) {
-  body {
-    padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px));
-  }
+/* Close button inside the bottom sheet (phones and tablets only) */
+.sheet-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--main-gray-tras);
+  color: var(--main-charcoal);
+  font-size: 1.1em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.sheet-close:focus-visible {
+  outline: 2px solid var(--main-charcoal);
+  outline-offset: 2px;
 }
 </style>

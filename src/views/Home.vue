@@ -311,8 +311,6 @@ ul.menu .btn.primary:focus-visible {
   .social :deep(ul.socialmedia) {
     margin: 8px 0 0;
     justify-content: space-evenly;
-    /* the floating menu button sits at the right end of this row */
-    padding-right: 56px;
   }
 }
 /* Phones: the main button on its own row, the other two side by side */
