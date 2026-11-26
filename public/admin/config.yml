@@ -16,6 +16,8 @@ collections:
         file: "public/_data/settings.json"
         fields:
           - { label: "Global title", name: "site_title", widget: "string" }
+          - { label: "Contact email (menu 'Get in touch' button)", name: "contact_email", widget: "string" }
+          - { label: "LinkedIn URL (menu 'Get in touch' button)", name: "linkedin_url", widget: "string", required: false }
       - name: "socialmedia"
         label: "Social Media Settings"
         file: "public/_data/socialmedia.json"

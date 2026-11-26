@@ -26,9 +26,6 @@
     <section id="portfolio">
       <Portfolio />
     </section>
-    <section id="contact">
-      <Contact />
-    </section>
   </div>
 </template>
 
@@ -38,7 +35,6 @@ import Social from "@/components/Social.vue";
 import Lottie from "@/components/Lottie.vue";
 import Resume from "@/views/Resume.vue";
 import Portfolio from "@/views/Portfolio.vue";
-import Contact from "@/views/Contact.vue";
 
 export default {
   name: "home",
@@ -47,7 +43,6 @@ export default {
     Lottie,
     Resume,
     Portfolio,
-    Contact,
   },
   data: function () {
     return {

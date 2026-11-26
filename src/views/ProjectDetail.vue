@@ -3,10 +3,7 @@
     <article v-if="project">
       <header class="intro">
         <!-- The yellow flag runs from the top of the browser down to the title's first word,
-             and carries the way back to the portfolio. -->
-        <router-link class="back" to="/#portfolio">
-          <span aria-hidden="true">←</span> Portfolio
-        </router-link>
+             like the page titles on Resume and Portfolio. -->
         <h1 class="case-title"><span class="highlight flag">{{ firstWord }}</span>{{ restOfTitle }}</h1>
         <p v-if="detail.summary" class="summary">{{ detail.summary }}</p>
       </header>
@@ -113,17 +110,37 @@
         </p>
       </section>
 
-      <nav class="pager" aria-label="More projects">
-        <router-link v-if="prev" class="prev" :to="`/portfolio/${prev.slug}`">
-          <span class="dir">← Previous</span>
-          <span class="name">{{ prev.title }}</span>
-        </router-link>
-        <span v-else></span>
-        <router-link v-if="next" class="next" :to="`/portfolio/${next.slug}`">
-          <span class="dir">Next →</span>
-          <span class="name">{{ next.title }}</span>
-        </router-link>
-      </nav>
+      <!-- The other public cases, as the same cards used on the Portfolio page -->
+      <section v-if="others.length" class="more" aria-labelledby="more-title">
+        <div class="more-head">
+          <h2 id="more-title"><span class="highlight">More</span> projects</h2>
+          <!-- Desktop: each arrow scrolls the row by a whole page of 3 projects (wraps around).
+               Phones: hidden; the row is swiped instead. -->
+          <div v-if="morePages > 1" class="more-nav">
+            <button class="icon-btn" type="button" aria-label="Previous projects" aria-controls="more-track" @click="turnPage(-1)">
+              <font-awesome-icon icon="chevron-left" aria-hidden="true" />
+            </button>
+            <button class="icon-btn" type="button" aria-label="Next projects" aria-controls="more-track" @click="turnPage(1)">
+              <font-awesome-icon icon="chevron-right" aria-hidden="true" />
+            </button>
+          </div>
+        </div>
+        <div id="more-track" ref="moreTrack" class="more-track">
+          <Project
+            v-for="p in others"
+            :key="p.slug"
+            class="more-slide"
+            :show="true"
+            :title="p.title"
+            :content="p.content"
+            :file="p.file"
+            :cover="p.image"
+            :slug="p.slug"
+          />
+          <!-- Empty slots so the last page lines up as a full page of 3 -->
+          <div v-for="n in moreSpacers" :key="`spacer-${n}`" class="more-spacer" aria-hidden="true"></div>
+        </div>
+      </section>
     </article>
 
     <div v-else class="missing">
@@ -137,12 +154,14 @@
 
 <script>
 import axios from "axios";
+import Project from "@/components/Project.vue";
 
 export default {
   name: "ProjectDetail",
+  components: { Project },
   props: { slug: { type: String, required: true } },
   data() {
-    return { projects: [], loaded: false };
+    return { projects: [], loaded: false, morePage: 0 };
   },
   computed: {
     // Only public projects that have a detail page; hidden ones stay unreachable.
@@ -158,11 +177,16 @@ export default {
     detail() {
       return (this.project && this.project.detail) || {};
     },
-    prev() {
-      return this.index > 0 ? this.visible[this.index - 1] : null;
+    // Every other public case, in portfolio order, for the "More projects" grid.
+    others() {
+      return this.visible.filter((p) => p.slug !== this.slug);
     },
-    next() {
-      return this.index >= 0 && this.index < this.visible.length - 1 ? this.visible[this.index + 1] : null;
+    // Pages of 3 for the desktop carousel.
+    morePages() {
+      return Math.ceil(this.others.length / 3);
+    },
+    moreSpacers() {
+      return this.morePages * 3 - this.others.length;
     },
     firstWord() {
       const t = (this.project && this.project.title) || "";
@@ -182,6 +206,17 @@ export default {
         document.title = p ? `${p.title} - Otto Zaiser [Designer]` : "Project not found - Otto Zaiser [Designer]";
       },
     },
+    // New case (or data just loaded): jump the carousel back to its first page.
+    others() {
+      this.morePage = 0;
+      this.$nextTick(() => this.scrollToPage(false));
+    },
+  },
+  mounted() {
+    window.addEventListener("resize", this.onResize);
+  },
+  beforeUnmount() {
+    window.removeEventListener("resize", this.onResize);
   },
   created() {
     axios
@@ -197,6 +232,25 @@ export default {
       });
   },
   methods: {
+    // Scroll to the previous/next page of 3 projects, wrapping around at either end.
+    turnPage(dir) {
+      this.morePage = (this.morePage + dir + this.morePages) % this.morePages;
+      this.scrollToPage(true);
+    },
+    // One page = the track's visible width plus one gap (3 cards + 3 gaps).
+    scrollToPage(smooth) {
+      const track = this.$refs.moreTrack;
+      if (!track) return;
+      const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      track.scrollTo({ left: this.morePage * (track.clientWidth + gap), behavior: smooth && !reduceMotion ? "smooth" : "auto" });
+    },
+    // Keep the current page aligned if the window is resized (desktop only: on phones the row is
+    // swiped freely, and mobile browsers fire resize when the address bar shows/hides).
+    onResize() {
+      if (window.matchMedia("(max-width: 760px)").matches) return;
+      this.scrollToPage(false);
+    },
     // CMS image paths are stored as /public/_data/...; the site serves them from /_data/...
     media(path) {
       return (path || "").split("/public").pop();
@@ -242,27 +296,11 @@ export default {
 .intro {
   position: relative;
 }
-/* Yellow flag: starts at the very top of the page (no menu here) and ends under the first word.
-   min-width keeps "← Portfolio" inside it even for short words like "BFA" or ".ar". */
+/* Yellow flag: starts at the very top of the page and hugs the title's first word,
+   like the page titles elsewhere on the site. */
 .case-title .flag {
   display: inline-block;
-  padding: 120px 10px 0;
-  min-width: 150px;
-}
-.back {
-  position: absolute;
-  top: 24px;
-  left: 10px;
-  z-index: 1;
-  font-size: 0.9em;
-  font-weight: 600;
-  color: var(--main-charcoal);
-  text-decoration: none;
-  white-space: nowrap;
-}
-.back:hover,
-.back:focus {
-  text-decoration: underline;
+  padding: 120px 0 0;
 }
 h1 {
   font-size: 2.4em;
@@ -476,7 +514,6 @@ figcaption {
 @media (max-width: 760px) {
   .case-title .flag {
     padding-top: 96px;
-    min-width: 140px;
   }
   h1 {
     font-size: 1.9em;
@@ -492,38 +529,58 @@ figcaption {
     gap: 16px;
   }
 }
-.pager {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
+.more {
   margin-top: 96px;
-  padding-top: 24px;
+  padding-top: 32px;
   border-top: 1px solid var(--main-lightgray);
 }
-.pager a {
+.more-head {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding: 16px;
-  border: 1px solid var(--main-lightgray);
-  border-radius: 4px;
-  text-decoration: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 0 0 16px;
+}
+.more h2 {
+  font-size: 1.5em; /* site h2 size */
+  margin: 0;
   color: var(--main-charcoal);
-  transition: all 0.3s ease;
 }
-.pager a:hover,
-.pager a:focus {
-  transform: translate(0, -3px);
+.more-nav {
+  display: flex;
+  gap: 8px;
 }
-.pager .next {
-  text-align: right;
+.more-nav .icon-btn {
+  border: 1px solid var(--main-charcoal);
+  cursor: pointer;
 }
-.pager .dir {
-  font-size: 0.85em;
-  color: var(--main-txt-gray);
+/* Desktop: one row of cards, 3 visible; the arrows scroll it a whole page at a time. */
+.more-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 2 * 16px) / 3);
+  column-gap: 16px;
+  overflow-x: hidden;
+  padding: 8px 0 4px; /* room for the cards' hover lift */
 }
-.pager .name {
-  font-weight: bold;
+/* Phones: no arrows; swipe the row, one card plus a peek of the next. */
+@media (max-width: 760px) {
+  .more-nav,
+  .more-spacer {
+    display: none;
+  }
+  .more-track {
+    grid-auto-columns: 82%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+  .more-track::-webkit-scrollbar {
+    display: none;
+  }
+  .more-slide {
+    scroll-snap-align: start;
+  }
 }
 .missing {
   padding: 48px 0;

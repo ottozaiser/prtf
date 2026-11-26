@@ -42,6 +42,10 @@
                   </router-link>
                   <a :href="item.url" target="_blank" v-else><span class="nav-link-label">{{ item.name }}</span></a>
                 </li>
+                <!-- "Get in touch" call to action: copy email / email / LinkedIn -->
+                <li v-if="settings && settings.contact_email" class="menu-item menu-cta">
+                  <ContactMenu :email="settings.contact_email" :linkedin="settings.linkedin_url" />
+                </li>
               </ul>
             </div>
             <!-- <button aria-label="Close Navigation" @click="toggleMenu">x</button>  -->
@@ -59,11 +63,12 @@
 <script>
 // import Social from "@/components/Social.vue";
 import axios from "axios";
+import ContactMenu from "@/components/ContactMenu.vue";
 export default {
   name: "MainNav",
-  // components: {
-  //   Social,
-  // },
+  components: {
+    ContactMenu,
+  },
   props: {
     settings: Object,
   },
@@ -180,6 +185,11 @@ export default {
       var pathAndHash = url.split("#");
       var path = pathAndHash[0] || "/";
       var hash = pathAndHash[1] ? `#${pathAndHash[1]}` : "";
+
+      // Case-study pages (/portfolio/<slug>) belong to the Portfolio menu item.
+      if (this.$route.path.startsWith("/portfolio/") && (hash === "#portfolio" || path === "/portfolio")) {
+        return true;
+      }
 
       if (hash) {
         return this.$route.path === path && this.activeSectionHash === hash;
@@ -633,5 +643,51 @@ nav.main-navigation ul.menu li.menu-item a:focus .nav-link-label {
 .slide-enter,
 .slide-leave-to {
   transform: translateZ(0) translateX(300px);
+}
+
+/* Mobile drawer, standard layout: brand on top, list from the top with ~50px rows and dividers,
+   active item bold with an inset bar (no text shift), CTA as a full-width button at the end. */
+@media (max-width: 991px) {
+  .panel-menu {
+    min-width: min(320px, 85vw);
+  }
+  h1.brand {
+    margin: 20px 72px 12px 24px; /* room on the right for the close button */
+  }
+  h1.brand span.ml {
+    padding-left: 0;
+  }
+  nav.main-navigation ul.menu {
+    margin-top: 8px;
+    flex-grow: 0;
+    justify-content: flex-start;
+    border-top: 1px solid var(--main-lightgray);
+  }
+  nav.main-navigation ul.menu li.menu-item {
+    border-bottom: 1px solid var(--main-lightgray);
+  }
+  nav.main-navigation ul.menu li.menu-item.menu-cta {
+    border-bottom: 0;
+  }
+  nav.main-navigation ul.menu li.menu-item a {
+    padding: 14px 24px;
+    border-left: 0;
+  }
+  nav.main-navigation ul.menu li.menu-item a:hover,
+  nav.main-navigation ul.menu li.menu-item a:focus {
+    border-left: 0;
+    background-color: var(--main-gray-tras);
+    box-shadow: inset 4px 0 0 var(--main-highlight);
+  }
+  nav.main-navigation ul.menu li.menu-item a.router-link-exact-active,
+  nav.main-navigation ul.menu li.menu-item a.is-active,
+  nav.main-navigation ul.menu li.menu-item a.router-link-exact-active:hover,
+  nav.main-navigation ul.menu li.menu-item a.router-link-exact-active:focus,
+  nav.main-navigation ul.menu li.menu-item a.is-active:hover,
+  nav.main-navigation ul.menu li.menu-item a.is-active:focus {
+    border-left: 0;
+    font-weight: 600;
+    box-shadow: inset 4px 0 0 var(--main-charcoal);
+  }
 }
 </style>

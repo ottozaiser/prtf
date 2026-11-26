@@ -26,8 +26,6 @@ const routes = [
 		name: "project",
 		props: true,
 		component: () => import(/* webpackChunkName: "project" */ "../views/ProjectDetail.vue"),
-		// Case studies are full-focus pages: no main menu, the back link lives in the title flag.
-		meta: { hideNav: true },
 	},
 	{
 		path: "/resume",
@@ -99,7 +97,7 @@ const routes = [
 			if (from.path === to.path && findEl(to.hash)) {
 				return { el: to.hash, behavior: "smooth" };
 			}
-			// Coming from another page (e.g. /story -> /#contact): Home renders only after its
+			// Coming from another page (e.g. /story -> /#portfolio): Home renders only after its
 			// data loads, and each section then fetches its own JSON, so the page keeps growing.
 			// Wait until the target exists and the page height settles before scrolling.
 			return waitForStableEl(to.hash).then((found) =>

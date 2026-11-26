@@ -4,7 +4,6 @@
 			"name": "Resume",
 			"url": "/#resume"
 		},
-
 		{
 			"name": "Portfolio",
 			"url": "/#portfolio"
@@ -12,10 +11,6 @@
 		{
 			"name": "My story",
 			"url": "/story"
-		},
-		{
-			"name": "Contact",
-			"url": "/#contact"
 		}
 	]
 }
