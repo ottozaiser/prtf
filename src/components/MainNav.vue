@@ -645,40 +645,95 @@ nav.main-navigation ul.menu li.menu-item a:focus .nav-link-label {
   transform: translateZ(0) translateX(300px);
 }
 
-/* Mobile drawer, standard layout: brand on top, list from the top with ~50px rows and dividers,
-   active item bold with an inset bar (no text shift), CTA as a full-width button at the end. */
+/* Phones and tablets: thumb-friendly navigation. The menu button floats at the bottom right, and
+   the menu opens as a bottom sheet with centered links just above it. */
 @media (max-width: 991px) {
+  header button.menu-button {
+    top: auto;
+    right: 16px;
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+    width: 48px;
+    height: 48px;
+    background-color: var(--main-charcoal);
+    box-shadow: 0 4px 14px rgba(30, 41, 48, 0.28);
+  }
+  header button.menu-button:hover,
+  header button.menu-button:focus,
+  header button.menu-button:active {
+    background-color: var(--main-charcoal);
+  }
+  header button.menu-button:focus-visible {
+    outline: 3px solid var(--main-highlight);
+    outline-offset: 2px;
+  }
+  header button.menu-button .nav-icon {
+    width: 20px;
+    height: 16px;
+    opacity: 1;
+  }
+  header button.menu-button .nav-icon span {
+    background: #fff;
+  }
+  header button.menu-button .nav-icon span:nth-child(2),
+  header button.menu-button .nav-icon span:nth-child(3),
+  header button.menu-button .open span:nth-child(1),
+  header button.menu-button .open span:nth-child(4) {
+    top: 7px;
+  }
+  header button.menu-button .nav-icon span:nth-child(4) {
+    top: 14px;
+  }
+  header button.menu-button .open span:nth-child(1),
+  header button.menu-button .open span:nth-child(4) {
+    top: 7px;
+  }
+
   .panel-menu {
-    min-width: min(320px, 85vw);
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    max-height: 85vh;
+    max-height: 85dvh;
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 -6px 24px rgba(30, 41, 48, 0.18);
+    /* room below the links for the floating close button */
+    padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px));
+  }
+  .slide-enter-from,
+  .slide-leave-to {
+    transform: translateY(100%);
   }
   h1.brand {
-    margin: 20px 72px 12px 24px; /* room on the right for the close button */
+    margin: 20px 24px 12px;
+    text-align: center;
   }
   h1.brand span.ml {
     padding-left: 0;
   }
   nav.main-navigation ul.menu {
-    margin-top: 8px;
+    margin-top: 0;
     flex-grow: 0;
     justify-content: flex-start;
-    border-top: 1px solid var(--main-lightgray);
-  }
-  nav.main-navigation ul.menu li.menu-item {
-    border-bottom: 1px solid var(--main-lightgray);
-  }
-  nav.main-navigation ul.menu li.menu-item.menu-cta {
-    border-bottom: 0;
   }
   nav.main-navigation ul.menu li.menu-item a {
     padding: 14px 24px;
     border-left: 0;
   }
+  /* Page links only (not the Get in touch options inside the same list) */
+  nav.main-navigation ul.menu li.menu-item > a {
+    text-align: center;
+    font-size: 1.15em;
+  }
   nav.main-navigation ul.menu li.menu-item a:hover,
   nav.main-navigation ul.menu li.menu-item a:focus {
     border-left: 0;
     background-color: var(--main-gray-tras);
-    box-shadow: inset 4px 0 0 var(--main-highlight);
   }
+  /* Current page: a yellow highlighter stroke under the label, like the portfolio cards */
   nav.main-navigation ul.menu li.menu-item a.router-link-exact-active,
   nav.main-navigation ul.menu li.menu-item a.is-active,
   nav.main-navigation ul.menu li.menu-item a.router-link-exact-active:hover,
@@ -687,7 +742,23 @@ nav.main-navigation ul.menu li.menu-item a:focus .nav-link-label {
   nav.main-navigation ul.menu li.menu-item a.is-active:focus {
     border-left: 0;
     font-weight: 600;
-    box-shadow: inset 4px 0 0 var(--main-charcoal);
+  }
+  nav.main-navigation ul.menu li.menu-item a.router-link-exact-active .nav-link-label,
+  nav.main-navigation ul.menu li.menu-item a.is-active .nav-link-label {
+    background: linear-gradient(var(--main-highlight), var(--main-highlight)) no-repeat 0 88% / 100% 0.4em;
+    padding: 0 2px;
+  }
+}
+@media (max-width: 991px) and (prefers-reduced-motion: reduce) {
+  .slide-enter-active,
+  .slide-leave-active {
+    transition: none;
+  }
+}
+/* Pages leave room at the bottom so the floating menu button never covers the last lines */
+@media (max-width: 991px) {
+  body {
+    padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px));
   }
 }
 </style>
