@@ -239,6 +239,13 @@ nav.main-navigation ul.menu li.menu-item .contact-menu a.option:focus-visible {
   nav.main-navigation ul.menu li.menu-item .contact-menu a.option:focus {
     min-height: 44px;
   }
+  /* In the mobile menu the options are centered, like the page links above them */
+  .nav .option,
+  nav.main-navigation ul.menu li.menu-item .contact-menu.nav a.option,
+  nav.main-navigation ul.menu li.menu-item .contact-menu.nav a.option:hover,
+  nav.main-navigation ul.menu li.menu-item .contact-menu.nav a.option:focus {
+    justify-content: center;
+  }
   .nav .options {
     display: block;
     position: static;
