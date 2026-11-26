@@ -173,17 +173,18 @@ export default {
         return;
       }
 
-      var resumeEl = document.getElementById("resume");
-      var portfolioEl = document.getElementById("portfolio");
-      var offset = this.isDesktop ? 120 : 32;
+      // The section you're in is the last one whose top you've scrolled past (works whatever
+      // order the home sections are in).
+      var offset = this.isDesktop ? 120 : Math.round(window.innerHeight / 3);
       var scrollPosition = window.scrollY + offset;
       var activeHash = "";
-
-      if (portfolioEl && scrollPosition >= portfolioEl.offsetTop) {
-        activeHash = "#portfolio";
-      } else if (resumeEl && scrollPosition >= resumeEl.offsetTop) {
-        activeHash = "#resume";
-      }
+      ["portfolio", "resume"]
+        .map((id) => document.getElementById(id))
+        .filter(Boolean)
+        .sort((a, b) => a.offsetTop - b.offsetTop)
+        .forEach((el) => {
+          if (scrollPosition >= el.offsetTop) activeHash = "#" + el.id;
+        });
 
       this.activeSectionHash = activeHash;
     },
@@ -505,7 +506,7 @@ h1.brand a {
     transition: background-color 0.2s ease, transform 0.2s ease;
   }
   nav.main-navigation ul.menu li.menu-item a:hover,
-  nav.main-navigation ul.menu li.menu-item a:focus {
+  nav.main-navigation ul.menu li.menu-item a:focus-visible {
     border-left: 0;
     border-bottom: 3px solid var(--main-highlight);
     background-color: transparent;
@@ -518,9 +519,9 @@ h1.brand a {
     border-bottom: 3px solid var(--main-charcoal);
   }
   nav.main-navigation ul.menu li.menu-item a.router-link-exact-active:hover,
-  nav.main-navigation ul.menu li.menu-item a.router-link-exact-active:focus,
+  nav.main-navigation ul.menu li.menu-item a.router-link-exact-active:focus-visible,
   nav.main-navigation ul.menu li.menu-item a.is-active:hover,
-  nav.main-navigation ul.menu li.menu-item a.is-active:focus {
+  nav.main-navigation ul.menu li.menu-item a.is-active:focus-visible {
     border-left: 0;
     border-bottom: 3px solid var(--main-highlight);
   }
@@ -558,7 +559,7 @@ nav.main-navigation ul.menu li.menu-item a {
   transition: all 0.2s ease;
 }
 nav.main-navigation ul.menu li.menu-item a:hover,
-nav.main-navigation ul.menu li.menu-item a:focus {
+nav.main-navigation ul.menu li.menu-item a:focus-visible {
   border-left: 5px solid var(--main-highlight);
   background-color: var(--main-lightgray);
 }
@@ -567,9 +568,9 @@ nav.main-navigation ul.menu li.menu-item a.is-active {
   border-left: 5px solid var(--main-charcoal);
 }
 nav.main-navigation ul.menu li.menu-item a.router-link-exact-active:hover,
-nav.main-navigation ul.menu li.menu-item a.router-link-exact-active:focus,
+nav.main-navigation ul.menu li.menu-item a.router-link-exact-active:focus-visible,
 nav.main-navigation ul.menu li.menu-item a.is-active:hover,
-nav.main-navigation ul.menu li.menu-item a.is-active:focus {
+nav.main-navigation ul.menu li.menu-item a.is-active:focus-visible {
   border-left: 5px solid var(--main-charcoal);
 }
 
@@ -588,7 +589,7 @@ nav.main-navigation ul.menu li.menu-item a.is-active:focus {
     transition: background-color 0.2s ease, transform 0.2s ease;
   }
   nav.main-navigation ul.menu li.menu-item a:hover,
-  nav.main-navigation ul.menu li.menu-item a:focus {
+  nav.main-navigation ul.menu li.menu-item a:focus-visible {
     border-left: 0;
     border-bottom: 3px solid var(--main-highlight);
     background-color: transparent;
@@ -599,16 +600,16 @@ nav.main-navigation ul.menu li.menu-item a.is-active:focus {
     border-bottom: 3px solid var(--main-charcoal);
   }
   nav.main-navigation ul.menu li.menu-item a.router-link-exact-active:hover,
-  nav.main-navigation ul.menu li.menu-item a.router-link-exact-active:focus,
+  nav.main-navigation ul.menu li.menu-item a.router-link-exact-active:focus-visible,
   nav.main-navigation ul.menu li.menu-item a.is-active:hover,
-  nav.main-navigation ul.menu li.menu-item a.is-active:focus {
+  nav.main-navigation ul.menu li.menu-item a.is-active:focus-visible {
     border-left: 0;
     border-bottom: 3px solid var(--main-highlight);
   }
 }
 
 nav.main-navigation ul.menu li.menu-item a:hover .nav-link-label,
-nav.main-navigation ul.menu li.menu-item a:focus .nav-link-label {
+nav.main-navigation ul.menu li.menu-item a:focus-visible .nav-link-label {
   display: inline-block;
   animation: nav-link-bounce 0.3s ease;
 }
@@ -744,7 +745,7 @@ nav.main-navigation ul.menu li.menu-item a:focus .nav-link-label {
     font-size: 1.15em;
   }
   nav.main-navigation ul.menu li.menu-item a:hover,
-  nav.main-navigation ul.menu li.menu-item a:focus {
+  nav.main-navigation ul.menu li.menu-item a:focus-visible {
     border-left: 0;
     background-color: var(--main-gray-tras);
   }
@@ -752,9 +753,9 @@ nav.main-navigation ul.menu li.menu-item a:focus .nav-link-label {
   nav.main-navigation ul.menu li.menu-item a.router-link-exact-active,
   nav.main-navigation ul.menu li.menu-item a.is-active,
   nav.main-navigation ul.menu li.menu-item a.router-link-exact-active:hover,
-  nav.main-navigation ul.menu li.menu-item a.router-link-exact-active:focus,
+  nav.main-navigation ul.menu li.menu-item a.router-link-exact-active:focus-visible,
   nav.main-navigation ul.menu li.menu-item a.is-active:hover,
-  nav.main-navigation ul.menu li.menu-item a.is-active:focus {
+  nav.main-navigation ul.menu li.menu-item a.is-active:focus-visible {
     border-left: 0;
     font-weight: 600;
   }
@@ -780,6 +781,13 @@ nav.main-navigation .panel-menu .sheet-social ul.socialmedia {
 @media (max-width: 991px) {
   body {
     padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px));
+  }
+}
+/* Touch screens: no hover state, so the last tapped link doesn't look selected */
+@media (max-width: 991px) and (hover: none) {
+  nav.main-navigation ul.menu li.menu-item a:hover {
+    background-color: transparent;
+    box-shadow: none;
   }
 }
 </style>

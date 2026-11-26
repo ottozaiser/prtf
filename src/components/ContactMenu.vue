@@ -312,4 +312,13 @@ nav.main-navigation ul.menu li.menu-item .contact-menu a.option:focus-visible {
     right: 0;
   }
 }
+/* Touch screens: no sticky hover background on the last tapped option */
+@media (hover: none) {
+  .option:hover {
+    background: transparent;
+  }
+  nav.main-navigation ul.menu li.menu-item .contact-menu a.option:hover {
+    background: transparent;
+  }
+}
 </style>
