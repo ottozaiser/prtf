@@ -13,6 +13,7 @@
         v-bind:location="post.location"
         v-bind:file="post.file"
         v-bind:cover="post.image"
+        v-bind:slug="post.detail ? post.slug : undefined"
       />
     </div>
     <div class="clientcontainer">

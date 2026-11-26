@@ -8,7 +8,7 @@
 		</div>
 		<Loader v-show="loading" />
 		<div v-if="settings">
-			<MainNav ref="navComponent" :settings="settings" />
+			<MainNav v-if="!$route.meta.hideNav" ref="navComponent" :settings="settings" />
 			<main>
 				<router-view />
 			</main>

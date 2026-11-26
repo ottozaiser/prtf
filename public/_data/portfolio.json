@@ -1,74 +1,576 @@
 {
   "portfolio": {
     "title": "Portfolio",
-    "content": "<p>I am currently working on this section. Beware that I can not show all because NDAs. In the meantime, you can see some of my work on <b>PDFs</b>:</p>",
+    "content": "<p>A selection of my work, from product and UX design to branding and motion. Some projects are under NDA, so I can only share part of them here. Click any project to see the full story.</p>",
     "projects": [
       {
         "title": "Microsoft",
         "show": true,
-        "content": "Training to retailers about the features of the brand new Office 365.",
+        "content": "An iPad training app that got retail sales teams up to speed on Office 365.",
         "image": "/public/_data/media/microsoft.png",
-        "file": "https://drive.google.com/file/d/18ffK6BgsCCkP4zwyDvZP5SfN3oTxIBS3/view"
+        "file": "https://drive.google.com/file/d/18ffK6BgsCCkP4zwyDvZP5SfN3oTxIBS3/view",
+        "slug": "microsoft",
+        "detail": {
+          "client": "Microsoft Corporation is an American multinational technology company headquartered in Redmond, Washington.",
+          "context": "Office 365 was about to launch, and retail sales associates needed to learn the new features fast so they could demo them to customers.",
+          "role": "Designer, technical lead and developer, from visual design to the final build.",
+          "sections": [
+            {
+              "image": "/public/_data/media/projects/microsoft/01.png",
+              "caption": "The home screen: every tile launches a short video demo.",
+              "alt": "Office 365 retail training on iPad: The home screen: every tile launches a short video demo.",
+              "device": true
+            },
+            {
+              "image": "/public/_data/media/projects/microsoft/02.png",
+              "caption": "The visual style follows Microsoft’s brand guidelines to the letter.",
+              "alt": "Office 365 retail training on iPad: The visual style follows Microsoft’s brand guidelines to the letter.",
+              "device": true
+            },
+            {
+              "image": "/public/_data/media/projects/microsoft/03.png",
+              "caption": "I built the layout on Microsoft’s own tile grid, so the content feels native to the brand.",
+              "alt": "Office 365 retail training on iPad: I built the layout on Microsoft’s own tile grid, so the content feels native to the brand.",
+              "device": true
+            },
+            {
+              "image": "/public/_data/media/projects/microsoft/04.png",
+              "caption": "Video demos come with step-by-step tutorial animations.",
+              "alt": "Office 365 retail training on iPad: Video demos come with step-by-step tutorial animations.",
+              "device": true
+            },
+            {
+              "image": "/public/_data/media/projects/microsoft/05.png",
+              "caption": "The design landed with no major change requests from the client.",
+              "alt": "Office 365 retail training on iPad: The design landed with no major change requests from the client.",
+              "device": true
+            },
+            {
+              "image": "/public/_data/media/projects/microsoft/06.png",
+              "caption": "Once every video has been watched, a Next button unlocks.",
+              "alt": "Office 365 retail training on iPad: Once every video has been watched, a Next button unlocks.",
+              "device": true
+            },
+            {
+              "image": "/public/_data/media/projects/microsoft/07.png",
+              "caption": "The design became a template: we built six more products on it.",
+              "alt": "Office 365 retail training on iPad: The design became a template: we built six more products on it.",
+              "device": true
+            }
+          ],
+          "summary": "A tile-based iPad training app that got retail sales teams up to speed on Office 365, and became the template for six more products."
+        }
       },
       {
         "title": "Sony",
         "show": true,
-        "content": "A new device called Dash was launched and the retailers needed to know about it.",
+        "content": "A gamified tutorial that taught people how to use Sony’s new Dash device.",
         "image": "/public/_data/media/sony.png",
-        "file": "https://drive.google.com/file/d/1mmbDFRsGIvRNHi73ZZ5gDhccxzesNFPA/view"
+        "file": "https://drive.google.com/file/d/1mmbDFRsGIvRNHi73ZZ5gDhccxzesNFPA/view",
+        "slug": "sony",
+        "detail": {
+          "client": "Sony Corporation is a Japanese multinational conglomerate headquartered in Minato, Tokyo.",
+          "context": "In 2010, Sony launched Dash, a new personal internet viewer, and needed tutorials to show people how to use it.",
+          "role": "Designer, technical lead and developer.",
+          "sections": [
+            {
+              "image": "/public/_data/media/projects/sony/01.png",
+              "caption": "We built a game, not a slideshow, to introduce the device.",
+              "alt": "Sony Dash tutorial: We built a game, not a slideshow, to introduce the device.",
+              "device": true
+            },
+            {
+              "image": "/public/_data/media/projects/sony/02.png",
+              "caption": "Users explore the room to find hidden objects, and a friendly character explains each feature.",
+              "alt": "Sony Dash tutorial: Users explore the room to find hidden objects, and a friendly character explains each feature.",
+              "device": true
+            },
+            {
+              "image": "/public/_data/media/projects/sony/03.png",
+              "caption": "Find every object and the Dash appears, ready to try.",
+              "alt": "Sony Dash tutorial: Find every object and the Dash appears, ready to try.",
+              "device": true
+            },
+            {
+              "image": "/public/_data/media/projects/sony/04.png",
+              "caption": "Complete a room and the character flies off to the next one.",
+              "alt": "Sony Dash tutorial: Complete a room and the character flies off to the next one.",
+              "device": true
+            },
+            {
+              "image": "/public/_data/media/projects/sony/05.png",
+              "caption": "Sony ended Dash support in 2017, but the tutorial lives on here.",
+              "alt": "Sony Dash tutorial: Sony ended Dash support in 2017, but the tutorial lives on here.",
+              "device": true
+            }
+          ],
+          "summary": "Instead of a slideshow, a game: users explore a virtual home to discover what Sony’s new Dash device can do."
+        }
       },
       {
         "title": "BFA",
         "show": true,
-        "content": "I helped Blockchain Federal Argentina to create their brand, website and applications.",
+        "content": "Brand, website and apps for Argentina’s public blockchain, from a blank page to its 2019 conference.",
         "image": "/public/_data/media/bfa.png",
-        "file": "https://drive.google.com/file/d/1uV1F7vlxTZ0RRc4i4X_ZavfjwbV0JmVm/view"
+        "file": "https://drive.google.com/file/d/1uV1F7vlxTZ0RRc4i4X_ZavfjwbV0JmVm/view",
+        "slug": "bfa",
+        "detail": {
+          "client": "Blockchain Federal Argentina (BFA) is an open, multi-service platform for blockchain-based services and applications, built collaboratively by different sectors.",
+          "context": "BFA was born from a collaboration between different sectors, and that collaborative model is the backbone of the platform. When I joined, it was just an idea. My job was to make it visible and real.",
+          "role": "Lead designer: branding, UI design, prototyping, heuristics, communication and consulting.",
+          "sections": [
+            {
+              "id": "visual-identity",
+              "heading": "Visual identity",
+              "text": "I created BFA’s brand and carried it across every touchpoint: the website, presentations and icons, and the BFA’19 conference.",
+              "link": {
+                "label": "Visit bfa.ar",
+                "url": "https://bfa.ar/"
+              }
+            },
+            {
+              "image": "/public/_data/media/projects/bfa/01.png",
+              "caption": "The website, built on Drupal.",
+              "alt": "Blockchain Federal Argentina: The website, built on Drupal."
+            },
+            {
+              "image": "/public/_data/media/projects/bfa/02.png",
+              "caption": "A system of page designs for the website.",
+              "alt": "Blockchain Federal Argentina: A system of page designs for the website."
+            },
+            {
+              "image": "/public/_data/media/projects/bfa/04.jpg",
+              "caption": "The brand identity.",
+              "alt": "Blockchain Federal Argentina: The brand identity."
+            },
+            {
+              "image": "/public/_data/media/projects/bfa/05.png",
+              "caption": "A presentation system and a custom icon set.",
+              "alt": "Blockchain Federal Argentina: A presentation system and a custom icon set."
+            },
+            {
+              "image": "/public/_data/media/projects/bfa/06.png",
+              "caption": "The website for BFA’19, the platform’s 2019 conference.",
+              "alt": "Blockchain Federal Argentina: The website for BFA’19, the platform’s 2019 conference."
+            },
+            {
+              "image": "/public/_data/media/projects/bfa/07.jpg",
+              "caption": "BFA’19, live.",
+              "alt": "Blockchain Federal Argentina: BFA’19, live."
+            },
+            {
+              "heading": "Case study: Sello de Tiempo",
+              "text": "An institution in the BFA community built a timestamp tool: a way to prove that a digital document existed at a given moment and hasn’t changed since. They built it first, and then asked me to “put the design on it.”\n\nSo I started from a very basic app and worked out how to make it usable and appealing. There were no front-end developers on the project either, so I built the front end myself, in Vue.js, a framework I had never used before.",
+              "notes": [
+                "“Put the design on it.” Oh, I really love developers!",
+                "My first project with Vue.js"
+              ],
+              "id": "case-study",
+              "link": {
+                "label": "Try Sello de Tiempo live",
+                "url": "https://bfa.ar/sello"
+              }
+            },
+            {
+              "text": "The flow was simple: pick a file, stamp it, then verify that it was added to the blockchain. This is what they sent me:",
+              "image": "/public/_data/media/projects/bfa/timestamp-01.png",
+              "caption": "The original app: drop a file, stamp it, wait, done.",
+              "alt": "The original timestamp app: four basic screens with dashed boxes and plain buttons"
+            },
+            {
+              "heading": "A brand-new timestamp",
+              "text": "I started from the BFA website’s styles, which were based on Bootstrap, so the tool would feel like part of the platform.",
+              "image": "/public/_data/media/projects/bfa/timestamp-02.png",
+              "caption": "The first screen looks different, but works the same.",
+              "alt": "Sello de Tiempo 2.0: upload screen to drag or select files",
+              "level": 3
+            },
+            {
+              "image": "/public/_data/media/projects/bfa/timestamp-03.png",
+              "caption": "Users can now add several files and stamp or verify them all at once.",
+              "alt": "Sello de Tiempo 2.0: a file ready to verify or stamp, with its hash"
+            },
+            {
+              "image": "/public/_data/media/projects/bfa/timestamp-06.png",
+              "caption": "Success: a read-only verification link the user can copy and share.",
+              "alt": "Sello de Tiempo 2.0: file sent successfully, with a verification link"
+            },
+            {
+              "image": "/public/_data/media/projects/bfa/timestamp-08.png",
+              "caption": "Verified: the block number and date prove the file hasn’t changed since.",
+              "alt": "Sello de Tiempo 2.0: verification result with block number and date"
+            },
+            {
+              "heading": "Outcome",
+              "text": "The app was a success and was presented at blockchain events. Others keep improving it today, but I did my part.",
+              "notes": [
+                "The whole project lives in BFA’s private GitLab repository"
+              ],
+              "level": 3
+            }
+          ],
+          "summary": "Turning Argentina’s public blockchain from an idea into a brand, a website, web apps and a conference.",
+          "jumps": [
+            {
+              "label": "Visual identity",
+              "target": "visual-identity"
+            },
+            {
+              "label": "Case study: Sello de Tiempo",
+              "target": "case-study"
+            }
+          ]
+        }
       },
       {
         "title": "Viñetas Sueltas",
         "show": true,
-        "content": "I’ve been in charge of Viñetas Sueltas' from 2008 to 2017 and this is that story.",
+        "content": "Ten years of websites for an international comics festival, each one built from scratch in two weeks.",
         "image": "/public/_data/media/vinetas.png",
-        "file": "https://drive.google.com/file/d/1X3uAUzciYfkBicg1ZaaVjF8M9WlPVv0q/view"
+        "file": "https://drive.google.com/file/d/1X3uAUzciYfkBicg1ZaaVjF8M9WlPVv0q/view",
+        "slug": "vinetas-sueltas",
+        "detail": {
+          "client": "Viñetas Sueltas is a non-profit that runs an international comics festival in Buenos Aires. I co-founded it, and I designed and built its website from 2008 to 2017.",
+          "context": "Web development changed a lot between 2008 and 2017, but one constraint never did: two weeks to build the site from scratch, on top of my day job.",
+          "role": "Web designer, developer and branding.",
+          "sections": [
+            {
+              "heading": "2017",
+              "text": "With a solid setup from 2016 already in place, this year was all about the design.\n\nThe poster was drawn by an American artist, and I followed it from the first rough sketches to the final art. The sketches shaped the festival’s visual language, and the final poster gave me the color palette.",
+              "tech": [
+                "HTML5",
+                "CSS3",
+                "Responsive",
+                "JavaScript",
+                "Gulp",
+                "Bower",
+                "Bootstrap",
+                "Font Awesome",
+                "JSON",
+                "PHP form",
+                "Minified"
+              ],
+              "image": "/public/_data/media/projects/vinetas-sueltas/01.png",
+              "alt": "Viñetas Sueltas festival website, 2017"
+            },
+            {
+              "heading": "2016",
+              "text": "This year I rebuilt everything from scratch with a proper build system, using every tool I could find to make the two-week sprint easier.\n\nThe guest list lived in a JSON file, so adding, removing or editing guests took seconds. I set up Gulp, Bower and Bootstrap, and off I went.\n\nI talked with the illustrator early about the poster’s colors and composition, and I knew the guest list would arrive at the last minute. Knowing where the poster was headed made every section easier to design.",
+              "tech": [
+                "HTML5",
+                "CSS3",
+                "Responsive",
+                "JavaScript",
+                "Gulp",
+                "Bower",
+                "Bootstrap",
+                "Font Awesome",
+                "JSON",
+                "PHP form",
+                "Minified"
+              ],
+              "image": "/public/_data/media/projects/vinetas-sueltas/02.png",
+              "alt": "Viñetas Sueltas festival website, 2016"
+            },
+            {
+              "heading": "2012",
+              "text": "A site that’s online two weeks a year is perfect as a single page. It was also my first dive into media queries and responsive design, and a lot of fun.",
+              "tech": [
+                "HTML5 (single page)",
+                "CSS3",
+                "Almost responsive",
+                "JavaScript"
+              ],
+              "image": "/public/_data/media/projects/vinetas-sueltas/03.png",
+              "alt": "Viñetas Sueltas festival website, 2012"
+            },
+            {
+              "heading": "2010",
+              "text": "Steve Jobs had declared war on Flash, and we were going crazy. HTML came back hard, and I had to return to markup, which I’d left behind in the days of tables and spacer GIFs.\n\nThe result was cleaner and more readable. Not responsive, though: in 2010, I didn’t even own a smartphone.",
+              "tech": [
+                "HTML",
+                "CSS",
+                "jQuery"
+              ],
+              "image": "/public/_data/media/projects/vinetas-sueltas/04.png",
+              "alt": "Viñetas Sueltas festival website, 2010"
+            },
+            {
+              "heading": "2009",
+              "text": "I reused the 2008 site and brought the mascot to life with character animation. Apparently I was deep into grunge back then, and I went way over the top.",
+              "tech": [
+                "Adobe Flash 9",
+                "ActionScript 2.0",
+                "HTML (tables)",
+                "WordPress blog",
+                "Lightbox"
+              ],
+              "image": "/public/_data/media/projects/vinetas-sueltas/05.png",
+              "alt": "Viñetas Sueltas festival website, 2009"
+            },
+            {
+              "heading": "2008",
+              "text": "A friend called: a new independent comics festival needed a website, and it needed it within a week.\n\nIt may look rough today, but back then, pulling a blog’s RSS feed into a Flash site was a big deal.",
+              "tech": [
+                "Adobe Flash 7",
+                "ActionScript 2.0",
+                "WordPress blog",
+                "Lightbox"
+              ],
+              "image": "/public/_data/media/projects/vinetas-sueltas/06.png",
+              "alt": "Viñetas Sueltas festival website, 2008"
+            }
+          ],
+          "summary": "Ten years, six websites, one constraint: two weeks to build each one from scratch, on top of my day job."
+        }
       },
       {
         "title": "Nearpod",
         "show": false,
-        "content": "Helped the iOS team to create a new menu feature with Motion UI.",
+        "content": "Motion UI that brought new lesson libraries to Nearpod’s iPad app without touching its iconic Welcome screen.",
         "image": "/public/_data/media/portfolio_nearpod.png",
-        "file": "https://drive.google.com/file/d/1vYYhgm0KgLwD3uqAG34zO0En4X0hgKNX/view"
+        "file": "https://drive.google.com/file/d/1vYYhgm0KgLwD3uqAG34zO0En4X0hgKNX/view",
+        "slug": "nearpod",
+        "detail": {
+          "client": "Nearpod is an award-winning student engagement platform with lessons for teachers. I helped bring new features to its iPad app.",
+          "context": "Nearpod sold free and paid lessons in a store, then added custom libraries for schools, districts and programs, and these had to work on every platform.\n\nOn the web, a top navigation bar with drop-down menus handled it fine. On iOS it was a different game, and the team had been struggling to find an answer before I joined.",
+          "role": "Product designer (and firefighter): prototyping, UI design, heuristics and accessibility.",
+          "notes": [
+            "Nearpod wanted more revenue from premade lessons",
+            "The web app was evolving much faster than iOS"
+          ],
+          "sections": [
+            {
+              "heading": "Welcome",
+              "text": "This was the iPad Welcome screen. Stakeholders saw it almost as part of the brand and didn’t want it changed.\n\nSo instead of redesigning it, I proposed Motion UI: a smooth transition from the Welcome menu into a new submenu, like the Flash sites of the old days.\n\nThe heads of Product and iOS loved the idea, and we aligned on the solution.",
+              "image": "/public/_data/media/projects/nearpod/01.jpg",
+              "caption": "The Explore button leads to the lesson store.",
+              "alt": "Nearpod iPad Welcome screen with colored menu buttons",
+              "notes": [
+                "Experience gives you the tools to solve problems"
+              ]
+            },
+            {
+              "heading": "Transition",
+              "text": "Menu A turns into Menu B. The motion had to be fast but easy to follow, so users never lose their place.",
+              "image": "/public/_data/media/projects/nearpod/02.jpg",
+              "caption": "From Menu A (Welcome) to Menu B (Explore).",
+              "alt": "Nearpod menu A and menu B side by side"
+            },
+            {
+              "video": "VADTIoYk-ZI",
+              "caption": "The animation prototype.",
+              "text": "I presented the animation prototype to the Product Owner and stakeholders, and they were very happy with the result."
+            }
+          ],
+          "summary": "A Motion UI solution that fit new lesson libraries into Nearpod’s iPad app, without redesigning a screen stakeholders considered part of the brand."
+        }
       },
       {
-        "title": "CoS: Top-Level Domain",
+        "title": ".ar Domain Launch",
         "show": true,
-        "content": "I helped NIC Argentina to launch the opening of the top-level domain to users.",
-        "image": "/public/_data/media/portfolio_nic.png",
-        "file": "https://drive.google.com/file/d/1k7SR5Ipxj8AU2JsSMavdWW8Pl-lqLD5x/view"
+        "content": "Opening Argentina’s .ar domain to the public: 35,000 new domains registered in two months.",
+        "image": "/public/_data/media/portfolio_nic.jpg",
+        "file": "https://drive.google.com/file/d/1k7SR5Ipxj8AU2JsSMavdWW8Pl-lqLD5x/view",
+        "slug": "top-level-domain",
+        "detail": {
+          "client": "NIC Argentina is the government office that runs the .ar country-code top-level domain. I led the design work to open .ar domains to the public.",
+          "context": "Until 2019, people could only register subdomains like .com.ar or .net.ar. Opening .ar itself was a big deal for the organization, and it had been delayed for years.\n\nFour organizations shared the registration platform. Communication between them was poor, and our requests sat low on the platform provider’s list. So we focused on the teams we could work with and kept platform changes to a minimum, which meant the front end could only change in small ways.",
+          "role": "Lead designer: prototyping, UI design, heuristics, communication, branding and consulting.",
+          "notes": [
+            "UI design was part of a government framework library",
+            "Platform redesign was out of scope",
+            "The platform didn’t work very well",
+            "Working for the government is hard"
+          ],
+          "sections": [
+            {
+              "image": "/public/_data/media/projects/cos-top-level-domain/01.jpg",
+              "caption": "Where we started: domain search and the domain list.",
+              "alt": "NIC Argentina domain search and domain list"
+            },
+            {
+              "heading": "Opening phases",
+              "text": "To prevent speculation and domain squatting, the team designed a three-phase opening.",
+              "list": [
+                "Phase 1: people who already owned a name as .com.ar or .net.ar got priority to register it as .ar. If two people had priority on the same name, a raffle decided.",
+                "Phase 2: anyone could request any name, and a raffle decided among all requests.",
+                "Phase 3: open registration, like any other domain."
+              ],
+              "notes": [
+                "This case study focuses on Phase 1",
+                "Case 1: one user with priority to register",
+                "Case 2: two users with priority to register"
+              ]
+            },
+            {
+              "heading": "Tweak it",
+              "text": "The process was complicated, and our resources were limited. So I asked: “What if, instead of changing everything, we tweak it a little?”\n\nI focused on the domain list table. It was within our resources, and users already went there to renew their domains.\n\nRight away I noticed the action buttons were icons only. I couldn’t tell what they did until I hovered over them: a real usability and accessibility problem, and a quick one to fix.",
+              "image": "/public/_data/media/projects/cos-top-level-domain/02.jpg",
+              "caption": "Before: icon-only actions in the domain list.",
+              "alt": "Domain list with icon-only action buttons"
+            },
+            {
+              "image": "/public/_data/media/projects/cos-top-level-domain/03.jpg",
+              "caption": "Renew, Transfer, Delegate: the labels only appeared on hover.",
+              "alt": "Renew, Transfer and Delegate icon buttons with hover labels"
+            },
+            {
+              "text": "First change: a new, highlighted row for the reserved domain, with a clear Register button.",
+              "image": "/public/_data/media/projects/cos-top-level-domain/04.jpg",
+              "caption": "Case 1: one person with priority gets a highlighted row and a Register button.",
+              "alt": "Domain list with a highlighted reserved row and a Register button"
+            },
+            {
+              "text": "That solved Case 1. But what if two people have priority on the same domain?\n\nThat kicked off a UX writing debate that lasted days. Spanish has many near-synonyms with subtle differences, and the button label mattered. We landed on Registrar (Register) and Solicitar (Request).\n\nTogether with the Communication team, we also added an alert at the top of the page explaining the new rows and linking to details about the opening.",
+              "image": "/public/_data/media/projects/cos-top-level-domain/05.jpg",
+              "caption": "Case 2: Register and Request actions, plus an alert explaining the opening.",
+              "alt": "Domain list with Register and Request buttons and an information alert"
+            },
+            {
+              "heading": "Visual communication",
+              "text": "There was no time for the big campaign we had planned, so we explained the opening with a landing page, emails and social media.\n\nThe concept: “Your place on the Internet.” A new domain is a new world in cyberspace, so we went with a space theme.",
+              "image": "/public/_data/media/projects/cos-top-level-domain/06.jpg",
+              "caption": "The landing page: the new domain, its features, the opening timeline, and links to rules and FAQs.",
+              "alt": "Space-themed .ar landing page",
+              "link": {
+                "label": "nic.ar/ar",
+                "url": "https://nic.ar/ar"
+              }
+            },
+            {
+              "heading": "Aftermath",
+              "text": "Then the project stalled for almost a year because of the unstable platform, so we never got to test it with users.\n\nA political decision brought it back to life, and the teams had to ship fast. The opening ran on a very tight schedule, and some features were cut to meet the deadline.\n\nThe core changes (labeled buttons and the new rows) shipped. The alert didn’t, so people who hadn’t heard about the opening could get confused. We covered the gap with emails, a landing page, FAQs and tutorials.",
+              "notes": [
+                "I regret this the most"
+              ],
+              "list": [
+                "The platform was still unstable",
+                "The first deploy failed, pushing the launch back a day",
+                "Many users didn’t know the difference between a subdomain and a top-level domain"
+              ]
+            },
+            {
+              "heading": "Results",
+              "text": "Working for the government is hard, but it can be deeply rewarding. Despite all the issues:",
+              "list": [
+                "35,000 new .ar domains registered in the first two months",
+                "AR$9,500,000 in revenue",
+                "Large customers praised how simple the process was"
+              ],
+              "notes": [
+                "35,000 new domains!"
+              ]
+            },
+            {
+              "heading": "Extra: renewing multiple domains",
+              "text": "Renewing several domains at once sounds simple. It wasn’t.",
+              "image": "/public/_data/media/projects/cos-top-level-domain/07.jpg",
+              "caption": "Select several domains and renew them in one step.",
+              "alt": "Domain list with checkboxes and a Renew domains button",
+              "link": {
+                "label": "Try the functional prototype",
+                "url": "https://ottozaiser.github.io/renovacion-multiple/"
+              }
+            }
+          ],
+          "summary": "How small, targeted UX changes helped open Argentina’s .ar domain to the public, with 35,000 domains registered in the first two months."
+        }
       },
       {
-        "title": "Personal",
+        "title": "Personal Play Deportes",
         "show": true,
-        "content": "Art direction and motion for a promotional video.",
+        "content": "Art direction and motion design for a video telling the story of a sports app.",
         "image": "/public/_data/media/ppdeportes.png",
-        "file": "https://drive.google.com/file/d/1N6j7C5M9lUZFdIa2jVED0Nhw0bg0BJKa/view"
+        "file": "https://drive.google.com/file/d/1N6j7C5M9lUZFdIa2jVED0Nhw0bg0BJKa/view",
+        "slug": "personal-play",
+        "detail": {
+          "client": "Personal Play Deportes is a sports app from Personal, an Argentine telecom company. They wanted a video showing how the app had evolved.",
+          "context": "The brief was simple: a timeline. Every design and motion decision was mine.",
+          "role": "Art director and motion designer.",
+          "sections": [
+            {
+              "heading": "The video",
+              "video": "https://vimeo.com/177124881",
+              "caption": "Personal Play Deportes: the app’s story in two minutes."
+            },
+            {
+              "heading": "Behind the frames",
+              "text": "Key moments from the timeline, from the opening title to the app’s first releases."
+            },
+            {
+              "image": "/public/_data/media/projects/personal/01.jpg",
+              "caption": "Opening title.",
+              "alt": "Frame from the Personal Play Deportes video: Opening title."
+            },
+            {
+              "image": "/public/_data/media/projects/personal/02.jpg",
+              "caption": "Testing, Q&A and focus groups.",
+              "alt": "Frame from the Personal Play Deportes video: Testing, Q&A and focus groups."
+            },
+            {
+              "image": "/public/_data/media/projects/personal/03.jpg",
+              "caption": "January 2016.",
+              "alt": "Frame from the Personal Play Deportes video: January 2016."
+            },
+            {
+              "image": "/public/_data/media/projects/personal/04.jpg",
+              "caption": "February 2016.",
+              "alt": "Frame from the Personal Play Deportes video: February 2016."
+            },
+            {
+              "image": "/public/_data/media/projects/personal/05.jpg",
+              "caption": "Looking ahead.",
+              "alt": "Frame from the Personal Play Deportes video: Looking ahead."
+            }
+          ],
+          "summary": "A promotional video telling the story of a sports app, with full creative freedom on design and motion."
+        }
       },
       {
         "title": "Logos",
         "show": false,
-        "content": "Some logos I've designed.",
+        "content": "A selection of logos I’ve designed over the years.",
         "image": "/public/_data/media/logos.png",
-        "file": "https://drive.google.com/file/d/1hS3vqdHLHyqiXAxVQ6BIMD_NPDcv7mey/view"
+        "file": "https://drive.google.com/file/d/1hS3vqdHLHyqiXAxVQ6BIMD_NPDcv7mey/view",
+        "slug": "logos",
+        "detail": {
+          "client": "Brand marks for companies, products and people.",
+          "sections": [
+            {
+              "image": "/public/_data/media/projects/logos/01.jpg",
+              "alt": "Neoflora logo"
+            },
+            {
+              "image": "/public/_data/media/projects/logos/02.jpg",
+              "alt": "Logo"
+            },
+            {
+              "image": "/public/_data/media/projects/logos/03.jpg",
+              "alt": "Rafael Arace logo"
+            },
+            {
+              "image": "/public/_data/media/projects/logos/04.jpg",
+              "alt": "Molplas logo"
+            },
+            {
+              "image": "/public/_data/media/projects/logos/05.jpg",
+              "alt": "TeleTech Innovations logo"
+            }
+          ],
+          "summary": "A selection of logos I’ve designed over the years."
+        }
       },
       {
         "title": "Reel",
-        "show": true,
+        "show": false,
         "content": "You can watch my Motion Graphics Reel on Vimeo.",
         "image": "/public/_data/media/portfolio_motion.png",
         "file": "http://www.vimeo.com/ottozaiser"
       },
       {
         "content": "You can see my illustration portfolio on Tumblr.",
-        "show": true,
+        "show": false,
         "title": "Art",
         "file": "https://ottozaiser.tumblr.com/",
         "image": "/public/_data/media/portfolio_art.png"

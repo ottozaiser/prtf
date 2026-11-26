@@ -1,5 +1,10 @@
 <template>
-  <a :href="file" target="_blank" rel="external nofollow" v-if="show">
+  <component
+    v-if="show"
+    :is="slug ? 'router-link' : 'a'"
+    v-bind="slug ? { to: `/portfolio/${slug}` } : { href: file, target: '_blank', rel: 'external nofollow' }"
+    class="card"
+  >
     <article>
       <div class="project">
         <div class="img-container">
@@ -10,12 +15,12 @@
           <progressive-img class="image" :src="cover.split('/public').pop()" alt />
         </div>
         <div class="content">
-          <h2>{{ title }}</h2>
+          <h3>{{ title }}</h3>
           <p v-html="content"></p>
         </div>
       </div>
     </article>
-  </a>
+  </component>
 </template>
 
 <script>
@@ -28,6 +33,8 @@ export default {
     location: String,
     file: String,
     cover: String,
+    // When set, the card opens the project's case-study page instead of the external file.
+    slug: String,
   },
 };
 </script>
@@ -37,19 +44,21 @@ export default {
 * {
   transition: all 0.3s ease;
 }
-a {
+.card {
+  display: block;
   border-radius: 4px;
   border: 1px solid var(--main-lightgray);
   text-decoration: none;
+  color: inherit;
   transition: all 0.3s ease;
 }
-a:hover {
+.card:hover {
   transform: translate(0, -5px);
 }
 .img-container {
   position: relative;
 }
-.project h2 {
+.project h3 {
   color: var(--main-charcoal);
   margin-top: 0;
   font-size: 1.1em;

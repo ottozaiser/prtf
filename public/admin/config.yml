@@ -187,6 +187,51 @@ collections:
                   - { label: "Project Content", name: "content", widget: "markdown" }
                   - { label: "Project Cover image", name: "image", widget: "image" }
                   - { label: "Project File location", name: "file", widget: "string" }
+                  - { label: "Page URL name (slug, e.g. microsoft)", name: "slug", widget: "string", required: false }
+                  - label: "Project page"
+                    name: "detail"
+                    widget: "object"
+                    required: false
+                    fields:
+                      - { label: "Summary (one line under the title)", name: "summary", widget: "text", required: false }
+                      - { label: "About", name: "client", widget: "text", required: false }
+                      - { label: "Context", name: "context", widget: "text", required: false }
+                      - { label: "My role", name: "role", widget: "text", required: false }
+                      - { label: "Notes", name: "notes", widget: "list", required: false }
+                      - label: "Jump buttons (shown under the intro)"
+                        name: "jumps"
+                        widget: list
+                        required: false
+                        fields:
+                          - { label: "Label", name: "label", widget: "string" }
+                          - { label: "Target section ID", name: "target", widget: "string" }
+                      - label: "Sections"
+                        name: "sections"
+                        widget: list
+                        required: false
+                        fields:
+                          - { label: "Section ID (for jump buttons, e.g. case-study)", name: "id", widget: "string", required: false }
+                          - { label: "Heading", name: "heading", widget: "string", required: false }
+                          - { label: "Heading level (3 = subheading, no highlight)", name: "level", widget: "select", options: [2, 3], required: false }
+                          - { label: "Text (blank line = new paragraph)", name: "text", widget: "text", required: false }
+                          - { label: "Bullet list", name: "list", widget: "list", required: false }
+                          - { label: "Image", name: "image", widget: "image", required: false }
+                          - { label: "Image alt text", name: "alt", widget: "string", required: false }
+                          - { label: "Device mockup (show at real size, rounded corners)", name: "device", widget: "boolean", required: false }
+                          - { label: "Wide (break out of the text column, up to 1218px)", name: "wide", widget: "boolean", required: false }
+                          - { label: "Max display width in px (use the image's real width for low-res screenshots)", name: "width", widget: "number", required: false }
+                          - { label: "Caption", name: "caption", widget: "string", required: false }
+                          - { label: "Video (Vimeo or YouTube URL)", name: "video", widget: "string", required: false }
+                          - { label: "Technologies", name: "tech", widget: "list", required: false }
+                          - { label: "Side notes", name: "notes", widget: "list", required: false }
+                          - { label: "Layout", name: "layout", widget: "select", options: ["default", "side"], required: false }
+                          - label: "Link"
+                            name: "link"
+                            widget: "object"
+                            required: false
+                            fields:
+                              - { label: "Label", name: "label", widget: "string", required: false }
+                              - { label: "URL", name: "url", widget: "string", required: false }
           - label: "Clients"
             name: "client"
             widget: "object"

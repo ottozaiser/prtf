@@ -104,6 +104,7 @@ p {
 .job .header h3 {
   font-weight: bold;
   display: inline-block;
+  font-size: 1.1em; /* site h3 size: labels, card and job titles */
 }
 .job .header p {
   line-height: 1em;

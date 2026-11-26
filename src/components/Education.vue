@@ -49,6 +49,9 @@ p {
   font-weight: normal;
   display: inline-block;
 }
+.education .header h3 {
+  font-size: 1.1em; /* site h3 size */
+}
 .education .header p {
   align-self: center;
   justify-self: end;
