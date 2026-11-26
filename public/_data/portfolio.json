@@ -792,6 +792,15 @@
                 }
               ],
               "columns": 5
+            },
+            {
+              "heading": "What happened next",
+              "level": 3,
+              "text": "The trivia version didn’t reach its targets, but it was a huge learning experience for the company: a new kind of game, a new metagame and new ways of building art in Unity. Later, etermax rebranded the game with AI art, changed the gameplay to a merge game and relaunched it as Pet Shelter Merge & Story.",
+              "link": {
+                "label": "Pet Shelter Merge & Story on Google Play",
+                "url": "https://play.google.com/store/apps/details?id=com.etermax.petmerge"
+              }
             }
           ]
         }
