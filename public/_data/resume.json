@@ -226,11 +226,26 @@
           },
           {
             "name": "ChatGPT"
+          },
+          {
+            "name": "Gemini"
+          },
+          {
+            "name": "ElevenLabs"
+          },
+          {
+            "name": "Kling"
+          },
+          {
+            "name": "Suno"
+          },
+          {
+            "name": "Veo 3"
           }
         ]
       },
       {
-        "category_title": "Standards and methodology",
+        "category_title": "Methodology & Workflow",
         "category": [
           {
             "name": "Agile SCRUM"
@@ -249,23 +264,9 @@
           },
           {
             "name": "Screen readers"
-          }
-        ]
-      },
-      {
-        "category_title": "Admin tools",
-        "category": [
-          {
-            "name": "Office"
-          },
-          {
-            "name": "Trello"
           },
           {
             "name": "Jira"
-          },
-          {
-            "name": "Redmine"
           },
           {
             "name": "Perforce"
