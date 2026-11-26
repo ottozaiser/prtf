@@ -276,7 +276,7 @@ ul.menu .btn.primary:focus-visible {
     height: 100vh;
     height: 100svh;
     min-height: 620px;
-    padding-bottom: 8px;
+    padding-bottom: 20px;
   }
   .layout {
     flex: 1;
@@ -308,9 +308,9 @@ ul.menu .btn.primary:focus-visible {
     gap: 8px;
   }
   /* Social icons spread evenly across the width, centered under the buttons */
-  .social :deep(ul.socialmedia) {
-    margin: 8px 0 0;
-    justify-content: space-evenly;
+  /* The social links move into the menu on phones and tablets */
+  .social {
+    display: none;
   }
 }
 /* Phones: the main button on its own row, the other two side by side */

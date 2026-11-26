@@ -50,9 +50,9 @@
                   <ContactMenu :email="settings.contact_email" :linkedin="settings.linkedin_url" :cv="settings.cv_url" />
                 </li>
               </ul>
+              <!-- Phones and tablets: the social links live here instead of under the home intro -->
+              <Social v-if="!isDesktop" class="sheet-social" />
             </div>
-            <!-- <button aria-label="Close Navigation" @click="toggleMenu">x</button>  -->
-            <!-- <Social class="social" /> -->
           </div>
         </transition>
       </nav>
@@ -64,13 +64,14 @@
 </template>
 
 <script>
-// import Social from "@/components/Social.vue";
+import Social from "@/components/Social.vue";
 import axios from "axios";
 import ContactMenu from "@/components/ContactMenu.vue";
 export default {
   name: "MainNav",
   components: {
     ContactMenu,
+    Social,
   },
   props: {
     settings: Object,
@@ -416,15 +417,15 @@ h1.brand a {
   flex-direction: column;
 }
 .panel-menu .social {
-  padding: 1em 2em;
+  padding: 8px 0 0;
 }
 .panel-menu .social ul.socialmedia li.social-item {
   padding: 0;
 }
 .panel-menu .social ul.socialmedia li.social-item a {
-  font-size: 1em;
-  width: 36px;
-  height: 36px;
+  font-size: 1.2em;
+  width: 44px;
+  height: 44px;
 }
 .panel-menu-inner {
   width: 100%;
@@ -755,6 +756,11 @@ nav.main-navigation ul.menu li.menu-item a:focus .nav-link-label {
   .slide-leave-active {
     transition: none;
   }
+}
+/* Social icons at the bottom of the sheet, spread evenly */
+nav.main-navigation .panel-menu .sheet-social ul.socialmedia {
+  justify-content: space-evenly;
+  margin: 4px 24px 0;
 }
 /* Close button inside the bottom sheet (phones and tablets only) */
 .sheet-close {
