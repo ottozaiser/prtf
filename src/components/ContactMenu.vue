@@ -13,10 +13,10 @@
       @click="open ? close() : show()"
     >
       Get in touch
-      <font-awesome-icon :icon="variant === 'hero' ? 'chevron-up' : 'chevron-down'" class="caret" :class="{ up: open }" aria-hidden="true" />
+      <font-awesome-icon :icon="dropUp ? 'chevron-up' : 'chevron-down'" class="caret" :class="{ up: open }" aria-hidden="true" />
     </button>
 
-    <ul :id="optionsId" class="options" :class="{ open }">
+    <ul :id="optionsId" class="options" :class="{ open, up: dropUp }">
       <li>
         <button type="button" class="option" @click="copyEmail">
           <font-awesome-icon :icon="copied ? 'check' : 'copy'" class="icon" aria-hidden="true" />
@@ -62,21 +62,42 @@ export default {
     },
   },
   data() {
-    return { open: false, copied: false, copiedTimer: null };
+    return { open: false, copied: false, copiedTimer: null, dropUp: false };
   },
   beforeUnmount() {
     document.removeEventListener("click", this.onOutsideClick);
+    window.removeEventListener("scroll", this.placeOptions);
+    window.removeEventListener("resize", this.placeOptions);
     clearTimeout(this.copiedTimer);
   },
   methods: {
     show() {
       this.open = true;
       document.addEventListener("click", this.onOutsideClick);
+      if (this.variant === "hero") {
+        this.placeOptions();
+        this.$nextTick(this.placeOptions);
+        window.addEventListener("scroll", this.placeOptions, { passive: true });
+        window.addEventListener("resize", this.placeOptions);
+      }
+    },
+    // Hero variant: open below the button when there's room under it, otherwise above it
+    // (at the bottom of the first screen there isn't; once the page is scrolled down there is).
+    placeOptions() {
+      const btn = this.$refs.toggle;
+      if (!btn) return;
+      const r = btn.getBoundingClientRect();
+      const list = this.$el.querySelector(".options");
+      const needed = (list && list.offsetHeight) || 200;
+      const below = window.innerHeight - r.bottom;
+      this.dropUp = below < needed + 16 && r.top > below;
     },
     close(returnFocus = false) {
       if (!this.open) return;
       this.open = false;
       document.removeEventListener("click", this.onOutsideClick);
+      window.removeEventListener("scroll", this.placeOptions);
+      window.removeEventListener("resize", this.placeOptions);
       if (returnFocus && this.$refs.toggle) this.$refs.toggle.focus();
     },
     onOutsideClick(e) {
@@ -250,8 +271,8 @@ nav.main-navigation ul.menu li.menu-item .contact-menu a.option:focus-visible {
     transition: none;
   }
 }
-/* Home intro: same outline pill as the other intro buttons; the options open upward, since the
-   button sits near the bottom of the first screen. */
+/* Home intro: same outline pill as the other intro buttons; the options open below it, or above
+   it when there's no room underneath (see placeOptions). */
 .contact-menu.hero {
   width: 100%;
 }
@@ -270,10 +291,12 @@ nav.main-navigation ul.menu li.menu-item .contact-menu a.option:focus-visible {
   font: inherit;
 }
 .hero .options {
-  top: auto;
-  bottom: calc(100% + 8px);
   right: auto;
   left: 0;
+}
+.hero .options.up {
+  top: auto;
+  bottom: calc(100% + 8px);
 }
 /* Phones: the button is the right half of a row, so align the box to its right edge */
 @media (max-width: 480px) {
