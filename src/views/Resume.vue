@@ -7,7 +7,18 @@
         <div class="image">
           <progressive-background :src="this.resumejson.about.image" />
         </div>
-        <div v-html="this.resumejson.about.content" class="dynamic-content" @click="handleClicks"></div>
+        <div>
+          <div v-html="this.resumejson.about.content" class="dynamic-content" @click="handleClicks"></div>
+          <a
+            v-if="this.resumejson.resume && this.resumejson.resume.name"
+            class="btn download"
+            :href="this.resumejson.resume.name"
+            download
+          >
+            <font-awesome-icon icon="download" aria-hidden="true" />
+            Download CV (PDF)
+          </a>
+        </div>
       </div>
     </section>
     <!-- <router-link to='/story'> {{ this.resumejson.label }} </router-link> -->
@@ -154,6 +165,13 @@ section {
   .content {
     grid-template-columns: 1fr;
   }
+}
+.download {
+  display: inline-block;
+  margin-top: 8px;
+}
+.download svg {
+  margin-right: 6px;
 }
 .content .image {
   text-align: center;

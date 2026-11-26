@@ -7,13 +7,13 @@ import '@/styles/index.css';
 
 // Font Awesome
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faChevronDown, faAngleDoubleUp, faHome, faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown, faAngleDoubleUp, faHome, faExternalLinkAlt, faDownload } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faVimeo, faInstagram, faTumblr, faDribbble } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import ProgressiveImg from '@/components/ProgressiveImg.vue';
 import ProgressiveBackground from '@/components/ProgressiveBackground.vue';
 
-library.add(faLinkedin, faVimeo, faInstagram, faTumblr, faDribbble, faChevronDown, faAngleDoubleUp, faHome, faExternalLinkAlt);
+library.add(faLinkedin, faVimeo, faInstagram, faTumblr, faDribbble, faChevronDown, faAngleDoubleUp, faHome, faExternalLinkAlt, faDownload);
 
 // Create app using Vue 3 (compat build)
 const app = createApp(App);
