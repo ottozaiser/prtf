@@ -276,7 +276,8 @@ ul.menu .btn.primary:focus-visible {
     height: 100vh;
     height: 100svh;
     min-height: 620px;
-    padding-bottom: 20px;
+    /* the row where the social icons were: room for the floating menu button under the buttons */
+    padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px));
   }
   .layout {
     flex: 1;
