@@ -248,6 +248,60 @@ ul.menu .btn.primary:focus-visible {
 .social {
   align-self: end;
 }
+/* Phones and tablets: the intro fills exactly one screen, like on desktop. The illustration takes
+   whatever height is left after the title, text and buttons, so nothing falls below the fold.
+   svh = the screen with the browser bars showing; very short screens get at least 620px. */
+@media (max-width: 991px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    height: 100svh;
+    min-height: 620px;
+    padding-bottom: 8px;
+  }
+  .layout {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .heading-home {
+    flex: none;
+    height: 150px;
+  }
+  .animation {
+    flex: 1 1 0;
+    min-height: 120px;
+    width: 100%;
+    max-width: 600px;
+    padding-top: 16px !important;
+    align-self: center;
+  }
+  .content {
+    flex: none;
+    padding-top: 8px;
+  }
+  .content p {
+    margin: 8px 0 0;
+  }
+  ul.menu {
+    margin: 16px 0 4px;
+    gap: 8px;
+  }
+  .social :deep(ul.socialmedia) {
+    margin: 8px 0 0;
+  }
+}
+/* Phones: the main button on its own row, the other two side by side */
+@media (max-width: 480px) {
+  ul.menu li {
+    flex: 1 1 calc(50% - 4px);
+  }
+  ul.menu li:first-child {
+    flex-basis: 100%;
+  }
+}
 section {
   border-top: 5px solid var(--main-highlight);
   margin-top: 48px;
