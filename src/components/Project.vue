@@ -15,7 +15,7 @@
           <progressive-img class="image" :src="cover.split('/public').pop()" alt />
         </div>
         <div class="content">
-          <h3>{{ title }}</h3>
+          <h3><span class="marker">{{ title }}</span></h3>
           <p v-html="content"></p>
         </div>
       </div>
@@ -63,6 +63,28 @@ export default {
   margin-top: 0;
   font-size: 1.1em;
   font-weight: bold;
+}
+/* Yellow detail: a highlighter stroke under the title (the site's yellow), which fills the
+   whole title when the card is hovered or focused. */
+.marker {
+  padding: 0 2px;
+  margin: 0 -2px;
+  background-image: linear-gradient(var(--main-highlight), var(--main-highlight));
+  background-repeat: no-repeat;
+  background-position: 0 88%;
+  background-size: 100% 0.4em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  transition: background-size 0.25s ease;
+}
+.card:hover .marker,
+.card:focus-visible .marker {
+  background-size: 100% 100%;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marker {
+    transition: none;
+  }
 }
 .image {
   width: 100%;
