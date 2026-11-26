@@ -100,6 +100,10 @@ export default {
 </script>
 
 <style scoped>
+/* Highlights are nowrap site-wide; in the story text, let long ones (e.g. "Accessibility and User Experience") wrap instead of jumping to a new line. */
+.story :deep(.highlight) {
+  white-space: normal;
+}
 .story {
   display: flex;
   flex-direction: column;
