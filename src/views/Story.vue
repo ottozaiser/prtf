@@ -13,8 +13,8 @@
             </h2>
           </div>
           <p v-html="item.content"></p>
-          <!-- Last step: every network, including the art ones that aren't on the home page -->
-          <Social v-if="index == steps.length - 1" all class="story-social" />
+          <!-- Last step: the same social links as the home page (on phones and tablets they're in the menu) -->
+          <Social v-if="index == steps.length - 1" class="story-social" />
         </div>
         <div class="img-container" data-aos="fade-up" data-aos-delay="50">
           <progressive-img class="image" :src="item.image" :alt="item.alt" />
@@ -198,6 +198,11 @@ section .content h2 a {
 }
 .story-social :deep(ul.socialmedia) {
   margin: 16px 0 0;
+}
+@media (max-width: 991px) {
+  .story-social {
+    display: none;
+  }
 }
 section .content .text-container {
   padding: 24px;
