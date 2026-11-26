@@ -268,7 +268,7 @@ ul.menu .btn.primary:focus-visible {
   }
   .heading-home {
     flex: none;
-    height: 150px;
+    height: 100px;
   }
   .animation {
     flex: 1 1 0;
@@ -289,8 +289,10 @@ ul.menu .btn.primary:focus-visible {
     margin: 16px 0 4px;
     gap: 8px;
   }
+  /* Social icons spread evenly across the width, centered under the buttons */
   .social :deep(ul.socialmedia) {
     margin: 8px 0 0;
+    justify-content: space-evenly;
   }
 }
 /* Phones: the main button on its own row, the other two side by side */
