@@ -224,6 +224,7 @@ collections:
                           - { label: "Max display width in px (use the image's real width for low-res screenshots)", name: "width", widget: "number", required: false }
                           - { label: "Caption", name: "caption", widget: "string", required: false }
                           - { label: "Video (Vimeo or YouTube URL)", name: "video", widget: "string", required: false }
+                          - { label: "Video aspect ratio (e.g. 4:3; default 16:9)", name: "ratio", widget: "string", required: false }
                           - { label: "Technologies", name: "tech", widget: "list", required: false }
                           - { label: "Side notes", name: "notes", widget: "list", required: false }
                           - { label: "Layout", name: "layout", widget: "select", options: ["default", "side"], required: false }

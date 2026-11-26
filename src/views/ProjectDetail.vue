@@ -90,7 +90,7 @@
         </figure>
 
         <figure v-if="s.video" class="media video">
-          <div class="ratio">
+          <div class="ratio" :style="{ paddingTop: ratioPadding(s.ratio) }">
             <iframe
               :src="embedUrl(s.video)"
               :title="s.caption || `${project.title} video`"
@@ -265,10 +265,16 @@ export default {
       const rest = words.slice(n).join(" ");
       return [first, rest ? ` ${rest}` : ""];
     },
+    // Video frame height as a % of its width, from a ratio like "4:3" (default 16:9).
+    ratioPadding(ratio) {
+      const m = /^(\d+(?:\.\d+)?):(\d+(?:\.\d+)?)$/.exec((ratio || "").trim());
+      return m ? `${(Number(m[2]) / Number(m[1])) * 100}%` : "56.25%";
+    },
     // Accepts a Vimeo URL, a YouTube URL, or a bare YouTube video ID.
     embedUrl(video) {
       const v = (video || "").trim();
-      const vimeo = v.match(/vimeo\.com\/(?:video\/)?(\d+)/);
+      // Also accepts Vimeo "manage" links (vimeo.com/manage/videos/<id>) pasted from the dashboard.
+      const vimeo = v.match(/vimeo\.com\/(?:manage\/videos\/|video\/)?(\d+)/);
       if (vimeo) return `https://player.vimeo.com/video/${vimeo[1]}?dnt=1`;
       const yt = v.match(/(?:youtu\.be\/|[?&]v=|\/embed\/)([\w-]{11})/);
       return `https://www.youtube-nocookie.com/embed/${yt ? yt[1] : v}`;

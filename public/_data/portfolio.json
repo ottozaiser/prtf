@@ -4,107 +4,114 @@
     "content": "<p>A selection of my work, from product and UX design to branding and motion. Some projects are under NDA, so I can only share part of them here. Click any project to see the full story.</p>",
     "projects": [
       {
-        "title": "Microsoft",
+        "title": "Nearpod",
         "show": true,
-        "content": "An iPad training app that got retail sales teams up to speed on Office 365.",
-        "image": "/public/_data/media/microsoft.png",
-        "file": "https://drive.google.com/file/d/18ffK6BgsCCkP4zwyDvZP5SfN3oTxIBS3/view",
-        "slug": "microsoft",
+        "content": "Image answers for quizzes and a Motion UI menu for the iPad app, for an award-winning US edtech platform.",
+        "image": "/public/_data/media/portfolio_nearpod.png",
+        "file": "https://drive.google.com/file/d/1vYYhgm0KgLwD3uqAG34zO0En4X0hgKNX/view",
+        "slug": "nearpod",
         "detail": {
-          "client": "Microsoft Corporation is an American multinational technology company headquartered in Redmond, Washington.",
-          "context": "Office 365 was about to launch, and retail sales associates needed to learn the new features fast so they could demo them to customers.",
-          "role": "Designer, technical lead and developer, from visual design to the final build.",
-          "sections": [
+          "summary": "Two projects for Nearpod’s lesson platform: images in quiz answers, and a Motion UI menu that brought new lesson libraries to the iPad app.",
+          "client": "Nearpod is an award-winning student engagement platform with lessons for teachers. As a product designer at Hexacta, I worked with Nearpod’s US-based product team on new features for its web and iPad apps.",
+          "context": "The web app was evolving fast, the iPad app had to keep up, and new features had to work on both. I often joined as a firefighter, solving design problems the team was stuck on.",
+          "role": "Product designer (and firefighter): prototyping, UI design, heuristics and accessibility.",
+          "jumps": [
             {
-              "image": "/public/_data/media/projects/microsoft/01.png",
-              "caption": "The home screen: every tile launches a short video demo.",
-              "alt": "Office 365 retail training on iPad: The home screen: every tile launches a short video demo.",
-              "device": true
+              "label": "Case study: Image Quiz",
+              "target": "image-quiz"
             },
             {
-              "image": "/public/_data/media/projects/microsoft/02.png",
-              "caption": "The visual style follows Microsoft’s brand guidelines to the letter.",
-              "alt": "Office 365 retail training on iPad: The visual style follows Microsoft’s brand guidelines to the letter.",
-              "device": true
-            },
-            {
-              "image": "/public/_data/media/projects/microsoft/03.png",
-              "caption": "I built the layout on Microsoft’s own tile grid, so the content feels native to the brand.",
-              "alt": "Office 365 retail training on iPad: I built the layout on Microsoft’s own tile grid, so the content feels native to the brand.",
-              "device": true
-            },
-            {
-              "image": "/public/_data/media/projects/microsoft/04.png",
-              "caption": "Video demos come with step-by-step tutorial animations.",
-              "alt": "Office 365 retail training on iPad: Video demos come with step-by-step tutorial animations.",
-              "device": true
-            },
-            {
-              "image": "/public/_data/media/projects/microsoft/05.png",
-              "caption": "The design landed with no major change requests from the client.",
-              "alt": "Office 365 retail training on iPad: The design landed with no major change requests from the client.",
-              "device": true
-            },
-            {
-              "image": "/public/_data/media/projects/microsoft/06.png",
-              "caption": "Once every video has been watched, a Next button unlocks.",
-              "alt": "Office 365 retail training on iPad: Once every video has been watched, a Next button unlocks.",
-              "device": true
-            },
-            {
-              "image": "/public/_data/media/projects/microsoft/07.png",
-              "caption": "The design became a template: we built six more products on it.",
-              "alt": "Office 365 retail training on iPad: The design became a template: we built six more products on it.",
-              "device": true
+              "label": "Case study: Motion UI",
+              "target": "motion-ui"
             }
           ],
-          "summary": "A tile-based iPad training app that got retail sales teams up to speed on Office 365, and became the template for six more products."
-        }
-      },
-      {
-        "title": "Sony",
-        "show": true,
-        "content": "A gamified tutorial that taught people how to use Sony’s new Dash device.",
-        "image": "/public/_data/media/sony.png",
-        "file": "https://drive.google.com/file/d/1mmbDFRsGIvRNHi73ZZ5gDhccxzesNFPA/view",
-        "slug": "sony",
-        "detail": {
-          "client": "Sony Corporation is a Japanese multinational conglomerate headquartered in Minato, Tokyo.",
-          "context": "In 2010, Sony launched Dash, a new personal internet viewer, and needed tutorials to show people how to use it.",
-          "role": "Designer, technical lead and developer.",
           "sections": [
             {
-              "image": "/public/_data/media/projects/sony/01.png",
-              "caption": "We built a game, not a slideshow, to introduce the device.",
-              "alt": "Sony Dash tutorial: We built a game, not a slideshow, to introduce the device.",
-              "device": true
+              "id": "image-quiz",
+              "heading": "Case study: Image Quiz",
+              "text": "Nearpod had just redesigned its quiz activity when the Product Owner asked for a new feature: images in the answers.\n\nThe quiz has two sides. On the teacher side, a small improvement to the existing view was enough. The student side needed more: it had to become engaging for kids."
             },
             {
-              "image": "/public/_data/media/projects/sony/02.png",
-              "caption": "Users explore the room to find hidden objects, and a friendly character explains each feature.",
-              "alt": "Sony Dash tutorial: Users explore the room to find hidden objects, and a friendly character explains each feature.",
-              "device": true
+              "image": "/public/_data/media/projects/nearpod/quiz-01.jpg",
+              "caption": "Teacher side, before: the freshly redesigned quiz editor.",
+              "alt": "Nearpod quiz editor for teachers, before images were added"
             },
             {
-              "image": "/public/_data/media/projects/sony/03.png",
-              "caption": "Find every object and the Dash appears, ready to try.",
-              "alt": "Sony Dash tutorial: Find every object and the Dash appears, ready to try.",
-              "device": true
+              "image": "/public/_data/media/projects/nearpod/quiz-02.jpg",
+              "caption": "Student side, before: it worked, but it was kind of boring.",
+              "alt": "Nearpod student quiz with plain text answers"
             },
             {
-              "image": "/public/_data/media/projects/sony/04.png",
-              "caption": "Complete a room and the character flies off to the next one.",
-              "alt": "Sony Dash tutorial: Complete a room and the character flies off to the next one.",
-              "device": true
+              "heading": "Teacher side",
+              "level": 3,
+              "text": "The editor component was already built in React, so I kept the change small: an image button next to each answer field.",
+              "image": "/public/_data/media/projects/nearpod/quiz-03.jpg",
+              "caption": "A small tweak: an image button next to each answer.",
+              "alt": "Quiz editor with an image button beside each answer option"
             },
             {
-              "image": "/public/_data/media/projects/sony/05.png",
-              "caption": "Sony ended Dash support in 2017, but the tutorial lives on here.",
-              "alt": "Sony Dash tutorial: Sony ended Dash support in 2017, but the tutorial lives on here.",
-              "device": true
+              "image": "/public/_data/media/projects/nearpod/quiz-04.jpg",
+              "caption": "Once an image is added, the answer text becomes optional.",
+              "alt": "Quiz editor with a photo added to an answer, text marked optional"
+            },
+            {
+              "heading": "Student side",
+              "level": 3,
+              "text": "For kids, I turned the answers into a colorful, game-board-like grid of image cards.",
+              "image": "/public/_data/media/projects/nearpod/quiz-05.jpg",
+              "caption": "Colors and a game-board feel bring the student side to life.",
+              "alt": "Student quiz with six colorful image answer cards"
+            },
+            {
+              "image": "/public/_data/media/projects/nearpod/quiz-06.jpg",
+              "caption": "A magnifier lets students take a closer look at any image.",
+              "alt": "Student quiz with a magnifier icon on an image card"
+            },
+            {
+              "image": "/public/_data/media/projects/nearpod/quiz-07.jpg",
+              "caption": "Images open in Nearpod’s standard lightbox.",
+              "alt": "An answer image enlarged in a lightbox"
+            },
+            {
+              "image": "/public/_data/media/projects/nearpod/quiz-08.jpg",
+              "caption": "Big, clear selection states and a Submit button sized for kids.",
+              "alt": "Two image answers selected and an active Submit button"
+            },
+            {
+              "id": "motion-ui",
+              "heading": "Case study: Motion UI",
+              "text": "Nearpod sold free and paid lessons in a store, then added custom libraries for schools, districts and programs, and these had to be available on every platform.\n\nOn the web, a top navigation bar with drop-down menus handled it fine. On iOS it was a different game, and the team had been struggling to find an answer before I joined.",
+              "notes": [
+                "Nearpod wanted more revenue from premade lessons",
+                "The web app was evolving much faster than iOS"
+              ]
+            },
+            {
+              "heading": "Welcome",
+              "text": "This was the iPad Welcome screen. Stakeholders saw it almost as part of the brand and didn’t want it changed.\n\nSo instead of redesigning it, I proposed Motion UI: a smooth transition from the Welcome menu into a new submenu, like the Flash sites of the old days.\n\nThe heads of Product and iOS loved the idea, and we aligned on the solution.",
+              "notes": [
+                "Experience gives you the tools to solve problems"
+              ],
+              "level": 3,
+              "image": "/public/_data/media/projects/nearpod/motion-01.jpg",
+              "caption": "The Explore button leads to the lesson store.",
+              "alt": "Nearpod iPad Welcome screen with colored menu buttons"
+            },
+            {
+              "heading": "Transition",
+              "text": "Menu A turns into Menu B. The motion had to be fast but easy to follow, so users never lose their place.",
+              "caption": "From Menu A (Welcome) to Menu B (Explore).",
+              "level": 3,
+              "image": "/public/_data/media/projects/nearpod/motion-02.jpg",
+              "alt": "Nearpod menu A (Welcome) and menu B (Explore submenu) side by side"
+            },
+            {
+              "video": "https://vimeo.com/1250390696",
+              "caption": "The animation prototype.",
+              "text": "I presented the animation prototype to the Product Owner and stakeholders, and they were very happy with the result.",
+              "ratio": "4:3"
             }
-          ],
-          "summary": "Instead of a slideshow, a game: users explore a virtual home to discover what Sony’s new Dash device can do."
+          ]
         }
       },
       {
@@ -223,6 +230,110 @@
         }
       },
       {
+        "title": "Microsoft",
+        "show": true,
+        "content": "An iPad training app that got retail sales teams up to speed on Office 365.",
+        "image": "/public/_data/media/microsoft.png",
+        "file": "https://drive.google.com/file/d/18ffK6BgsCCkP4zwyDvZP5SfN3oTxIBS3/view",
+        "slug": "microsoft",
+        "detail": {
+          "client": "Microsoft Corporation is an American multinational technology company headquartered in Redmond, Washington.",
+          "context": "Office 365 was about to launch, and retail sales associates needed to learn the new features fast so they could demo them to customers.",
+          "role": "Designer, technical lead and developer, from visual design to the final build.",
+          "sections": [
+            {
+              "image": "/public/_data/media/projects/microsoft/01.png",
+              "caption": "The home screen: every tile launches a short video demo.",
+              "alt": "Office 365 retail training on iPad: The home screen: every tile launches a short video demo.",
+              "device": true
+            },
+            {
+              "image": "/public/_data/media/projects/microsoft/02.png",
+              "caption": "The visual style follows Microsoft’s brand guidelines to the letter.",
+              "alt": "Office 365 retail training on iPad: The visual style follows Microsoft’s brand guidelines to the letter.",
+              "device": true
+            },
+            {
+              "image": "/public/_data/media/projects/microsoft/03.png",
+              "caption": "I built the layout on Microsoft’s own tile grid, so the content feels native to the brand.",
+              "alt": "Office 365 retail training on iPad: I built the layout on Microsoft’s own tile grid, so the content feels native to the brand.",
+              "device": true
+            },
+            {
+              "image": "/public/_data/media/projects/microsoft/04.png",
+              "caption": "Video demos come with step-by-step tutorial animations.",
+              "alt": "Office 365 retail training on iPad: Video demos come with step-by-step tutorial animations.",
+              "device": true
+            },
+            {
+              "image": "/public/_data/media/projects/microsoft/05.png",
+              "caption": "The design landed with no major change requests from the client.",
+              "alt": "Office 365 retail training on iPad: The design landed with no major change requests from the client.",
+              "device": true
+            },
+            {
+              "image": "/public/_data/media/projects/microsoft/06.png",
+              "caption": "Once every video has been watched, a Next button unlocks.",
+              "alt": "Office 365 retail training on iPad: Once every video has been watched, a Next button unlocks.",
+              "device": true
+            },
+            {
+              "image": "/public/_data/media/projects/microsoft/07.png",
+              "caption": "The design became a template: we built six more products on it.",
+              "alt": "Office 365 retail training on iPad: The design became a template: we built six more products on it.",
+              "device": true
+            }
+          ],
+          "summary": "A tile-based iPad training app that got retail sales teams up to speed on Office 365, and became the template for six more products."
+        }
+      },
+      {
+        "title": "Sony",
+        "show": true,
+        "content": "A gamified tutorial that taught people how to use Sony’s new Dash device.",
+        "image": "/public/_data/media/sony.png",
+        "file": "https://drive.google.com/file/d/1mmbDFRsGIvRNHi73ZZ5gDhccxzesNFPA/view",
+        "slug": "sony",
+        "detail": {
+          "client": "Sony Corporation is a Japanese multinational conglomerate headquartered in Minato, Tokyo.",
+          "context": "In 2010, Sony launched Dash, a new personal internet viewer, and needed tutorials to show people how to use it.",
+          "role": "Designer, technical lead and developer.",
+          "sections": [
+            {
+              "image": "/public/_data/media/projects/sony/01.png",
+              "caption": "We built a game, not a slideshow, to introduce the device.",
+              "alt": "Sony Dash tutorial: We built a game, not a slideshow, to introduce the device.",
+              "device": true
+            },
+            {
+              "image": "/public/_data/media/projects/sony/02.png",
+              "caption": "Users explore the room to find hidden objects, and a friendly character explains each feature.",
+              "alt": "Sony Dash tutorial: Users explore the room to find hidden objects, and a friendly character explains each feature.",
+              "device": true
+            },
+            {
+              "image": "/public/_data/media/projects/sony/03.png",
+              "caption": "Find every object and the Dash appears, ready to try.",
+              "alt": "Sony Dash tutorial: Find every object and the Dash appears, ready to try.",
+              "device": true
+            },
+            {
+              "image": "/public/_data/media/projects/sony/04.png",
+              "caption": "Complete a room and the character flies off to the next one.",
+              "alt": "Sony Dash tutorial: Complete a room and the character flies off to the next one.",
+              "device": true
+            },
+            {
+              "image": "/public/_data/media/projects/sony/05.png",
+              "caption": "Sony ended Dash support in 2017, but the tutorial lives on here.",
+              "alt": "Sony Dash tutorial: Sony ended Dash support in 2017, but the tutorial lives on here.",
+              "device": true
+            }
+          ],
+          "summary": "Instead of a slideshow, a game: users explore a virtual home to discover what Sony’s new Dash device can do."
+        }
+      },
+      {
         "title": "Viñetas Sueltas",
         "show": true,
         "content": "Ten years of websites for an international comics festival, each one built from scratch in two weeks.",
@@ -322,48 +433,6 @@
             }
           ],
           "summary": "Ten years, six websites, one constraint: two weeks to build each one from scratch, on top of my day job."
-        }
-      },
-      {
-        "title": "Nearpod",
-        "show": false,
-        "content": "Motion UI that brought new lesson libraries to Nearpod’s iPad app without touching its iconic Welcome screen.",
-        "image": "/public/_data/media/portfolio_nearpod.png",
-        "file": "https://drive.google.com/file/d/1vYYhgm0KgLwD3uqAG34zO0En4X0hgKNX/view",
-        "slug": "nearpod",
-        "detail": {
-          "client": "Nearpod is an award-winning student engagement platform with lessons for teachers. I helped bring new features to its iPad app.",
-          "context": "Nearpod sold free and paid lessons in a store, then added custom libraries for schools, districts and programs, and these had to work on every platform.\n\nOn the web, a top navigation bar with drop-down menus handled it fine. On iOS it was a different game, and the team had been struggling to find an answer before I joined.",
-          "role": "Product designer (and firefighter): prototyping, UI design, heuristics and accessibility.",
-          "notes": [
-            "Nearpod wanted more revenue from premade lessons",
-            "The web app was evolving much faster than iOS"
-          ],
-          "sections": [
-            {
-              "heading": "Welcome",
-              "text": "This was the iPad Welcome screen. Stakeholders saw it almost as part of the brand and didn’t want it changed.\n\nSo instead of redesigning it, I proposed Motion UI: a smooth transition from the Welcome menu into a new submenu, like the Flash sites of the old days.\n\nThe heads of Product and iOS loved the idea, and we aligned on the solution.",
-              "image": "/public/_data/media/projects/nearpod/01.jpg",
-              "caption": "The Explore button leads to the lesson store.",
-              "alt": "Nearpod iPad Welcome screen with colored menu buttons",
-              "notes": [
-                "Experience gives you the tools to solve problems"
-              ]
-            },
-            {
-              "heading": "Transition",
-              "text": "Menu A turns into Menu B. The motion had to be fast but easy to follow, so users never lose their place.",
-              "image": "/public/_data/media/projects/nearpod/02.jpg",
-              "caption": "From Menu A (Welcome) to Menu B (Explore).",
-              "alt": "Nearpod menu A and menu B side by side"
-            },
-            {
-              "video": "VADTIoYk-ZI",
-              "caption": "The animation prototype.",
-              "text": "I presented the animation prototype to the Product Owner and stakeholders, and they were very happy with the result."
-            }
-          ],
-          "summary": "A Motion UI solution that fit new lesson libraries into Nearpod’s iPad app, without redesigning a screen stakeholders considered part of the brand."
         }
       },
       {

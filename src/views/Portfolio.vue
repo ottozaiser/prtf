@@ -75,12 +75,27 @@ export default {
 </script>
 
 <style scoped>
+/* 3 cards per row, with an incomplete last row centered (flex instead of grid so it can center);
+   2 per row on tablets, 1 on phones. Cards in a row share the same height. */
 .projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  grid-column-gap: 16px;
-  grid-row-gap: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
   margin-top: 42px;
+}
+.projects .project {
+  flex: 0 0 calc((100% - 2 * 16px) / 3);
+}
+@media (max-width: 900px) {
+  .projects .project {
+    flex-basis: calc((100% - 16px) / 2);
+  }
+}
+@media (max-width: 600px) {
+  .projects .project {
+    flex-basis: 100%;
+  }
 }
 
 .clients {
