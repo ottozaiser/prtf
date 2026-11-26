@@ -1,17 +1,17 @@
 {
   "portfolio": {
     "title": "Portfolio",
-    "content": "<p>A selection of my work, from product and UX design to branding and motion. Some projects are under NDA, so I can only share part of them here. Open any project to see the full story.</p>",
+    "content": "<p>Mobile games first, then product and UX work for edtech, government and global brands. Some projects are under NDA, so I can only share part of them. Open any project to see the full story.</p>",
     "projects": [
       {
         "title": "FunCraft",
         "show": true,
         "slug": "funcraft",
-        "content": "Casual word, dice and sports games with more than 35M installs. Since joining in 2023, I’ve helped launch FunCraft’s new games, including the breakouts Word Yatzy and Farkle.",
+        "content": "Casual word, dice and sports games with more than 35M installs. Since joining in 2023, I’ve helped launch FunCraft’s new games, including the breakout hits Word Yatzy and Farkle.",
         "image": "/public/_data/media/funcraft-screens.jpg",
         "file": "",
         "detail": {
-          "summary": "FunCraft is a remote-first studio making casual word, dice and sports games. Since joining as its product designer in 2023, I’ve helped launch its new games, including the breakouts Word Yatzy and Farkle. Together, the games have more than 35 million installs.",
+          "summary": "FunCraft is a remote-first studio making casual word, dice and sports games. Since joining as its product designer in 2023, I’ve helped launch its new games, including the breakout hits Word Yatzy and Farkle. Together, FunCraft’s games have more than 35 million installs.",
           "client": "FunCraft is a remote-first mobile game studio with a catalog of word, dice, puzzle, strategy and sports-manager games for iOS and Android.",
           "role": "Product designer since 2023. On each game, I’m mostly in charge of the Unity integration, asset polish, animation and UI, plus ASO and the first UA ads for launch.",
           "jumps": [
@@ -20,7 +20,7 @@
               "target": "launch"
             },
             {
-              "label": "The breakouts",
+              "label": "The breakout hits",
               "target": "breakouts"
             },
             {
@@ -48,7 +48,7 @@
             },
             {
               "id": "breakouts",
-              "heading": "The breakouts",
+              "heading": "The breakout hits",
               "text": "Two of the games broke out, each with more than a million installs on Google Play alone."
             },
             {
@@ -58,19 +58,19 @@
               "gallery": [
                 {
                   "image": "/public/_data/media/projects/funcraft/screens/whamzee-1.jpg",
-                  "alt": "Find the best words"
+                  "alt": "Store screenshot: find the best words"
                 },
                 {
                   "image": "/public/_data/media/projects/funcraft/screens/whamzee-2.jpg",
-                  "alt": "Play with friends"
+                  "alt": "Store screenshot: play with friends"
                 },
                 {
                   "image": "/public/_data/media/projects/funcraft/screens/whamzee-3.jpg",
-                  "alt": "Score a Yatzy"
+                  "alt": "Store screenshot: score a Yatzy"
                 },
                 {
                   "image": "/public/_data/media/projects/funcraft/screens/whamzee-4.jpg",
-                  "alt": "Your games, ready to play"
+                  "alt": "Store screenshot: your games, ready to play"
                 }
               ],
               "columns": 4,
@@ -95,19 +95,19 @@
               "gallery": [
                 {
                   "image": "/public/_data/media/projects/funcraft/screens/farkle-1.jpg",
-                  "alt": "Roll the dice"
+                  "alt": "Store screenshot: roll the dice"
                 },
                 {
                   "image": "/public/_data/media/projects/funcraft/screens/farkle-2.jpg",
-                  "alt": "Win against friends"
+                  "alt": "Store screenshot: win against friends"
                 },
                 {
                   "image": "/public/_data/media/projects/funcraft/screens/farkle-3.jpg",
-                  "alt": "Bonus roll"
+                  "alt": "Store screenshot: bonus roll"
                 },
                 {
                   "image": "/public/_data/media/projects/funcraft/screens/farkle-4.jpg",
-                  "alt": "Your games, ready to play"
+                  "alt": "Store screenshot: your games, ready to play"
                 }
               ],
               "columns": 4,
@@ -137,19 +137,19 @@
               "gallery": [
                 {
                   "image": "/public/_data/media/projects/funcraft/screens/bingodice-1.jpg",
-                  "alt": "The most fun bingo with dice"
+                  "alt": "Store screenshot: the most fun bingo with dice"
                 },
                 {
                   "image": "/public/_data/media/projects/funcraft/screens/bingodice-2.jpg",
-                  "alt": "Classic bingo with a modern twist"
+                  "alt": "Store screenshot: classic bingo with a modern twist"
                 },
                 {
                   "image": "/public/_data/media/projects/funcraft/screens/bingodice-3.jpg",
-                  "alt": "Let’s play together"
+                  "alt": "Store screenshot: let’s play together"
                 },
                 {
                   "image": "/public/_data/media/projects/funcraft/screens/bingodice-4.jpg",
-                  "alt": "Play with friends"
+                  "alt": "Store screenshot: play with friends"
                 }
               ],
               "columns": 4,
@@ -174,19 +174,19 @@
               "gallery": [
                 {
                   "image": "/public/_data/media/projects/funcraft/screens/profootballmanager-1.jpg",
-                  "alt": "Draft legends"
+                  "alt": "Store screenshot: draft legends"
                 },
                 {
                   "image": "/public/_data/media/projects/funcraft/screens/profootballmanager-2.jpg",
-                  "alt": "Build your dream team"
+                  "alt": "Store screenshot: build your dream team"
                 },
                 {
                   "image": "/public/_data/media/projects/funcraft/screens/profootballmanager-3.jpg",
-                  "alt": "Clinch your spot"
+                  "alt": "Store screenshot: clinch your spot"
                 },
                 {
                   "image": "/public/_data/media/projects/funcraft/screens/profootballmanager-4.jpg",
-                  "alt": "Own the stage"
+                  "alt": "Store screenshot: own the stage"
                 }
               ],
               "columns": 4,
@@ -207,7 +207,7 @@
             {
               "id": "games",
               "heading": "All the games",
-              "text": "The full FunCraft catalog, from word and dice classics to sports managers and tower defense. Wordgrams and Merge Kingdoms launched before I joined.",
+              "text": "The full FunCraft catalog, from word and dice classics to sports-manager and tower defense games. Wordgrams and Merge Kingdoms launched before I joined.",
               "gallery": [
                 {
                   "image": "/public/_data/media/projects/funcraft/icons/whamzee.jpg",
@@ -362,11 +362,15 @@
         "image": "/public/_data/media/pet-shelter.jpg",
         "file": "",
         "detail": {
-          "summary": "The brief from etermax: a new trivia game with a fun metagame, something different from Trivia Crack. Our answer: a pet shelter where you answer the neighbors’ questions to get clues, find and rescue the pets that ran away, take care of them and rebuild the shelter. I was the team’s technical lead and second in charge, from the first concepts to launch. It was also the first etermax game to build its town map in Unity with isometric tiles.",
-          "client": "Pet Shelter by Trivia Crack is a mobile trivia game built around a pet shelter metagame, from etermax, the Buenos Aires studio behind Trivia Crack. Players answer the neighbors’ trivia questions to get clues, find and rescue the pets that ran away, take care of them, and rebuild the shelter.",
+          "summary": "A new trivia game for etermax with a pet shelter metagame: answer the neighbors’ questions to find runaway pets, care for them and rebuild the shelter. I was technical lead and second in charge, from first concepts to launch. The trivia version missed its targets, and etermax later relaunched it as a merge game.",
+          "client": "Pet Shelter by Trivia Crack is a mobile trivia game from etermax, the Buenos Aires studio behind Trivia Crack.",
           "context": "The shelter went through hard times and its pets ran away. That premise had to become a whole visual world around the trivia: a town to explore, neighbors who give clues, pets to rescue and care for, and a shelter that grows as you play. I started with the concepts, then worked with the team to take the art to launch.",
           "role": "Principal Product Artist: technical lead and second in charge of the team. Concept art and illustration, UI/UX design and Unity integration.",
           "jumps": [
+            {
+              "label": "The final game",
+              "target": "final-game"
+            },
             {
               "label": "Concepts",
               "target": "concepts"
@@ -374,10 +378,6 @@
             {
               "label": "Art evolution",
               "target": "art-evolution"
-            },
-            {
-              "label": "The final game",
-              "target": "final-game"
             }
           ],
           "sections": [
@@ -389,7 +389,7 @@
             {
               "heading": "A shelter that grows",
               "level": 3,
-              "text": "The core idea: a small, run-down shelter that opens up room by room as you rescue more pets.\n\nWe kept this isometric style all the way to launch, and built the town map in Unity with isometric tiles: the first game at etermax to do it.",
+              "text": "The core idea: a small, run-down shelter that opens up room by room as you rescue more pets.\n\nWe kept this isometric style all the way to launch and built the town map in Unity with isometric tiles, a first at etermax.",
               "gallery": [
                 {
                   "image": "/public/_data/media/projects/pet-shelter/concepts/shelter-stage-1.jpg",
@@ -502,12 +502,12 @@
                 {
                   "image": "/public/_data/media/projects/pet-shelter/concepts/trivia-flow-02.jpg",
                   "caption": "From the shelter…",
-                  "alt": "Map leaving the shelter"
+                  "alt": "Map: heading out from the shelter"
                 },
                 {
                   "image": "/public/_data/media/projects/pet-shelter/concepts/trivia-flow-03.jpg",
                   "caption": "…to a neighbor’s house",
-                  "alt": "Map arriving at a neighbor’s house"
+                  "alt": "Map: arriving at a neighbor’s house"
                 },
                 {
                   "image": "/public/_data/media/projects/pet-shelter/concepts/trivia-flow-04.jpg",
@@ -537,7 +537,7 @@
                 {
                   "image": "/public/_data/media/projects/pet-shelter/concepts/trivia-flow-09.jpg",
                   "caption": "Come back later",
-                  "alt": "Neighbor leaves until later"
+                  "alt": "Neighbor has to leave: continue for 50 coins or quit"
                 },
                 {
                   "image": "/public/_data/media/projects/pet-shelter/concepts/trivia-flow-10.jpg",
@@ -633,7 +633,7 @@
                 {
                   "image": "/public/_data/media/projects/pet-shelter/concepts/ui-01-map-missions-full.jpg",
                   "caption": "Shelter full",
-                  "alt": "Shelter is full warning"
+                  "alt": "Warning that the shelter is full"
                 },
                 {
                   "image": "/public/_data/media/projects/pet-shelter/concepts/ui-01-map-missions-rescued-1.jpg",
@@ -744,7 +744,7 @@
                 {
                   "image": "/public/_data/media/projects/pet-shelter/deck/icon-final-round.jpg",
                   "caption": "Android (round)",
-                  "alt": "Final round app icon",
+                  "alt": "Final app icon, round version for Android",
                   "shape": "round"
                 }
               ]
@@ -834,7 +834,7 @@
                 },
                 {
                   "image": "/public/_data/media/projects/pet-shelter/storyboard/chosen-6.jpg",
-                  "alt": "The door opens, the dog wags its tail"
+                  "alt": "The door opens and the dog wags its tail"
                 }
               ],
               "columns": 6,
@@ -1160,7 +1160,9 @@
                 "url": "https://play.google.com/store/apps/details?id=com.etermax.petmerge"
               }
             }
-          ]
+          ],
+          "hero": "/public/_data/media/pet-shelter-screens.jpg",
+          "heroAlt": "Five screens from the launched game: town map, trivia question, pet rescued, the shelter and a seasonal event"
         }
       },
       {
@@ -1171,8 +1173,8 @@
         "file": "https://drive.google.com/file/d/1vYYhgm0KgLwD3uqAG34zO0En4X0hgKNX/view",
         "slug": "nearpod",
         "detail": {
-          "summary": "Two projects for Nearpod’s lesson platform: images in quiz answers, and a Motion UI menu that brought new lesson libraries to the iPad app.",
-          "client": "Nearpod is an award-winning student engagement platform that teachers use to run interactive lessons. As a product designer at Hexacta, I worked with Nearpod’s US-based product team on new features for its web and iPad apps.",
+          "summary": "Two projects for Nearpod’s lesson platform: images in quiz answers and a Motion UI menu that brought new lesson libraries to the iPad app.",
+          "client": "Nearpod is an award-winning student engagement platform that teachers use to run interactive lessons. As a senior product designer at Hexacta, I worked with Nearpod’s US-based product team on new features for its web and iPad apps.",
           "context": "The web app was evolving fast, the iPad app had to keep up, and new features had to work on both. I often stepped in as a firefighter, solving design problems the team was stuck on.",
           "role": "Product designer (and firefighter): prototyping, UI design, heuristics and accessibility.",
           "jumps": [
@@ -1240,7 +1242,7 @@
             {
               "id": "motion-ui",
               "heading": "Case study: Motion UI",
-              "text": "Nearpod sold free and paid lessons in a store, then added custom libraries for schools, districts and programs, and these had to be available on every platform.\n\nOn the web, a top navigation bar with drop-down menus handled it fine. On iOS it was a different game, and the team had been struggling to find an answer before I joined.",
+              "text": "Nearpod sold free and paid lessons in a store, then added custom libraries for schools, districts and programs. These had to be available on every platform.\n\nOn the web, a top navigation bar with drop-down menus handled it fine. On iOS, it was a different game, and the team had been struggling to find an answer before I joined.",
               "notes": [
                 "Nearpod wanted more revenue from premade lessons",
                 "The web app was evolving much faster than iOS"
@@ -1249,9 +1251,6 @@
             {
               "heading": "Welcome",
               "text": "This was the iPad Welcome screen. Stakeholders saw it almost as part of the brand and didn’t want it changed.\n\nSo instead of redesigning it, I proposed Motion UI: a smooth transition from the Welcome menu into a new submenu, like the Flash sites of the old days.\n\nThe heads of Product and iOS loved the idea, and we aligned on the solution.",
-              "notes": [
-                "Experience gives you the tools to solve problems"
-              ],
               "level": 3,
               "image": "/public/_data/media/projects/nearpod/motion-01.jpg",
               "caption": "The Explore button leads to the lesson store.",
@@ -1263,7 +1262,7 @@
               "caption": "From Menu A (Welcome) to Menu B (Explore).",
               "level": 3,
               "image": "/public/_data/media/projects/nearpod/motion-02.jpg",
-              "alt": "Nearpod menu A (Welcome) and menu B (Explore submenu) side by side"
+              "alt": "Nearpod Menu A (Welcome) and Menu B (Explore submenu) side by side"
             },
             {
               "video": "https://vimeo.com/1250390696",
@@ -1271,11 +1270,12 @@
               "text": "I presented the animation prototype to the product owner and stakeholders, and they were very happy with the result.",
               "ratio": "4:3"
             }
-          ]
+          ],
+          "hero": "/public/_data/media/projects/nearpod/quiz-05.jpg"
         }
       },
       {
-        "title": ".ar Domain Launch",
+        "title": ".ar domain launch",
         "show": true,
         "content": "Opening Argentina’s .ar domain to the public: 35,000 new domains registered in two months.",
         "image": "/public/_data/media/portfolio_nic.jpg",
@@ -1336,7 +1336,7 @@
             },
             {
               "heading": "Visual communication",
-              "text": "There was no time for the big campaign we had planned, so we explained the opening with a landing page, emails and social media.\n\nThe concept: “Your place on the Internet.” A new domain is a new world in cyberspace, so we went with a space theme.",
+              "text": "There was no time for the big campaign we had planned, so we explained the opening with a landing page, emails and social media.\n\nThe concept: “Your place on the internet.” A new domain is a new world in cyberspace, so we went with a space theme.",
               "image": "/public/_data/media/projects/cos-top-level-domain/06.jpg",
               "caption": "The landing page: the new domain, its features, the opening timeline, and links to rules and FAQs.",
               "alt": "Space-themed .ar landing page",
@@ -1347,9 +1347,9 @@
             },
             {
               "heading": "Aftermath",
-              "text": "Then the project stalled for almost a year because of the unstable platform, so we never got to test it with users.\n\nA political decision brought it back to life, and the teams had to ship fast. The opening ran on a very tight schedule, and some features were cut to meet the deadline.\n\nThe core changes (labeled buttons and the new rows) shipped. The alert didn’t, so people who hadn’t heard about the opening might get confused. We covered the gap with emails, a landing page, FAQs and tutorials.",
+              "text": "Then the project stalled for almost a year because of the unstable platform, so we never got to test it with users.\n\nA political decision brought it back to life, and the teams had to ship fast. The opening ran on a very tight schedule, and some features were cut to meet the deadline.\n\nThe core changes (labeled buttons and the new rows) shipped. The alert didn’t, so people who hadn’t heard about the opening might get confused. We covered the gap with emails, a landing page, FAQs and tutorials.\n\nOther problems at launch:",
               "notes": [
-                "I regret this the most"
+                "My biggest regret: the alert didn’t ship"
               ],
               "list": [
                 "The platform was still unstable",
@@ -1381,7 +1381,8 @@
               }
             }
           ],
-          "summary": "How small, targeted UX changes helped open Argentina’s .ar domain to the public, with 35,000 domains registered in the first two months."
+          "summary": "How small, targeted UX changes helped open Argentina’s .ar domain to the public, with 35,000 domains registered in the first two months.",
+          "hero": "/public/_data/media/projects/cos-top-level-domain/05.jpg"
         }
       },
       {
@@ -1418,60 +1419,60 @@
             {
               "heading": "Wireframes and user testing",
               "level": 3,
-              "text": "Before building the user area, I wireframed every flow: sign-up, login, password reset, email verification, managing blockchain accounts, and an admin panel to review accounts and Ether requests.\n\nWe ran user tests on these flows: sign-up, login, password recovery and account management.",
+              "text": "Before building the user area, I wireframed every flow: sign-up, login, password reset, email verification, blockchain account management, and an admin panel to review accounts and Ether requests.\n\nWe ran user tests on these flows: sign-up, login, password reset and account management.",
               "gallery": [
                 {
                   "image": "/public/_data/media/projects/bfa/wireframe-01.png",
                   "caption": "Home",
-                  "alt": "Wireframe: BFA home with sign-up and log-in calls to action",
+                  "alt": "Wireframe: bFA home with sign-up and login calls to action",
                   "link": "/public/_data/media/projects/bfa/bfa-wireframes.pdf#page=1"
                 },
                 {
                   "image": "/public/_data/media/projects/bfa/wireframe-02.png",
                   "caption": "Sign up",
-                  "alt": "Wireframe: Sign-up form with name, email and password fields",
+                  "alt": "Wireframe: sign-up form with name, email and password fields",
                   "link": "/public/_data/media/projects/bfa/bfa-wireframes.pdf#page=3"
                 },
                 {
                   "image": "/public/_data/media/projects/bfa/wireframe-03.png",
                   "caption": "Log in",
-                  "alt": "Wireframe: Log-in form with email, password and a forgot-password link",
+                  "alt": "Wireframe: login form with email, password and a forgot-password link",
                   "link": "/public/_data/media/projects/bfa/bfa-wireframes.pdf#page=4"
                 },
                 {
                   "image": "/public/_data/media/projects/bfa/wireframe-04.png",
                   "caption": "Password reset",
-                  "alt": "Wireframe: Password reset form with a single email field",
+                  "alt": "Wireframe: password reset form with a single email field",
                   "link": "/public/_data/media/projects/bfa/bfa-wireframes.pdf#page=5"
                 },
                 {
                   "image": "/public/_data/media/projects/bfa/wireframe-05.png",
                   "caption": "Email verification",
-                  "alt": "Wireframe: Verification pending card with an envelope icon and resend link",
+                  "alt": "Wireframe: pending-verification card with an envelope icon and a resend link",
                   "link": "/public/_data/media/projects/bfa/bfa-wireframes.pdf#page=7"
                 },
                 {
                   "image": "/public/_data/media/projects/bfa/wireframe-06.png",
                   "caption": "Add an account",
-                  "alt": "Wireframe: Dialog to add a blockchain account",
+                  "alt": "Wireframe: dialog to add a blockchain account",
                   "link": "/public/_data/media/projects/bfa/bfa-wireframes.pdf#page=11"
                 },
                 {
                   "image": "/public/_data/media/projects/bfa/wireframe-07.png",
                   "caption": "Accounts",
-                  "alt": "Wireframe: Accounts table with status and Ether balance",
+                  "alt": "Wireframe: accounts table with status and Ether balance",
                   "link": "/public/_data/media/projects/bfa/bfa-wireframes.pdf#page=12"
                 },
                 {
                   "image": "/public/_data/media/projects/bfa/wireframe-08.png",
                   "caption": "Admin panel",
-                  "alt": "Wireframe: Admin panel to review users’ accounts and Ether requests",
+                  "alt": "Wireframe: admin panel to review users’ accounts and Ether requests",
                   "link": "/public/_data/media/projects/bfa/bfa-wireframes.pdf#page=20"
                 },
                 {
                   "image": "/public/_data/media/projects/bfa/wireframe-09.png",
                   "caption": "Change Ether capacity",
-                  "alt": "Wireframe: Admin dialog to change an account’s Ether capacity",
+                  "alt": "Wireframe: admin dialog to change an account’s Ether capacity",
                   "link": "/public/_data/media/projects/bfa/bfa-wireframes.pdf#page=21"
                 }
               ],
@@ -1501,8 +1502,8 @@
               "alt": "Packed auditorium at BFA’19 with a Spanish thank-you message overlaid"
             },
             {
-              "heading": "Case study: Sello de Tiempo",
-              "text": "An institution in the BFA community built a timestamp tool: a way to prove that a digital document existed at a given moment and hasn’t changed since. They built it first, and then asked me to “put the design on it.”\n\nSo I started from a very basic app and worked out how to make it usable and appealing. There were no front-end developers on the project either, so I built the front end myself, in Vue.js, a framework I had never used before.",
+              "heading": "Case study: Sello de Tiempo (Timestamp)",
+              "text": "An institution in the BFA community built a timestamp tool: a way to prove that a digital document existed at a given moment and hasn’t changed since. They built it first, and then asked me to “put the design on it.”\n\nSo I started from a very basic app and worked out how to make it usable and appealing. There were no front-end developers on the project, so I built the front end myself, in Vue.js, a framework I had never used before.",
               "notes": [
                 "They had built it first. My job was to make it usable.",
                 "My first project with Vue.js"
@@ -1523,7 +1524,7 @@
               "heading": "A brand-new timestamp",
               "text": "I started from the BFA website’s styles, which were based on Bootstrap, so the tool would feel like part of the platform.",
               "image": "/public/_data/media/projects/bfa/timestamp-02.png",
-              "caption": "The first screen looks different, but works the same.",
+              "caption": "The first screen looks different but works the same.",
               "alt": "Sello de Tiempo 2.0: upload screen to drag or select files",
               "level": 3
             },
@@ -1544,7 +1545,7 @@
             },
             {
               "heading": "Outcome",
-              "text": "The app was a success and was presented at blockchain events. Other teams keep improving it today.",
+              "text": "The app was a success and was presented at blockchain events. Other teams have kept improving it since.",
               "notes": [
                 "The whole project lives in BFA’s private GitLab repository"
               ],
@@ -1558,10 +1559,11 @@
               "target": "visual-identity"
             },
             {
-              "label": "Case study: Sello de Tiempo",
+              "label": "Case study: Timestamp app",
               "target": "case-study"
             }
-          ]
+          ],
+          "hero": "/public/_data/media/projects/bfa/01.png"
         }
       },
       {
@@ -1572,7 +1574,6 @@
         "file": "https://drive.google.com/file/d/1mmbDFRsGIvRNHi73ZZ5gDhccxzesNFPA/view",
         "slug": "sony",
         "detail": {
-          "client": "Sony Corporation is a Japanese multinational conglomerate headquartered in Minato, Tokyo.",
           "context": "In 2010, Sony launched Dash, a new personal internet viewer, and needed tutorials to show people how to use it.",
           "role": "Designer, technical lead and developer.",
           "sections": [
@@ -1607,7 +1608,9 @@
               "device": true
             }
           ],
-          "summary": "Instead of a slideshow, a game: users explore a virtual home to discover what Sony’s new Dash device can do."
+          "summary": "Instead of a slideshow, a game: users explore a virtual home to discover what Sony’s new Dash device can do.",
+          "hero": "/public/_data/media/projects/sony/01.png",
+          "heroWidth": 587
         }
       },
       {
@@ -1618,7 +1621,6 @@
         "file": "https://drive.google.com/file/d/18ffK6BgsCCkP4zwyDvZP5SfN3oTxIBS3/view",
         "slug": "microsoft",
         "detail": {
-          "client": "Microsoft Corporation is an American multinational technology company headquartered in Redmond, Washington.",
           "context": "Office 365 was about to launch, and retail sales associates needed to learn the new features fast so they could demo them to customers.",
           "role": "Designer, technical lead and developer, from visual design to the final build.",
           "sections": [
@@ -1665,7 +1667,9 @@
               "device": true
             }
           ],
-          "summary": "A tile-based iPad training app that got retail sales teams up to speed on Office 365, and became the template for six more products."
+          "summary": "A tile-based iPad training app that got retail sales teams up to speed on Office 365, and became the template for six more products.",
+          "hero": "/public/_data/media/projects/microsoft/01.png",
+          "heroWidth": 587
         }
       },
       {
@@ -1712,10 +1716,11 @@
             {
               "image": "/public/_data/media/projects/personal/05.jpg",
               "caption": "Looking ahead.",
-              "alt": "Video frame: the word Futuro on a dotted pink timeline"
+              "alt": "Video frame: the word Futuro (Future) on a dotted pink timeline"
             }
           ],
-          "summary": "A promotional video telling the story of a sports app, with full creative freedom on design and motion."
+          "summary": "A promotional video telling the story of a sports app, with full creative freedom on design and motion.",
+          "hero": "/public/_data/media/projects/personal/03.jpg"
         }
       },
       {
@@ -1728,7 +1733,7 @@
         "detail": {
           "client": "Viñetas Sueltas is a nonprofit that runs an international comics festival in Buenos Aires. I co-founded it, and I designed and built its website from 2008 to 2017.",
           "context": "Web development changed a lot between 2008 and 2017, but one constraint never did: two weeks to build the site from scratch, on top of my day job.",
-          "role": "Web designer, developer and branding.",
+          "role": "Web design, development and branding.",
           "sections": [
             {
               "heading": "2017",

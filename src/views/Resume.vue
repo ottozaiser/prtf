@@ -38,6 +38,7 @@
           v-bind:description="post.description"
           v-bind:from="post.from"
           v-bind:to="post.to"
+          v-bind:open="Boolean(post.open)"
         />
       </div>
     </section>
@@ -57,6 +58,7 @@
           v-bind:description="post.description"
           v-bind:from="post.from"
           v-bind:to="post.to"
+          v-bind:open="Boolean(post.open)"
         />
       </div>
     </section>
@@ -93,6 +95,23 @@
         />
       </div>
     </section>
+
+    <!-- The page (and the home page, which ends with it) closes with a next step -->
+    <aside v-if="settings && settings.contact_email" class="hire" aria-labelledby="resume-hire-title">
+      <p id="resume-hire-title" class="hire-title">Like what you see? Let’s talk.</p>
+      <div class="hire-actions">
+        <ContactMenu
+          variant="hero"
+          :email="settings.contact_email"
+          :linkedin="settings.linkedin_url"
+          :cv="settings.cv_url"
+        />
+        <a v-if="settings.cv_url" class="btn" :href="settings.cv_url" download>
+          <font-awesome-icon icon="download" aria-hidden="true" />
+          Download CV
+        </a>
+      </div>
+    </aside>
   </div>
 </template>
 
@@ -104,6 +123,7 @@ import Job from "@/components/Job.vue";
 import Skill from "@/components/Skill.vue";
 import Education from "@/components/Education.vue";
 import ClickHandler from "@/mixins/ClickHandler.js";
+import ContactMenu from "@/components/ContactMenu.vue";
 
 export default {
   name: "resume",
@@ -112,13 +132,21 @@ export default {
     Job,
     Skill,
     Education,
+    ContactMenu,
   },
   data: function () {
     return {
       resumejson: null,
+      settings: null,
     };
   },
   created: function () {
+    axios
+      .get("/_data/settings.json")
+      .then((response) => {
+        this.settings = response.data;
+      })
+      .catch(() => {});
     axios
       .get("/_data/resume.json")
       .then((response) => {
@@ -141,6 +169,44 @@ export default {
 </script>
 
 <style scoped>
+/* Contact box at the end, same look as the one on case pages */
+.hire {
+  margin: 64px 0 48px;
+  padding: 24px;
+  border: 2px solid var(--main-highlight);
+  border-radius: 4px;
+  background: #fff;
+}
+.hire-title {
+  font-size: 1.25em;
+  font-weight: bold;
+  line-height: 1.3;
+  color: var(--main-charcoal);
+  margin: 0 0 16px;
+}
+.hire-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.hire .contact-menu {
+  width: auto;
+}
+.hire .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 10px 20px;
+}
+@media (max-width: 480px) {
+  .hire .btn,
+  .hire .contact-menu {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+}
 .skills {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));

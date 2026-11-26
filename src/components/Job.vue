@@ -51,10 +51,12 @@ export default {
     description: String,
     from: String,
     to: String,
+    // Start expanded (the recent, relevant jobs), so a recruiter reads them without a tap
+    open: Boolean,
   },
   data: function () {
     return {
-      show: false,
+      show: this.open,
     };
   },
   computed: {

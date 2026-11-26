@@ -7,7 +7,7 @@
     role="dialog"
     aria-modal="true"
     :aria-label="label"
-    @keydown="onKey"
+    tabindex="-1"
     @click.self="close"
   >
     <div class="top">
@@ -17,8 +17,20 @@
       </button>
     </div>
 
-    <figure class="stage" @click.self="close" @touchstart.passive="onTouchStart" @touchend="onTouchEnd">
-      <img :key="current.src" :src="current.src" :alt="current.alt || current.caption || ''" class="img" />
+    <figure class="stage" :class="{ zoomed }" @click.self="close" @touchstart.passive="onTouchStart" @touchend="onTouchEnd">
+      <!-- Phones: wide screenshots (desktop pages, tables) stay small when fitted, so a tap
+           shows them at full screen height and they scroll sideways; tap again to fit. -->
+      <div class="frame" ref="frame">
+        <img
+          :key="current.src"
+          :src="current.src"
+          :alt="current.alt || current.caption || ''"
+          class="img"
+          @load="onImgLoad"
+          @click="toggleZoom"
+        />
+      </div>
+      <p v-if="wide && !zoomed" class="hint">Tap the image to zoom</p>
       <figcaption v-if="current.caption || description" class="caption">
         <strong v-if="current.caption">{{ current.caption }}</strong>
         <span v-if="description">{{ description }}</span>
@@ -49,7 +61,7 @@ export default {
   },
   emits: ["close", "update:index"],
   data() {
-    return { touchX: null, touchY: null, opener: null };
+    return { touchX: null, touchY: null, opener: null, zoomed: false, wide: false };
   },
   computed: {
     current() {
@@ -70,6 +82,9 @@ export default {
     open(isOpen) {
       if (isOpen) {
         this.opener = document.activeElement;
+        this.zoomed = false;
+        // Keys work wherever focus is (clicking the image moves focus to the page body)
+        document.addEventListener("keydown", this.onKey);
         document.documentElement.classList.add("lightbox-open");
         this.$nextTick(() => this.$refs.closeBtn && this.$refs.closeBtn.focus());
       } else {
@@ -77,6 +92,7 @@ export default {
       }
     },
     index() {
+      this.zoomed = false;
       this.preload();
     },
   },
@@ -88,6 +104,7 @@ export default {
       this.$emit("close");
     },
     release() {
+      document.removeEventListener("keydown", this.onKey);
       document.documentElement.classList.remove("lightbox-open");
       if (this.opener && this.opener.focus) this.opener.focus();
       this.opener = null;
@@ -124,6 +141,14 @@ export default {
         f[next].focus();
       }
     },
+    onImgLoad(e) {
+      const img = e.target;
+      this.wide = window.matchMedia("(max-width: 600px)").matches && img.naturalWidth > img.naturalHeight * 1.3;
+    },
+    toggleZoom() {
+      if (!this.wide) return;
+      this.zoomed = !this.zoomed;
+    },
     onTouchStart(e) {
       const t = e.changedTouches[0];
       this.touchX = t.clientX;
@@ -131,7 +156,7 @@ export default {
     },
     // Horizontal swipe of 40px+ (and more sideways than vertical) changes image.
     onTouchEnd(e) {
-      if (this.touchX === null) return;
+      if (this.touchX === null || this.zoomed) return; // zoomed: a sideways swipe scrolls the image
       const t = e.changedTouches[0];
       const dx = t.clientX - this.touchX;
       const dy = t.clientY - this.touchY;
@@ -162,6 +187,9 @@ html.lightbox-open body {
   justify-content: center;
   padding: 64px 72px 24px;
   color: #fff;
+}
+.close {
+  margin-left: auto; /* stays top right even when there's no counter */
 }
 .top {
   position: absolute;
@@ -199,6 +227,33 @@ html.lightbox-open body {
   object-fit: contain;
   border-radius: 6px;
   background: #fff;
+}
+.frame {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.hint {
+  margin: -4px 0 0;
+  font-size: 0.85em;
+  opacity: 0.7;
+}
+.stage.zoomed {
+  width: 100%;
+}
+.stage.zoomed .frame {
+  width: 100%;
+  overflow-x: auto;
+  justify-content: flex-start;
+  -webkit-overflow-scrolling: touch;
+}
+.stage.zoomed .img {
+  max-width: none;
+  max-height: none;
+  height: calc(100vh - 64px - 84px - 96px);
+  height: calc(100dvh - 64px - 84px - 96px);
+  width: auto;
+  cursor: zoom-out;
 }
 .caption {
   max-width: 640px;

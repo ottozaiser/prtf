@@ -8,9 +8,25 @@
         <p v-if="detail.summary" class="summary">{{ detail.summary }}</p>
       </header>
 
-      <div class="hero">
-        <progressive-img :src="media(project.image)" :alt="project.title" />
-      </div>
+      <!-- Hero: work (detail.hero) when set, else the card cover. When the hero is a section's own
+           image, that section is shown here instead (see sections below). -->
+      <figure class="hero" :class="{ 'hero-work': detail.hero }">
+        <button
+          v-if="detail.hero"
+          type="button"
+          class="zoom"
+          :aria-label="`Open image${heroSection && heroSection.caption ? ': ' + heroSection.caption : ''}`"
+          @click="openHero"
+        >
+          <progressive-img
+            :src="media(detail.hero)"
+            :alt="(heroSection && heroSection.alt) || detail.heroAlt || project.title"
+            :style="detail.heroWidth ? { maxWidth: `${detail.heroWidth}px` } : null"
+          />
+        </button>
+        <progressive-img v-else :src="media(project.image)" :alt="project.title" />
+      </figure>
+      <p v-if="heroSection && heroSection.caption" class="hero-caption">{{ heroSection.caption }}</p>
 
       <h2 v-if="detail.client || detail.context || detail.role" class="facts-title">
         <span class="highlight">Overview</span>
@@ -51,6 +67,7 @@
 
       <section
         v-for="(s, i) in detail.sections || []"
+        v-show="!isHeroSection(s)"
         :key="i"
         :id="s.id || null"
         class="block"
@@ -180,10 +197,13 @@
       <aside v-if="settings && settings.contact_email" class="hire" aria-labelledby="hire-title">
         <p id="hire-title" class="hire-title">Hiring a product designer for mobile games?</p>
         <div class="hire-actions">
-          <a class="btn primary" :href="`mailto:${settings.contact_email}?subject=${encodeURIComponent('Hi Otto')}`">
-            <font-awesome-icon icon="envelope" aria-hidden="true" />
-            Email me
-          </a>
+          <!-- Copy email / Email me / LinkedIn / CV: works for people without a mail app too -->
+          <ContactMenu
+            variant="hero"
+            :email="settings.contact_email"
+            :linkedin="settings.linkedin_url"
+            :cv="settings.cv_url"
+          />
           <a v-if="settings.cv_url" class="btn" :href="settings.cv_url" download>
             <font-awesome-icon icon="download" aria-hidden="true" />
             Download CV
@@ -244,10 +264,11 @@
 import axios from "axios";
 import Project from "@/components/Project.vue";
 import Lightbox from "@/components/Lightbox.vue";
+import ContactMenu from "@/components/ContactMenu.vue";
 
 export default {
   name: "ProjectDetail",
-  components: { Project, Lightbox },
+  components: { Project, Lightbox, ContactMenu },
   props: { slug: { type: String, required: true } },
   data() {
     return {
@@ -283,6 +304,15 @@ export default {
     },
     moreSpacers() {
       return this.morePages * 3 - this.others.length;
+    },
+    // When the hero is the page's first image and that section has nothing else (no heading or
+    // text), the section moves up into the hero instead of showing the same image twice.
+    heroSection() {
+      const h = this.detail.hero;
+      const first = (this.detail.sections || []).find((s) => s.image);
+      return h && first && first.image === h && !first.heading && !first.text && !(first.list && first.list.length)
+        ? first
+        : null;
     },
     firstWord() {
       const t = (this.project && this.project.title) || "";
@@ -352,6 +382,18 @@ export default {
         items: withIndex.map(({ g }) => ({ src: this.media(g.image), caption: g.caption || "", alt: g.alt || "" })),
         index: Math.max(0, withIndex.findIndex(({ j }) => j === itemIndex)),
         title: this.sectionTitle(sectionIndex),
+      };
+    },
+    isHeroSection(s) {
+      return s === this.heroSection;
+    },
+    openHero() {
+      const s = this.heroSection;
+      this.lightbox = {
+        open: true,
+        items: [{ src: this.media(this.detail.hero), caption: (s && s.caption) || "", alt: (s && s.alt) || this.detail.heroAlt || "" }],
+        index: 0,
+        title: (this.project && this.project.title) || "",
       };
     },
     openImage(sectionIndex) {
@@ -501,10 +543,20 @@ h1 {
   overflow: hidden;
   background: #fff;
 }
+.hero {
+  margin: 0;
+}
 .hero img {
   display: block;
   width: 100%;
   height: auto;
+  margin: 0 auto;
+}
+.hero-caption {
+  margin: 10px 0 0;
+  color: var(--main-txt-gray);
+  font-size: 0.95em;
+  line-height: 1.5;
 }
 .facts-title {
   font-size: 1.5em; /* site h2 size */
@@ -726,6 +778,7 @@ figcaption {
   margin-top: 6px;
   font-size: 0.85em;
   overflow-wrap: break-word;
+  hyphens: auto; /* "Backgam-mon" instead of "Backgamm/on" in narrow columns */
 }
 /* Tap-to-open images: a bare button around the image */
 .zoom {
@@ -842,6 +895,9 @@ figcaption {
   flex-wrap: wrap;
   gap: 12px;
 }
+.hire .contact-menu {
+  width: auto;
+}
 .hire .btn {
   display: inline-flex;
   align-items: center;
@@ -861,8 +917,10 @@ figcaption {
   box-shadow: 0 0 0 2px var(--main-charcoal);
 }
 @media (max-width: 480px) {
-  .hire .btn {
+  .hire .btn,
+  .hire .contact-menu {
     flex: 1 1 100%;
+    width: 100%;
   }
 }
 .hire + .more {

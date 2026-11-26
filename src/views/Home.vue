@@ -314,13 +314,33 @@ ul.menu .btn.primary:focus-visible {
     display: none;
   }
 }
-/* Phones: the main button on its own row, the other two side by side */
+/* Phones: the main button on its own row, the other two side by side (one line each) */
 @media (max-width: 480px) {
   ul.menu li {
     flex: 1 1 calc(50% - 4px);
   }
   ul.menu li:first-child {
     flex-basis: 100%;
+  }
+  ul.menu .btn,
+  ul.menu :deep(.hero-btn) {
+    white-space: nowrap;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+/* Very small phones: one button per row */
+@media (max-width: 359px) {
+  ul.menu li {
+    flex-basis: 100%;
+  }
+}
+/* Tablets: the illustration is about 380px tall, so cap its box and center it between title and text */
+@media (min-width: 601px) and (max-width: 991px) {
+  .animation {
+    max-height: 520px;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
   }
 }
 section {

@@ -13,7 +13,7 @@
     </div>
     <div class="window fixed" v-if="fixed">
       <div class="content">
-        <h1>404 - Page not found</h1>
+        <h1>404 – Page not found</h1>
         <div class="textContent">
           <p>Sorry. Sometimes I make mistakes, but that’s OK.</p>
         </div>

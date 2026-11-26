@@ -2,7 +2,7 @@
   "title": "Resume",
   "about": {
     "title": "🤓 About me",
-    "content": "<p>I design mobile games end to end: UX flows, UI, illustration and motion. Then I build it all in Unity myself, so nothing gets lost in handoff.</p><p>For 20+ years, I’ve worked where design meets code. I built e-learning at TeleTech and Globant for clients like Microsoft, T-Mobile and Bank of America, led the design team at NIC Argentina (the .ar domain registry), designed for Nearpod, and since 2020 I’ve worked on game products at etermax and FunCraft.</p><p>Outside work, I co-founded Viñetas Sueltas, a nonprofit that brings comics and graphic narrative to museums and cultural centers across Argentina.</p><ul><li><a href='https://www.linkedin.com/in/ottozaiser/' target='_blank'>LinkedIn profile</a></li><li><a class='highlight' href='/story'>Read my story >></a></li></ul>",
+    "content": "<p>I design mobile games end to end: UX flows, UI, illustration and motion. Then I integrate it in Unity myself, so nothing gets lost in handoff.</p><p>For 20+ years, I’ve worked where design meets code. I built e-learning at TeleTech and Globant for clients like Microsoft, T-Mobile and Bank of America, led the design team at NIC Argentina (the .ar domain registry), designed for Nearpod, and since 2020 I’ve worked on game products at etermax and FunCraft.</p><p>Outside work, I co-founded Viñetas Sueltas, a nonprofit that brings comics and graphic narrative to museums and cultural centers across Argentina.</p><ul><li><a href='https://www.linkedin.com/in/ottozaiser/' target='_blank'>LinkedIn profile</a></li><li><a class='highlight' href='/story'>Read my story >></a></li></ul>",
     "image": "/_data/media/me-real.png"
   },
   "resume": {
@@ -30,7 +30,7 @@
     "skills_title": "👑 Skills, knowledge & tools",
     "categories": [
       {
-        "category_title": "UI Design",
+        "category_title": "UI design",
         "category": [
           {
             "name": "Game UI"
@@ -56,7 +56,7 @@
         ]
       },
       {
-        "category_title": "UX Design",
+        "category_title": "UX design",
         "category": [
           {
             "name": "User-centered design"
@@ -154,7 +154,7 @@
         ]
       },
       {
-        "category_title": "Graphic Design",
+        "category_title": "Graphic design",
         "category": [
           {
             "name": "Branding"
@@ -171,7 +171,7 @@
         ]
       },
       {
-        "category_title": "Design Tools",
+        "category_title": "Design tools",
         "category": [
           {
             "name": "Pencil & paper"
@@ -241,7 +241,7 @@
             "name": "SCORM (e-learning)"
           },
           {
-            "name": "W3C"
+            "name": "Web standards (W3C)"
           },
           {
             "name": "Accessibility (WAI-ARIA)"
@@ -274,7 +274,8 @@
         "position": "Product Designer",
         "from": "01/2023",
         "to": "Present",
-        "description": "<p>Product designer at FunCraft, the remote-first studio behind Wordgrams, Word Yatzy, Farkle and Dice Yatzy, casual word, dice and sports games with 35M+ installs.</p><ul><li>Design game UI/UX from flows and wireframes to final screens, then implement them directly in Unity</li><li>Create in-game animation and particle effects that make features feel alive</li><li>Produce animated ad creatives for marketing and user-acquisition campaigns</li><li>Create graphics and illustrations for game features, events and store assets</li><li>Build AI-assisted art workflows (Claude, Midjourney, ChatGPT) to speed up concepting and asset production</li><li>Use Amplitude data to evaluate features and guide design iterations</li><li>Work across art, engineering and product using Jira and Perforce</li></ul><p><strong>Tools:</strong> Unity, Perforce, Jira, Amplitude, Adobe Suite (Photoshop, Illustrator, After Effects), Claude, Midjourney, ChatGPT</p>"
+        "description": "<p>FunCraft is the remote-first studio behind Wordgrams, Word Yatzy, Farkle and Dice Yatzy: casual word, dice and sports games with 35M+ installs.</p><ul><li>Design game UI/UX from flows and wireframes to final screens, then implement them directly in Unity</li><li>Create in-game animation and particle effects that make features feel alive</li><li>Produce animated ad creatives for marketing and user-acquisition campaigns</li><li>Create graphics and illustrations for game features, events and store assets</li><li>Build AI-assisted art workflows (Claude, Midjourney, ChatGPT) to speed up concepting and asset production</li><li>Use Amplitude data to evaluate features and guide design iterations</li><li>Work across art, engineering and product using Jira and Perforce</li></ul><p><strong>Tools:</strong> Unity, Perforce, Jira, Amplitude, Adobe Suite (Photoshop, Illustrator, After Effects), Claude, Midjourney, ChatGPT</p><p><a class='highlight' href='/portfolio/funcraft'>See the FunCraft case study >></a></p>",
+        "open": true
       },
       {
         "company": "etermax",
@@ -282,7 +283,8 @@
         "position": "Principal Product Artist & Product Artist",
         "from": "08/2020",
         "to": "12/2022",
-        "description": "<p>etermax is the Buenos Aires studio behind Trivia Crack. I joined as Product Artist and was promoted to Principal Product Artist in 2022, as technical lead and second in charge of the Pet Shelter by Trivia Crack team.</p><p><strong>Principal Product Artist</strong></p><ul><li>Technical lead and second in charge on Pet Shelter: concept art, UI/UX and Unity integration from first concepts to launch</li><li>Designed UI/UX for new features from concept to final screens</li><li>Created graphics and illustrations for in-game content and live events</li><li>Worked closely with engineering via Unity and Git so the final build matched the design</li></ul><p><strong>Product Artist</strong></p><ul><li>Designed UI/UX for game features, from user flows to final screens</li><li>Integrated UI and art assets directly in Unity, collaborating with engineers through Git</li><li>Designed in-app messages and promotional offers delivered through Braze</li><li>Used Amplitude data to evaluate features and guide design changes</li><li>Created graphics and illustrations for in-game content and events</li></ul><p><strong>Tools:</strong> Unity, Git, Amplitude, Braze, HTML, CSS &amp; JavaScript, Adobe Suite (Photoshop, Illustrator, After Effects)</p>"
+        "description": "<p>etermax is the Buenos Aires studio behind Trivia Crack. I joined as Product Artist and was promoted to Principal Product Artist in 2022, serving as technical lead and second in charge of the Pet Shelter by Trivia Crack team.</p><p><strong>Principal Product Artist</strong></p><ul><li>Technical lead and second in charge on Pet Shelter: concept art, UI/UX and Unity integration from first concepts to launch</li><li>Designed UI/UX for new features from concept to final screens</li><li>Created graphics and illustrations for in-game content and live events</li><li>Worked closely with engineering via Unity and Git so the final build matched the design</li></ul><p><strong>Product Artist</strong></p><ul><li>Designed UI/UX for game features, from user flows to final screens</li><li>Integrated UI and art assets directly in Unity, collaborating with engineers through Git</li><li>Designed in-app messages and promotional offers delivered through Braze</li><li>Used Amplitude data to evaluate features and guide design changes</li><li>Created graphics and illustrations for in-game content and events</li></ul><p><strong>Tools:</strong> Unity, Git, Amplitude, Braze, HTML, CSS, JavaScript, Adobe Suite (Photoshop, Illustrator, After Effects)</p><p><a class='highlight' href='/portfolio/pet-shelter'>See the Pet Shelter case study >></a></p>",
+        "open": true
       },
       {
         "company": "NIC Argentina",
@@ -290,7 +292,7 @@
         "position": "Lead Designer",
         "from": "03/2018",
         "to": "12/2019",
-        "description": "<p>NIC Argentina is the government office under the Presidency that runs the .ar domain registry.</p><ul><li>Led a 4-person design team, covering product UI, web and communications</li><li>Ran heuristic evaluations and flow assessments of the .ar domain registration process to find and fix usability problems</li><li>Applied accessibility standards (WCAG) to NIC’s public services, backed by my UTN diploma in Accessibility &amp; Usability</li><li>Designed UI and built front ends in Vue.js and JavaScript</li><li>Designed and built the front end for blockchain applications (Timestamp, Smartvote) on Blockchain Federal Argentina (BFA), the country’s public blockchain</li><li>Built and maintained the organization’s Drupal and WordPress sites</li><li>Created corporate communications and marketing campaigns</li></ul><p><strong>Tools:</strong> Sketch, Vue.js, JavaScript, Drupal, WordPress, Adobe Suite</p>"
+        "description": "<p>NIC Argentina is the government office under Argentina’s Office of the President that runs the .ar domain registry.</p><ul><li>Led a 4-person design team, covering product UI, web and communications</li><li>Ran heuristic evaluations and flow assessments of the .ar domain registration process to find and fix usability problems</li><li>Applied accessibility standards (WCAG) to NIC’s public services, backed by my UTN diploma in Accessibility &amp; Usability</li><li>Designed UI and built front ends in Vue.js and JavaScript</li><li>Designed and built the front end for blockchain applications (Timestamp, Smartvote) on Blockchain Federal Argentina (BFA), the country’s public blockchain</li><li>Built and maintained the organization’s Drupal and WordPress sites</li><li>Created corporate communications and marketing campaigns</li></ul><p><strong>Tools:</strong> Sketch, Vue.js, JavaScript, Drupal, WordPress, Adobe Suite</p>"
       },
       {
         "company": "Hexacta",

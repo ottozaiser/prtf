@@ -1,5 +1,5 @@
 <template>
-  <div class="contact-menu" :class="variant" ref="root" @keydown.esc="close(true)">
+  <div class="contact-menu" :class="`cm-${variant}`" ref="root" @keydown.esc="close(true)">
     <!-- variant "nav": desktop = a yellow "Get in touch" button with a small dropdown;
          mobile (inside the slide-out menu) = the options expand below it.
          variant "hero" (home intro): an outline button whose options pop up above it, at any width. -->
@@ -222,12 +222,12 @@ nav.main-navigation ul.menu li.menu-item .contact-menu a.option:focus-visible {
    aligned with the other menu items. Collapsed options are hidden from tab order too. */
 @media (max-width: 991px) {
   /* Full-width button at the end of the drawer list; the options box matches its width. */
-  .contact-menu.nav {
+  .contact-menu.cm-nav {
     display: block;
     margin: 20px 24px;
   }
   /* Touch targets: at least 44px tall (Apple HIG / WCAG 2.5.5) */
-  .nav .cta {
+  .cm-nav .cta {
     width: 100%;
     justify-content: center;
     min-height: 44px;
@@ -240,13 +240,13 @@ nav.main-navigation ul.menu li.menu-item .contact-menu a.option:focus-visible {
     min-height: 44px;
   }
   /* In the mobile menu the options are centered, like the page links above them */
-  .nav .option,
-  nav.main-navigation ul.menu li.menu-item .contact-menu.nav a.option,
-  nav.main-navigation ul.menu li.menu-item .contact-menu.nav a.option:hover,
-  nav.main-navigation ul.menu li.menu-item .contact-menu.nav a.option:focus {
+  .cm-nav .option,
+  nav.main-navigation ul.menu li.menu-item .contact-menu.cm-nav a.option,
+  nav.main-navigation ul.menu li.menu-item .contact-menu.cm-nav a.option:hover,
+  nav.main-navigation ul.menu li.menu-item .contact-menu.cm-nav a.option:focus {
     justify-content: center;
   }
-  .nav .options {
+  .cm-nav .options {
     display: block;
     position: static;
     width: auto;
@@ -261,7 +261,7 @@ nav.main-navigation ul.menu li.menu-item .contact-menu a.option:focus-visible {
     transition: max-height 0.25s ease, margin-top 0.25s ease, padding 0.25s ease, border-color 0.25s ease,
       visibility 0s linear 0.25s;
   }
-  .nav .options.open {
+  .cm-nav .options.open {
     max-height: 260px;
     margin-top: 8px;
     padding: 6px;
@@ -273,14 +273,14 @@ nav.main-navigation ul.menu li.menu-item .contact-menu a.option:focus-visible {
   }
 }
 @media (max-width: 991px) and (prefers-reduced-motion: reduce) {
-  .nav .options,
-  .nav .options.open {
+  .cm-nav .options,
+  .cm-nav .options.open {
     transition: none;
   }
 }
 /* Home intro: same outline pill as the other intro buttons; the options open below it, or above
    it when there's no room underneath (see placeOptions). */
-.contact-menu.hero {
+.contact-menu.cm-hero {
   width: 100%;
 }
 /* App.vue gives every ".content li" a margin; the home intro is inside .content */
@@ -297,17 +297,17 @@ nav.main-navigation ul.menu li.menu-item .contact-menu a.option:focus-visible {
   padding: 10px 20px;
   font: inherit;
 }
-.hero .options {
+.cm-hero .options {
   right: auto;
   left: 0;
 }
-.hero .options.up {
+.cm-hero .options.up {
   top: auto;
   bottom: calc(100% + 8px);
 }
 /* Phones: the button is the right half of a row, so align the box to its right edge */
 @media (max-width: 480px) {
-  .hero .options {
+  .cm-hero .options {
     left: auto;
     right: 0;
   }

@@ -171,8 +171,9 @@ section .content h2 {
 }
 /* Song links: a taller tap target than the text line alone */
 section .content h2 a {
-  display: inline-block;
-  padding: 10px 0;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
 }
 .story-social :deep(ul.socialmedia) {
   margin: 16px 0 0;
