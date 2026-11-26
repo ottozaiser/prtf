@@ -4,6 +4,799 @@
     "content": "<p>A selection of my work, from product and UX design to branding and motion. Some projects are under NDA, so I can only share part of them here. Click any project to see the full story.</p>",
     "projects": [
       {
+        "title": "Pet Shelter",
+        "show": true,
+        "slug": "pet-shelter",
+        "content": "A trivia game with a pet shelter metagame: rescue runaway pets, care for them and rebuild their shelter. I was the team’s technical lead and second in charge, from first concepts to launch.",
+        "image": "/public/_data/media/pet-shelter.jpg",
+        "file": "",
+        "detail": {
+          "summary": "The brief from etermax: a new trivia game with a fun metagame, something different from Trivia Crack. Our answer: a pet shelter where you answer the neighbors’ questions to get clues, find and rescue the pets that ran away, take care of them and rebuild the shelter. I was the team’s technical lead and second in charge, from the first concepts to launch.",
+          "client": "Pet Shelter by Trivia Crack is a mobile trivia game from etermax, the Buenos Aires studio behind Trivia Crack, built around a pet shelter metagame. Players answer the neighbors’ trivia questions to get clues, find and rescue the pets that ran away, take care of them, and rebuild the shelter.",
+          "context": "The shelter went through hard times and its pets ran away. That premise had to become a whole visual world around the trivia: a town to explore, neighbors who give clues, pets to rescue and care for, and a shelter that grows as you play. I started with the concepts, then worked with the team to take the art to launch.",
+          "role": "Principal Product Artist: technical lead and second in charge of the team. Concept art and illustration, UI/UX design and Unity integration.",
+          "jumps": [
+            {
+              "label": "Concepts",
+              "target": "concepts"
+            },
+            {
+              "label": "Art evolution",
+              "target": "art-evolution"
+            },
+            {
+              "label": "The final game",
+              "target": "final-game"
+            }
+          ],
+          "sections": [
+            {
+              "id": "concepts",
+              "heading": "From idea to concept",
+              "text": "These are my first explorations for the game: how the shelter could grow, what the town might look like, and how the trivia and the rescue metagame could fit into one loop."
+            },
+            {
+              "heading": "A shelter that grows",
+              "level": 3,
+              "text": "The core idea: a small, run-down shelter that opens up room by room as you rescue more pets.\n\nWe kept this isometric style all the way to launch, and built the town map in Unity with isometric tiles: the first game at etermax to do it.",
+              "gallery": [
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/shelter-stage-1.jpg",
+                  "caption": "Stage 1",
+                  "alt": "Shelter concept, stage 1 of 6"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/shelter-stage-2.jpg",
+                  "caption": "Stage 2",
+                  "alt": "Shelter concept, stage 2 of 6"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/shelter-stage-3.jpg",
+                  "caption": "Stage 3",
+                  "alt": "Shelter concept, stage 3 of 6"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/shelter-stage-4.jpg",
+                  "caption": "Stage 4",
+                  "alt": "Shelter concept, stage 4 of 6"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/shelter-stage-5.jpg",
+                  "caption": "Stage 5",
+                  "alt": "Shelter concept, stage 5 of 6"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/shelter-stage-6.jpg",
+                  "caption": "Stage 6",
+                  "alt": "Shelter concept, stage 6 of 6"
+                }
+              ],
+              "columns": 3
+            },
+            {
+              "gallery": [
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/house-1.jpg",
+                  "caption": "Roof tiles",
+                  "alt": "Blender house model with roof tiles"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/house-2.jpg",
+                  "caption": "Materials",
+                  "alt": "Blender house model with textured materials"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/house-3.jpg",
+                  "caption": "Blockout",
+                  "alt": "Grey Blender house blockout"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/house-4.jpg",
+                  "caption": "Color",
+                  "alt": "Colored Blender house test"
+                }
+              ],
+              "columns": 4,
+              "heading": "3D exploration in Blender",
+              "level": 3,
+              "text": "I modeled the town’s buildings in Blender to explore shapes, roof tiles, materials and color before the final art. The 3D direction didn’t move forward: the team decided to go full 2D and isometric."
+            },
+            {
+              "heading": "Trivia with characters",
+              "level": 3,
+              "text": "In the game, the trivia questions come from the neighbors, so I explored a cast of characters and a layout that puts them front and center.",
+              "gallery": [
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/trivia-layout.jpg",
+                  "caption": "Layout grid",
+                  "alt": "Trivia screen layout grid"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/trivia-char-1.jpg",
+                  "caption": "Gossip lady",
+                  "alt": "Gossip lady character sketch"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/trivia-char-2.jpg",
+                  "caption": "The baker",
+                  "alt": "Baker character sketch"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/trivia-char-3.jpg",
+                  "caption": "Store guy",
+                  "alt": "Store guy character sketch"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/trivia-char-4.jpg",
+                  "caption": "Dog walker",
+                  "alt": "Dog walker character sketch"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/trivia-char-5.jpg",
+                  "caption": "Bookseller",
+                  "alt": "Bookseller character sketch"
+                }
+              ],
+              "columns": 3
+            },
+            {
+              "text": "The trivia flow, screen by screen: from the neighbors who saw the pet to the next clue.",
+              "gallery": [
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/trivia-flow-01.jpg",
+                  "caption": "Neighbors who saw the pet",
+                  "alt": "Card listing the neighbors who saw the missing pet"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/trivia-flow-02.jpg",
+                  "caption": "From the shelter…",
+                  "alt": "Map leaving the shelter"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/trivia-flow-03.jpg",
+                  "caption": "…to a neighbor’s house",
+                  "alt": "Map arriving at a neighbor's house"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/trivia-flow-04.jpg",
+                  "caption": "A neighbor offers to help",
+                  "alt": "Neighbor offering to help"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/trivia-flow-05.jpg",
+                  "caption": "Answer 3 questions",
+                  "alt": "Neighbor asks three questions"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/trivia-flow-06.jpg",
+                  "caption": "Only 3 mistakes allowed",
+                  "alt": "Neighbor explains the attempts"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/trivia-flow-07.jpg",
+                  "caption": "Almost! A wrong answer",
+                  "alt": "Wrong answer feedback"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/trivia-flow-08.jpg",
+                  "caption": "A second chance",
+                  "alt": "Option to continue after failing"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/trivia-flow-09.jpg",
+                  "caption": "Come back later",
+                  "alt": "Neighbor leaves until later"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/trivia-flow-10.jpg",
+                  "caption": "The next clue",
+                  "alt": "Neighbor gives the next clue"
+                }
+              ],
+              "columns": 5
+            },
+            {
+              "heading": "Prototyping the flow",
+              "level": 3,
+              "text": "I connected it all in an animated flow prototype: home, map, rescue missions, trivia and rewards.",
+              "video": "https://vimeo.com/1250396120",
+              "width": 340,
+              "caption": "A neighbor offers to help, if you answer her questions.",
+              "ratio": "9:16"
+            },
+            {
+              "gallery": [
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/flow-00-home.jpg",
+                  "caption": "Home",
+                  "alt": "Home screen concept"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/flow-01-map-missions-pins.jpg",
+                  "caption": "Map missions",
+                  "alt": "Map with mission pins"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/flow-04-mgameplay-01.jpg",
+                  "caption": "Neighbor intro",
+                  "alt": "Neighbor introduction"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/flow-02-gameplay.jpg",
+                  "caption": "Trivia",
+                  "alt": "Trivia question"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/flow-04-mgameplay-02.jpg",
+                  "caption": "Correct!",
+                  "alt": "Correct answer feedback"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/flow-04-mgameplay-03.jpg",
+                  "caption": "Next clue",
+                  "alt": "A neighbor gives the next clue"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/flow-01-map-missions-rescued-2.jpg",
+                  "caption": "Pet rescued",
+                  "alt": "Pet rescued reward screen"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/shelter-ui.jpg",
+                  "caption": "Shelter",
+                  "alt": "Shelter screen concept"
+                }
+              ],
+              "columns": 4,
+              "heading": "UI exploration",
+              "level": 3
+            },
+            {
+              "heading": "Map and mission UI",
+              "level": 3,
+              "text": "Then I iterated on the map and mission UI: different ways to present missions and calls to action, a full shelter, and the moment you find a pet.",
+              "gallery": [
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/ui-01-map-missions-cta-b01.jpg",
+                  "caption": "Mission card A",
+                  "alt": "Mission call-to-action option A"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/ui-01-map-missions-cta-b02.jpg",
+                  "caption": "Mission card B",
+                  "alt": "Mission call-to-action option B"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/ui-01-map-missions-cta-b03.jpg",
+                  "caption": "Mission card C",
+                  "alt": "Mission call-to-action option C"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/ui-01-map-missions-cta-b04.jpg",
+                  "caption": "Searching",
+                  "alt": "Searching mission state"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/ui-01-map-missions-full.jpg",
+                  "caption": "Shelter full",
+                  "alt": "Shelter is full warning"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/ui-01-map-missions-rescued-1.jpg",
+                  "caption": "Searching…",
+                  "alt": "Search animation frame"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/ui-01-map-missions-rescued-1b.jpg",
+                  "caption": "Found!",
+                  "alt": "Pet silhouette reveal"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/ui-04-mgameplay-05.jpg",
+                  "caption": "Pick a clue",
+                  "alt": "Choosing a clue to continue"
+                }
+              ],
+              "columns": 4
+            },
+            {
+              "id": "art-evolution",
+              "heading": "Art evolution",
+              "text": "As the team took the concepts into production, the art went through several rounds. These pages from our art deck show how each piece evolved."
+            },
+            {
+              "heading": "Logo and app icon",
+              "level": 3,
+              "text": "First round: four splash screen proposals.",
+              "gallery": [
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/deck/splash-proposal-1.jpg",
+                  "caption": "Splash 1",
+                  "alt": "Splash screen proposal 1 with Jack in front of the shelter"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/deck/splash-proposal-2.jpg",
+                  "caption": "Splash 2",
+                  "alt": "Splash screen proposal 2 with Jack in front of the shelter"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/deck/splash-proposal-3.jpg",
+                  "caption": "Splash 3",
+                  "alt": "Splash screen proposal 3 with Jack in front of the shelter"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/deck/splash-proposal-4.jpg",
+                  "caption": "Splash 4",
+                  "alt": "Splash screen proposal 4 with Jack in front of the shelter"
+                }
+              ],
+              "columns": 4
+            },
+            {
+              "text": "The final splash screen.",
+              "width": 260,
+              "columns": 1,
+              "gallery": [
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/deck/splash-final.jpg",
+                  "alt": "Final splash screen with Jack"
+                }
+              ]
+            },
+            {
+              "text": "App icon proposals, from clean vector to sketchy line art, with Jack and a cat.",
+              "columns": 5,
+              "gallery": [
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/deck/icon-proposal-1.jpg",
+                  "alt": "App icon proposal 1",
+                  "shape": "icon"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/deck/icon-proposal-2.jpg",
+                  "alt": "App icon proposal 2",
+                  "shape": "icon"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/deck/icon-proposal-3.jpg",
+                  "alt": "App icon proposal 3",
+                  "shape": "icon"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/deck/icon-proposal-4.jpg",
+                  "alt": "App icon proposal 4",
+                  "shape": "icon"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/deck/icon-proposal-5.jpg",
+                  "alt": "App icon proposal 5",
+                  "shape": "icon"
+                }
+              ]
+            },
+            {
+              "text": "The final app icon, for iOS and Android.",
+              "width": 360,
+              "columns": 2,
+              "gallery": [
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/deck/icon-final.jpg",
+                  "caption": "iOS",
+                  "alt": "Final app icon: Jack on a blue background",
+                  "shape": "icon"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/deck/icon-final-round.jpg",
+                  "caption": "Android (round)",
+                  "alt": "Final round app icon",
+                  "shape": "round"
+                }
+              ]
+            },
+            {
+              "heading": "Intro animatic",
+              "level": 3,
+              "text": "I storyboarded several ways to open the game. Here are two of them, and the one that made it.\n\n“Explosion”: a happy shelter, a crash, the pets run away. One month later, the last dog greets you, angry.",
+              "gallery": [
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/storyboard/explosion-1.jpg",
+                  "alt": "Pets playing in a happy shelter"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/storyboard/explosion-2.jpg",
+                  "alt": "CRASH!"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/storyboard/explosion-3.jpg",
+                  "alt": "The pets run away"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/storyboard/explosion-4.jpg",
+                  "alt": "One dog left alone on its bed"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/storyboard/explosion-5.jpg",
+                  "alt": "One month later"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/storyboard/explosion-6.jpg",
+                  "alt": "The dog greets you, angry"
+                }
+              ],
+              "columns": 6,
+              "columnsMobile": 2
+            },
+            {
+              "text": "“Photo”: the guardian with all the pets turns out to be an old photo. Jack looks up at the same room, now empty.",
+              "gallery": [
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/storyboard/photo-1.jpg",
+                  "alt": "The guardian with the pets in the shelter"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/storyboard/photo-2.jpg",
+                  "alt": "Zoom out: it’s a framed photo"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/storyboard/photo-3.jpg",
+                  "alt": "Jack looks at the photo"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/storyboard/photo-4.jpg",
+                  "alt": "Jack lying in the empty room"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/storyboard/photo-5.jpg",
+                  "alt": "The same room, now empty"
+                }
+              ],
+              "columns": 5,
+              "columnsMobile": 2
+            },
+            {
+              "text": "The one that made it: you arrive in Trivia Town by bus and find the shelter boarded up, with a note on the door. I turned it into a timed animatic.",
+              "gallery": [
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/storyboard/chosen-1.jpg",
+                  "alt": "A bus leaves: arriving in Trivia Town"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/storyboard/chosen-2.jpg",
+                  "alt": "First look at the town"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/storyboard/chosen-3.jpg",
+                  "alt": "The shelter, with a dog at the door"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/storyboard/chosen-4.jpg",
+                  "alt": "The boarded-up door"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/storyboard/chosen-5.jpg",
+                  "alt": "The note: “Have you seen this Guardian?”"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/storyboard/chosen-6.jpg",
+                  "alt": "The door opens, the dog wags its tail"
+                }
+              ],
+              "columns": 6,
+              "columnsMobile": 2
+            },
+            {
+              "video": "https://vimeo.com/1250395867",
+              "width": 340,
+              "caption": "The intro animatic: “You came back to Trivia Town…”",
+              "ratio": "196:426"
+            },
+            {
+              "heading": "The town",
+              "level": 3,
+              "gallery": [
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/deck/map-1.jpg",
+                  "caption": "First layout",
+                  "alt": "Early pencil map of the town"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/concepts/map-sketch.jpg",
+                  "caption": "Neighborhood sketch",
+                  "alt": "Pencil sketch of an isometric neighborhood"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/deck/map-color.jpg",
+                  "caption": "Town 1 in color, with its landmarks",
+                  "alt": "Colored isometric town with landmarks"
+                }
+              ],
+              "columns": 1,
+              "text": "The town was a team effort. Rosana, an artist on the team, joined to help with it, from the first layout to the final color map, with team feedback and adjustments along the way."
+            },
+            {
+              "heading": "The shelter",
+              "level": 3,
+              "gallery": [
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/deck/shelter-1.jpg",
+                  "caption": "Early sketch",
+                  "alt": "Pencil sketch of the shelter"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/deck/shelter-2.jpg",
+                  "caption": "Grey blockout",
+                  "alt": "Grey isometric blockout of the shelter"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/deck/shelter-final.jpg",
+                  "caption": "Final: rooms unlock as you play",
+                  "alt": "Final shelter with locked and unlocked rooms"
+                }
+              ],
+              "columns": 1,
+              "text": "The shelter was a team effort too. Gaby joined to help with it, from the early sketch to the final art, also with team feedback and adjustments along the way."
+            },
+            {
+              "heading": "Pets",
+              "level": 3,
+              "text": "Sketches.",
+              "columns": 3,
+              "columnsMobile": 3,
+              "gallery": [
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/characters/pet-sketch-cat.jpg",
+                  "alt": "Cat sketch",
+                  "shape": "cutout"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/characters/pet-sketch-beagle.jpg",
+                  "alt": "Beagle sketch",
+                  "shape": "cutout"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/characters/pet-sketch-spotted.jpg",
+                  "alt": "Dog with an eye patch, sketch",
+                  "shape": "cutout"
+                }
+              ]
+            },
+            {
+              "text": "Final pets for Town 1.",
+              "columns": 3,
+              "columnsMobile": 3,
+              "gallery": [
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/characters/pet-final-cat.jpg",
+                  "alt": "Orange cat",
+                  "shape": "cutout"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/characters/pet-final-beagle.jpg",
+                  "alt": "Beagle",
+                  "shape": "cutout"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/characters/pet-final-dalmatian.jpg",
+                  "alt": "Dalmatian",
+                  "shape": "cutout"
+                }
+              ]
+            },
+            {
+              "heading": "Jack",
+              "level": 3,
+              "text": "Looking for Jack: sketches.",
+              "columns": 3,
+              "columnsMobile": 3,
+              "gallery": [
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/characters/jack-sketch-1.jpg",
+                  "alt": "Jack sketch",
+                  "shape": "cutout"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/characters/jack-sketch-2.jpg",
+                  "alt": "Jack sketch",
+                  "shape": "cutout"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/characters/jack-sketch-3.jpg",
+                  "alt": "Jack sketch",
+                  "shape": "cutout"
+                }
+              ]
+            },
+            {
+              "text": "Final Jack.",
+              "columns": 3,
+              "columnsMobile": 3,
+              "gallery": [
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/characters/jack-final-1.jpg",
+                  "alt": "Jack sitting",
+                  "shape": "cutout"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/characters/jack-final-2.jpg",
+                  "alt": "Jack smiling",
+                  "shape": "cutout"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/characters/jack-final-3.jpg",
+                  "alt": "Jack lying down",
+                  "shape": "cutout"
+                }
+              ]
+            },
+            {
+              "heading": "Neighbors",
+              "level": 3,
+              "text": "Sketches.",
+              "columns": 3,
+              "columnsMobile": 3,
+              "gallery": [
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/characters/neighbor-sketch-gossip.jpg",
+                  "alt": "Gossip lady sketch",
+                  "shape": "cutout"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/characters/neighbor-sketch-baker.jpg",
+                  "alt": "Baker sketch",
+                  "shape": "cutout"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/characters/neighbor-sketch-firefighter.jpg",
+                  "alt": "Firefighter sketch",
+                  "shape": "cutout"
+                }
+              ]
+            },
+            {
+              "text": "Final neighbors for Town 1.",
+              "columns": 3,
+              "columnsMobile": 3,
+              "gallery": [
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/characters/neighbor-final-gossip.jpg",
+                  "caption": "Gossip lady",
+                  "alt": "Gossip lady",
+                  "shape": "cutout"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/characters/neighbor-final-baker.jpg",
+                  "caption": "The baker",
+                  "alt": "The baker",
+                  "shape": "cutout"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/characters/neighbor-final-firefighter.jpg",
+                  "caption": "Firefighter",
+                  "alt": "Firefighter",
+                  "shape": "cutout"
+                }
+              ]
+            },
+            {
+              "id": "final-game",
+              "heading": "The final game",
+              "text": "This is the launched game, built by the whole team. As technical lead and second in charge, I designed the UI and flows and integrated the UI in Unity."
+            },
+            {
+              "heading": "Story and rescue missions",
+              "level": 3,
+              "text": "Jack asks for your help. Answer the neighbors’ questions to get clues, follow them across the map, and rescue the pets that ran away.",
+              "gallery": [
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/product/screen-01.jpg",
+                  "caption": "Splash",
+                  "alt": "Pet Shelter splash screen"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/product/screen-02.jpg",
+                  "caption": "Jack asks for help",
+                  "alt": "Jack welcomes the player"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/product/screen-04.jpg",
+                  "caption": "Neighbors will help",
+                  "alt": "Jack explains the neighbors will help"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/product/screen-06.jpg",
+                  "caption": "Choose a missing pet",
+                  "alt": "Missing pets board"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/product/screen-07.jpg",
+                  "caption": "Find the pet on the map",
+                  "alt": "Map with a neighbor and the level path"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/product/screen-10.jpg",
+                  "caption": "A neighbor’s clue",
+                  "alt": "Neighbor gives a clue"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/product/screen-11.jpg",
+                  "caption": "Answer the trivia",
+                  "alt": "Trivia question"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/product/screen-12.jpg",
+                  "caption": "Correct!",
+                  "alt": "Correct answer"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/product/screen-08.jpg",
+                  "caption": "Pet rescued!",
+                  "alt": "Pet rescued screen"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/product/screen-14.jpg",
+                  "caption": "Reward",
+                  "alt": "Star reward"
+                }
+              ],
+              "columns": 5
+            },
+            {
+              "heading": "The shelter, rewards and events",
+              "level": 3,
+              "text": "Back at the shelter, you take care of the pets and rebuild it room by room, with daily rewards, seasonal events and mini-games to keep players coming back.",
+              "gallery": [
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/product/screen-15.jpg",
+                  "caption": "Level complete",
+                  "alt": "Level complete celebration"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/product/screen-16.jpg",
+                  "caption": "The shelter",
+                  "alt": "Shelter being rebuilt"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/product/pet-care.jpg",
+                  "caption": "Pet care",
+                  "alt": "Tom the cat is hungry: feed him"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/product/screen-09.jpg",
+                  "caption": "Tasks",
+                  "alt": "Daily tasks"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/product/screen-17.jpg",
+                  "caption": "Daily bonus",
+                  "alt": "Daily bonus calendar"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/product/screen-18.jpg",
+                  "caption": "Season pass",
+                  "alt": "Seasonal event pass"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/product/screen-19.jpg",
+                  "caption": "Find the pet",
+                  "alt": "Mini-game: tap to find a pet"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/product/screen-20.jpg",
+                  "caption": "Pick-A-Prize",
+                  "alt": "Pick-A-Prize intro"
+                },
+                {
+                  "image": "/public/_data/media/projects/pet-shelter/product/screen-21.jpg",
+                  "caption": "Pick-A-Prize rewards",
+                  "alt": "Pick-A-Prize board"
+                }
+              ],
+              "columns": 5
+            }
+          ]
+        }
+      },
+      {
         "title": "Nearpod",
         "show": true,
         "content": "Image answers for quizzes and a Motion UI menu for the iPad app, for an award-winning US edtech platform.",

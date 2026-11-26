@@ -89,7 +89,28 @@
           <figcaption v-if="s.caption">{{ s.caption }}</figcaption>
         </figure>
 
-        <figure v-if="s.video" class="media video">
+        <!-- Self-hosted clip (.mp4): plays muted on loop like a GIF, with controls; no autoplay
+             for visitors who prefer reduced motion -->
+        <figure v-if="s.video && isClip(s.video)" class="media clip">
+          <video
+            :src="href(s.video)"
+            :poster="s.poster ? media(s.poster) : null"
+            muted
+            loop
+            playsinline
+            controls
+            preload="metadata"
+            :aria-label="s.caption || `${project.title} video`"
+            :style="s.width ? { maxWidth: `${s.width}px` } : null"
+          ></video>
+          <figcaption v-if="s.caption">{{ s.caption }}</figcaption>
+        </figure>
+
+        <figure
+          v-else-if="s.video"
+          class="media video"
+          :style="s.width ? { maxWidth: `${s.width}px`, marginLeft: 'auto', marginRight: 'auto' } : null"
+        >
           <div class="ratio" :style="{ paddingTop: ratioPadding(s.ratio) }">
             <iframe
               :src="embedUrl(s.video)"
@@ -103,8 +124,16 @@
         </figure>
 
         <!-- Thumbnail grid (e.g. wireframes); each item can link somewhere, like a page of a PDF -->
-        <div v-if="s.gallery && s.gallery.length" class="gallery">
-          <figure v-for="(g, j) in s.gallery" :key="j" class="gallery-item">
+        <div
+          v-if="s.gallery && s.gallery.length"
+          class="gallery"
+          :style="{
+            '--cols': s.columns || 3,
+            '--cols-mobile': s.columnsMobile || ((s.columns || 3) >= 4 ? 3 : Math.min(s.columns || 3, 2)),
+            maxWidth: s.width ? s.width + 'px' : null,
+          }"
+        >
+          <figure v-for="(g, j) in s.gallery" :key="j" class="gallery-item" :class="g.shape ? 'shape-' + g.shape : null">
             <a v-if="g.link" :href="href(g.link)" target="_blank" rel="noopener" :aria-label="`${g.caption || 'Image'} (opens in a new tab)`">
               <progressive-img :src="media(g.image)" :alt="g.alt || g.caption || ''" loading="lazy" />
             </a>
@@ -172,7 +201,12 @@ export default {
   components: { Project },
   props: { slug: { type: String, required: true } },
   data() {
-    return { projects: [], loaded: false, morePage: 0 };
+    return {
+      projects: [],
+      loaded: false,
+      morePage: 0,
+      reduceMotion: typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+    };
   },
   computed: {
     // Only public projects that have a detail page; hidden ones stay unreachable.
@@ -217,10 +251,14 @@ export default {
         document.title = p ? `${p.title} - Otto Zaiser [Designer]` : "Project not found - Otto Zaiser [Designer]";
       },
     },
-    // New case (or data just loaded): jump the carousel back to its first page.
+    // New case (or data just loaded): jump the carousel back to its first page,
+    // and hook up the new page's video clips.
     others() {
       this.morePage = 0;
-      this.$nextTick(() => this.scrollToPage(false));
+      this.$nextTick(() => {
+        this.scrollToPage(false);
+        this.setupClips();
+      });
     },
   },
   mounted() {
@@ -228,6 +266,7 @@ export default {
   },
   beforeUnmount() {
     window.removeEventListener("resize", this.onResize);
+    if (this.clipObserver) this.clipObserver.disconnect();
   },
   created() {
     axios
@@ -240,6 +279,8 @@ export default {
       })
       .finally(() => {
         this.loaded = true;
+        // The article renders only once loaded, so hook up clips after that render.
+        this.$nextTick(() => this.setupClips());
       });
   },
   methods: {
@@ -279,6 +320,36 @@ export default {
       const first = words.slice(0, n).join(" ");
       const rest = words.slice(n).join(" ");
       return [first, rest ? ` ${rest}` : ""];
+    },
+    // Self-hosted clips play like GIFs: muted, looping, and only while on screen (paused when
+    // scrolled away). Muting must be set on the element before play(), or browsers block autoplay.
+    // Visitors who prefer reduced motion get the controls but no autoplay.
+    setupClips() {
+      if (this.clipObserver) this.clipObserver.disconnect();
+      const videos = this.$el && this.$el.querySelectorAll ? this.$el.querySelectorAll(".clip video") : [];
+      if (!videos.length || this.reduceMotion || !("IntersectionObserver" in window)) return;
+      this.clipObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            const v = e.target;
+            if (e.isIntersecting) {
+              v.muted = true;
+              v.play().catch(() => {});
+            } else {
+              v.pause();
+            }
+          });
+        },
+        { threshold: 0.25 }
+      );
+      videos.forEach((v) => {
+        v.muted = true;
+        this.clipObserver.observe(v);
+      });
+    },
+    // A self-hosted video file (vs. a Vimeo/YouTube link).
+    isClip(video) {
+      return /\.(mp4|webm)(\?|#|$)/i.test(video || "");
     },
     // Video frame height as a % of its width, from a ratio like "4:3" (default 16:9).
     ratioPadding(ratio) {
@@ -515,12 +586,25 @@ figcaption {
 .link {
   margin: 16px 0 0;
 }
-/* Thumbnail grid: 3 per row (2 on phones) */
+/* Thumbnail grid: --cols per row (default 3); fewer on phones (--cols-mobile) */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(var(--cols, 3), 1fr);
   gap: 16px;
-  margin-top: 24px;
+  margin: 24px auto 0; /* centered when a section sets a max width */
+  align-items: start;
+}
+/* Self-hosted clips */
+.clip video {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto; /* portrait phone clips use a max width and sit centered */
+  border-radius: 4px;
+  background: #000;
+}
+.clip figcaption {
+  text-align: center;
 }
 .gallery-item {
   margin: 0;
@@ -543,9 +627,35 @@ figcaption {
   margin-top: 6px;
   font-size: 0.85em;
 }
+/* App icons: shown the way they look on a phone (rounded square or circle), no frame */
+.gallery-item.shape-icon img,
+.gallery-item.shape-round img {
+  border: 0;
+  border-radius: 22.5%;
+  box-shadow: 0 4px 14px rgba(30, 41, 48, 0.18);
+}
+.gallery-item.shape-round img {
+  border-radius: 50%;
+}
+.gallery-item.shape-icon figcaption,
+.gallery-item.shape-round figcaption,
+.gallery-item.shape-cutout figcaption {
+  text-align: center;
+}
+/* Characters on a white background, shown without a frame: multiply blends the white into the page.
+   Same height for every figure in the row; wide poses shrink to fit their column. */
+.gallery-item.shape-cutout img {
+  width: 100%;
+  height: clamp(120px, 26vw, 220px);
+  object-fit: contain;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  mix-blend-mode: multiply;
+}
 @media (max-width: 600px) {
   .gallery {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(var(--cols-mobile, 2), 1fr);
     gap: 12px;
   }
 }

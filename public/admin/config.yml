@@ -221,13 +221,16 @@ collections:
                           - { label: "Image alt text", name: "alt", widget: "string", required: false }
                           - { label: "Device mockup (show at real size, rounded corners)", name: "device", widget: "boolean", required: false }
                           - { label: "Wide (break out of the text column, up to 1218px)", name: "wide", widget: "boolean", required: false }
-                          - { label: "Max display width in px (use the image's real width for low-res screenshots)", name: "width", widget: "number", required: false }
+                          - { label: "Max display width in px (image or gallery; use the image's real width for low-res screenshots)", name: "width", widget: "number", required: false }
                           - { label: "Caption", name: "caption", widget: "string", required: false }
                           - { label: "Video (Vimeo or YouTube URL)", name: "video", widget: "string", required: false }
                           - { label: "Video aspect ratio (e.g. 4:3; default 16:9)", name: "ratio", widget: "string", required: false }
                           - { label: "Technologies", name: "tech", widget: "list", required: false }
                           - { label: "Side notes", name: "notes", widget: "list", required: false }
                           - { label: "Layout", name: "layout", widget: "select", options: ["default", "side"], required: false }
+                          - { label: "Video poster image (for .mp4 clips)", name: "poster", widget: "image", required: false }
+                          - { label: "Gallery columns (default 3; use 4-5 for phone screens)", name: "columns", widget: "number", required: false }
+                          - { label: "Gallery columns on phones (optional)", name: "columnsMobile", widget: "number", required: false }
                           - label: "Gallery (thumbnail grid)"
                             name: "gallery"
                             widget: list
@@ -237,6 +240,7 @@ collections:
                               - { label: "Caption", name: "caption", widget: "string", required: false }
                               - { label: "Alt text", name: "alt", widget: "string", required: false }
                               - { label: "Link (optional, e.g. a PDF page)", name: "link", widget: "string", required: false }
+                              - { label: "Shape (icon / round = app icons, cutout = character on white, no frame)", name: "shape", widget: "select", options: ["icon", "round", "cutout"], required: false }
                           - label: "Link"
                             name: "link"
                             widget: "object"
