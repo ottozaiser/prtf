@@ -267,24 +267,6 @@ section .image {
     height: 100%;
   }
 }
-/* Desktop and tablet: a bigger illustration beside the text, as large as the screen height allows */
-@media (min-width: 641px) {
-  section .content {
-    max-width: 960px;
-    gap: 24px;
-  }
-  section .text-container {
-    flex: 1 1 0;
-    min-width: 0;
-  }
-  section .img-container {
-    flex: none;
-  }
-  section .image {
-    width: min(440px, 62svh, 46vw);
-    height: min(440px, 62svh, 46vw);
-  }
-}
 /* Phones: the illustration takes all the height the text leaves, so it's as big as possible while
    the whole chapter still fits in one screen. Room at the bottom for the "next" arrow. */
 @media (max-width: 640px) {
