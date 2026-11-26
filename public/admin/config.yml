@@ -125,6 +125,22 @@ collections:
                   - { label: "From", name: "from", widget: "string" }
                   - { label: "To", name: "to", widget: "string" }
                   - { label: "Description", name: "description", widget: "markdown" }
+          - label: "Volunteering"
+            name: volunteering
+            widget: "object"
+            required: false
+            fields:
+              - { label: "Volunteering title", name: "volunteering_title", widget: "string" }
+              - label: "Volunteering item"
+                widget: list
+                name: job
+                fields:
+                  - { label: "Organization", name: "company", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string", required: false }
+                  - { label: "Role", name: "position", widget: "string" }
+                  - { label: "From", name: "from", widget: "string", required: false }
+                  - { label: "To", name: "to", widget: "string", required: false }
+                  - { label: "Description", name: "description", widget: "markdown" }
   - name: "mystory"
     label: "My Story page"
     delete: false # Prevent users from deleting documents in this collection

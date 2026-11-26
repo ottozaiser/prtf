@@ -32,6 +32,26 @@
       </div>
     </section>
 
+    <section v-if="this.resumejson.volunteering" data-aos="fade-up" data-aos-once="true">
+      <h2>{{ this.resumejson.volunteering.volunteering_title }}</h2>
+      <div class="jobs">
+        <Job
+          class="job"
+          data-aos="fade-up"
+          data-aos-once="true"
+          v-for="post in this.resumejson.volunteering.job"
+          v-bind:key="post.company"
+          v-bind:position="post.position"
+          v-bind:company="post.company"
+          v-bind:url="post.url"
+          v-bind:description="post.description"
+          v-bind:from="post.from"
+          v-bind:to="post.to"
+          v-bind:labels="Object.keys(post)"
+        />
+      </div>
+    </section>
+
     <section data-aos="fade-up" data-aos-once="true">
       <h2>{{ this.resumejson.education.education_title }}</h2>
       <div class="education">

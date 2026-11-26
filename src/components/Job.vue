@@ -1,11 +1,11 @@
 <template>
-  <div class="job" :id="company">
+  <div class="job" :id="anchorId">
     <div class="header">
       <h3>
         <span class="sr-only">{{ labels[0] }}:</span>
         {{ position }}
       </h3>
-      <p>
+      <p v-if="from">
         <span class="sr-only">{{ labels[2] }}:</span>
         {{ from }}
         <span aria-label="hidden">-</span>
@@ -58,11 +58,17 @@ export default {
       show: false,
     };
   },
+  computed: {
+    // Company alone isn't unique (e.g. two "Freelance" entries), so add the start date.
+    anchorId() {
+      return [this.company, this.from].filter(Boolean).join("-").replace(/[^\w-]+/g, "-");
+    },
+  },
   methods: {
     toggle() {
       if (this.show) {
         this.show = false;
-        document.getElementById(this.company).scrollIntoView();
+        document.getElementById(this.anchorId).scrollIntoView();
       } else {
         this.show = true;
       }
