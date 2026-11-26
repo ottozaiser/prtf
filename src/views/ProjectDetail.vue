@@ -81,12 +81,20 @@
 
         <figure v-if="s.image && s.layout !== 'side'" class="media" :class="{ device: s.device, wide: s.wide }">
           <!-- width: the image's real pixel width, so low-res screenshots are never stretched -->
-          <progressive-img
-            :src="media(s.image)"
-            :alt="s.alt || s.caption || ''"
-            loading="lazy"
-            :style="s.width ? { maxWidth: `${s.width}px` } : null"
-          />
+          <!-- Tap to open full screen -->
+          <button
+            type="button"
+            class="zoom"
+            :aria-label="`Open image${s.caption ? ': ' + s.caption : ''}`"
+            @click="openImage(i)"
+          >
+            <progressive-img
+              :src="media(s.image)"
+              :alt="s.alt || s.caption || ''"
+              loading="lazy"
+              :style="s.width ? { maxWidth: `${s.width}px` } : null"
+            />
+          </button>
           <figcaption v-if="s.caption">{{ s.caption }}</figcaption>
         </figure>
 
@@ -138,7 +146,16 @@
             <a v-if="g.link" :href="href(g.link)" target="_blank" rel="noopener" :aria-label="`${g.caption || 'Image'} (opens in a new tab)`">
               <progressive-img :src="media(g.image)" :alt="g.alt || g.caption || ''" loading="lazy" />
             </a>
-            <progressive-img v-else :src="media(g.image)" :alt="g.alt || g.caption || ''" loading="lazy" />
+            <!-- Tap to open full screen, then move through the rest of this gallery -->
+            <button
+              v-else
+              type="button"
+              class="zoom"
+              :aria-label="`Open image${g.caption ? ': ' + g.caption : ''}`"
+              @click="openGallery(i, j)"
+            >
+              <progressive-img :src="media(g.image)" :alt="g.alt || g.caption || ''" loading="lazy" />
+            </button>
             <figcaption v-if="g.caption">{{ g.caption }}</figcaption>
           </figure>
         </div>
@@ -205,6 +222,13 @@
           <div v-for="n in moreSpacers" :key="`spacer-${n}`" class="more-spacer" aria-hidden="true"></div>
         </div>
       </section>
+      <Lightbox
+        :open="lightbox.open"
+        :items="lightbox.items"
+        v-model:index="lightbox.index"
+        :title="lightbox.title"
+        @close="lightbox.open = false"
+      />
     </article>
 
     <div v-else class="missing">
@@ -219,16 +243,18 @@
 <script>
 import axios from "axios";
 import Project from "@/components/Project.vue";
+import Lightbox from "@/components/Lightbox.vue";
 
 export default {
   name: "ProjectDetail",
-  components: { Project },
+  components: { Project, Lightbox },
   props: { slug: { type: String, required: true } },
   data() {
     return {
       projects: [],
       settings: null,
       loaded: false,
+      lightbox: { open: false, items: [], index: 0, title: "" },
       morePage: 0,
       reduceMotion: typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches,
     };
@@ -316,6 +342,33 @@ export default {
       });
   },
   methods: {
+    // Full-screen viewer. A gallery opens on the tapped image and steps through that gallery only
+    // (images that link to a file, like PDF pages, keep their link). A single image opens alone.
+    openGallery(sectionIndex, itemIndex) {
+      const s = this.detail.sections[sectionIndex];
+      const withIndex = s.gallery.map((g, j) => ({ g, j })).filter(({ g }) => g.image && !g.link);
+      this.lightbox = {
+        open: true,
+        items: withIndex.map(({ g }) => ({ src: this.media(g.image), caption: g.caption || "", alt: g.alt || "" })),
+        index: Math.max(0, withIndex.findIndex(({ j }) => j === itemIndex)),
+        title: this.sectionTitle(sectionIndex),
+      };
+    },
+    openImage(sectionIndex) {
+      const s = this.detail.sections[sectionIndex];
+      this.lightbox = {
+        open: true,
+        items: [{ src: this.media(s.image), caption: s.caption || "", alt: s.alt || "" }],
+        index: 0,
+        title: this.sectionTitle(sectionIndex),
+      };
+    },
+    // Nearest heading at or above this section, e.g. "The final game" for its untitled galleries.
+    sectionTitle(sectionIndex) {
+      const secs = this.detail.sections || [];
+      for (let k = sectionIndex; k >= 0; k--) if (secs[k].heading) return secs[k].heading;
+      return (this.project && this.project.title) || "";
+    },
     // Scroll to the previous/next page of 3 projects, wrapping around at either end.
     turnPage(dir) {
       this.morePage = (this.morePage + dir + this.morePages) % this.morePages;
@@ -673,6 +726,28 @@ figcaption {
   margin-top: 6px;
   font-size: 0.85em;
   overflow-wrap: break-word;
+}
+/* Tap-to-open images: a bare button around the image */
+.zoom {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+  border-radius: 4px;
+}
+.media .zoom img {
+  margin: 0 auto;
+}
+.zoom:focus-visible {
+  outline: 2px solid var(--main-charcoal);
+  outline-offset: 3px;
+}
+.gallery-item .zoom:hover img,
+.gallery-item .zoom:focus-visible img {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(30, 41, 48, 0.12);
 }
 /* App icons: shown the way they look on a phone (rounded square or circle), no frame */
 .gallery-item.shape-icon img,
