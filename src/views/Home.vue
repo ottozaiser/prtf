@@ -14,9 +14,17 @@
                The CV is a file, so it's a plain <a download>, never a router-link (that would hit the 404 route). -->
           <ul class="menu" v-if="this.homejson.links && this.homejson.links.length">
             <li class="menu-item" v-bind:key="index" v-for="(item, index) in this.homejson.links">
-              <a v-if="item.download" class="btn" :class="{ primary: item.primary }" :href="item.url" download>{{ item.name }}</a>
-              <router-link v-else-if="item.url.startsWith('/')" class="btn" :class="{ primary: item.primary }" :to="item.url">{{ item.name }}</router-link>
-              <a v-else class="btn" :class="{ primary: item.primary }" :href="item.url">{{ item.name }}</a>
+              <!-- Same options as the header's "Get in touch": copy email, email, LinkedIn, CV -->
+              <ContactMenu
+                v-if="item.contact && settings && settings.contact_email"
+                variant="hero"
+                :email="settings.contact_email"
+                :linkedin="settings.linkedin_url"
+                :cv="settings.cv_url"
+              />
+              <a v-else-if="item.download" class="btn" :class="{ primary: item.primary }" :href="item.url" download>{{ item.name }}</a>
+              <router-link v-else-if="item.url && item.url.startsWith('/')" class="btn" :class="{ primary: item.primary }" :to="item.url">{{ item.name }}</router-link>
+              <a v-else-if="item.url" class="btn" :class="{ primary: item.primary }" :href="item.url">{{ item.name }}</a>
             </li>
           </ul>
           <Social class="social" />
@@ -36,6 +44,7 @@
 <script>
 import axios from "axios";
 import Social from "@/components/Social.vue";
+import ContactMenu from "@/components/ContactMenu.vue";
 import Lottie from "@/components/Lottie.vue";
 import Resume from "@/views/Resume.vue";
 import Portfolio from "@/views/Portfolio.vue";
@@ -44,6 +53,7 @@ export default {
   name: "home",
   components: {
     Social,
+    ContactMenu,
     Lottie,
     Resume,
     Portfolio,
@@ -51,6 +61,7 @@ export default {
   data: function () {
     return {
       homejson: null,
+      settings: null,
       animationData: null,
       defaultOptions: { animationData: this.animationData },
       animationSpeed: 1,
@@ -58,6 +69,13 @@ export default {
   },
   created: function () {
     const base = (import.meta.env && import.meta.env.BASE_URL) || '/';
+
+    axios
+      .get(base + "_data/settings.json")
+      .then((response) => {
+        this.settings = response.data;
+      })
+      .catch(() => {});
 
     axios
       .get(base + "_data/home.json")

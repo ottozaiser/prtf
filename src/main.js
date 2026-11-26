@@ -7,13 +7,13 @@ import '@/styles/index.css';
 
 // Font Awesome
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faChevronDown, faChevronLeft, faChevronRight, faAngleDoubleUp, faHome, faExternalLinkAlt, faDownload, faCopy, faCheck, faEnvelope, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown, faChevronUp, faChevronLeft, faChevronRight, faAngleDoubleUp, faHome, faExternalLinkAlt, faDownload, faCopy, faCheck, faEnvelope, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faVimeo, faInstagram, faTumblr, faDribbble } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import ProgressiveImg from '@/components/ProgressiveImg.vue';
 import ProgressiveBackground from '@/components/ProgressiveBackground.vue';
 
-library.add(faLinkedin, faVimeo, faInstagram, faTumblr, faDribbble, faChevronDown, faChevronLeft, faChevronRight, faAngleDoubleUp, faHome, faExternalLinkAlt, faDownload, faCopy, faCheck, faEnvelope, faXmark);
+library.add(faLinkedin, faVimeo, faInstagram, faTumblr, faDribbble, faChevronDown, faChevronUp, faChevronLeft, faChevronRight, faAngleDoubleUp, faHome, faExternalLinkAlt, faDownload, faCopy, faCheck, faEnvelope, faXmark);
 
 // Create app using Vue 3 (compat build)
 const app = createApp(App);

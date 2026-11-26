@@ -1,21 +1,22 @@
 <template>
-  <div class="contact-menu" ref="root" @keydown.esc="close(true)">
-    <!-- Desktop: a yellow "Get in touch" button that opens a small dropdown.
-         Mobile (inside the slide-out menu): the same button expands/collapses the options below it. -->
+  <div class="contact-menu" :class="variant" ref="root" @keydown.esc="close(true)">
+    <!-- variant "nav": desktop = a yellow "Get in touch" button with a small dropdown;
+         mobile (inside the slide-out menu) = the options expand below it.
+         variant "hero" (home intro): an outline button whose options pop up above it, at any width. -->
     <button
       ref="toggle"
-      class="cta"
+      :class="variant === 'hero' ? 'btn hero-btn' : 'cta'"
       type="button"
       aria-haspopup="true"
       :aria-expanded="open.toString()"
-      aria-controls="contact-options"
+      :aria-controls="optionsId"
       @click="open ? close() : show()"
     >
       Get in touch
-      <font-awesome-icon icon="chevron-down" class="caret" :class="{ up: open }" aria-hidden="true" />
+      <font-awesome-icon :icon="variant === 'hero' ? 'chevron-up' : 'chevron-down'" class="caret" :class="{ up: open }" aria-hidden="true" />
     </button>
 
-    <ul id="contact-options" class="options" :class="{ open }">
+    <ul :id="optionsId" class="options" :class="{ open }">
       <li>
         <button type="button" class="option" @click="copyEmail">
           <font-awesome-icon :icon="copied ? 'check' : 'copy'" class="icon" aria-hidden="true" />
@@ -53,6 +54,12 @@ export default {
     email: { type: String, required: true },
     linkedin: { type: String, default: "" },
     cv: { type: String, default: "" },
+    variant: { type: String, default: "nav" },
+  },
+  computed: {
+    optionsId() {
+      return `contact-options-${this.variant}`;
+    },
   },
   data() {
     return { open: false, copied: false, copiedTimer: null };
@@ -194,12 +201,12 @@ nav.main-navigation ul.menu li.menu-item .contact-menu a.option:focus-visible {
    aligned with the other menu items. Collapsed options are hidden from tab order too. */
 @media (max-width: 991px) {
   /* Full-width button at the end of the drawer list; the options box matches its width. */
-  .contact-menu {
+  .contact-menu.nav {
     display: block;
     margin: 20px 24px;
   }
   /* Touch targets: at least 44px tall (Apple HIG / WCAG 2.5.5) */
-  .cta {
+  .nav .cta {
     width: 100%;
     justify-content: center;
     min-height: 44px;
@@ -211,7 +218,7 @@ nav.main-navigation ul.menu li.menu-item .contact-menu a.option:focus-visible {
   nav.main-navigation ul.menu li.menu-item .contact-menu a.option:focus {
     min-height: 44px;
   }
-  .options {
+  .nav .options {
     display: block;
     position: static;
     width: auto;
@@ -226,7 +233,7 @@ nav.main-navigation ul.menu li.menu-item .contact-menu a.option:focus-visible {
     transition: max-height 0.25s ease, margin-top 0.25s ease, padding 0.25s ease, border-color 0.25s ease,
       visibility 0s linear 0.25s;
   }
-  .options.open {
+  .nav .options.open {
     max-height: 260px;
     margin-top: 8px;
     padding: 6px;
@@ -238,9 +245,41 @@ nav.main-navigation ul.menu li.menu-item .contact-menu a.option:focus-visible {
   }
 }
 @media (max-width: 991px) and (prefers-reduced-motion: reduce) {
-  .options,
-  .options.open {
+  .nav .options,
+  .nav .options.open {
     transition: none;
+  }
+}
+/* Home intro: same outline pill as the other intro buttons; the options open upward, since the
+   button sits near the bottom of the first screen. */
+.contact-menu.hero {
+  width: 100%;
+}
+/* App.vue gives every ".content li" a margin; the home intro is inside .content */
+.options li {
+  margin: 0;
+}
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 20px;
+  font: inherit;
+}
+.hero .options {
+  top: auto;
+  bottom: calc(100% + 8px);
+  right: auto;
+  left: 0;
+}
+/* Phones: the button is the right half of a row, so align the box to its right edge */
+@media (max-width: 480px) {
+  .hero .options {
+    left: auto;
+    right: 0;
   }
 }
 </style>

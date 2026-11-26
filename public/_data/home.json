@@ -16,7 +16,7 @@
 		},
 		{
 			"name": "Get in touch",
-			"url": "mailto:hola@otto.ar?subject=Hi%20Otto"
+			"contact": true
 		}
 	]
 }
