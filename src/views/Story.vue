@@ -267,21 +267,61 @@ section .image {
     height: 100%;
   }
 }
-/* Phones: room at the bottom for the "next" arrow, and the illustration scales with the screen
-   height so each chapter fits in one screen, even on short phones. */
-@media (max-width: 640px) {
-  section {
-    padding: 16px 0 64px;
+/* Desktop and tablet: a bigger illustration beside the text, as large as the screen height allows */
+@media (min-width: 641px) {
+  section .content {
+    max-width: 960px;
+    gap: 24px;
+  }
+  section .text-container {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+  section .img-container {
+    flex: none;
   }
   section .image {
-    width: min(300px, 32svh);
-    height: min(300px, 32svh);
+    width: min(440px, 62svh, 46vw);
+    height: min(440px, 62svh, 46vw);
   }
 }
-@media (max-width: 400px) {
-  section .image {
-    width: min(250px, 32svh);
-    height: min(250px, 32svh);
+/* Phones: the illustration takes all the height the text leaves, so it's as big as possible while
+   the whole chapter still fits in one screen. Room at the bottom for the "next" arrow. */
+@media (max-width: 640px) {
+  section {
+    height: 100vh;
+    height: 100svh;
+    padding: 16px 0 64px;
+  }
+  section .content,
+  section:nth-child(odd) .content {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  section .img-container {
+    order: -1;
+    flex: 1 1 auto;
+    min-height: 140px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 24px;
+    box-sizing: border-box;
+    container-type: size; /* lets the image size itself to this box (cqw / cqh) */
+  }
+  section .text-container {
+    flex: none;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  /* The largest square that fits the free box: limited by width on tall phones, by height on short ones */
+  section .image,
+  section:last-child .image {
+    width: min(100cqw, 100cqh);
+    height: min(100cqw, 100cqh);
   }
 }
 </style>
