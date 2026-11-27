@@ -97,7 +97,7 @@
             {
               "heading": "Word Yatzy",
               "level": 3,
-              "text": "A word game with Yatzy scoring: find the best words, fill the scorecard and beat your friends.",
+              "text": "A word game with Yatzy scoring: find the best words, fill the scorecard and beat your friends. It launched in March 2023. By November 2026:",
               "gallery": [
                 {
                   "image": "/public/_data/media/projects/funcraft/screens/whamzee-1.jpg",
@@ -129,6 +129,11 @@
                   "url": "https://apps.apple.com/us/app/word-yatzy-fun-word-puzzler/id6444775332",
                   "srText": "Word Yatzy on the"
                 }
+              ],
+              "list": [
+                "4.8M players, most of them in the US",
+                "70M games played",
+                "18-minute sessions, about twice a day"
               ]
             },
             {
@@ -139,7 +144,7 @@
             {
               "heading": "Bingo Dice",
               "level": 3,
-              "text": "Classic bingo with a modern twist: roll the dice to mark your card and play with friends.",
+              "text": "Classic bingo with a modern twist: roll the dice to mark your card and play with friends. It launched in July 2025. By November 2026:",
               "gallery": [
                 {
                   "image": "/public/_data/media/projects/funcraft/screens/bingodice-1.jpg",
@@ -171,12 +176,18 @@
                   "url": "https://apps.apple.com/us/app/bingo-dice/id6747049399",
                   "srText": "Bingo Dice on the"
                 }
+              ],
+              "list": [
+                "2.9M players, most of them in the US",
+                "62M games played",
+                "22-minute sessions, about twice a day",
+                "96% of new players finish the tutorial"
               ]
             },
             {
               "heading": "17-0 Football Manager",
               "level": 3,
-              "text": "A football manager game: draft legends, build your dream team and go for a perfect 17-0 season.",
+              "text": "A football manager game: draft legends, build your dream team and go for a perfect 17-0 season. It launched in August 2026. By November 2026:",
               "gallery": [
                 {
                   "image": "/public/_data/media/projects/funcraft/screens/profootballmanager-1.jpg",
@@ -208,6 +219,12 @@
                   "url": "https://apps.apple.com/us/app/17-0-football-manager/id6799906854",
                   "srText": "17-0 Football Manager on the"
                 }
+              ],
+              "list": [
+                "430K players, almost all in the US",
+                "6M games played",
+                "20-minute sessions, about twice a day",
+                "97% of new players finish the tutorial"
               ]
             },
             {
