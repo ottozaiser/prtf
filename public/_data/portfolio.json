@@ -54,7 +54,7 @@
             {
               "heading": "Farkle Dice Roll",
               "level": 3,
-              "text": "The classic dice game of strategy and luck: roll, keep your scoring dice and know when to stop.",
+              "text": "The classic dice game of strategy and luck: roll, keep your scoring dice and know when to stop. It launched in December 2024 and became FunCraft’s most successful game. By November 2026:",
               "gallery": [
                 {
                   "image": "/public/_data/media/projects/funcraft/screens/farkle-1.jpg",
@@ -86,6 +86,12 @@
                   "url": "https://apps.apple.com/us/app/farkle-dice-roll/id6476893083",
                   "srText": "Farkle Dice Roll on the"
                 }
+              ],
+              "list": [
+                "5.8M players, most of them in the US",
+                "207M games played",
+                "18-minute sessions, about twice a day",
+                "96% of new players finish the tutorial"
               ]
             },
             {

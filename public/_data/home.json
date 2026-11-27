@@ -1,7 +1,7 @@
 {
 	"title": "Home",
 	"subtitle": "<span class='greeting'>👋 Hi! I’m</span> <span class='highlight light'>Otto</span>",
-	"content": "I’m Otto Zaiser, a product designer for mobile games who builds UI in Unity. At FunCraft (35M+ installs), I’ve helped launch Farkle and Word Yatzy. I work remotely from Buenos Aires (UTC-3), 1–2 hours ahead of New York.",
+	"content": "I’m Otto Zaiser, a product designer for mobile games who builds UI in Unity. I work remotely from Buenos Aires (UTC-3), 1–2 hours ahead of New York.",
 	"image": "/_data/media/me.png",
 	"links": [
 		{
