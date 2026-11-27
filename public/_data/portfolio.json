@@ -7,11 +7,11 @@
         "title": "FunCraft",
         "show": true,
         "slug": "funcraft",
-        "content": "Casual word, dice and sports games with more than 35M installs. Since joining in 2023, I’ve helped launch FunCraft’s new games, including the breakout hits Word Yatzy and Farkle.",
+        "content": "Casual word, dice and sports games with more than 35M installs. Since joining in 2023, I’ve helped launch every new FunCraft game, including the breakout hits Farkle and Word Yatzy.",
         "image": "/public/_data/media/funcraft-screens.jpg",
         "file": "",
         "detail": {
-          "summary": "FunCraft is a remote-first studio making casual word, dice and sports games. Since joining as its product designer in 2023, I’ve helped launch its new games, including the breakout hits Word Yatzy and Farkle. Together, FunCraft’s games have more than 35 million installs.",
+          "summary": "FunCraft is a remote-first studio making casual word, dice and sports games. Since joining as its product designer in 2023, I’ve helped launch every one of its new games, including the breakout hits Farkle and Word Yatzy. Together, FunCraft’s games have more than 35 million installs.",
           "client": "FunCraft is a remote-first mobile game studio with a catalog of word, dice, puzzle, strategy and sports-manager games for iOS and Android.",
           "role": "Product designer since 2023. On each game, I’m mostly in charge of the Unity integration, asset polish, animation and UI, plus ASO and the first UA ads for launch.",
           "jumps": [
@@ -52,43 +52,6 @@
               "text": "Two of the games broke out, each with more than a million installs on Google Play alone."
             },
             {
-              "heading": "Word Yatzy",
-              "level": 3,
-              "text": "A word game with Yatzy scoring: find the best words, fill the scorecard and beat your friends.",
-              "gallery": [
-                {
-                  "image": "/public/_data/media/projects/funcraft/screens/whamzee-1.jpg",
-                  "alt": "Store screenshot: find the best words"
-                },
-                {
-                  "image": "/public/_data/media/projects/funcraft/screens/whamzee-2.jpg",
-                  "alt": "Store screenshot: play with friends"
-                },
-                {
-                  "image": "/public/_data/media/projects/funcraft/screens/whamzee-3.jpg",
-                  "alt": "Store screenshot: score a Yatzy"
-                },
-                {
-                  "image": "/public/_data/media/projects/funcraft/screens/whamzee-4.jpg",
-                  "alt": "Store screenshot: your games, ready to play"
-                }
-              ],
-              "columns": 4,
-              "columnsMobile": 2,
-              "links": [
-                {
-                  "label": "Google Play",
-                  "url": "https://play.google.com/store/apps/details?id=com.funcraft.whamzee",
-                  "srText": "Word Yatzy on"
-                },
-                {
-                  "label": "App Store",
-                  "url": "https://apps.apple.com/us/app/word-yatzy-fun-word-puzzler/id6444775332",
-                  "srText": "Word Yatzy on the"
-                }
-              ]
-            },
-            {
               "heading": "Farkle Dice Roll",
               "level": 3,
               "text": "The classic dice game of strategy and luck: roll, keep your scoring dice and know when to stop.",
@@ -122,6 +85,43 @@
                   "label": "App Store",
                   "url": "https://apps.apple.com/us/app/farkle-dice-roll/id6476893083",
                   "srText": "Farkle Dice Roll on the"
+                }
+              ]
+            },
+            {
+              "heading": "Word Yatzy",
+              "level": 3,
+              "text": "A word game with Yatzy scoring: find the best words, fill the scorecard and beat your friends.",
+              "gallery": [
+                {
+                  "image": "/public/_data/media/projects/funcraft/screens/whamzee-1.jpg",
+                  "alt": "Store screenshot: find the best words"
+                },
+                {
+                  "image": "/public/_data/media/projects/funcraft/screens/whamzee-2.jpg",
+                  "alt": "Store screenshot: play with friends"
+                },
+                {
+                  "image": "/public/_data/media/projects/funcraft/screens/whamzee-3.jpg",
+                  "alt": "Store screenshot: score a Yatzy"
+                },
+                {
+                  "image": "/public/_data/media/projects/funcraft/screens/whamzee-4.jpg",
+                  "alt": "Store screenshot: your games, ready to play"
+                }
+              ],
+              "columns": 4,
+              "columnsMobile": 2,
+              "links": [
+                {
+                  "label": "Google Play",
+                  "url": "https://play.google.com/store/apps/details?id=com.funcraft.whamzee",
+                  "srText": "Word Yatzy on"
+                },
+                {
+                  "label": "App Store",
+                  "url": "https://apps.apple.com/us/app/word-yatzy-fun-word-puzzler/id6444775332",
+                  "srText": "Word Yatzy on the"
                 }
               ]
             },
@@ -210,17 +210,17 @@
               "text": "The full FunCraft catalog, from word and dice classics to sports-manager and tower defense games. Wordgrams and Merge Kingdoms launched before I joined.",
               "gallery": [
                 {
-                  "image": "/public/_data/media/projects/funcraft/icons/whamzee.jpg",
-                  "caption": "Word Yatzy",
-                  "alt": "Word Yatzy app icon",
-                  "link": "https://play.google.com/store/apps/details?id=com.funcraft.whamzee",
-                  "shape": "icon"
-                },
-                {
                   "image": "/public/_data/media/projects/funcraft/icons/farkle.jpg",
                   "caption": "Farkle Dice Roll",
                   "alt": "Farkle Dice Roll app icon",
                   "link": "https://play.google.com/store/apps/details?id=com.funcraft.farkle",
+                  "shape": "icon"
+                },
+                {
+                  "image": "/public/_data/media/projects/funcraft/icons/whamzee.jpg",
+                  "caption": "Word Yatzy",
+                  "alt": "Word Yatzy app icon",
+                  "link": "https://play.google.com/store/apps/details?id=com.funcraft.whamzee",
                   "shape": "icon"
                 },
                 {
@@ -365,7 +365,7 @@
           "summary": "A new trivia game for etermax with a pet shelter metagame: answer the neighbors’ questions to find runaway pets, care for them and rebuild the shelter. I was technical lead and second in charge, from first concepts to launch. The trivia version missed its targets, and etermax later relaunched it as a merge game.",
           "client": "Pet Shelter by Trivia Crack is a mobile trivia game from etermax, the Buenos Aires studio behind Trivia Crack.",
           "context": "The shelter went through hard times and its pets ran away. That premise had to become a whole visual world around the trivia: a town to explore, neighbors who give clues, pets to rescue and care for, and a shelter that grows as you play. I started with the concepts, then worked with the team to take the art to launch.",
-          "role": "Principal Product Artist: technical lead and second in charge of the team. Concept art and illustration, UI/UX design and Unity integration.",
+          "role": "Principal Product Artist: technical lead and second in charge of the team. Concept art and illustration, UI/UX design and Unity integration. The art team was an art manager, me, three artists and an animator, working with about six developers.",
           "jumps": [
             {
               "label": "The final game",
@@ -1240,6 +1240,11 @@
               "alt": "Two image answers selected and an active Submit button"
             },
             {
+              "heading": "Outcome",
+              "level": 3,
+              "text": "Image Quiz didn’t ship: other features took priority on the roadmap."
+            },
+            {
               "id": "motion-ui",
               "heading": "Case study: Motion UI",
               "text": "Nearpod sold free and paid lessons in a store, then added custom libraries for schools, districts and programs. These had to be available on every platform.\n\nOn the web, a top navigation bar with drop-down menus handled it fine. On iOS, it was a different game, and the team had been struggling to find an answer before I joined.",
@@ -1267,7 +1272,7 @@
             {
               "video": "https://vimeo.com/1250390696",
               "caption": "The animation prototype.",
-              "text": "I presented the animation prototype to the product owner and stakeholders, and they were very happy with the result.",
+              "text": "I presented the animation prototype to the product owner and stakeholders, and they were very happy with the result. Motion UI shipped in the iPad app, which has changed a lot in the years since I left.",
               "ratio": "4:3"
             }
           ],
@@ -1575,7 +1580,7 @@
         "slug": "sony",
         "detail": {
           "context": "In 2010, Sony launched Dash, a new personal internet viewer, and needed tutorials to show people how to use it.",
-          "role": "Designer, technical lead and developer.",
+          "role": "At TeleTech: designer, technical lead and developer.",
           "sections": [
             {
               "image": "/public/_data/media/projects/sony/01.png",
@@ -1622,7 +1627,7 @@
         "slug": "microsoft",
         "detail": {
           "context": "Office 365 was about to launch, and retail sales associates needed to learn the new features fast so they could demo them to customers.",
-          "role": "Designer, technical lead and developer, from visual design to the final build.",
+          "role": "At TeleTech: designer, technical lead and developer, from visual design to the final build.",
           "sections": [
             {
               "image": "/public/_data/media/projects/microsoft/01.png",

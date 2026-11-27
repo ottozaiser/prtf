@@ -20,6 +20,9 @@
   .hl { background: #fff200; padding: 0 .06em; }
   .headline { margin: 2pt 0 0; font-size: 11.5pt; font-weight: 600; }
   .contact { margin: 4pt 0 0; font-size: 9.6pt; }
+  /* Avatar line drawing, top right of the header (vector, so it prints sharp) */
+  header { position: relative; padding-right: 0.9in; }
+  .avatar { position: absolute; top: 0; right: 0; width: 0.72in; height: auto; }
   h2 {
     margin: 10pt 0 4pt; padding-bottom: 2pt; border-bottom: 1.5pt solid #222;
     font-size: 10.5pt; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
@@ -41,14 +44,15 @@
 </head>
 <body>
 <header>
+  <svg class="avatar" viewBox="0 0 107.79 110.15" aria-hidden="true"><g fill="#231f20"><path d="M95.52,67.79c3.97-.24,7.13-3.54,7.13-7.57s-3.4-7.59-7.59-7.59h-.39c-.92-13.36-8.19-24.98-18.82-31.84,4.74-4.9,8.12-9.96,12.05-11.93-4.59-6.12-22.95,0-22.95,0,0,0,1.53-3.06,6.12-6.12-12.24-9.18-27.54,7.65-27.54,7.65V2.74s-12.27,7.73-12.97,18.41c-8.66,5.79-14.99,14.77-17.35,25.25h-1.8c-6.29,0-11.41,5.12-11.41,11.41s5.12,11.41,11.41,11.41h3.11c.12.34.23.68.36,1.01,16.96,56.35,92.9,36.52,92.9,36.52l-12.27-38.97ZM16.83,67.81h-5.41c-5.52,0-10-4.49-10-10s4.49-10,10-10h5.41v20.01ZM16.67,40.16c2.92-6.97,7.76-12.94,13.86-17.24-.05,16.06-10.46,17.28-13.86,17.24ZM95.05,66.32h-59.17s-3.04-22.3,9.18-34.51c14.89,1.66,23.51-3.85,29.75-9.98,10.38,6.6,17.51,17.85,18.44,30.8h-2.79c-.39,0-.71.32-.71.71s.32.71.71.71h4.59c3.41,0,6.18,2.77,6.18,6.18s-2.76,6.16-6.15,6.18l-.02-.08Z"/><path d="M71.8,47.86c-1.2,0-2.17.97-2.17,2.17s.97,2.17,2.17,2.17,2.17-.97,2.17-2.17-.97-2.17-2.17-2.17Z"/><path d="M85.07,47.86c-1.2,0-2.17.97-2.17,2.17s.97,2.17,2.17,2.17,2.17-.97,2.17-2.17-.97-2.17-2.17-2.17Z"/></g></svg>
   <h1><span class="hl">Otto</span> Zaiser</h1>
   <p class="headline">Product Designer, Mobile Games</p>
-  <p class="contact"><a href="mailto:zaiser@gmail.com">zaiser@gmail.com</a> | <span id="phone" hidden></span><a href="https://www.linkedin.com/in/ottozaiser/">linkedin.com/in/ottozaiser</a> | <a href="https://otto.ar">otto.ar</a></p>
+  <p class="contact"><a href="mailto:hola@otto.ar">hola@otto.ar</a> | Buenos Aires (UTC-3), remote | <span id="phone" hidden></span><a href="https://www.linkedin.com/in/ottozaiser/">linkedin.com/in/ottozaiser</a> | <a href="https://otto.ar">otto.ar</a></p>
 </header>
 
 <section>
   <h2>Summary</h2>
-  <p>Product designer for mobile games who takes features from flows to final UI, motion and art, then implements them in Unity. At FunCraft (35M+ installs), helped launch Word Yatzy and Farkle, 1M+ installs each on Google Play. 20+ years working where design meets code.</p>
+  <p>Product designer for mobile games who takes features from flows to final UI, motion and art, then implements them in Unity. At FunCraft (35M+ installs), helped launch Farkle and Word Yatzy, 1M+ installs each on Google Play. 20+ years working where design meets code.</p>
 </section>
 
 <section>
@@ -58,7 +62,7 @@
     <div class="job-head"><span><span class="job-title">Product Designer</span>, FunCraft</span><span class="dates">01/2023 – Present</span></div>
     <ul>
       <li>Design UI/UX for FunCraft’s casual word, dice and sports games, then implement it directly in Unity</li>
-      <li>Helped launch the breakout games Word Yatzy and Farkle, each with 1M+ installs on Google Play</li>
+      <li>Helped launch the breakout games Farkle and Word Yatzy, each with 1M+ installs on Google Play</li>
       <li>Create in-game animation and particle effects, ASO store assets and launch UA ads, including playables</li>
       <li>Ship final UI fixes in the codebase myself with AI coding tools; build AI-assisted art workflows</li>
     </ul>
