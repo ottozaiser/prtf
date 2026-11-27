@@ -1,1 +1,8 @@
+# Old whois domains: send every page to the same path on otto.ar
+https://whois.otto.ar/*      https://otto.ar/:splat  301!
+http://whois.otto.ar/*       https://otto.ar/:splat  301!
+https://whois.otto.com.ar/*  https://otto.ar/:splat  301!
+http://whois.otto.com.ar/*   https://otto.ar/:splat  301!
+
+# Single-page app: every other path is handled by the Vue router
 /* /index.html 200
